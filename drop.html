@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dropdown Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    } 
+
+    .navbar {
+      display: flex;
+      background-color: #fff;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    } 
+
+    .nav-item {
+      position: relative;
+      margin-right: 30px;
+    } 
+
+    .nav-link {
+      text-decoration: none;
+      color: #333;
+      padding: 10px;
+      display: block;
+    } 
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      display: grid;
+      grid-template-columns: repeat(3, 200px);
+      gap: 20px;
+    } 
+
+    .nav-item:hover .dropdown {
+      display: grid;
+    } 
+
+    .dropdown a {
+      text-decoration: none;
+      color: #444;
+      margin-bottom: 8px;
+      display: block;
+    } 
+
+    .dropdown a:hover {
+      color: #d52c6e;
+    }
+  </style>
+</head>
+<body> 
+
+<div class="navbar">
+  <div class="nav-item">
+    <a class="nav-link" href="#">Design Ideas</a>
+    <div class="dropdown">
+      <div>
+        <a href="#">Modular Kitchen Designs</a>
+        <a href="#">Wardrobe Designs</a>
+        <a href="#">Bathroom Designs</a>
+        <a href="#">Master Bedroom Designs</a>
+        <a href="#">Living Room Designs</a>
+        <a href="#">Pooja Room Designs</a>
+      </div>
+      <div>
+        <a href="#">Dining Room Designs</a>
+        <a href="#">Foyer Designs</a>
+        <a href="#">Homes By Livspace</a>
+        <a href="#">Home Office Designs</a>
+        <a href="#">Guest Bedroom Designs</a>
+        <a href="#">Window Designs</a>
+      </div>
+      <div>
+        <a href="#">Tile Designs</a>
+        <a href="#">Study Room Designs</a>
+        <a href="#">Kitchen Sinks</a>
+        <a href="#">Space Saving Designs</a>
+        <a href="#">Door Designs</a>
+        <a href="#">Staircase Designs</a>
+      </div>
+    </div>
+  </div>
+</div> 
+
+</body>
+</html> 
+

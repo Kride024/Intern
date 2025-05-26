@@ -22,20 +22,28 @@
       
   const subOption = localStorage.getItem('selected-SubOption');
   const category = localStorage.getItem('selected-Category');
-  const length = parseFloat(localStorage.getItem('length')) || 0;
-  const Width = parseFloat(localStorage.getItem('Width')) || 0;  // fixed typo here
-  const height = parseFloat(localStorage.getItem('height')) || 0;
+  // const length = parseFloat(localStorage.getItem('length')) || 0;
+  // const Width = parseFloat(localStorage.getItem('Width')) || 0;  // fixed typo here
+  // const height = parseFloat(localStorage.getItem('height')) || 0;
       let area = 0;
 
       if (category === 'False Ceiling Designs' ) {
+        const length = parseFloat(localStorage.getItem('length')) || 0;
+  const Width = parseFloat(localStorage.getItem('Width')) || 0;  // fixed typo here
         area = length * Width;
       } else if (category === 'Flooring Designs') {
+        const length = parseFloat(localStorage.getItem('length')) || 0;
+  const Width = parseFloat(localStorage.getItem('Width')) || 0;  // fixed typo here
         area = length * Width ;
       } 
       else if(category ==='Wall Designs'){
+        const Width = parseFloat(localStorage.getItem('Width')) || 0;  // fixed typo here
+  const height = parseFloat(localStorage.getItem('height')) || 0;
         area= height * Width ;
       }
       else if(category ==='Interior Designs'){
+        const length = parseFloat(localStorage.getItem('length')) || 0;
+  const Width = parseFloat(localStorage.getItem('Width')) || 0;  // fixed typo here
         area= 2*length * Width;
       }
 // costing properly ask
@@ -46,7 +54,7 @@
         'Wooden Flooring': 160,
         'LVT (Luxury Vinyl Tile)': 80,
         'Tiles Flooring': 110,
-        'PVC Wainscoting':100,
+        'WPC Wainscoting':100,
         'WPC Louvers':180,
         'Charcoal Panel':300,
         'Wall Paneling':30,

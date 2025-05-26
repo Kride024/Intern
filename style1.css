@@ -92,6 +92,12 @@ li{
   
  background-color: rgb(76, 75, 75);
 border:none;
+
+}
+.btn:hover{
+background-color: rgb(76, 75, 75) !important;
+cursor:pointer;
+box-shadow:var(--btn-box-shadow);
 }
 .btni{
     width:26rem;
@@ -111,12 +117,15 @@ border:none;
  margin-bottom: 3rem;
  margin-top: -2rem;;
 border:none;
+ &:hover {
+    background-color: rgb(76, 75, 75);
+  }
 }
 
 
 /* states */
 .btn:hover{
-background-color:var(--bnt-hover-bg-color);
+background-color: rgb(76, 75, 75);
 cursor:pointer;
 box-shadow:var(--btn-box-shadow);
 }
