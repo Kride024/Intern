@@ -1,0 +1,76 @@
+<html>
+<head>
+  <title>Step 5 - Cost</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    .container{
+    padding:8rem 9rem;
+  }
+  h2{
+  color:rgb(70, 69, 69);
+  /* margin-top: rem; */
+  }
+  h1, h2,div {
+    color: #333;
+    text-align: center;
+    
+  }
+  </style>
+  <script>
+    function calculateCost() {
+      
+  const subOption = localStorage.getItem('selected-SubOption');
+  const category = localStorage.getItem('selected-Category');
+  const length = parseFloat(localStorage.getItem('length')) || 0;
+  const Width = parseFloat(localStorage.getItem('Width')) || 0;  // fixed typo here
+  const height = parseFloat(localStorage.getItem('height')) || 0;
+      let area = 0;
+
+      if (category === 'False Ceiling Designs' ) {
+        area = length * Width;
+      } else if (category === 'Flooring Designs') {
+        area = length * Width ;
+      } 
+      else if(category ==='Wall Designs'){
+        area= height * Width ;
+      }
+      else if(category ==='Interior Designs'){
+        area= 2*length * Width;
+      }
+// costing properly ask
+      const rates = {
+        'Gypsum Board False Ceiling': 150,
+        'Soffit Ceiling': 250,
+        'Plaster Of Paris (POP) Wall Ceiling': 200,
+        'Wooden Flooring': 160,
+        'LVT (Luxury Vinyl Tile)': 80,
+        'Tiles Flooring': 110,
+        'PVC Wainscoting':100,
+        'WPC Louvers':180,
+        'Charcoal Panel':300,
+        'Wall Paneling':30,
+        'Wall Painting':35,
+        'PVC Panel': 60,
+        '3D Interior Design':60,
+        'Bedrooms':60, 
+        'Living Room':60,
+        'Modular Kitchen':60,
+        'Kids Room':60,
+          
+    };
+// console.log(rates[subOption]);
+
+      area = (rates[subOption] || 0)*area;
+    
+      document.getElementById('result').textContent = `Total Cost: ₹${area}`;
+    }
+  </script>
+</head>
+<body onload="calculateCost()">
+  <div class="container">
+    <h2>Step 5: Total Cost</h2>
+    <div id="result"></div>
+  </div>
+</body>
+</html>

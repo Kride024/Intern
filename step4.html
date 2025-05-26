@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Step 4 - Dimensions</title>
+  <link rel="stylesheet" href="style.css">
+  <style>.container{
+    padding:2rem 9rem;
+  }
+  h2{
+  color:rgb(70, 69, 69);
+  /* margin-top: rem; */
+  }
+  input{
+      width: 100%;
+    height:60px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-shadow:  0 6px 24px rgba(0,0,0,0.12), 0 1.5px 4px rgba(0,0,0,0.10);
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Step 4: Enter Dimensions</h2>
+    <form action="r.html" method="get">
+    <p style="font-size:1.3rem ;margin-bottom: -1px; margin-left:3px;margin-top: 2rem;color:rgb(80, 78, 78);"> Length of Wall (in feet):</p>  <input type="number" name="length" required><br>
+      <p style="font-size:1.3rem ;margin-bottom:-1px; margin-left:3px;color:rgb(80, 78, 78);" >Width of Wall (in feet):</p> <input type="number" name="Width" required><br>
+     <!-- <p style="font-size:1.3rem ;margin-bottom:-1px; margin-left:3px;color:rgb(80, 78, 78);">Height (in feet):</p>  <input type="number" name="height" required><br> -->
+     <h1> <button type="submit">Calculate</button></h1>
+     
+    </form>
+  </div>
+  <script>
+
+  const subOption = localStorage.getItem('selected-SubOption');
+  const category = localStorage.getItem('selected-Category');
+
+
+    const form = document.querySelector('form');
+    const lengthInput = document.querySelector('input[name="length"]');
+    const breadthInput = document.querySelector('input[name="Width"]');
+    // const heightInput = document.querySelector('input[name="height"]');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const length = lengthInput.value;
+      const Width = breadthInput.value;
+      // const height = heightInput.value;
+
+      localStorage.setItem('length', length);
+      localStorage.setItem('Width', Width);
+      // localStorage.setItem('height', height);
+      console.log('Length:', length);
+
+      window.location.href = 'r.html';
+    });
+    </script>
+</body>
+</html>

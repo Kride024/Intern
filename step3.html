@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Step 3 - Sub-Options</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+      .container{
+    padding:2rem 9rem;
+  }
+  h2{
+  color:rgb(70, 69, 69);
+  /* margin-top: rem; */
+  }
+   select {
+    width: 100%;
+    height:60px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-shadow:  0 6px 24px rgba(0,0,0,0.12), 0 1.5px 4px rgba(0,0,0,0.10);
+  }
+ 
+select, select option {
+  color: rgb(6,158,228); /* red shade */
+}
+select option:hover {background-color: #f1f1f1}
+
+ .image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.image-grid img {
+  width: 100%;
+ height:150px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+   /* transition: transform 0.3s ease, box-shadow 0.4s ease; */
+
+}
+/* img:hover{
+  scale:1.1;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+} */
+  </style>
+  <script>
+ 
+    function showOptions() {
+  const category = localStorage.getItem('selected-Category');
+  const select = document.getElementById('options');
+  const subOptionsDiv = document.getElementById('Sub-Options');
+  const imageGrid = document.querySelector('.image-grid');
+  subOptionsDiv.textContent = category ? `${category}` : 'Sub-Options';
+  if (!category) {
+    alert('Category not selected. Redirecting to Step 2.');
+    window.location.href = 'step2.html';
+    return;
+  }
+
+  // Clear previous options and images
+  select.innerHTML = '';
+  imageGrid.innerHTML = '';
+
+  let options = [];
+  let images = [];
+  if (category === 'False Ceiling Designs') {
+    options = ['Plaster Of Paris (POP) Wall Ceiling', 'Gypsum Board False Ceiling', 'Soffit Ceiling'];
+
+  } else if (category === 'Flooring Designs') {
+    options = ['Wooden Flooring', 'LVT (Luxury Vinyl Tile)', 'Tiles Flooring'];
+    
+    
+  } else if (category === 'Wall Designs') {
+    options = ['WPC Wainscoting', 'WPC Louvers', 'Charcoal Panel','Wall Paneling',  'Wall Painting', 'PVC Panel'];
+    // images = ['WhatsApp Image 2025-05-24 at 15.23.45_328d0c67.jpg', 'WhatsApp Image 2025-05-24 at 15.23.46_492a3eb4.jpg'];
+  } else if (category === 'Interior Designs') {
+    options = ['3D Interior Design', 'Bedrooms', 'Living Room', 'Modular Kitchen', 'Kids Room'];
+    // images = ['WhatsApp Image 2025-05-24 at 15.23.47_75a828db.jpg', 'WhatsApp Image 2025-05-24 at 15.23.49_be7a7c85.jpg'];
+  }
+
+  options.forEach(opt => {
+    const el = document.createElement('option');
+    el.value = opt;
+    el.textContent = opt;
+    select.appendChild(el);
+  });
+
+  // images.forEach(src => {
+  //   const img = document.createElement('img');
+  //   img.src = src;
+  //   img.alt = 'Category Image';
+  //   imageGrid.appendChild(img);
+  // });
+}
+   function handleSubmit(event) {
+      event.preventDefault();
+
+      const selectedOption = document.getElementById('options').value;
+      localStorage.setItem('selected-SubOption', selectedOption);
+      const category = localStorage.getItem('selected-Category');
+   if(category === 'Wall Designs')
+      window.location.href = 'step41.html';
+   else
+    window.location.href = 'step4.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      showOptions();
+      document.getElementById('form').addEventListener('submit', handleSubmit);
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Step 3: Select the type of<div id="Sub-Options"></div></h2>
+    <form id="form">
+      <select id="options" name="subOption" required></select>
+    <div class="image-grid">
+    <!-- <img src="intern-img1.jpg" alt="Image 1">
+    <img src="intern-img2.jpg" alt="Image 2">
+    <img src="intern-img3.jpg" alt="Image 3">
+    <img src="intern-img4.jpg" alt="Image 4"> -->
+  </div>
+     <h1> <button type="submit">Next</button></h1>
+    </form>
+  </div>
+</body>
+</html>
+

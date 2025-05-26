@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Step 1 - Type</title>
+  <style>
+     /* .container{
+    padding:1rem 1rem;
+  } */
+  h2{
+  color:rgb(70, 69, 69);
+  /* margin-top: rem; */
+  }
+    h1, h2 {
+      margin-top: 70px;;
+    color: #333;
+    text-align: center;
+    
+  }
+    /* HIDE RADIO */
+[type=radio] { 
+  /* position: absolute; */
+  /* opacity: 0; */
+  width: 1.3rem;
+  height: 1.3rem;
+ accent-color: rgb(6,158,228);
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+ .image-option:has(input[type="radio"]:checked) img {
+    outline: 3.6px solid rgb(6,158,228);
+     box-shadow: 0 6px 24px rgba(0,0,0,0.18), 0 1.5px 4px rgba(0,0,0,0.15);
+  }
+  </style>
+  <link rel="stylesheet"#f00 href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2 style="color:rgb(70, 69, 69);">Step 1: Choose the type of project</h2>
+    <form action="step2.html" method="get" id="form">
+     
+      <label class="image-option" for="Residential" ><div style="display:flex; margin-top: 3rem;"><input type="radio" name="projectType" value="Residential"  id="Residential" checked><div>
+        <p style="font-size:1.3rem ;margin-top: -0.0rem; margin-left:3px;color:rgb(80, 78, 78);">Residential</p>
+      </div></div></label>
+    <br>
+    
+      <label class="image-option" for="Commercial"><div style="display:flex"> <input type="radio" id="Commercial" name="projectType" value="Commercial"><div class="option-content"><p style="font-size:1.3rem ;margin-top: -0.0rem; margin-left:3px;color:rgb(80, 78, 78);">Commercial</p></div></div> </label><br>
+    <h1 style="margin-top: -18px; margin-bottom: 24px;"><button type="submit">Next</button></h1> 
+    </form>
+  </div>
+  <script>
+   
+    const options = document.querySelectorAll('.image-option');
+  const hiddenInput = document.getElementById('selectedRoom');
+
+  
+  const form = document.getElementById('form');
+  const interior = document.getElementById('Residential');
+  const commercial = document.getElementById('Commercial');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const ResidentialValue = Residential.checked;
+    const CommercialValue = Commercial.checked;
+
+    localStorage.setItem('Residential', ResidentialValue);
+    localStorage.setItem('Commercial', CommercialValue);
+
+    window.location.href = 'step2.html';
+  });
+
+  </script>
+</body>
+</html>
