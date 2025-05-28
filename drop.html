@@ -28,21 +28,20 @@
     } 
 
     .dropdown {
-      display: none;
+      display: none; /* Initially hidden */
       position: absolute;
-      top: 40px;
+      top: 100%;
       left: 0;
       background-color: #fff;
       padding: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       z-index: 1000;
-      display: grid;
       grid-template-columns: repeat(3, 200px);
       gap: 20px;
     } 
 
     .nav-item:hover .dropdown {
-      display: grid;
+      display: grid; /* Show on hover */
     } 
 
     .dropdown a {
@@ -92,5 +91,6 @@
 </div> 
 
 </body>
-</html> 
+</html>
+
 

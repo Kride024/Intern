@@ -9,7 +9,7 @@
     <style>
       .hero-heading {
   color: #fff; /* White text */
-  -webkit-text-stroke: 2px #ebe9e9; /* Red outline */
+  /* -webkit-text-stroke: 2px #ebe9e9; Red outline */
    /* For future compatibility */
   /* Remove border, padding, etc. if not needed */
   border: none;
@@ -20,6 +20,108 @@
 /* ...existing code... */
 
   
+ .body1 {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      margin: 0;
+      padding: 40px 20px;
+      text-align: center;
+      color: #000000;
+    }
+    .review-wrapper {
+      position: relative;
+      max-width: 1100px;
+      margin: auto;
+      
+    }
+
+    .slider-container {
+      overflow: hidden;
+      width: 1082px;
+      margin: auto;
+    }
+
+    .reviews-container {
+      display: flex;
+      transition: transform 0.4s ease;
+      /* gap:5rem; */
+    }
+
+    .review-card {
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 250px;
+      margin: 0 10px;
+      flex-shrink: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .review-card img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .stars {
+      color: #FFD700;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .name {
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .content {
+      font-size: 14px;
+      color: #222;
+    }
+
+    .arrow-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #ffffff;
+      color: #000000;
+      border: 2px solid #eee4e4;
+      padding: 8px 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      z-index: 1;
+    }
+
+    .arrow-left {
+      left: -6px;
+      box-shadow: 0 4px 8px rgba(84, 82, 82, 0.1);
+    }
+
+    .arrow-right {
+      right: -5px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .arrow-button.hidden {
+      display: none;
+    }
+
+    @media (max-width: 1140px) {
+      .slider-container {
+        width: 100%;
+      }
+    }
+      @keyframes scrollLoop {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
     </style>
 </head>
 <body>
@@ -36,8 +138,48 @@
         <nav class="navbar">
         <ul>
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">Who we are</a></li>
-             <li class="nav-item"><a href="service.html" class="nav-link">Design Ideas</a></li>
+            <li class="nav-item"><a href="who we are.html" class="nav-link">Who we are</a></li>
+             <li class="nav-item" style="position: relative;"
+        onmouseover="this.querySelector('.dropdown').style.display='grid'; this.querySelector('a').style.color='#d52c6e';"
+        onmouseout="this.querySelector('.dropdown').style.display='none'; this.querySelector('a').style.color='#333';"><a href="service.html" class="nav-link">Design Ideas</a>
+    <div class="dropdown" style="
+        display: none; /* Hidden on page load */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+        grid-template-columns: repeat(3, 200px);
+        gap: 20px;
+      ">
+        <div>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Modular Kitchen Designs</a>
+          <a href="#" style="text-decoration: none; color: #444 ;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Wardrobe Designs</a>
+          <a href="#" style="text-decoration: none; color: #444 ;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Bathroom Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Master Bedroom Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Living Room Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Pooja Room Designs</a>
+        </div>
+        <div>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Dining Room Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Foyer Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Homes By Livspace</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Home Office Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Guest Bedroom Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Window Designs</a>
+        </div>
+        <div>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Tile Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Study Room Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Kitchen Sinks</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Space Saving Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Door Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Staircase Designs</a>
+        </div>
+      </div>
+    </li>
             <li class="nav-item"><a href="service.html" class="nav-link">Services</a></li>
              <li class="nav-item"><a href="blog.html" class="nav-link">Work with Us</a></li>
             <li class="nav-item"><a href="#section-contact-homepage" class="nav-link">Contact</a></li>
@@ -57,7 +199,11 @@
         <div class="container grid " >
         <div class="section-hero--content" style="display:grid;justify-content: center;align-content:center; margin-top: 20rem;">
             <p class="hero-subheading"></p>
-            <h1 class="hero-heading" style="color:#151516">
+            <h1 class="hero-heading" style="color: white; text-shadow: 
+  -1px -1px 0 black,  
+   1px -1px 0 black,
+  -1px  2px 0 black,
+   1px  2px 0 black;font-family:Poppins,sana-serif;font-size: 50px;">
                 Your Vision, Our Design
             </h1>
             <button class="btn" style=" justify-self:center;background-color: rgb(28, 94, 226);width:30rem;margin-top: 1rem; border-radius: 4rem;padding:1.6rem;font-weight: 600;font-size: 1.7rem;" onclick="window.location.href=`welcome.html`;">Get Free Estimate</button>
@@ -89,8 +235,8 @@
    <!-- ========== Start Section-About ========== -->
    <section class="section-about">
     <div class="container " style="margin-left: 11rem;">
-       <div class=" grid grid-two--cols"> <div><h2 class="section-common-heading ">Get a glimpse Of Elicite Homes</h2>
-          <p class="section-common-subheading" style="margin-top: 1rem;">Beautiful Homes. Zero Hassle. 100% You.
+       <div class=" grid grid-two--cols"> <div><h2 class="section-common-heading ">Get a glimpse Of Elicit Homes</h2>
+          <p class="section-common-subheading" style="margin-top: 1rem;">Swag wala ghar, hassle ka no scene, full-on aapki vibe.
         </p>
     </div>
     <button class="btn" style=" width:20rem; margin-left: 36rem;background: rgb(28, 94, 226); border-radius:2rem;">More</button>
@@ -280,157 +426,364 @@
      </div>
 
    </section>
-   <!-- ========== Start why choose section ========== -->
-   <section class="section-why--choose">
-    <div class="container">
-        <h2 class="section-common-heading">Why Choose  EduHub</h2>
-        <p class="section-common-subheading">Choose  EduHub for a holistic , enriching learning experience that empowers you to achieve your goals.
-        </p>
+   
+ 
+
+<!--Review Page start-->
+<div class="body1" >
+<h2  class="section-common-heading " style="margin-bottom: 4rem;">Customer Reviews</h2>
+
+<div class="review-wrapper">
+  <button class="arrow-button arrow-left hidden" onclick="scrollReviews(-1)" id="leftBtn">←</button>
+
+  <div class="slider-container">
+    <div class="reviews-container" id="reviewContainer">
+      <!-- Each review card -->
+       
+      <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer">
+        <div class="stars">★★★★★</div>
+        <div class="name">Samantha Lee</div>
+        <div class="content">Loved the minimalistic design! The team was professional and quick.</div>
+      </div>
+      <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Customer">
+        <div class="stars">★★★★☆</div>
+        <div class="name">John Kim</div>
+        <div class="content">Great quality and timely delivery. Just a bit pricey, but worth it.</div>
+      </div>
+      <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Customer">
+        <div class="stars">★★★★★</div>
+        <div class="name">Maria Gonzales</div>
+        <div class="content">Elegant touches everywhere. They understood my vision perfectly.</div>
+      </div>
+      <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Customer">
+        <div class="stars">★★★★☆</div>
+        <div class="name">Akash Mehra</div>
+        <div class="content">Beautiful transformation of our living room. Friendly crew too!</div>
+      </div>
+      <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/women/51.jpg" alt="Customer">
+        <div class="stars">★★★★★</div>
+        <div class="name">Priya Sharma</div>
+        <div class="content">Wonderful experience! Stylish and functional interiors.</div>
+      </div>
+      <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="Customer">
+        <div class="stars">★★★☆☆</div>
+        <div class="name">Liam Chen</div>
+        <div class="content">Nice outcome but a bit delayed in execution.</div>
+      </div>
+      <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Customer">
+        <div class="stars">★★★★★</div>
+        <div class="name">Emily Parker</div>
+        <div class="content">Creative designs and friendly team. Highly recommended!</div>
+      </div>
+
+      <div class="review-card">
+        <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Customer">
+        <div class="stars">★★★★☆</div>
+        <div class="name">David Rao</div>
+        <div class="content">Good experience overall. They improved our kitchen beautifully.</div>
+      </div>
+    </div>
+  </div>
+
+  <button class="arrow-button arrow-right" onclick="scrollReviews(1)" id="rightBtn">→</button>
+</div>
+</div>
+
+<!-- Our Achievements -->
+ <div  style="font-family: Arial, sans-serif; background-color: #f3f1f1; margin: 0; padding: 40px 20px; color: #000; ">
+
+<h2 class="section-common-heading " style="margin-bottom: 20px; text-align: center;margin-bottom: 5rem;">Our Achievements</h2>
+
+<div id="achievement-wrapper" style="max-width: 3000px; margin: auto; margin-bottom: 5rem;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 5rem;">
+    
+    <div id="ach-card-2015" style="background: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 300px; padding: 20px; text-align: center; flex-shrink: 0;">
+      <h3 style="margin: 0; font-size: 20px;">2015</h3>
+      <p style="font-size: 28px; margin: 10px 0;"><strong>Established</strong></p>
+      <p style="font-size: 14px;">Year we began our journey in interior excellence.</p>
+    </div>
+
+    <div id="ach-card-projects" style="background: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 300px; padding: 20px; text-align: center; flex-shrink: 0;">
+      <h3 style="margin: 0; font-size: 20px;">300+</h3>
+      <p style="font-size: 28px; margin: 10px 0;"><strong>Projects Done</strong></p>
+      <p style="font-size: 14px;">Successfully delivered quality spaces across the country.</p>
+    </div>
+
+    <div id="ach-card-vendors" style="background: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 300px; padding: 20px; text-align: center; flex-shrink: 0;">
+      <h3 style="margin: 0; font-size: 20px;">150+</h3>
+      <p style="font-size: 28px; margin: 10px 0;"><strong>Trusted Vendors</strong></p>
+      <p style="font-size: 14px;">Collaborations built on reliability and quality materials.</p>
+    </div>
+
+    <div id="ach-card-supply" style="background: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 300px; padding: 20px; text-align: center; flex-shrink: 0;">
+      <h3 style="margin: 0; font-size: 20px;">29</h3>
+      <p style="font-size: 28px; margin: 10px 0;"><strong>Supply Channels</strong></p>
+      <p style="font-size: 14px;">Efficient delivery networks to meet every project need.</p>
     </div>
     
-    <!-- left side of container -->
-<div class="container grid grid-three--cols">
-    <div class="choose-left--div text-align--right">
-<div class="why-choose--div">
-    <p class="common-text--highlight">1</p>
-    <h3 class="section-common--title">Expert Instruction</h3>
-    <p>
-        Learn from experience teacher who are passionate about sharing 
-        knowledge and guiding you toward success in your learning journey.
-    </p>
+  </div>
 </div>
-<div class="why-choose--div">
-    <p class="common-text--highlight">2</p>
-    <h3 class="section-common--title">Interactive Lessons</h3>
-    <p>
-        Engage in hands-on learning experience that make education fun and memorable Interactive lessons encourage active participation and deeper understanding.
-    </p>
+
 </div>
-<div class="why-choose--div">
-    <p class="common-text--highlight">3</p>
-    <h3 class="section-common--title">Lifelong Learning Support</h3>
-    <p>
-        Our Commitment to your education doesn't end with a certificate Receive ongoing support and resources for continuous learning and growth.
-    </p>
-</div>
+
+<!-- Partners starts -->
+ <div style="margin: 0; padding: 40px 20px; font-family: Arial, sans-serif; background: #ffffff; color: #000000;">
+
+<h2  class="section-common-heading" style="text-align: center; margin-bottom: 5rem;">Our Channel Partners</h2>
+
+<!-- Auto-scrolling flex wrapper (no visible box) -->
+<div style="overflow: hidden;margin: 0 7rem; width: 89%;">
+
+  <!-- Scroll track (twice duplicated for seamless looping) -->
+  <div style="display: flex; width: max-content; animation: scrollLoop 10s linear infinite;">
+
+    <!-- Card set duplicated twice for infinite loop -->
+    <div style="display: flex;">
+      <!-- Cards -->
+      <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+        <strong>Partner A</strong>
+      </div>
+      <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+        <strong>Partner B</strong>
+      </div>
+      <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+        <strong>Partner C</strong>
+      </div>
+      <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+        <strong>Partner D</strong>
+      </div>
+      <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+        <strong>Partner E</strong>
+      </div>
+      <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+        <strong>Partner F</strong>
+      </div>
     </div>
-    <!-- center part of image -->
-     <div class="choose-center-div">
-        <figure>
-            <img src="test-hero.png" alt="thapa technical official new website"/>
-        </figure>
-     </div>
-     <!-- right side of the container -->
-     <div class="choose-right--div text-align--left">
-        <div class="why-choose--div">
-            <p class="common-text--highlight">4</p>
-            <h3 class="section-common--title">Lifelong Learning Support</h3>
-            <p>
-                Our Commitment to your education doesn't end with a certificate Receive ongoing support and resources for continuous learning and growth.
-            </p>
-        </div>
-        <div class="why-choose--div">
-            <p class="common-text--highlight">5</p>
-            <h3 class="section-common--title">Lifelong Learning Support</h3>
-            <p>
-                Our Commitment to your education doesn't end with a certificate Receive ongoing support and resources for continuous learning and growth.
-            </p>
-        </div>
-        <div class="why-choose--div">
-            <p class="common-text--highlight">6</p>
-            <h3 class="section-common--title">Lifelong Learning Support</h3>
-            <p>
-                Our Commitment to your education doesn't end with a certificate Receive ongoing support and resources for continuous learning and growth.
-            </p>
-        </div>
-            </div>
-        </div>
-    
-    </section>
-   <!-- ========== End why choose section ========== -->
+
+    <!-- Same set duplicated again -->
+    <div style="display: flex;">
+      <!-- Duplicate Cards -->
+      <div style="min-width: 200px; height: 100px; background-color:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+        <strong>Partner A</strong>
+      </div>
+      <div style="min-width: 200px; height: 100px; background-color:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+        <strong>Partner B</strong>
+      </div>
+      <div style="min-width: 200px; height: 100px; background-color:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+        <strong>Partner C</strong>
+      </div>
+      <div style="min-width: 200px; height: 100px; background:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+        <strong>Partner D</strong>
+      </div>
+      <div style="min-width: 200px; height: 100px; background:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+        <strong>Partner E</strong>
+      </div>
+      <div style="min-width: 200px; height: 100px; background:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+        <strong>Partner F</strong>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+<!-- FAQ Question -->
+
+<div class="section-common-heading"  style="margin: 0; font-family: Arial, sans-serif; background: #f3f1f1; color: #000;">
+
+<div style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
+  <h2 style="text-align: center; font-size: 28px; margin-bottom: 4rem;padding-top: 4rem;">Frequently Asked Questions</h2>
+
+  <!-- FAQ Item -->
+  <div style="box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 6px; margin-bottom: 20px; overflow: hidden;">
+    <button onclick="toggleFaq(this)" style="width: 100%; background: #f9f9f9; padding: 15px 20px; font-size: 16px; text-align: left; cursor: pointer; border: none;">
+      How can I access affordable healthcare services in underserved areas?
+      <span style="float: right;">+</span>
+    </button>
+    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;">
+      Many clinics offer low-cost or free services for underserved communities. You can check with local health centers, non-profits, or government programs for assistance.
+    </div>
+  </div>
+
+  <!-- FAQ Item -->
+  <div style="box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 6px; margin-bottom: 20px; overflow: hidden;">
+    <button onclick="toggleFaq(this)" style="width: 100%; background: #f9f9f9; padding: 15px 20px; font-size: 16px; text-align: left; cursor: pointer; border: none;">
+      Are there telehealth services available for remote areas?
+      <span style="float: right;">+</span>
+    </button>
+    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;">
+      Yes, many healthcare providers offer telehealth consultations, allowing you to connect with doctors via video calls, even from remote locations.
+    </div>
+  </div>
+
+  <!-- FAQ Item -->
+  <div style="box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 6px; margin-bottom: 20px; overflow: hidden;">
+    <button onclick="toggleFaq(this)" style="width: 100%; background: #f9f9f9; padding: 15px 20px; font-size: 16px; text-align: left; cursor: pointer; border: none;">
+      What healthcare programs are available for uninsured individuals?
+      <span style="float: right;">+</span>
+    </button>
+    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;">
+      There are various government-funded programs like Medicaid, free community health clinics, and sliding scale payment systems to help uninsured individuals receive care.
+    </div>
+  </div>
+
+  <!-- FAQ Item -->
+  <div style="box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 6px; margin-bottom: 20px; overflow: hidden;">
+    <button onclick="toggleFaq(this)" style="width: 100%; background: #f9f9f9; padding: 15px 20px; font-size: 16px; text-align: left; cursor: pointer; border: none;">
+      How can I get mental health support in an underserved area?
+      <span style="float: right;">+</span>
+    </button>
+    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;">
+      Many community health centers and online platforms provide affordable or free mental health counseling, including crisis hotlines and support groups.
+    </div>
+  </div>
+
+
+
+  <!-- FAQ Item -->
+  <div style="box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 6px; margin-bottom: 20px; overflow: hidden;">
+    <button onclick="toggleFaq(this)" style="width: 100%; background: #f9f9f9; padding: 15px 20px; font-size: 16px; text-align: left; cursor: pointer; border: none;">
+      How can I access affordable healthcare services in underserved areas?
+      <span style="float: right;">+</span>
+    </button>
+    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;">
+      Many clinics offer low-cost or free services for underserved communities. You can check with local health centers, non-profits, or government programs for assistance.
+    </div>
+  </div>
+    <!-- FAQ Item -->
+  <div style="box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 6px; margin-bottom: 20px; overflow: hidden;">
+    <button onclick="toggleFaq(this)" style="width: 100%; background: #f9f9f9; padding: 15px 20px; font-size: 16px; text-align: left; cursor: pointer; border: none;">
+      How can I access affordable healthcare services in underserved areas?
+      <span style="float: right;">+</span>
+    </button>
+    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;">
+      Many clinics offer low-cost or free services for underserved communities. You can check with local health centers, non-profits, or government programs for assistance.
+    </div>
+  </div>
+    <!-- FAQ Item -->
+  <div style="box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 6px; margin-bottom: 20px; overflow: hidden;">
+    <button onclick="toggleFaq(this)" style="width: 100%; background: #f9f9f9; padding: 15px 20px; font-size: 16px; text-align: left; cursor: pointer; border: none;">
+      How can I access affordable healthcare services in underserved areas?
+      <span style="float: right;">+</span>
+    </button>
+    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;">
+      Many clinics offer low-cost or free services for underserved communities. You can check with local health centers, non-profits, or government programs for assistance.
+    </div>
+  </div>
+    <!-- FAQ Item -->
+  <div style="box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 6px; margin-bottom: 20px; overflow: hidden;">
+    <button onclick="toggleFaq(this)" style="width: 100%; background: #f9f9f9; padding: 15px 20px; font-size: 16px; text-align: left; cursor: pointer; border: none;">
+      How can I access affordable healthcare services in underserved areas?
+      <span style="float: right;">+</span>
+    </button>
+    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;">
+      Many clinics offer low-cost or free services for underserved communities. You can check with local health centers, non-profits, or government programs for assistance.
+    </div>
+  </div>
+  </div>
    <!-- ========== Start Contact Home Section ========== -->
-   <div class="section-contact--homepage" id="section-contact-homepage" >
-    <div class="container grid grid-two--cols">
-        <div class="contact-content">
-            <h2 class="contact-title">Let's revolutionize the way you study</h2>
-            <p>Join our free bootcamps to know us Better</p>
-            <div class="btn">
-                <a href="contact.html">
-                    Start Now <i class="fa-solid fa-circle-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-        <div class="contact-image">
-            <img src="main.png" alt="a guy doing coding"/>
-
-        </div>
-    </div>
-   </div>
-
+   
 
 
    <!-- ========== End Contact Home Section ========== -->
    
 
     <!-- ========== Start Footer Section ========== -->
-   <footer>
-    <div class="container grid grid-four--cols">
-        <div class="footer-1--div">
-            <div class="logo-brand">
-                <a href="index.html" class="footer-subheading"> Eduhub</a>
-            </div>
-            <p >Let's revolutionize the way you study with  Eduhub</p>
-        
-        <div class="social-footer--icons">
-            <a href="https://insta.gg/fDuFEXfyyH" target="_blank" >
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://youtube"  >
-                <i class="fa-brands fa-youtube"></i>
-            </a>
-            <a href="https//facebook/kriti" >
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-        </div>
-    </div>
-        <div class="footer-2--div">
-            <p class="footer-subheading"> Courses </p>
-              <ul>
-                <li><a href="index.html"> CSS </a></li>
-                <li><a href="index.html">CSS</a></li>
-                <li><a href="index.html">CSS</a></li>
-                <li><a href="index.html">CSS</a></li>
-                <li><a href="index.html">CSS</a></li>
-              </ul>  
-          
-        </div>
-        <div class="footer-3--div">
-            <p class="footer-subheading">Links </p>
-              <ul>
-                <li><a href="index.html"> Home</a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">Home</a></li>
-              </ul>  
-           
-        </div>
-        <div class="footer-4--div">
-            <p class="footer-subheading">Blogs</p>
-              <ul>
-                <li><a href="index.html"> HTML </a></li>
-                <li><a href="index.html">HTML</a></li>
-                <li><a href="index.html">HTML</a></li>
-                <li><a href="index.html">HTML</a></li>
-                <li><a href="index.html">HTML</a></li>
-              </ul>  
-            
-        </div>
-    </div>
-   </footer>
 
+<div style="margin: 0; padding: 0; font-family: Arial, sans-serif;margin-top:18rem;">
+
+  <!-- Footer -->
+  <footer style="background-color: #1c3d5a; color: #fff; padding: 30px 20px;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; max-width: 1000px; margin:auto;height:24rem;">
+
+      <!-- Contact Info -->
+      <div style="flex: 1 1 300px; margin-bottom: 20px;">
+        <h3 style="margin: 0 0 10px 0; font-size: 20px;">Contact Us</h3>
+        <p style="margin: 5px 0;"><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-9876543210</p>
+        <p style="margin: 5px 0;"><i class="fas fa-envelope" style="margin-right: 8px;"></i> info@example.com</p>
+        <p style="margin: 5px 0;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 123 Interior Lane, Design City, India</p>
+      </div>
+
+      <!-- Social Icons -->
+      <div style="flex: 1 1 200px; text-align: right;">
+        <h3 style="margin: 0 0 10px 0; font-size: 20px;">Connect with us</h3>
+        <a href="#" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fab fa-instagram"></i></a>
+        <a href="#" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fas fa-phone"></i></a>
+        <a href="mailto:info@example.com" style="color: #fff; font-size: 18px;"><i class="fas fa-envelope"></i></a>
+      </div>
+
+    </div>
+    <div style="text-align: center; margin-top: 20px; font-size: 14px; color: #ccc;">
+      © 2025 Your Interior Company. All rights reserved.
+    </div>
+  </footer>
+
+</div>
 
    <!-- ========== End Footer Section ========== -->
-   
+   <a href="https://wa.me/+919506423475" target="_blank" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+</a>
+
 </body>
+<script>
+     const container = document.getElementById('reviewContainer');
+  const leftBtn = document.getElementById('leftBtn');
+  const rightBtn = document.getElementById('rightBtn');
+  const cardWidth = 270; // includes margin
+  const visibleCards = 4;
+
+  let currentIndex = 0;
+
+  function scrollReviews(direction) {
+    const totalCards = container.children.length;
+    const maxIndex = totalCards - visibleCards;
+
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+    container.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+
+    leftBtn.classList.toggle('hidden', currentIndex === 0);
+    rightBtn.classList.toggle('hidden', currentIndex === maxIndex);
+  }
+
+  // Hide right button if cards fit without scrolling
+  window.addEventListener('load', () => {
+    const totalCards = container.children.length;
+    if (totalCards <= visibleCards) {
+      rightBtn.classList.add('hidden');
+    }
+  });
+
+    function toggleFaq(btn) {
+    var answer = btn.nextElementSibling;
+    var icon = btn.querySelector('span');
+    var isVisible = answer.style.display === "block";
+    answer.style.display = isVisible ? "none" : "block";
+    icon.textContent = isVisible ? "+" : "−";
+  }
+</script>
 </html>

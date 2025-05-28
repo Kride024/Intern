@@ -18,6 +18,11 @@
   }
   </style>
   <script>
+   setTimeout(() => {
+  document.getElementById('resulti').innerHTML = 'Congratulation! Its Time To Contact Us';
+}, 1000);
+
+    
     function calculateCost() {
       
   const subOption = localStorage.getItem('selected-SubOption');
@@ -50,14 +55,14 @@
       const rates = {
         'Gypsum Board False Ceiling': 150,
         'Soffit Ceiling': 250,
-        'Plaster Of Paris (POP) Wall Ceiling': 200,
+        'POP Wall Ceiling': 200,
         'Wooden Flooring': 160,
         'LVT (Luxury Vinyl Tile)': 80,
         'Tiles Flooring': 110,
         'WPC Wainscoting':100,
         'WPC Louvers':180,
         'Charcoal Panel':300,
-        'Wall Paneling':30,
+        'Wall Panning':30,
         'Wall Painting':35,
         'PVC Panel': 60,
         '3D Interior Design':60,
@@ -65,20 +70,59 @@
         'Living Room':60,
         'Modular Kitchen':60,
         'Kids Room':60,
+        'Artificial Faff':60,
+
           
     };
 // console.log(rates[subOption]);
+document.getElementById('heading').textContent = `Cost Estimation for ${subOption}`;
 
       area = (rates[subOption] || 0)*area;
     
-      document.getElementById('result').textContent = `Total Cost: ₹${area}`;
+      document.getElementById('result').textContent = `Total Cost : ₹${area}`;
     }
   </script>
 </head>
 <body onload="calculateCost()">
+  <div id="resulti" style="
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  /* background-color:rgb(6,158,228); */
+  color: #000;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  user-select: none;
+  min-width: 40px;
+  justify-content: center;
+">
+  
+</div>
   <div class="container">
-    <h2>Step 5: Total Cost</h2>
+    <h2 id="heading" style="margin-top: -4rem;margin-bottom: 2.7rem;"></h2>
     <div id="result"></div>
   </div>
+   <a href="https://wa.me/+919506423475" target="_blank" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+</a>
 </body>
 </html>

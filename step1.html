@@ -35,12 +35,52 @@
     outline: 3.6px solid rgb(6,158,228);
      box-shadow: 0 6px 24px rgba(0,0,0,0.18), 0 1.5px 4px rgba(0,0,0,0.15);
   }
+  /***** Navbar Section *****/
+.section-navbar {
+    width: 100%;
+    box-shadow: rgba(0,0,0,0.05) 0px 6px 24px 0px,
+                rgba(0,0,0,0.08) 0px 0px 0px 1px;
+}
+.section-navbar .container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 0;
+    background-color:#fff;
+}
+
+.container{
+  margin-left: 20rem;;
+}
   </style>
   <link rel="stylesheet"#f00 href="style.css">
+  
 </head>
 <body>
+<div style="
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color:rgb(6,158,228);
+  color: white;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  user-select: none;
+  min-width: 40px;
+  justify-content: center;
+">
+  1/5
+</div>
+
   <div class="container">
-    <h2 style="color:rgb(70, 69, 69);">Step 1: Choose the type of project</h2>
+    <h2 style="color:rgb(70, 69, 69);">Choose the type of project</h2>
     <form action="step2.html" method="get" id="form">
      
       <label class="image-option" for="Residential" ><div style="display:flex; margin-top: 3rem;"><input type="radio" name="projectType" value="Residential"  id="Residential" checked><div>
@@ -75,5 +115,21 @@
   });
 
   </script>
+   <a href="https://wa.me/+919506423475" target="_blank" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+</a>
 </body>
 </html>
+
