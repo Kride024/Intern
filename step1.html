@@ -81,7 +81,7 @@
 
   <div class="container">
     <h2 style="color:rgb(70, 69, 69);">Choose the type of project</h2>
-    <form action="step2.html" method="get" id="form">
+    <form action="step2.html" method="get" id="form" >
      
       <label class="image-option" for="Residential" ><div style="display:flex; margin-top: 3rem;"><input type="radio" name="projectType" value="Residential"  id="Residential" checked><div>
         <p style="font-size:1.3rem ;margin-top: -0.0rem; margin-left:3px;color:rgb(80, 78, 78);">Residential</p>
@@ -89,6 +89,10 @@
     <br>
     
       <label class="image-option" for="Commercial"><div style="display:flex"> <input type="radio" id="Commercial" name="projectType" value="Commercial"><div class="option-content"><p style="font-size:1.3rem ;margin-top: -0.0rem; margin-left:3px;color:rgb(80, 78, 78);">Commercial</p></div></div> </label><br>
+          <label class="image-option" for="Renovation" ><div style="display:flex; "><input type="radio" name="projectType" value="Renovation"  id="Renovation" checked><div>
+        <p style="font-size:1.3rem ;margin-top: -0.0rem; margin-left:3px;color:rgb(80, 78, 78);">Renovation</p>
+      </div></div></label>
+    <br>
     <h1 style="margin-top: -18px; margin-bottom: 24px;"><button type="submit">Next</button></h1> 
     </form>
   </div>
@@ -101,24 +105,31 @@
   const form = document.getElementById('form');
   const interior = document.getElementById('Residential');
   const commercial = document.getElementById('Commercial');
+ const Renovation = document.getElementById('Renovation');
 
   form.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const ResidentialValue = Residential.checked;
     const CommercialValue = Commercial.checked;
+    const RenovationValue = Renovation.checked;
 
     localStorage.setItem('Residential', ResidentialValue);
     localStorage.setItem('Commercial', CommercialValue);
-
+    localStorage.setItem('Renovation', RenovationValue);
+    if(RenovationValue){
+      window.location.href = 'form.html';
+    }
+    else{
     window.location.href = 'step2.html';
+    }
   });
 
   </script>
    <a href="https://wa.me/+919506423475" target="_blank" style="
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+ bottom: 19rem;
+  right: 10px;
   z-index: 1000;
   width: 60px;
   height: 60px;

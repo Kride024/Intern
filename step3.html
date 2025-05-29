@@ -68,14 +68,21 @@ select option:hover {background-color: #f1f1f1}
     options = ['POP Wall Ceiling', 'Gypsum Board False Ceiling', 'Soffit Ceiling'];
 
   } else if (category === 'Flooring Designs') {
-    options = ['Wooden Flooring', 'LVT (Luxury Vinyl Tile)', 'Tiles Flooring','Artificial Faff'];
+    options = ['Wooden Flooring', 'LVT (Luxury Vinyl Tile)', 'Tiles Flooring','Artificial Turf'];
     
     
-  } else if (category === 'Wall Designs') {
-    options = ['WPC Wainscoting', 'WPC Louvers', 'Charcoal Panel','Wall Punning',  'Wall Painting', 'PVC Panel'];
+  }
+   else if (category === 'Window Designs') {
+    options = [ 'uPVC Sliding Window','uPVC Casement Window','Powder Coated Aluminum  Sliding Window','Powder Coated Aluminum Casement window', 'Glazing  Window'];
+    
+    
+  }
+
+  else if (category === 'Wall Designs') {
+    options = ['WPC Wainscoting', 'WPC Louvers', 'Charcoal Panel','Wall Punning',  'Wall Painting', 'PVC Panel','Vertical Garden'];
     // images = ['WhatsApp Image 2025-05-24 at 15.23.45_328d0c67.jpg', 'WhatsApp Image 2025-05-24 at 15.23.46_492a3eb4.jpg'];
   } else if (category === 'Interior Designs') {
-    options = ['3D Interior Design', 'Bedrooms', 'Living Room', 'Modular Kitchen', 'Kids Room'];
+    options = ['2BHK','3BHK', 'Bedrooms', 'Living Room', 'Modular Kitchen', 'Kids Room'];
     // images = ['WhatsApp Image 2025-05-24 at 15.23.47_75a828db.jpg', 'WhatsApp Image 2025-05-24 at 15.23.49_be7a7c85.jpg'];
   }
 
@@ -99,7 +106,7 @@ select option:hover {background-color: #f1f1f1}
       const selectedOption = document.getElementById('options').value;
       localStorage.setItem('selected-SubOption', selectedOption);
       const category = localStorage.getItem('selected-Category');
-   if(category === 'Wall Designs')
+   if(category === 'Wall Designs'||category ==='Window Designs')
       window.location.href = 'step41.html';
    else
     window.location.href = 'step4.html';
@@ -148,8 +155,8 @@ select option:hover {background-color: #f1f1f1}
   </div>
    <a href="https://wa.me/+919506423475" target="_blank" style="
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+ bottom: 19rem;
+  right: 10px;
   z-index: 1000;
   width: 60px;
   height: 60px;

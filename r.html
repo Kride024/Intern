@@ -65,17 +65,23 @@
         'Wall Panning':30,
         'Wall Painting':35,
         'PVC Panel': 60,
-        '3D Interior Design':60,
+        '3BHK':60,
+        '2BHK':50,
         'Bedrooms':60, 
         'Living Room':60,
         'Modular Kitchen':60,
         'Kids Room':60,
-        'Artificial Faff':60,
-
-          
+        'Artificial Turf':60,
+        'Vertical Garden': 500,
+        'uPVC Sliding Window':750,
+        'uPVC Casement Window':650,
+        'Powder Coated Aluminum  Sliding Window':850,
+        'Powder Coated Aluminum Casement window':700,
+        'Glazing  Window':300,
+             
     };
 // console.log(rates[subOption]);
-document.getElementById('heading').textContent = `Cost Estimation for ${subOption}`;
+document.getElementById('heading').textContent = `Estimation for ${subOption}`;
 
       area = (rates[subOption] || 0)*area;
     
@@ -111,8 +117,8 @@ document.getElementById('heading').textContent = `Cost Estimation for ${subOptio
   </div>
    <a href="https://wa.me/+919506423475" target="_blank" style="
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 19rem;
+  right: 10px;
   z-index: 1000;
   width: 60px;
   height: 60px;

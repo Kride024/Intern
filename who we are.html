@@ -5,6 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         .section-timeline {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px 0;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #1d1e1e;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .containers {
+      position: relative;
+      width: 50%;
+      padding: 20px 40px;
+      box-sizing: border-box;
+    }
+
+    .containers.left {
+      left: 0;
+    }
+
+    .containers.right {
+      left: 50%;
+    }
+
+    .content {
+      padding: 20px;
+      background-color: white;
+      position: relative;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .containers::before {
+      content: "";
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      top: 30px;
+      background-color: #f3c090;
+      border: 4px solid white;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .containers.left::before {
+      right: -10px;
+    }
+
+    .containers.right::before {
+      left: -10px;
+    }
+
+    .containers.left .content {
+      margin-left: auto;
+      text-align: left;
+    }
+
+    .containers.right .content {
+      margin-right: auto;
+      text-align: left;
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 30px;
+      }
+
+      .containers {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      .containers.right {
+        left: 0;
+      }
+
+      .containers::before {
+        left: 18px;
+        right: auto;
+      }
+
+      .containers.left .content,
+      .containers.right .content {
+        margin: 0;
+      }
+    }
+    /* module/reusable */
+.section-common-heading{
+    font-size:3.2rem;
+    font-weight: 700;
+    margin-left: 4rem;
+    margin-bottom: 4rem;;
+    text-transform:capitalize
+}
+.section-common-subheading{
+    color:var(--heading-color);
+}
+    </style>
 </head>
 <body>
     <!-- ========== Start nav section ========== -->
@@ -73,7 +189,7 @@
    </header>
    <!-- ========== End nav section========== -->
      <main>
-    <div class="section-hero" style="background-image: url('about_head.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; min-height: 100vh; margin: 0;">
+    <div class="section-hero" style="background-image: url('bedroom 2nd view c2.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; min-height: 80vh; margin: 0;">
 
         <div class="container grid " >
         <!-- <div class="section-hero--content" style="display:grid;justify-content: center;align-content:center; margin-top: 20rem;">
@@ -106,37 +222,169 @@
     </svg>
 </div>
    </main>
-   <div style="font-family: Arial, sans-serif; margin: 0; background-color: #f4f4f4; padding: 20px;">
+   <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
 
   <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-    <h1 style="font-size: 2.5rem; margin-bottom: 10px; color: #333;">About Us</h1>
+    <h1  class="section-common-heading"style="font-size: 3.5rem; margin-bottom: 10px; color: #333;">About Us</h1>
 
-    <p style="font-size: 1.1rem; margin-bottom: 40px; color: #555; line-height: 1.6;">
-      Our journey began with a passion for transforming spaces into beautiful and functional works of art. Over the years, we have grown into a team that values creativity, craftsmanship, and customer satisfaction.
+    <p style="line-height: 1.8;font-weight: 700;font-size: 1.7rem; margin-bottom: 40px; color: #555; line-height: 1.6;">
+      Elicit Engineers & Interior, established in Gorakhpur in 2015,
+offers comprehensive architectural, building solutions, interior
+design, HVAC-R, and contracting services for both new
+constructions and refurbishments.
+To ensure a full spectrum of interior services, Elicit
+collaborates with partner companies, delivering tailored
+solutions to meet client needs
     </p>
 
-    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <div style="display: flex; flex-wrap: wrap; gap: 5rem; justify-content: center;">
       
       <!-- Owner Box -->
-      <div style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); flex: 1 1 400px; max-width: 420px; text-align: left;">
-        <img src="owner.jpg" alt="Owner Photo" style="width: 100%; max-width: 150px; height: auto; border-radius: 50%; margin-bottom: 15px;" />
-        <h3 style="margin-top: 0; color: #222;">Meet the Owner</h3>
-        <p style="color: #666; font-size: 1rem; line-height: 1.5;">
-          John Doe, the visionary behind our work, brings over a decade of design expertise and hands-on experience to every project.
+      <div style=" background-color:  #f7cead; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); flex: 1 1 400px; max-width: 500px; text-align: left;">
+        <!-- <img src="owner.jpg" alt="Owner Photo" style="width: 100%; max-width: 150px; height: auto; border-radius: 50%; margin-bottom: 15px;" /> -->
+        <h2 class="section-common-subheading" style="margin-top: 0; color: #222;font-size: 2rem;margin-bottom: 1.5rem;">Our Vision</h2>
+        <p style=" line-height: 1.8;font-weight: 700;color: #666; font-size: 1.3rem; line-height: 1.5;">
+          EE&I was established in Gorakhpur in 2015 to provide comprehensive architectural, building solutions, interior design,
+HVAC-R, and contracting services for all types of buildings, whether new constructions or refurbishments.
+To offer a full spectrum of interior services, Elicit collaborates with partner companies, ensuring tailored solutions for
+clients.
+We specialize in general contracting, managing projects from greenfield development to final completion. Our expertise
+includes architectural solutions, construction, MEP, HVAC-R, clean rooms, security & communication systems, and the
+construction chemical market.
         </p>
       </div>
 
       <!-- Education Box -->
-      <div style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); flex: 1 1 400px; max-width: 420px; text-align: left;">
-        <h3 style="margin-top: 0; color: #222;">Educational Background</h3>
-        <p style="color: #666; font-size: 1rem; line-height: 1.5;">
-          John holds a degree in Interior Architecture and has completed certifications in sustainable design, ensuring every project is both stylish and eco-conscious.
+      <div style="background-color: #151515; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); flex: 1 1 400px; max-width: 500px; text-align: left;">
+        <h2 class="section-common-subheading" style=" line-height: 1.8;font-weight: 700;margin-top: 0; color: #bcbbbb;font-size: 2.0rem;margin-bottom: 1.5rem;">Our Mission</h2>
+        <p style="line-height: 1.8;font-weight: 700;color: #afadad; font-size: 1.3rem; line-height: 1.5;">
+         We Aim to Build a Better World
+Our priority to provide solution to satisfy both users &
+environment. We maintain and follow standards and
+optimize the work and try to reduce the works impact
+on environment.
+Everything counts. No matter how big or small.
+I invite you all to be the part of this mission. We
+should be at one platform to endorse swatch Bharat
+mission.
+There is no single way to address the challenges we
+face. That is why we all need to work collectively, in all
+sorts of different ways, but with the same goal.
         </p>
       </div>
 
     </div>
   </div>
+  </div>
+<div class="section-timeline">
+<h1 class="section-common-heading"  style="font-size: 3.5rem; margin-bottom: 10px; color: #333;margin-left: 40%;margin-top: 5rem;">Our growth journey</h1>
+<div class="timeline">
+  <div class="containers left">
+    <div class="content">
+      <h2>January 2023</h2>
+      <p>Started the journey with a dream and a plan.</p>
+    </div>
+  </div>
+  <div class="containers right">
+    <div class="content">
+      <h2>June 2023</h2>
+      <p>Launched the first prototype with amazing feedback.</p>
+    </div>
+  </div>
+  <div class="containers left">
+    <div class="content">
+      <h2>December 2023</h2>
+      <p>Expanded the team and released the beta version.</p>
+    </div>
+  </div>
+  <div class="containers right">
+    <div class="content">
+      <h2>May 2024</h2>
+      <p>Reached 10,000+ users. Still growing strong!</p>
+    </div>
+  </div>
+</div>
+</div>
+<div style="background-color: #f4f4f4 ;padding-bottom:19rem;">
+  <div style="background-color: #f4f4f4;font-family: Arial, sans-serif; margin: 40px; ">
+<div style="margin: 0; font-family: Arial, sans-serif; ">
+
+  <h1 class="section-common-heading" class="section-common-heading"style="font-size: 3.5rem; margin-bottom: 10px; color: #333;padding:5rem 0;margin-left:37%;">
+    Supported by the Best
+  </h1>
+
+  <div style="
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem auto;
+    padding: 0 1rem;
+  ">
+    <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://tse3.mm.bing.net/th?id=OIP.aEtF3x_ejUdgSmXnrdp3uAHaBq&pid=Api&P=0&h=220" style="width:100% ;height:100%"></div>
+    <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://5.imimg.com/data5/IOS/Default/2020/9/DJ/IE/PQ/2593275/product-jpeg-500x500.png" style="width:100%;height:100%"></div>
+    <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://tse4.mm.bing.net/th?id=OIP.iNvDFaU6WkQFwc54J3k7fgAAAA&pid=Api&P=0&h=220" style="width:100%;height:100%"></div>
+    <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://supremeinteriordesigns.com/wp-content/uploads/2024/03/Everest-Cement-Sheet.jpg" style="width:100%;height:100%"></div>
+    <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/39ecc1123065489.Y3JvcCwxMTU2LDkwNCwzODAsODg.png" style="width:100%;height:100%"></div>
+    <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://www.specthrum.com/wp-content/uploads/2020/05/Bison-Panel.jpg" style="width:100%;height:100%"></div>
+    <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://www.earthindra.com/wp-content/uploads/2023/06/green-ply-scaled.jpg"style="width:100%;height:100%"></div>
+    <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://jainlaminates.com/wp-content/uploads/2020/04/action-tesa.jpeg" style="width:100%;height:100%"></div>
+    <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://logowik.com/content/uploads/images/asian-paints6567.logowik.com.webp" style="width:100%;height:100%"></div>
+    <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://images.yourstory.com/cs/images/companies/birlaopuslogo-1708922934512.jpg?fm=auto&ar=1:1&mode=fill&fill=solid&fill-color=fff" style="width:100%;height:100%"></div>
+    <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://www.buildersmart.in/media/mobile/bmobilebrands/meraki2.jpg" style="width:100%;height:100%"></div>
+    <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://tse3.mm.bing.net/th?id=OIP.5HwWjeia8qFLGFs_gctCbgHaHa&pid=Api&P=0&h=220" style="width:100%;height:100%"></div>
+    <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://www.mgsarchitecture.in/images/Updates/Orient-Bell.jpg" style="width:100%;height:100%"></div>
+    <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://www.saint-gobain.ie/sites/default/files/styles/brand_logo/public/bean/brand/logo/Gyproc%20Logo%20SG.png?itok=-F_7MYfE" style="width:100%;height:100%"></div>
+    <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://tse2.mm.bing.net/th?id=OIP.WQAVE47myc5xBPAy1EWtrQAAAA&pid=Api&P=0&h=220" style="width:100%;height:100%"></div>
+  </div>
 
 </div>
+  </div>
+</div>
+
+<!-- <div class="section-hero" style="background-image: url('Screenshot 2025-05-30 013843.png'); background-size: cover; background-repeat: no-repeat; background-position: center; min-height: 80vh; margin: 0;"></div> -->
+ <!-- Footer -->
+  <footer style="background-color: #1c3d5a; color: #fff; padding: 30px 20px;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; max-width: 1000px; margin:auto;height:24rem;">
+
+      <!-- Contact Info -->
+      <div style="flex: 1 1 300px; margin-bottom: 20px;">
+        <h3 style="margin: 0 0 10px 0; font-size: 20px;">Contact Us</h3>
+        <p style="margin: 5px 0;"><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-9876543210</p>
+        <p style="margin: 5px 0;"><i class="fas fa-envelope" style="margin-right: 8px;"></i> info@example.com</p>
+        <p style="margin: 5px 0;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 123 Interior Lane, Design City, India</p>
+      </div>
+
+      <!-- Social Icons -->
+      <div style="flex: 1 1 200px; text-align: right;">
+        <h3 style="margin: 0 0 10px 0; font-size: 20px;">Connect with us</h3>
+        <a href="#" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fab fa-instagram"></i></a>
+        <a href="#" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fas fa-phone"></i></a>
+        <a href="mailto:info@example.com" style="color: #fff; font-size: 18px;"><i class="fas fa-envelope"></i></a>
+      </div>
+
+    </div>
+    <div style="text-align: center; margin-top: 20px; font-size: 14px; color: #ccc;">
+      © 2025 Your Interior Company. All rights reserved.
+    </div>
+  </footer>
+    <a href="https://wa.me/+919506423475" target="_blank" style="
+  position: fixed;
+  bottom: 19rem;
+  right: 10px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+</a>
+
 </body>
 </html>

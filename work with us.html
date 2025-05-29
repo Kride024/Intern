@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Our Team</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+
+    *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Urbanist", sans-serif;
+}
+html{
+    font-size:62.5%;
+    scroll-behavior: smooth;
+    scroll-snap-type: Y proximity;
+    /* 1rem=10px */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family:"Poppins", sans-serif;
+}
+p,
+li,
+a,label{
+    font-family: "Urbanist", serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400px;
+    line-height:1.5;
+}
+a{
+    text-decoration: none;    
+}
+li{
+  list-style: none;
+}
+
+/* theme */
+:root{
+    --main-color:#0062ff;
+    --supporting-color:#ebf3fe;
+    --font-color:#424242;
+    /* --bg-color:#ffffff; */
+    --bg-color:#f7fcff;
+    --heading-color:#000a19;
+    --hero-heading-color:#003b99;
+    --white-color:#ffffff;
+    --para-color:#504e4d;
+    --bnt-hover-bg-color:#003b99;
+    --btn-box-shadow:rgba(100,100,111,0.2)0px 7px 29px 0px;
+    --footer-bg-color:#040d12;
+}
+
+/* layout */
+.section{scroll-snap-align:start}.section-common--title{margin:2rem 0 1rem;font-size:18px}.container{max-width:142rem;margin:0 auto;padding:9.6rem 2.4rem}:is( .section-about,.section-blog,.section-course,.section-contact--homepage,.section-why--choose,.section-contact) .container:first-child{padding:6.4rem 0 2.4rem}.grid{display:grid;align-items:center}.grid-two--cols{grid-template-columns:repeat(2,1fr)}.grid-three--cols{grid-template-columns:repeat(3,1fr)}.grid-four--cols{grid-template-columns:repeat(4,1fr)}
+
+/* module/reusable */
+.section-common-heading{
+    font-size:3.2rem;
+    font-weight: 700;
+    text-transform:capitalize
+}
+.section-common-subheading{
+    color:var(--heading-color);
+}
+.fa-solid{
+    padding:2.4rem;
+    background-color:var(--supporting-color);
+    font-size:2.4rem;
+    border-radius:50%;
+    color:var(--hero-heading-color);
+   
+}
+    * { box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    #hiringForm_container { display: flex; flex-wrap: wrap; min-height: 100vh; }
+    #hiringForm_left, #hiringForm_right { flex: 1 1 50%; padding: 40px; }
+    #hiringForm_left { background-color: #f0f4f8; }
+    #hiringForm_left h2 { font-size: 2rem; margin-bottom: 15px; }
+    #hiringForm_right { background-color: #ffffff; }
+    #hiringForm_form { max-width: 500px; margin: auto; }
+    .hiringForm_field { margin-bottom: 15px; }
+    .hiringForm_field label { display: block; margin-bottom: 5px; font-weight: bold; }
+    .hiringForm_field input, .hiringForm_field textarea, .hiringForm_field select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    #hiringForm_submit { background-color: #007bff; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; transition: 0.3s ease-in-out; }
+    #hiringForm_submit:hover { background-color: #0056b3; }
+    @media (max-width: 768px) { #hiringForm_left, #hiringForm_right { flex: 1 1 100%; } }
+
+    /*****navbar Section *****/ 
+.section-navbar{
+    width:100%;
+    box-shadow:rgba(0,0,0,0.05)0px 6px 24px 0px ,
+    rgba(0,0,0,0.08)0px 0px 0px 1px;
+
+}
+.section-navbar .container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem  0;
+    /* margin-right:30rem ; */
+}
+/* .section-navbar .navbar-brand {
+    margin-left: 7rem;
+} */
+.section-navbar .navbar ul {
+    display:flex;
+    gap:6rem;
+    text-transform: capitalize;
+    margin-left:-2rem ;
+    
+   & li a{
+    color:var(--heading-color);
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 800;
+   position:relative;
+   &::after{
+    content:"";
+    width:0%;
+    border-bottom:1px solid var(--main-color);
+    position:absolute;
+    bottom:-0.3rem;
+    left:0;
+     transition:all 0.3s linear; 
+    
+}
+
+   } 
+   & li a:hover:after{
+    width:100%;
+   }
+ 
+
+}
+/***** End navbar Section *****/
+.btn{
+  display:inline-block;
+  padding:1.2rem 3.2rem;
+  background-color: var(--main-color);
+  color:#fcfbfa;
+  font-weight: 600;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+
+  -o-border-radius: 2rem;
+  
+ background-color: rgb(76, 75, 75);
+border:none;
+
+}
+.btn:hover{
+background-color: rgb(76, 75, 75) !important;
+cursor:pointer;
+box-shadow:var(--btn-box-shadow);
+}
+.btni{
+    width:26rem;
+     display:inline-block;
+  padding:1.2rem 3.2rem;
+  background-color: var(--main-color);
+  color:#fcfbfa;
+  font-weight: 600;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+
+  -o-border-radius: 2rem;
+  
+ background-color: rgb(28, 94, 226);
+ margin-bottom: 3rem;
+ margin-top: -2rem;;
+border:none;
+ &:hover {
+    background-color: rgb(76, 75, 75);
+  }
+}
+ @media (max-width: 1140px) {
+      .slider-container {
+        width: 100%;
+      }
+    }
+      @keyframes scrollLoop {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+/* states */
+.btn:hover{
+background-color: rgb(76, 75, 75);
+cursor:pointer;
+box-shadow:var(--btn-box-shadow);
+}
+  </style>
+</head>
+<body>
+
+   
+<!-- ========== Start nav section ========== -->
+   <header class ="section-navbar">
+    <div class="container">
+        <div class="navbar-brand" >
+            <a href="index.html">
+                <div>
+                 <a href="index.html">  <img src="elicit_logo-removebg-preview (1).png" alt="logo" class="logo" style="width: 10rem; height: 9rem; margin-top: -4px;margin-left: 1rem;"/>
+              </a> 
+                </div>
+            </a>
+        </div>
+        <nav class="navbar">
+        <ul>
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="who we are.html" class="nav-link">Who we are</a></li>
+             <li class="nav-item" style="position: relative;"
+        onmouseover="this.querySelector('.dropdown').style.display='grid'; this.querySelector('a').style.color='#d52c6e';"
+        onmouseout="this.querySelector('.dropdown').style.display='none'; this.querySelector('a').style.color='#333';"><a href="service.html" class="nav-link">Design Ideas</a>
+    <div class="dropdown" style="
+        display: none; /* Hidden on page load */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+        grid-template-columns: repeat(3, 200px);
+        gap: 20px;
+      ">
+        <div>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Modular Kitchen Designs</a>
+          <a href="#" style="text-decoration: none; color: #444 ;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Wardrobe Designs</a>
+          <a href="#" style="text-decoration: none; color: #444 ;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Bathroom Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Master Bedroom Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Living Room Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Pooja Room Designs</a>
+        </div>
+        <div>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Dining Room Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Foyer Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Homes By Livspace</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Home Office Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Guest Bedroom Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Window Designs</a>
+        </div>
+        <div>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Tile Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Study Room Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Kitchen Sinks</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Space Saving Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Door Designs</a>
+          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.5rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Staircase Designs</a>
+        </div>
+      </div>
+    </li>
+            <li class="nav-item"><a href="service.html" class="nav-link">Services</a></li>
+             <li class="nav-item"><a href="work with us.html" class="nav-link">Work with Us</a></li>
+            <li class="nav-item"><a href="#section-contact-homepage" class="nav-link">Contact</a></li>
+           
+        </ul>
+        </nav>
+        <button class="btn" style="background-color:  rgb(28, 94, 226); font-weight: 600;">BOOK FREE CONSULTATION</button>
+    </div>
+   </header>
+   <!-- ========== End nav section========== -->
+
+     <div style="display: flex; flex-wrap: wrap; width: 100%; min-height: 100vh; font-family: Arial, sans-serif;">
+
+    <!-- Image Side -->
+    <div style="flex: 1 1 50%; padding: 12px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; background-color: #ffffff;">
+      <img 
+        src="https://static.vecteezy.com/system/resources/previews/001/879/436/non_2x/career-opportunities-at-job-fair-we-re-hiring-and-recruitment-ads-human-resources-open-vacancy-job-seekers-come-applying-for-jobs-illustration-for-business-card-banner-brochure-flyer-free-vector.jpg" 
+        alt="Team working" 
+        style="max-width: 100%; height: 100vh; border-radius: 12px;margin-top: 6rem;color:blue;"
+      />
+    </div>
+
+   
+    <div id="hiringForm_right" style="background-color: rgb(106, 163, 206);padding:-2rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);border-radius: 3rem;margin-top: 0.1rem;">
+      <form id="hiringForm_form" onsubmit="handleSubmit(event)" >
+       <h2 class="section-common-heading"style="text-align: center;margin-bottom:2rem">Apply Now</h2>
+        <div class="hiringForm_field">
+          <label for="hiringForm_name">Full Name</label>
+          <input type="text" id="hiringForm_name" name="name" required>
+        </div>
+
+        <div class="hiringForm_field">
+          <label for="hiringForm_email">Email</label>
+          <input type="email" id="hiringForm_email" name="email" required oninput="validateEmail()">
+          <small id="email_error" style="color: red; display: none;">Invalid email format</small>
+        </div>
+
+        <div class="hiringForm_field">
+          <label for="hiringForm_phone">Phone Number</label>
+          <input type="tel" id="hiringForm_phone" name="phone" required oninput="validatePhone()">
+          <small id="phone_error" style="color: red; display: none;">Invalid phone format</small>
+        </div>
+
+        <div class="hiringForm_field">
+          <label for="hiringForm_position">Position Applied For</label>
+          <select id="hiringForm_position" name="position" required>
+            <option value="">Select a position</option>
+            <option value="developer">Developer</option>
+            <option value="designer">Designer</option>
+            <option value="manager">Project Manager</option>
+          </select>
+        </div>
+
+         <div class="hiringForm_field">
+          <label for="hiringForm_resume">Resume Link</label>
+          <input type="url" id="hiringForm_resume" name="resume" placeholder="e.g., Google Drive or Dropbox link" required>
+        </div>
+
+        <div class="hiringForm_field">
+          <label for="hiringForm_message">Why do you want to join us?</label>
+          <textarea id="hiringForm_message" name="message" rows="4"></textarea>
+        </div>
+
+        <button id="hiringForm_submit" type="submit">Submit Application</button>
+      </form>
+
+      <p id="hiringForm_success" style="display: none; color: green; text-align: center; margin-top: 15px;">
+        Thank you! Your application has been received.
+      </p>
+    </div>
+
+  </div>
+  <!-- content for hiring form -->
+  <!-- <div id="hiringForm_container">
+    <div id="hiringForm_left">
+      <h2>Join Our Team!</h2>
+      <p>We’re always looking for talented individuals. Fill out the form to apply and take the next step in your career with us.</p>
+    </div>
+
+    <div id="hiringForm_right">
+      <form id="hiringForm_form" onsubmit="handleSubmit(event)">
+        
+        <div class="hiringForm_field">
+          <label for="hiringForm_name">Full Name</label>
+          <input type="text" id="hiringForm_name" name="name" required>
+        </div>
+
+        <div class="hiringForm_field">
+          <label for="hiringForm_email">Email</label>
+          <input type="email" id="hiringForm_email" name="email" required oninput="validateEmail()">
+          <small id="email_error" style="color: red; display: none;">Invalid email format</small>
+        </div>
+
+        <div class="hiringForm_field">
+          <label for="hiringForm_phone">Phone Number</label>
+          <input type="tel" id="hiringForm_phone" name="phone" required oninput="validatePhone()">
+          <small id="phone_error" style="color: red; display: none;">Invalid phone format</small>
+        </div>
+
+        <div class="hiringForm_field">
+          <label for="hiringForm_position">Position Applied For</label>
+          <select id="hiringForm_position" name="position" required>
+            <option value="">Select a position</option>
+            <option value="developer">Developer</option>
+            <option value="designer">Designer</option>
+            <option value="manager">Project Manager</option>
+          </select>
+        </div>
+
+         <div class="hiringForm_field">
+          <label for="hiringForm_resume">Resume Link</label>
+          <input type="url" id="hiringForm_resume" name="resume" placeholder="e.g., Google Drive or Dropbox link" required>
+        </div>
+
+        <div class="hiringForm_field">
+          <label for="hiringForm_message">Why do you want to join us?</label>
+          <textarea id="hiringForm_message" name="message" rows="4"></textarea>
+        </div>
+
+        <button id="hiringForm_submit" type="submit">Submit Application</button>
+      </form>
+
+      <p id="hiringForm_success" style="display: none; color: green; text-align: center; margin-top: 15px;">
+        Thank you! Your application has been received.
+      </p>
+    </div>
+  </div> -->
+
+  <!-- Footer -->
+  <footer style="background-color: #1c3d5a; color: #fff; padding: 30px 20px;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; max-width: 1000px; margin:auto;height:24rem;">
+
+      <!-- Contact Info -->
+      <div style="flex: 1 1 300px; margin-bottom: 20px;">
+        <h3 style="margin: 0 0 10px 0; font-size: 20px;">Contact Us</h3>
+        <p style="margin: 5px 0;"><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-9876543210</p>
+        <p style="margin: 5px 0;"><i class="fas fa-envelope" style="margin-right: 8px;"></i> info@example.com</p>
+        <p style="margin: 5px 0;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 123 Interior Lane, Design City, India</p>
+      </div>
+
+      <!-- Social Icons -->
+      <div style="flex: 1 1 200px; text-align: right;">
+        <h3 style="margin: 0 0 10px 0; font-size: 20px;">Connect with us</h3>
+        <a href="#" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fab fa-instagram"></i></a>
+        <a href="#" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fas fa-phone"></i></a>
+        <a href="mailto:info@example.com" style="color: #fff; font-size: 18px;"><i class="fas fa-envelope"></i></a>
+      </div>
+
+    </div>
+    <div style="text-align: center; margin-top: 20px; font-size: 14px; color: #ccc;">
+      © 2025 Your Interior Company. All rights reserved.
+    </div>
+  </footer>
+
+</div>
+
+   <!-- ========== End Footer Section ========== -->
+   <a href="https://wa.me/+919506423475" target="_blank" style="
+  position: fixed;
+  bottom: 19rem;
+  right: 10px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+</a>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      document.getElementById('hiringForm_success').style.display = 'block';
+    }
+
+    function validateEmail() {
+      const email = document.getElementById("hiringForm_email").value;
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      document.getElementById("email_error").style.display = regex.test(email) ? "none" : "block";
+    }
+
+    function validatePhone() {
+      const phone = document.getElementById("hiringForm_phone").value;
+      const regex = /^[0-9]{10}$/;
+      document.getElementById("phone_error").style.display = regex.test(phone) ? "none" : "block";
+    }
+
+    function validateFile() {
+      const file = document.getElementById("hiringForm_resume").files[0];
+      if (file) {
+        const validTypes = ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
+        document.getElementById("file_error").style.display = validTypes.includes(file.type) ? "none" : "block";
+      }
+    }
+
+
+    
+  const url = 'https://script.google.com/macros/s/AKfycbwBylxYgSQ4qnSKs9bdembG8r7oX-OjJ-EwydGzNK2bpOTvyQLIm8WnpM--ZcfY6fU3vg/exec';
+  const form = document.querySelector('#hiringForm_form');
+  const button = form.querySelector('button');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    button.innerHTML = "Submitting...";
+    button.disabled = true;
+
+    const formData = new FormData(form);
+
+    fetch(url, {
+      method: 'POST',
+      body: formData,
+    })
+    .then((res) => res.text())
+    .then((responseText) => {
+      button.innerHTML = "Sent!";
+     // Optional: show success message
+      form.reset();
+    })
+    .catch((error) => {
+      console.error("Error!", error.message);
+      button.innerHTML = "Failed. Try Again";
+    })
+    .finally(() => {
+      button.disabled = false;
+    });
+  });
+
+  </script>
+
+</body>
+</html>
+
