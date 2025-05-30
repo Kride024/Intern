@@ -77,6 +77,10 @@ select option:hover {background-color: #f1f1f1}
     
     
   }
+  else if (category === 'Door Designs') {
+    options = ['Powder Coated Aluminum Door', 'Glass Door'];
+    // images = ['WhatsApp Image 2025-05-24 at 15.23.44_1b0c8f2e.jpg', 'WhatsApp Image 2025-05-24 at 15.23.44_2b0c8f2e.jpg'];
+  }
 
   else if (category === 'Wall Designs') {
     options = ['WPC Wainscoting', 'WPC Louvers', 'Charcoal Panel','Wall Punning',  'Wall Painting', 'PVC Panel','Vertical Garden'];
@@ -106,7 +110,7 @@ select option:hover {background-color: #f1f1f1}
       const selectedOption = document.getElementById('options').value;
       localStorage.setItem('selected-SubOption', selectedOption);
       const category = localStorage.getItem('selected-Category');
-   if(category === 'Wall Designs'||category ==='Window Designs')
+   if(category === 'Wall Designs'||category ==='Window Designs'||category==='Door Designs')
       window.location.href = 'step41.html';
    else
     window.location.href = 'step4.html';
