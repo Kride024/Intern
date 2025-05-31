@@ -124,7 +124,7 @@
     }
     </style>
 </head>
-<body>
+<body style="overflow-x: hidden;">
    <!-- ========== Start nav section ========== -->
    <header class ="section-navbar">
     <div class="container">
@@ -184,11 +184,11 @@
     </li>
             <li class="nav-item"><a href="service.html" class="nav-link">Services</a></li>
              <li class="nav-item"><a href="work with us.html" class="nav-link">Work with Us</a></li>
-            <li class="nav-item"><a href="#section-contact-homepage" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="contact us.html" class="nav-link">Contact</a></li>
            
         </ul>
         </nav>
-        <button class="btn" style="background-color:  rgb(28, 94, 226); font-weight: 600;">BOOK FREE CONSULTATION</button>
+        <button class="btn" id="btn"style="background-color:  rgb(28, 94, 226); font-weight: 600;font-size:1.4rem">BOOK FREE CONSULTATION</button>
     </div>
    </header>
    <!-- ========== End nav section========== -->
@@ -196,7 +196,15 @@
 
    <!-- ========== Start Hero Section ========== -->
    <main>
-    <div class="section-hero" style="background-image: url('https://storage.planner5d.com/c/0c966f05c517554d7fd54cea895ecfbd.jpg?v=1649766100'); background-size: cover; background-repeat: no-repeat; background-position: center; min-height: 100vh; margin: 0;">
+    <div class="section-hero" style="
+  background-image: url('https://storage.planner5d.com/c/0c966f05c517554d7fd54cea895ecfbd.jpg?v=1649766100');
+  min-height: 100vh;
+  width:100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 80%;
+">
+
 
         <div class="container grid " >
         <div class="section-hero--content" style="display:grid;justify-content: center;align-content:center; margin-top: 20rem;">
@@ -208,7 +216,7 @@
    1px  2px 0 black;font-family:Poppins,sana-serif;font-size: 50px;">
                 Aapka Vision, Hamara Design
             </h1>
-            <button class="btn" style=" justify-self:center;background-color: rgb(28, 94, 226);width:30rem;margin-top: 3rem; border-radius: 4rem;padding:1.6rem;font-weight: 600;font-size: 1.7rem;" onclick="window.location.href=`welcome.html`;">Get Free Estimate</button>
+            <button class="btn btns" style=" justify-self:center;background-color: rgb(28, 94, 226);width:30rem;margin-top: 3rem; border-radius: 4rem;padding:1.6rem;font-weight: 600;" onclick="window.location.href=`welcome.html`;">Get Free Estimate</button>
             <p class="hero-para">
                 <!-- Welcome to Eduhub,your Gateway to Knowledge and skill
                 development. We are dedicated to providing high-quality,
@@ -550,28 +558,28 @@
     <div style="display: flex;">
       <!-- Cards -->
       <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
-        <img src="https://tse3.mm.bing.net/th?id=OIP.aEtF3x_ejUdgSmXnrdp3uAHaBq&pid=Api&P=0&h=220" style="width:100% ;height:100%">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.aEtF3x_ejUdgSmXnrdp3uAHaBq&pid=Api&P=0&h=220" style="width:100% ;height:100%; object-fit: contain;">
       </div>
       <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
-        <img src="https://5.imimg.com/data5/IOS/Default/2020/9/DJ/IE/PQ/2593275/product-jpeg-500x500.png" style="width:100%;height:100%">
+        <img src="https://5.imimg.com/data5/IOS/Default/2020/9/DJ/IE/PQ/2593275/product-jpeg-500x500.png" style="width:100%;height:100%; object-fit: contain;">
       </div>
       <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
-        <img src="https://tse4.mm.bing.net/th?id=OIP.iNvDFaU6WkQFwc54J3k7fgAAAA&pid=Api&P=0&h=220" style="width:100%;height:100%">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.iNvDFaU6WkQFwc54J3k7fgAAAA&pid=Api&P=0&h=220" style="width:100%;height:100%; object-fit: contain;">
       </div>
       <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
-      <img src="https://supremeinteriordesigns.com/wp-content/uploads/2024/03/Everest-Cement-Sheet.jpg" style="width:100%;height:100%">
+      <img src="https://supremeinteriordesigns.com/wp-content/uploads/2024/03/Everest-Cement-Sheet.jpg" style="width:100%;height:100%; object-fit: contain;">
       </div>
       <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
-      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/39ecc1123065489.Y3JvcCwxMTU2LDkwNCwzODAsODg.png" style="width:100%;height:100%">
+      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/39ecc1123065489.Y3JvcCwxMTU2LDkwNCwzODAsODg.png" style="width:100%;height:100%; object-fit: contain;">
       </div>
       <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
-      <img src="https://www.specthrum.com/wp-content/uploads/2020/05/Bison-Panel.jpg" style="width:100%;height:100%">
+      <img src="https://www.specthrum.com/wp-content/uploads/2020/05/Bison-Panel.jpg" style="width:100%;height:100%; object-fit: contain;">
       </div>
        <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
-        <img src="https://www.earthindra.com/wp-content/uploads/2023/06/green-ply-scaled.jpg"style="width:100%;height:100%">
+        <img src="https://www.earthindra.com/wp-content/uploads/2023/06/green-ply-scaled.jpg"style="width:100%;height:100%; object-fit: contain;">
       </div>
        <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
-      <img src="https://jainlaminates.com/wp-content/uploads/2020/04/action-tesa.jpeg" style="width:100%;height:100%">
+      <img src="https://jainlaminates.com/wp-content/uploads/2020/04/action-tesa.jpeg" style="width:100%;height:100%; object-fit: contain;">
       </div>
     </div>
 
@@ -579,25 +587,25 @@
     <div style="display: flex;">
       <!-- Duplicate Cards -->
       <div style="min-width: 200px; height: 100px; background-color:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
-        <img src="https://logowik.com/content/uploads/images/asian-paints6567.logowik.com.webp" style="width:100%;height:100%">
+        <img src="https://logowik.com/content/uploads/images/asian-paints6567.logowik.com.webp" style="width:100%;height:100%; object-fit: contain;">
       </div>
       <div style="min-width: 200px; height: 100px; background-color:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
-       <img src="https://images.yourstory.com/cs/images/companies/birlaopuslogo-1708922934512.jpg?fm=auto&ar=1:1&mode=fill&fill=solid&fill-color=fff" style="width:100%;height:100%">
+       <img src="https://images.yourstory.com/cs/images/companies/birlaopuslogo-1708922934512.jpg?fm=auto&ar=1:1&mode=fill&fill=solid&fill-color=fff" style="width:100%;height:100%; object-fit: contain;">
       </div>
       <div style="min-width: 200px; height: 100px; background-color:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
-       <img src="https://www.buildersmart.in/media/mobile/bmobilebrands/meraki2.jpg" style="width:100%;height:100%">
+       <img src="https://www.buildersmart.in/media/mobile/bmobilebrands/meraki2.jpg" style="width:100%;height:100%; object-fit: contain;">
       </div>
       <div style="min-width: 200px; height: 100px; background:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
-       <img src="https://tse3.mm.bing.net/th?id=OIP.5HwWjeia8qFLGFs_gctCbgHaHa&pid=Api&P=0&h=220" style="width:100%;height:100%">
+       <img src="https://tse3.mm.bing.net/th?id=OIP.5HwWjeia8qFLGFs_gctCbgHaHa&pid=Api&P=0&h=220" style="width:100%;height:100%; object-fit: contain;">
       </div>
       <div style="min-width: 200px; height: 100px; background:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
-       <img src="https://www.mgsarchitecture.in/images/Updates/Orient-Bell.jpg" style="width:100%;height:100%">
+       <img src="https://www.mgsarchitecture.in/images/Updates/Orient-Bell.jpg" style="width:100%;height:100%; object-fit: contain;">
       </div>
       <div style="min-width: 200px; height: 100px; background:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
-    <img src="https://www.saint-gobain.ie/sites/default/files/styles/brand_logo/public/bean/brand/logo/Gyproc%20Logo%20SG.png?itok=-F_7MYfE" style="width:100%;height:100%">
+    <img src="https://www.saint-gobain.ie/sites/default/files/styles/brand_logo/public/bean/brand/logo/Gyproc%20Logo%20SG.png?itok=-F_7MYfE" style="width:100%;height:100%; object-fit: contain;">
       </div>
        <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
-        <img src="https://tse2.mm.bing.net/th?id=OIP.WQAVE47myc5xBPAy1EWtrQAAAA&pid=Api&P=0&h=220" style="width:100%;height:100%">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.WQAVE47myc5xBPAy1EWtrQAAAA&pid=Api&P=0&h=220" style="width:100%;height:100%; object-fit: contain;">
       </div>
     </div>
 
@@ -796,5 +804,17 @@
     answer.style.display = isVisible ? "none" : "block";
     icon.textContent = isVisible ? "+" : "−";
   }
+
+
+  document.getElementById('btn').addEventListener('click',(e)=>{
+    e.preventDefault();
+   localStorage.clear();
+    localStorage.setItem('booked',true);
+    window.location.href='form.html';
+
+  })
+
+ 
+
 </script>
 </html>

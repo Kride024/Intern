@@ -28,7 +28,7 @@ p,
 li,
 a,label{
     font-family: "Urbanist", serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
     letter-spacing: 0.1rem;
     font-weight: 400px;
     line-height:1.5;
@@ -82,6 +82,7 @@ li{
   padding:1.2rem 3.2rem;
   background-color: var(--main-color);
   color:#fcfbfa;
+  font-size: 2rem;;
   font-weight: 600;
   border-radius: 2rem;
   -webkit-border-radius: 2rem;
@@ -93,7 +94,9 @@ li{
  background-color: rgb(76, 75, 75);
 border:none;
 
+
 }
+
 .btn:hover{
 background-color: rgb(76, 75, 75) !important;
 cursor:pointer;
@@ -102,6 +105,7 @@ box-shadow:var(--btn-box-shadow);
 .btni{
     width:26rem;
      display:inline-block;
+     font-size:2rem;
   padding:1.2rem 3.2rem;
   background-color: var(--main-color);
   color:#fcfbfa;
@@ -182,7 +186,6 @@ box-shadow:var(--btn-box-shadow);
 /***** hero Section *****/ 
 main{
     position:relative;
-    background-image:linear-gradient(to top right,#3d86fa,#4484fb,#679eff,#b3d2ff,#ebf3fe);
    
 }
 .section-hero .grid{

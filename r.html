@@ -41,21 +41,23 @@
   const Width = parseFloat(localStorage.getItem('Width')) || 0;  // fixed typo here
         area = length * Width ;
       } 
-      else if(category ==='Wall Designs'){
+      else if(category ==='Wall Designs' || category === 'Window Designs' || category === 'Door Designs'|| category==='Window blind'){
         const Width = parseFloat(localStorage.getItem('Width')) || 0;  // fixed typo here
   const height = parseFloat(localStorage.getItem('height')) || 0;
         area= height * Width ;
       }
+
+     
       else if(category ==='Interior Designs'){
-        const length = parseFloat(localStorage.getItem('length')) || 0;
+        const height = parseFloat(localStorage.getItem('height')) || 0;
   const Width = parseFloat(localStorage.getItem('Width')) || 0;  // fixed typo here
-        area= 2*length * Width;
+        area= 2*height * Width;
       }
 // costing properly ask
       const rates = {
         'Gypsum Board False Ceiling': 150,
         'Soffit Ceiling': 250,
-        'POP Wall Ceiling': 200,
+        'POP False Ceiling': 200,
         'Wooden Flooring': 160,
         'LVT (Luxury Vinyl Tile)': 80,
         'Tiles Flooring': 110,
@@ -65,8 +67,8 @@
         'Wall Panning':30,
         'Wall Painting':35,
         'PVC Panel': 60,
-        '3BHK':60,
-        '2BHK':50,
+        '3BHK':1500,
+        '2BHK':1500,
         'Bedrooms':60, 
         'Living Room':60,
         'Modular Kitchen':60,
@@ -78,9 +80,26 @@
         'Powder Coated Aluminum  Sliding Window':850,
         'Powder Coated Aluminum Casement window':700,
         'Glazing  Window':300,
-        'Powder Coated Aluminum Door':100,
-        'Glass Door':100,
-             
+        'Powder Coated Aluminum Door':500,
+        'Glass Door':750,
+        'Roller Blind':180,
+        'Roman Blind':400,  
+        'Vertical Blind':130,
+        'Venetian Blind':370,
+        'Zebra Blind':280,
+        'Honeycomb Blind':350,
+        'Gypsum Grid False Ceiling': 105,
+        'Metal Ceiling': 145,
+        'Mineral Fiber Ceiling': 125,
+        'Baffle Ceiling': 1000,
+        'Carpet Tiles': 150,
+        'Office Interior': 2000,
+        'Showroom Interior': 2000,
+        'Jewelry Shop Interior':2000,
+        'Parlour Interior': 2000,
+        'Restaurant Interior ':2000,
+        'School Interior':2000,
+
     };
 // console.log(rates[subOption]);
 document.getElementById('heading').textContent = `Estimation for ${subOption}`;
@@ -88,6 +107,8 @@ document.getElementById('heading').textContent = `Estimation for ${subOption}`;
       area = (rates[subOption] || 0)*area;
     
       document.getElementById('result').textContent = `Total Cost : ₹${area}`;
+      
+     
     }
   </script>
 </head>

@@ -64,11 +64,16 @@ select option:hover {background-color: #f1f1f1}
 
   let options = [];
   let images = [];
-  if (category === 'False Ceiling Designs') {
-    options = ['POP Wall Ceiling', 'Gypsum Board False Ceiling', 'Soffit Ceiling'];
+  if (category === 'False Ceiling Designs'  ) {
+    if((localStorage.getItem('Residential')==="true")){
+    options = ['POP False Ceiling', 'Gypsum Board False Ceiling', 'Soffit Ceiling'];
+    }
+    else if((localStorage.getItem('Commercial')==="true")){
+      options = ['POP False Ceiling', 'Gypsum Board False Ceiling', 'Soffit Ceiling','Gypsum Grid False Ceiling','Metal Ceiling','Mineral Fiber Ceiling','Baffle Ceiling'];
+    }
 
   } else if (category === 'Flooring Designs') {
-    options = ['Wooden Flooring', 'LVT (Luxury Vinyl Tile)', 'Tiles Flooring','Artificial Turf'];
+    options = ['Wooden Flooring', 'LVT (Luxury Vinyl Tile)', 'Tiles Flooring','Artificial Turf', 'Carpet Tiles'];
     
     
   }
@@ -86,8 +91,21 @@ select option:hover {background-color: #f1f1f1}
     options = ['WPC Wainscoting', 'WPC Louvers', 'Charcoal Panel','Wall Punning',  'Wall Painting', 'PVC Panel','Vertical Garden'];
     // images = ['WhatsApp Image 2025-05-24 at 15.23.45_328d0c67.jpg', 'WhatsApp Image 2025-05-24 at 15.23.46_492a3eb4.jpg'];
   } else if (category === 'Interior Designs') {
+    if((localStorage.getItem('Residential')==="true")){
     options = ['2BHK','3BHK', 'Bedrooms', 'Living Room', 'Modular Kitchen', 'Kids Room'];
     // images = ['WhatsApp Image 2025-05-24 at 15.23.47_75a828db.jpg', 'WhatsApp Image 2025-05-24 at 15.23.49_be7a7c85.jpg'];
+  }
+  else if((localStorage.getItem('Commercial')==="true")){
+    options = ['Office Interior','Showroom Interior', 'Jewelry Shop Interior', 'Parlour Interior', 'Restaurant Interior ', 'School Interior'];
+    // images = ['WhatsApp Image 2025-05-24 at 15.23.47_75a828db.jpg', 'WhatsApp Image 2025-05-24 at 15.23.49_be7a7c85.jpg'];
+  }
+}
+  else if(category==='Window blind'){
+    options = ['Roller Blind', 'Roman Blind', 'Vertical Blind', 'Venetian Blind','Zebra Blind','Honeycomb Blind'];
+    // images = ['WhatsApp Image 2025-05-24 at 15.23.50_1b0c8f2e.jpg', 'WhatsApp Image 2025-05-24 at 15.23.50_2b0c8f2e.jpg'];
+  } else {
+    alert('Invalid category selected.');
+    return;
   }
 
   options.forEach(opt => {
@@ -110,8 +128,9 @@ select option:hover {background-color: #f1f1f1}
       const selectedOption = document.getElementById('options').value;
       localStorage.setItem('selected-SubOption', selectedOption);
       const category = localStorage.getItem('selected-Category');
-   if(category === 'Wall Designs'||category ==='Window Designs'||category==='Door Designs')
+   if(category === 'Wall Designs'||category ==='Window Designs'||category==='Door Designs'||category==='Window blind'||category==='Interior Designs'){
       window.location.href = 'step41.html';
+   }
    else
     window.location.href = 'step4.html';
     }

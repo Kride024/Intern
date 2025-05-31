@@ -109,7 +109,7 @@
 
   form.addEventListener('submit', function(event) {
     event.preventDefault();
-
+localStorage.clear();
     const ResidentialValue = Residential.checked;
     const CommercialValue = Commercial.checked;
     const RenovationValue = Renovation.checked;
@@ -117,11 +117,14 @@
     localStorage.setItem('Residential', ResidentialValue);
     localStorage.setItem('Commercial', CommercialValue);
     localStorage.setItem('Renovation', RenovationValue);
-    if(RenovationValue){
+    if(RenovationValue===true){
       window.location.href = 'form.html';
     }
-    else{
+    else if(ResidentialValue===true){
     window.location.href = 'step2.html';
+    }
+    else{
+window.location.href='step21.html';
     }
   });
 

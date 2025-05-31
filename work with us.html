@@ -32,7 +32,7 @@ p,
 li,
 a,label{
     font-family: "Urbanist", serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
     letter-spacing: 0.1rem;
     font-weight: 400px;
     line-height:1.5;
@@ -265,11 +265,11 @@ box-shadow:var(--btn-box-shadow);
     </li>
             <li class="nav-item"><a href="service.html" class="nav-link">Services</a></li>
              <li class="nav-item"><a href="work with us.html" class="nav-link">Work with Us</a></li>
-            <li class="nav-item"><a href="#section-contact-homepage" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="contact us.html" class="nav-link">Contact</a></li>
            
         </ul>
         </nav>
-        <button class="btn" style="background-color:  rgb(28, 94, 226); font-weight: 600;">BOOK FREE CONSULTATION</button>
+        <button class="btn" id="btn" style="background-color:  rgb(28, 94, 226); font-weight: 600;font-size: 1.3rem;">BOOK FREE CONSULTATION</button>
     </div>
    </header>
    <!-- ========== End nav section========== -->
@@ -497,7 +497,18 @@ box-shadow:var(--btn-box-shadow);
     });
   });
 
-  </script>
+ 
+  document.getElementById('btn').addEventListener('click',(e)=>{
+    e.preventDefault();
+  localStorage.clear();
+    localStorage.setItem('booked',true);
+    window.location.href='form.html';
+
+  })
+
+
+</script>
+  
 
 </body>
 </html>

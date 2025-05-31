@@ -161,6 +161,7 @@
 
 
 <script>
+  
   const url = 'https://script.google.com/macros/s/AKfycbxSy2h4rG5HO5xcST5tLPKKMidjfb-IHP0wmW0-uXXJeeeSqBPmcoEjjnOOmnfG1Q0jfQ/exec';
   const form = document.querySelector('#form');
   const button = form.querySelector('button');
@@ -180,10 +181,14 @@
     .then((res) => res.text())
     .then((responseText) => {
       button.innerHTML = "Sent!";
-      if(localStorage.getItem('Residential')) {
-        window.location.href='Thank you.html';
+      if((localStorage.getItem('Renovation')=="true")|| (localStorage.getItem('booked')=="true")) {
+  localStorage.setItem('booked',false);
+  localStorage.setItem('Renovation',false);
+      window.location.href = 'Thank you.html'; // Redirect to form.html if Renovation is true
       }
+     
       else{
+        
       window.location.href = 'r.html'; // Optional: show success message
       }
       form.reset();

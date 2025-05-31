@@ -48,8 +48,8 @@
     <h2>Enter Dimensions OF Single Wall</h2>
     <form action="r.html" method="get">
     <!-- <p style="font-size:1.3rem ;margin-bottom: -1px; margin-left:3px;margin-top: 2rem;color:rgb(80, 78, 78);"> Length (in feet):</p>  <input type="number" name="length" required><br> -->
-      <p style="font-size:1.3rem ;margin-bottom:-1px; margin-left:3px;color:rgb(80, 78, 78);" >Width of Wall (in feet):</p> <input type="number" name="Width" required><br>
-     <p style="font-size:1.3rem ;margin-bottom:-1px; margin-left:3px;color:rgb(80, 78, 78);">Height of Wall (in feet):</p>  <input type="number" name="height" required><br>
+      <p style="font-size:1.3rem ;margin-bottom:-1px; margin-left:3px;color:rgb(80, 78, 78);" >Width of Wall (in feet):</p> <input type="number" step="any" name="Width" required><br>
+     <p style="font-size:1.3rem ;margin-bottom:-1px; margin-left:3px;color:rgb(80, 78, 78);">Height of Wall (in feet):</p>  <input type="number" step="any" name="height" required><br>
      <h1> <button type="submit">Calculate</button></h1>
      
     </form>
@@ -61,21 +61,40 @@
 
 
     const form = document.querySelector('form');
-    // const lengthInput = document.querySelector('input[name="length"]');
-    const breadthInput = document.querySelector('input[name="Width"]');
-    const heightInput = document.querySelector('input[name="height"]');
+    
+
 
     form.addEventListener('submit', function(event) {
       event.preventDefault();
 
     //   const length = lengthInput.value;
+  
+
+ if(category === 'Window blind'){
+  const breadthInput = document.querySelector('input[name="Width"]');
+  const heightInput = document.querySelector('input[name="height"]');
+  const Width = parseFloat(breadthInput.value);
+  const height = parseFloat(heightInput.value);
+
+  if (Width < 3.28 || height < 3.28) {
+    alert("Please enter a number greater than or equal to 3.28.");
+    return; // Stop form submission
+  } else {
+    localStorage.setItem('Width', Width);
+    localStorage.setItem('height', height);
+    localStorage.setItem('selected-SubOption', 'Window blind');
+  }
+}
+      else{
+            const breadthInput = document.querySelector('input[name="Width"]');
+    const heightInput = document.querySelector('input[name="height"]');
       const Width = breadthInput.value;
       const height = heightInput.value;
-
-    //   localStorage.setItem('length', length);
-      localStorage.setItem('Width', Width);
+          localStorage.setItem('Width', Width);
       localStorage.setItem('height', height);
-      console.log('Length:', height);
+      }
+     
+    
 
       window.location.href = 'form.html';
     });
