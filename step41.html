@@ -71,19 +71,7 @@
   
 
  if(category === 'Window blind'){
-  const breadthInput = document.querySelector('input[name="Width"]');
-  const heightInput = document.querySelector('input[name="height"]');
-  const Width = parseFloat(breadthInput.value);
-  const height = parseFloat(heightInput.value);
-
-  if (Width < 3.28 || height < 3.28) {
-    alert("Please enter a number greater than or equal to 3.28.");
-    return; // Stop form submission
-  } else {
-    localStorage.setItem('Width', Width);
-    localStorage.setItem('height', height);
-    localStorage.setItem('selected-SubOption', 'Window blind');
-  }
+window.location.href="window bind.html"
 }
       else{
             const breadthInput = document.querySelector('input[name="Width"]');

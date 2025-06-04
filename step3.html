@@ -92,7 +92,7 @@ select option:hover {background-color: #f1f1f1}
     // images = ['WhatsApp Image 2025-05-24 at 15.23.45_328d0c67.jpg', 'WhatsApp Image 2025-05-24 at 15.23.46_492a3eb4.jpg'];
   } else if (category === 'Interior Designs') {
     if((localStorage.getItem('Residential')==="true")){
-    options = ['2BHK','3BHK', 'Bedrooms', 'Living Room', 'Modular Kitchen', 'Kids Room'];
+    options = ['2BHK','3BHK', 'Bedrooms', 'Living Room', 'Modular Kitchen', 'Kids Room','Terrace Garden'];
     // images = ['WhatsApp Image 2025-05-24 at 15.23.47_75a828db.jpg', 'WhatsApp Image 2025-05-24 at 15.23.49_be7a7c85.jpg'];
   }
   else if((localStorage.getItem('Commercial')==="true")){
@@ -128,7 +128,10 @@ select option:hover {background-color: #f1f1f1}
       const selectedOption = document.getElementById('options').value;
       localStorage.setItem('selected-SubOption', selectedOption);
       const category = localStorage.getItem('selected-Category');
-   if(category === 'Wall Designs'||category ==='Window Designs'||category==='Door Designs'||category==='Window blind'||category==='Interior Designs'){
+      if(category==='Window blind'){
+      window.location.href = 'window bind.html';
+      }
+   else if(category === 'Wall Designs'||category ==='Window Designs'||category==='Door Designs'||category==='Interior Designs'){
       window.location.href = 'step41.html';
    }
    else

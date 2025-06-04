@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Step 4 - Dimensions</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .container{
+      padding:2rem 9rem;
+    }
+    h2{
+      color:rgb(70, 69, 69);
+    }
+    input, select{
+      width: 100%;
+      height:60px;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      box-shadow:  0 6px 24px rgba(0,0,0,0.12), 0 1.5px 4px rgba(0,0,0,0.10);
+    }
+  </style>
+</head>
+<body>
+  <div style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color:rgb(6,158,228);
+    color: white;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    user-select: none;
+    min-width: 40px;
+    justify-content: center;
+  ">
+    4/5
+  </div>
+  <div class="container">
+    <h2>Enter Dimensions OF Single Wall</h2>
+    <form>
+      <p style="font-size:1.3rem; margin-bottom:-1px; margin-left:3px;color:rgb(80, 78, 78);">Width of Wall (in feet):</p>
+      <input type="number" step="any" name="Width" required>
+      <p style="font-size:1.3rem; margin-bottom:-1px; margin-left:3px;color:rgb(80, 78, 78);">Height of Wall (in feet):</p>
+      <input type="number" step="any" name="height" required>
+      <!-- <div id="blindTypeContainer" style="display:none;">
+        <p style="font-size:1.3rem; margin-bottom:-1px; margin-left:3px;color:rgb(80, 78, 78);">Select Blind Type:</p>
+        <select id="blindType" required>
+          <option value="">--Select--</option>
+          <option value="Roller Blind">Roller Blind</option>
+          <option value="Roman Blind">Roman Blind</option>
+          <option value="Vertical Blind">Vertical Blind</option>
+          <option value="Venetian Blind">Venetian Blind</option>
+          <option value="Zebra Blind">Zebra Blind</option>
+          <option value="Honeycomb Blind">Honeycomb Blind</option>
+        </select>
+      </div> -->
+      <h1><button type="submit">Calculate</button></h1>
+    </form>
+  </div>
+  <script>
+    const category = localStorage.getItem('selected-Category');
+      const subOption = localStorage.getItem('selected-SubOption');
+    // Show blind type selector only for Window blind
+    // if(category === 'Window blind'){
+    //   document.getElementById('blindTypeContainer').style.display = 'block';
+    // }
+
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const Width = parseFloat(form.elements['Width'].value);
+      const height = parseFloat(form.elements['height'].value);
+
+      if (Width < 3.28 || height < 3.28) {
+        alert("Please enter a number greater than or equal to 3.28.");
+        return;
+      }
+
+      localStorage.setItem('Width', Width);
+      localStorage.setItem('height', height);
+
+      // if(category === 'Window blind'){
+      //   const blindType = document.getElementById('blindType').value;
+      //   if(!blindType){
+      //     alert("Please select a blind type.");
+      //     return;
+      //   }
+        // localStorage.setItem('subOption', blindType);
+      // }
+
+      window.location.href = 'form.html';
+    });
+  </script>
+  <a href="https://wa.me/+919506423475" target="_blank" style="
+    position: fixed;
+    bottom: 19rem;
+    right: 10px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+  </a>
+</body>
+</html>
