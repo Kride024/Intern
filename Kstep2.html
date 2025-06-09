@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Step 1 - Kitchen Budget Type</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: 
+        linear-gradient(rgba(6, 158, 228, 0.12), rgba(255, 255, 255, 0.7)),
+        url('https://images.unsplash.com/photo-1615874959474-d609969a9c31?auto=format&fit=crop&w=1200&q=80') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.97);
+      padding: 3rem 4rem 6rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 880px;
+      margin-top: 1rem;
+      position: relative;
+    }
+
+    h1, h2 {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-weight: 400;
+      color: rgb(80, 78, 78);
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .option-card {
+      flex: 1 1 30%;
+      max-width: 30%;
+      background: #f7f7f7;
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: 0.3s;
+      border: 2px solid transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .option-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+
+    .option-card input[type="radio"] {
+      display: none;
+    }
+
+    .option-card.selected {
+      border: 2px solid rgb(6, 158, 228);
+      background-color: #e9f5ff;
+    }
+
+    .option-image {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .option-card:hover .option-image {
+      transform: scale(1.02);
+    }
+
+    .option-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 0.3rem;
+    }
+
+    .option-description {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    button {
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      background: rgb(6, 158, 228);
+      color: #fff;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+      box-shadow: 0 4px 24px rgba(6, 158, 228, 0.3);
+      transition: 0.3s;
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+     
+    }
+
+    button:hover {
+      transform: translateX(-50%) scale(1.05);
+    }
+
+    .step-indicator {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background-color: rgb(6,158,228);
+      color: white;
+      border-radius: 20px;
+      padding: 8px 15px;
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    @media(max-width: 768px) {
+      .option-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
+      button {
+        width: 90%;
+        left: 5%;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="step-indicator">1/5</div>
+
+<div class="container">
+  <h1 style="margin-top: -1rem;">Your Budget</h1>
+  <h2>Which type of kitchen are you planning for?</h2>
+  <form id="form">
+    <div class="options">
+
+      <label class="option-card" id="standard-card">
+        <input type="radio" name="kitchenType" value="Standard" checked>
+        <img src="Photos/KITCHEN/kitchen7.jpg" class="option-image" alt="Standard Kitchen">
+        <div class="option-title">Essentials (₹₹)</div>
+        <div class="option-description">
+          A range of basic units and accessories that are necessary for a comfortable modular kitchen.<br>
+          ✅ Affordable pricing<br>
+          ✅ Convenient designs<br>
+          ✅ Basic accessories
+        </div>
+      </label>
+
+      <label class="option-card" id="luxury-card">
+        <input type="radio" name="kitchenType" value="Luxury">
+        <img src="Photos/KITCHEN/Screenshot 2025-06-05 173704.png" class="option-image" alt="Luxury Kitchen">
+        <div class="option-title">Luxury (₹₹₹)</div>
+        <div class="option-description">
+          A premium modular kitchen with advanced materials, smart layouts, and modern accessories.<br>
+          ✅ Premium finishes<br>
+          ✅ Smart storage<br>
+          ✅ Sleek appliances
+        </div>
+      </label>
+
+      <label class="option-card" id="superluxury-card">
+        <input type="radio" name="kitchenType" value="Super Luxury">
+        <img src="Photos/KITCHEN/kitchen4.jpg" class="option-image" alt="Super Luxury Kitchen">
+        <div class="option-title">Super Luxury (₹₹₹₹)</div>
+        <div class="option-description">
+          The ultimate in style, materials, and innovation for a dream kitchen space.<br>
+          ✅ High-end custom finishes<br>
+          ✅ Designer fittings<br>
+          ✅ Integrated smart tech
+        </div>
+      </label>
+
+    </div>
+    <div style="background:#fff;">
+      <button type="submit">Next</button>
+    </div>
+  </form>
+</div>
+
+<!-- WhatsApp Icon -->
+<a href="https://wa.me/+919506423475" target="_blank" style="
+  position: fixed;
+  bottom: 8rem;
+  right: 10px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+</a>
+
+<script>
+  const cards = document.querySelectorAll('.option-card');
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      cards.forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      card.querySelector('input').checked = true;
+    });
+  });
+
+  document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // localStorage.clear();
+    const selected = document.querySelector('input[name="kitchenType"]:checked').value;
+    localStorage.setItem('KitchenType', selected);
+    window.location.href = 'Kstep3.html';
+  });
+
+  // Default highlight
+  document.getElementById('standard-card').classList.add('selected');
+</script>
+
+</body>
+</html>
+
+
+

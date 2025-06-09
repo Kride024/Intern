@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Star Rating for Image</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .stars {
+      margin-top: 1rem;
+    }
+    .star {
+      font-size: 2rem;
+      cursor: pointer;
+      color: lightgray;
+      transition: color 0.2s;
+    }
+    .star.hovered,
+    .star.selected {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Rate this Image</h2>
+  <img src="https://via.placeholder.com/300x200" alt="Image to Rate">
+
+  <div class="stars" id="starContainer">
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+  </div>
+
+  <p id="ratingOutput">Rating: 0</p>
+
+  <script>
+    const stars = document.querySelectorAll('.star');
+    const output = document.getElementById('ratingOutput');
+    let selectedRating = 0;
+
+    stars.forEach((star, idx) => {
+      star.addEventListener('mouseover', () => {
+        highlightStars(idx);
+      });
+
+      star.addEventListener('mouseout', () => {
+        highlightStars(selectedRating - 1);
+      });
+
+      star.addEventListener('click', () => {
+        selectedRating = idx + 1;
+        highlightStars(idx);
+        output.textContent = `Rating: ${selectedRating}`;
+      });
+    });
+
+    function highlightStars(index) {
+      stars.forEach((star, i) => {
+        star.classList.toggle('selected', i <= index);
+      });
+    }
+  </script>
+
+</body>
+</html>
+

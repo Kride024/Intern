@@ -186,6 +186,10 @@
   localStorage.setItem('Renovation',false);
       window.location.href = 'Thank you.html'; // Redirect to form.html if Renovation is true
       }
+      else if(localStorage.getItem('Hii')=='For_kitchen'){
+        localStorage.setItem("Hii","For_Done");
+        window.location.href = 'Kr.html'; // Redirect to Kr.html if Hii is For_Kitchen
+      }
      
       else{
         
