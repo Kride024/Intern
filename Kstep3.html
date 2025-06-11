@@ -105,10 +105,15 @@
   <script>
     const form = document.querySelector('form');
     const lengthInput = document.querySelector('input[name="length"]');
+    console.log('Form submitted, length:', length); // Add this line
 
     form.addEventListener('submit', function(event) {
       event.preventDefault();
-      const length = lengthInput.value;
+        const length = parseFloat(lengthInput.value);
+        if (length < 5) {
+    alert("Please enter a number greater than or equal to 5ft.");
+    return;
+  }
       localStorage.setItem('length', length);
       localStorage.setItem('Hii', 'For_kitchen');
       window.location.href = 'form.html';
