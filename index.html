@@ -6,7 +6,38 @@
     <title>final doc</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style1.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+
+  /* Modal Style */
+  #imageModal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #imageModal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 10px black;
+  }
+
+  #imageModal span {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+
+
       .hero-heading {
   color: #fff; /* White text */
   /* -webkit-text-stroke: 2px #ebe9e9; Red outline */
@@ -167,7 +198,7 @@
         </div>
         <div>
           <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"></a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Balcony.html';return false">Balcony Design</a>
+          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Balcony.html';return false">Garden Design</a>
           <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Wardrobe.html';return false">Design Wardrobe</a>
           <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href='Puja Unit.html';return false">Puja Unit Design</a>
           <a href="#" style="margin-top:3rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='crockery design.html';return false">Crockery Unit Design</a>
@@ -259,10 +290,24 @@
 
      <div class="container grid grid-four--cols">
        
-        <div class="about-div" >
+        <div class="about-div" style="position: relative; text-align: center;" >
            
                 <img src="Photos/bedroom 1st view c1.jpg" alt="technical research item"/>
-           
+           <h2 style="
+    position: absolute;
+    top: 53%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.6vw;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 100;
+    white-space: nowrap;
+  ">
+    Elicit Engineers and Interiors
+  </h2>
            
             <h3 class="section-common--title"  style="margin-bottom: 4rem;">Room Design: <span>Bold & Timeless</span> </h3>
             <!-- <p>
@@ -270,10 +315,24 @@
                 in learning and choose topics that match what you want to learn.
                          </p> -->
         </div>
-         <div class="about-div" >
+         <div class="about-div" style="position: relative; text-align: center;" >
            
                 <img src="Photos/kitchen 1st view c1.jpg" alt="technical research item"/>
-           
+                 <h2 style="
+    position: absolute;
+    top: 53%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.6vw;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 100;
+    white-space: nowrap;
+  ">
+    Elicit Engineers and Interiors
+  </h2>
            
             <h3 class="section-common--title"  style="margin-bottom: 4rem;">Kitchen Design: <span>Deep Accents</span> </h3>
             <!-- <p>
@@ -281,20 +340,50 @@
                 in learning and choose topics that match what you want to learn.
                          </p> -->
         </div>
-        <div class="about-div">
+        <div class="about-div" style="position: relative; text-align: center;">
           
                 <img src="Photos/090923 rd 01 Ed.jpg"  alt="technical research item"/>
             
+                      <h2 style="
+    position: absolute;
+    top: 53%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.6vw;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 100;
+    white-space: nowrap;
+  ">
+    Elicit Engineers and Interiors
+  </h2>
             <h3 class="section-common--title"  style="margin-bottom: 4rem;">Wardrobe Design: <span>Modern</span></h3>
             <!-- <p>
             Next,we make the lessons.We make them fun and interesting for you.We make
             sure they work for different ways people like to learn.
                          </p> -->
         </div>
-        <div class="about-div">
+        <div class="about-div" style="position: relative; text-align: center;">
           
                 <img src=" Photos/WhatsApp Image 2025-05-27 at 21.59.45_cff33d28.jpg" alt=" technical research item" />
            
+                      <h2 style="
+    position: absolute;
+    top: 53%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.6vw;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 100;
+    white-space: nowrap;
+  ">
+    Elicit Engineers and Interiors
+  </h2>
             <h3 class="section-common--title" style="margin-bottom: 4rem;">Room Design:  <span>Forest-Inspired</span></h3>
             <!-- <p>
              After that,we turn the lessons into things you can use online.We use the latest tools to make sure they work well 
@@ -322,51 +411,137 @@
      <div class="container grid grid-three--cols " style="margin-top: -8rem;">
        
      
-         <div class="about-div1" >
+         <div class="about-div1" style="position: relative; text-align: center;">
            
                 <img src="Photos/Bedroom/Screenshot 2025-06-03 224652.png" style="width:644px;height: 394px;"/>
            
-           
+                 <h2 style="
+    position: absolute;
+    top: 93%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.6vw;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 100;
+    white-space: nowrap;
+  ">
+    Elicit Engineers and Interiors
+  </h2>
            
             <!-- <p>
                 we start by learning what you need.We look at what's new and exciting
                 in learning and choose topics that match what you want to learn.
                          </p> -->
         </div>
-        <div class="about-div1">
+        <div class="about-div1" style="position: relative; text-align: center;">
           
-                <img src="https://i.pinimg.com/736x/2d/8f/99/2d8f99c6013352d06ad9772098bfc73b.jpg"  alt="technical research item" style="width:347px;height: 394px;margin-left: -1.6rem;"/>
-            <!-- margin-left: -65rem; -->
+                <img src="https://i.pinimg.com/736x/49/6b/a1/496ba1456d87d5e12a42dade7483d52a.jpg"  alt="technical research item" style="width:347px;height: 394px;margin-left: -1.6rem;"/>
+                <!-- <h2 style="
+    position: absolute;
+    top: 93%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 300;
+    white-space: nowrap;
+  ">
+    Elicit Engineers and Interiors
+  </h2> -->
+                <!-- margin-left: -65rem; -->
            
             <!-- <p>
             Next,we make the lessons.We make them fun and interesting for you.We make
             sure they work for different ways people like to learn.
                          </p> -->
         </div >
-        <div class="about-div1">
+        <div class="about-div1" style="position: relative; text-align: center;">
           
                 <img src="Photos/090923 rd 02 Ed.jpg"  alt=" technical research item" style="width:350px;height: 394px;margin-left: -2.2rem;" />
-           <!-- margin-left: -160rem; -->
+                <h2 style="
+    position: absolute;
+    top: 93%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.6vw;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 100;
+    white-space: nowrap;
+  ">
+    Elicit Engineers and Interiors
+  </h2>
+                <!-- margin-left: -160rem; -->
            
         </div>
        
         
-              <div class="about-div1">
+              <div class="about-div1" style="position: relative; ">
           
                 <img src="Photos/bedroom 2nd view c2.jpg" alt=" technical research item" style="width:350px;height: 394px;margin-top: 7rem;"  />
-           
+                 <h2 style="
+    position: absolute;
+    top: 94%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.6vw;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 100;
+    white-space: nowrap;
+  ">
+    Elicit Engineers and Interiors
+  </h2>
            
         </div>
-              <div class="about-div1">
+              <div class="about-div1" style="position: relative; text-align: center;">
           
                 <img src="Photos/lobby 1st view c1.jpg" alt=" technical research item" style="width:644px;height: 394px;margin-top: 7rem;margin-left: -31rem;"  />
-           
+                 <h2 style="
+    position: absolute;
+    top: 94%;
+    left: -70%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.6vw;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 100;
+    white-space: nowrap;
+  ">
+    Elicit Engineers and Interiors
+  </h2>
            
         </div>
-              <div class="about-div1">
+              <div class="about-div1" style="position: relative; text-align: center;">
           
-                <img src="https://i.pinimg.com/736x/6e/0c/ad/6e0cad5f61d2cd7f19d3f94376746e5c.jpg" alt=" technical research item" style="width:350px;height: 394px;margin-top: 7rem; margin-left: -2.1rem;"  />
-           
+                <img src="https://i.pinimg.com/736x/07/b4/6d/07b46d9f835510ba38c1a62b530a8b40.jpg" alt=" technical research item" style="width:350px;height: 394px;margin-top: 7rem; margin-left: -2.1rem;"  />
+                 <!-- <h2 style="
+    position: absolute;
+    top: 94%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 300;
+    white-space: nowrap;
+  ">
+    Elicit Engineers and Interiors
+  </h2> -->
            
         </div>
         
@@ -389,11 +564,25 @@
 
      <div class="container grid grid-four--cols">
        
-        <div class="about-div" >
+        <div class="about-div" style="position: relative; text-align: center;">
            
                 <img src="https://i.pinimg.com/736x/c6/82/ca/c682cafdf626143dc3b14c6800ada3fc.jpg" alt="technical research item"/>
-           
-           
+<!--            
+                      <h2 style="
+    position: absolute;
+    top: 38%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 300;
+    white-space: nowrap;
+  ">
+    Elicit Engineers and Interiors
+  </h2> -->
             <h3 class="section-common--title"  style="margin-bottom: 4rem; text-align: left; margin-left: 1.5rem;"> False Ceiling : <p>Know the estimated Price</p> </h3>
             <!-- <p>
                 we start by learning what you need.We look at what's new and exciting
@@ -401,10 +590,24 @@
                          </p> -->
                           <button class="btni" onclick="window.location.href=`step2.html`;">Calculate</button>
         </div>
-         <div class="about-div" >
+         <div class="about-div" style="position: relative; text-align: center;" >
            
                 <img src="Photos/flooring/Screenshot 2025-06-10 231640.png" alt="technical research item"/>
-           
+                 <h2 style="
+    position: absolute;
+    top: 38%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.6vw;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 100;
+    white-space: nowrap;
+  ">
+    Elicit Engineers and Interiors
+  </h2>
            
             <h3 class="section-common--title"  style="margin-bottom: 4rem;  text-align: left; margin-left: 1.5rem;">Flooring design : <p>Know the estimated Price</p> </h3>
             <!-- <p>
@@ -413,10 +616,24 @@
                          </p> -->
                           <button class="btni"  onclick="window.location.href=`step2.html`;">Calculate</button>
         </div>
-        <div class="about-div">
+        <div class="about-div" style="position: relative; text-align: center;">
           
                 <img src="Screenshot 2025-06-12 172502.png"  alt="technical research item"/>
-            
+                  <h2 style="
+    position: absolute;
+    top: 38%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.6vw;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 100;
+    white-space: nowrap;
+  ">
+    Elicit Engineers and Interiors
+  </h2>
             <h3 class="section-common--title"  style="margin-bottom: 4rem;  text-align: left; margin-left: 1.5rem;">Wall Design : <p>Know the estimated Price</p></h3>
             <!-- <p>
             Next,we make the lessons.We make them fun and interesting for you.We make
@@ -424,10 +641,24 @@
                          </p> -->
                           <button class="btni" onclick="window.location.href=`step2.html`;" >Calculate</button>
         </div>
-        <div class="about-div">
+        <div class="about-div" style="position: relative; text-align: center;">
           
                 <img src="Photos/WhatsApp Image 2022-05-26 at 2.27.58 PM.jpeg" alt=" technical research item" />
-           
+                 <h2 style="
+    position: absolute;
+    top: 38%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.6vw;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 100;
+    white-space: nowrap;
+  ">
+    Elicit Engineers and Interiors
+  </h2>
             <h3 class="section-common--title" style="margin-bottom: 4rem; text-align: left; margin-left: 1.5rem;">Interior Design : <p>Know the estimated Price</p></h3>
             <!-- <p>
              After that,we turn the lessons into things you can use online.We use the latest tools to make sure they work well 
@@ -453,13 +684,7 @@
     <div class="reviews-container" id="reviewContainer">
       <!-- Each review card -->
        
-        <div class="review-card">
-        <img src="https://lh3.googleusercontent.com/a-/ALV-UjWOR17bv33E88Vkfbqgkp7Y3hyf3JIRFMLXv8ZEw4yZLfi2Vhm0=w90-h90-p-rp-mo-br100" alt="Customer">
-        <div class="stars">★★★★★</div>
-        <div class="name">
-Amna Abbasi</div>
-        <div class="content">I had the pleasure of working with Elicit for the renovation of my parents' room in Gorakhpur while managing everything remotely from Abu Dhabi. From start to finish, the experience was seamless and stress-free.</div>
-      </div>
+       
       <div class="review-card">
          <img src="https://lh3.googleusercontent.com/a-/ALV-UjXJaFS6_pZ9x3bTuNZ1_FdXhQGDsTiyDs8FDjM4pgrywaQw_xXvoA=w90-h90-p-rp-mo-br100" alt="Customer">
         <div class="stars">★★★★★</div>
@@ -471,6 +696,33 @@ Amna Abbasi</div>
         <div class="stars">★★★★★</div>
         <div class="name">Antara Palit</div>
         <div class="content">They did my interior for my room and kitchen. Team has been very professional and was very helpful. They understood my requirement and did the work accordingly. Highly recommend</div>
+      </div>
+       <div class="review-card">
+        <img src="https://lh3.googleusercontent.com/a-/ALV-UjWOR17bv33E88Vkfbqgkp7Y3hyf3JIRFMLXv8ZEw4yZLfi2Vhm0=w90-h90-p-rp-mo-br100" alt="Customer">
+        <div class="stars">★★★★★</div>
+        <div class="name">
+Amna Abbasi</div>
+        <div class="content">I had the pleasure of working with Elicit for the renovation of my parents' room in Gorakhpur while managing everything remotely from Abu Dhabi. From start to finish, the experience was seamless and stress-free.</div>
+      </div>
+       <div class="review-card">
+        <img src="https://lh3.googleusercontent.com/a-/ALV-UjUYncrWA9vAiEI_K9Ev8rJaF-Gq9kiFjQqdy_IvFs4TIIdQrKU=w90-h90-p-rp-mo-br100" alt="Customer">
+        <div class="stars">★★★★★</div>
+        <div class="name">Ram D</div>
+        <div class="content">I had great experience using services of Elicit Engineers & Interiors. I must say Team Elicit did tremendously great job in terms of understanding requirements and delivering quality product and installation on time far from his location.</div>
+      </div>
+       <div class="review-card">
+        <img src="https://lh3.googleusercontent.com/a-/ALV-UjVM-JjdXIpiQkCY39q8QC_nbUzATDQDAYZos0uMnmVS_MnRvq5r=w90-h90-p-rp-mo-br100" alt="Customer">
+        <div class="stars">★★★★★</div>
+        <div class="name">
+Anjalli Rathour</div>
+        <div class="content">I’m extremely pleased with the interior design work. The team demonstrated great creativity and attention to detail, ensuring the bedroom feels both functional and aesthetically pleasing</div>
+      </div>
+      <div class="review-card">
+        <img src="https://lh3.googleusercontent.com/a-/ALV-UjURF09NOuvnpS3ILeYjhNrBOmTeZZkhE3qF90eEDXLvFPFAwh8=w90-h90-p-rp-mo-ba3-br100" alt="Customer">
+        <div class="stars">★★★★★</div>
+        <div class="name">
+Nirj Pandey</div>
+        <div class="content">Perfect Professional Team in Gorakhpur</div>
       </div>
       <div class="review-card">
         <img src="https://lh3.googleusercontent.com/a-/ALV-UjXU9cAbI9BDHaGj2RYFf8hSpNEruea6a0z1rSP7TYC9SkBtAMF8Dw=w90-h90-p-rp-mo-br100" alt="Customer">
@@ -485,23 +737,11 @@ Amna Abbasi</div>
 Abhishek Singh Bhadouria</div>
         <div class="content">Good quality products with geniune rate.</div>
       </div>
-      <div class="review-card">
-        <img src="https://lh3.googleusercontent.com/a-/ALV-UjURF09NOuvnpS3ILeYjhNrBOmTeZZkhE3qF90eEDXLvFPFAwh8=w90-h90-p-rp-mo-ba3-br100" alt="Customer">
-        <div class="stars">★★★★★</div>
-        <div class="name">
-Nirj Pandey</div>
-        <div class="content">Perfect Professional Team in Gorakhpur</div>
-      </div>
+      
     
       
 
-      <div class="review-card">
-        <img src="https://lh3.googleusercontent.com/a-/ALV-UjVM-JjdXIpiQkCY39q8QC_nbUzATDQDAYZos0uMnmVS_MnRvq5r=w90-h90-p-rp-mo-br100" alt="Customer">
-        <div class="stars">★★★★★</div>
-        <div class="name">
-Anjalli Rathour</div>
-        <div class="content">I’m extremely pleased with the interior design work. The team demonstrated great creativity and attention to detail, ensuring the bedroom feels both functional and aesthetically pleasing</div>
-      </div>
+     
     </div>
   </div>
 
@@ -630,8 +870,8 @@ Anjalli Rathour</div>
      1. Why do I need an interior designer?
       <span style="float: right;">+</span>
     </button>
-    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;font-size: 1.6rem;line-height: 2rem;">
-An interior designer helps transform your space by balancing functionality with aesthetics. They bring expert knowledge in layouts, materials, lighting, and design trends—ensuring your home looks stunning and works perfectly for your lifestyle. With professional guidance, you avoid costly errors and enjoy a seamless, stress-free experience.
+    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 10px;font-size: 1.4rem;font-weight: 400;line-height: 2rem;">
+An interior designer helps transform your space by balancing functionality with aesthetics. They bring expert knowledge in layouts, materials, lighting, and design trends ensuring your home looks stunning and works perfectly for your lifestyle. With professional guidance, you avoid costly errors and enjoy a seamless, stress-free experience.
     </div>
   </div>
 
@@ -641,8 +881,8 @@ An interior designer helps transform your space by balancing functionality with 
  2. Why is Elicit the ideal choice for your home interior design?
       <span style="float: right;">+</span>
     </button>
-    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;font-size: 1.6rem;line-height: 2rem;">
-Elicit offers a comprehensive interior design experience—from personalized consultations and 3D designs to expert project management and post-installation support. With talented designers, quality craftsmanship, transparent pricing, and reliable timelines, Elicit brings your dream home to life—beautifully and effortlessly.
+    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;font-size: 1.4rem;font-weight: 400;line-height: 2rem;">
+Elicit offers a comprehensive interior design experience from personalized consultations and 3D designs to expert project management and post-installation support. With talented designers, quality craftsmanship, transparent pricing, and reliable timelines, Elicit brings your dream home to life beautifully and effortlessly.
     </div>
   </div>
 
@@ -652,8 +892,8 @@ Elicit offers a comprehensive interior design experience—from personalized con
 3. What services are included under home interior design?
       <span style="float: right;">+</span>
     </button>
-    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;font-size: 1.6rem;line-height: 2rem;">
-Elicit’s home interior design services cover everything from space planning, modular kitchens, wardrobes, and furniture to wall finishes, ceilings, lighting, flooring, and décor. We also handle electrical, plumbing, and civil work—giving you a complete end-to-end solution under one roof.
+    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;font-size: 1.4rem;font-weight: 400;line-height: 2rem;">
+Elicit’s home interior design services cover everything from space planning, modular kitchens, wardrobes, and furniture to wall finishes, ceilings, lighting, flooring, and décor. We also handle electrical, plumbing, and civil work giving you a complete end-to-end solution under one roof.
     </div>
   </div>
 
@@ -663,7 +903,7 @@ Elicit’s home interior design services cover everything from space planning, m
       4. How much does home interior design cost?
       <span style="float: right;">+</span>
     </button>
-    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;font-size: 1.6rem;line-height: 2rem;">
+    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;font-size: 1.4rem;font-weight: 400;line-height: 2rem;">
 The cost depends on your home's size, design preferences, and materials. On average, full home interiors can start around ₹3–4 lakh for a 1BHK and increase based on customization and finishes. Elicit offers flexible packages tailored to your budget, with no hidden charges.
     </div>
   </div>
@@ -676,7 +916,7 @@ The cost depends on your home's size, design preferences, and materials. On aver
 5. What are the timelines for completing a home interior project?
       <span style="float: right;">+</span>
     </button>
-    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;font-size: 1.6rem;line-height: 2rem;">
+    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;font-size: 1.4rem;font-weight: 400;line-height: 2rem;">
 Timelines vary based on project scope and home size. Typically, an Elicit project takes 6 to 12 weeks from design finalization to handover. Our process is streamlined to ensure timely execution without compromising on quality or detail.
     </div>
   </div>
@@ -686,7 +926,7 @@ Timelines vary based on project scope and home size. Typically, an Elicit projec
 6. What are some trending home interior styles you can explore?
       <span style="float: right;">+</span>
     </button>
-    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 1.6rem;line-height: 2rem;">
+    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 1.4rem;font-weight: 400;line-height: 2rem;">
 Here are a few interior design styles that are currently popular:<br>
 
 Minimalist: Simple, clean, and clutter-free designs.<br>
@@ -710,8 +950,8 @@ Elicit helps you explore these styles and customize them to match your personali
 7. Will I be involved in the design process?
       <span style="float: right;">+</span>
     </button>
-    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;font-size: 1.6rem;line-height: 2rem;">
-Absolutely. At Elicit, we believe your home should reflect you. Our designers work closely with you from the very first consultation—understanding your vision, preferences, and lifestyle. You’ll be involved at every key stage, from concept to material selection and final approvals, ensuring the end result is uniquely yours.
+    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;font-size: 1.4rem;font-weight: 400;line-height: 2rem;">
+Absolutely. At Elicit, we believe your home should reflect you. Our designers work closely with you from the very first consultation understanding your vision, preferences, and lifestyle. You’ll be involved at every key stage, from concept to material selection and final approvals, ensuring the end result is uniquely yours.
     </div>
   </div>
     <!-- FAQ Item -->
@@ -720,7 +960,7 @@ Absolutely. At Elicit, we believe your home should reflect you. Our designers wo
 8. Do you offer customized furniture and modular solutions?
       <span style="float: right;">+</span>
     </button>
-    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;font-size: 1.6rem;line-height: 2rem;">
+    <div style="display: none; padding: 15px 20px; background: #ffffff; font-size: 15px;font-size: 1.4rem;font-weight: 400;line-height: 2rem;">
 Yes, Elicit specializes in both custom-made furniture and modular designs tailored to your space and style. Whether it’s a modular kitchen, wardrobes, or bespoke sofas and tables, our team ensures each piece is designed for comfort, durability, and visual harmony with your interiors.
     </div>
   </div>
@@ -745,7 +985,7 @@ Yes, Elicit specializes in both custom-made furniture and modular designs tailor
         <h3 style="margin: 0 0 10px 0; font-size: 20px;">Contact Us</h3>
         <p style="margin: 5px 0;"><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-9506423475</p>
         <!-- <p style="margin: 5px 0;"><i class="fas fa-envelope" style="margin-right: 8px;"></i> elicitengineers@outlook.com</p> -->
-        <p style="margin: 5px 0;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 0169, Ghaseekatra Beside Karbala, Ghasi Katra Gorakhpur-273001, Uttar Pradesh, India</p>
+        <p style="margin: 5px 0;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 0169, Ghaseekatra , Ghasi Katra Gorakhpur1, Uttar Pradesh, India-27300</p>
       </div>
 
       <!-- Social Icons -->
@@ -782,6 +1022,33 @@ Yes, Elicit specializes in both custom-made furniture and modular designs tailor
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
   <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
 </a>
+
+<!-- Modal -->
+<div id="imageModal">
+  <span onclick="closeModal()">&times;</span>
+  <img id="modalImage" src="" alt="Preview">
+</div>
+
+<script>
+  function openModal(src) {
+    document.getElementById("modalImage").src = src;
+    document.getElementById("imageModal").style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+
+  // Attach click to all images inside .about-div
+  window.onload = function () {
+    const images = document.querySelectorAll('.about-div img');
+    images.forEach(img => {
+      img.style.cursor = 'pointer';
+      img.onclick = () => openModal(img.src);
+    });
+  };
+</script>
+
 
 </body>
 <script>

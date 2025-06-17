@@ -167,16 +167,49 @@ document.getElementById('heading').textContent = `Estimation for ${subOption}`;
   <style>
     .container {
       padding: 8rem 9rem;
+      
     }
 
     h2 {
+   
       color: rgb(70, 69, 69);
     }
 
     h1, h2, div {
       color: #333;
-      text-align: center;
+     text-align: center;
+     /* margin-top: 4rem; */
     }
+  
+
+.btn{
+  width:auto;
+  height:auto;
+  display:inline-block;
+ 
+  /* padding:1.2rem 3.2rem; */
+background-color: #0062ff !important;
+  color:#fcfbfa;
+  /* font-size: 2rem;; */
+  font-weight: 400;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+
+  -o-border-radius: 2rem;
+  
+ background-color: rgb(76, 75, 75);
+border:none;
+
+
+}
+
+.btn:hover{
+background-color: rgb(76, 75, 75) !important;
+cursor:pointer;
+box-shadow:var(--btn-box-shadow);
+}
   </style>
   <script>
     setTimeout(() => {
@@ -278,8 +311,9 @@ document.getElementById('heading').textContent = `Estimation for ${subOption}`;
     </div>
 
     <div class="container">
-      <h2 id="heading" style="margin-top: -4rem; margin-bottom: 2.7rem;"></h2>
-      <div id="result"></div>
+      <h2 id="heading" style="margin-top: -3rem; margin-bottom: 2rem;"></h2>
+      <div id="result" style="margin-top: 1rem;"></div>
+      <button class="btn" style=" margin-top: 1rem;" onclick="window.location.href='https://wa.me/+919506423475'">Request for catalog</button>
     </div>
 
     <!-- Terms and Conditions Note -->

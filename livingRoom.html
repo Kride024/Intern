@@ -3,16 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us</title>
-   <link rel="stylesheet" href="style1.css">
+  <title>Living Room Interior Design</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <style>
-   
+ 
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      
+      padding: 3rem 5%;
+    }
+    h1{
+        font-size: 2.6rem;
+        margin-bottom: 1rem;
+  margin-top: 7rem;
+    }
+    h2{
+        font-size: 1.9rem;
+    }
+    h1, h2 {
+        
+      text-align: center;
+      color: #264de4;
+    }
+    .intro p {
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-align: center;
+      font-size: 1.7rem;
+    }
+    .design-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding-top: 2rem;
+    }
+    .design-card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .design-card:hover {
+      transform: scale(1.03);
+    }
+    .design-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .design-card .content {
+      padding: 1rem;
+      h3{
+        font-size: 1.6rem;
+      }
+     p{
+        font-size: 1.6rem;
+     }
+    }
+    .cta {
+        
+      text-align: center;
+      margin-top: 3rem;
+      h2{
+margin-top: 5rem;
+margin-bottom: 2.2rem;
+      }
+    }
+    .cta button {
+      background-color: #264de4;
+      color: white;
+      border: none;
+      padding: 2rem 3rem;
+      font-size: 2rem;
+      margin-top: 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .cta button:hover {
+      background-color: #1b36a3;
+    }
   </style>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-    <!-- ========== Start nav section ========== -->
+      <!-- ========== Start nav section ========== -->
    <header class ="section-navbar" style="position: fixed; top: 0; left: 0; right: 0;  background:#fff; z-index: 1000;">
     <div class="container">
         <div class="navbar-brand" >
@@ -43,18 +125,17 @@
         grid-template-columns: repeat(3, 200px);
         gap: 20px;
       ">
-      
-        <div >
+      <div >
           <a href="#" style=" margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href=`bedroom.html`;return false">Bedroom</a>
           <a href="#" style=" margin-top:2.5rem;text-decoration: none; color: #444 ;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`Living.html`;return false">Living Room</a>
           <a href="#" style=" margin-top:2.5rem;text-decoration: none; color: #444 ;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`Kitchen.html`;return false">Kitchen</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Kids Room </a>
+          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href=`Kids.html`;return false">Kids Room </a>
 
           <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`tv.html`;return false">TV Unit Design</a>
         </div>
-        <div>
+       <div>
           <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"></a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Balcony.html';return false">Garden Design</a>
+          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Balcony.html';return false">Balcony Design</a>
           <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Wardrobe.html';return false">Design Wardrobe</a>
           <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href='Puja Unit.html';return false">Puja Unit Design</a>
           <a href="#" style="margin-top:3rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='crockery design.html';return false">Crockery Unit Design</a>
@@ -80,70 +161,63 @@
     </div>
    </header>
    <!-- ========== End nav section========== -->
-<div style="font-family: Arial, sans-serif; background-color: #f4f6f8; margin: 0; padding: 40px;padding-bottom: 25rem;margin-top: 13rem;">
-
-  <h1 style="text-align: center; color: #161616; font-size: 36px; margin-bottom: 50px;">Contact Us</h1>
-
-  <div class="contact-container" style="display: flex; gap: 20rem; justify-content: center; flex-wrap: wrap;">
-
-    <!-- Book Consultation Card -->
-    <div class="consultation-card" style="
-      background-color: rgb(144, 227, 224);
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      width: 400px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.15)';"
-       onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.1)';">
-      <h2 style="font-size: 24px; color: #2563eb; margin-bottom: 15px;text-align:center;" id="btn">Book Free Consultation</h2>
-      <p style="color: #555; margin-bottom: 20px;">
-      Book a free consultation with our experienced professionals today. Whether you  have questions, we're here  to help you  and Guide every step of the way , absolutely free,Go aHead.
+  <div class="container">
+    <h1>Living Room Interior Design</h1>
+    <div class="intro">
+      <p>
+        Discover stunning, functional living room designs by HomeLane that blend comfort with style. Whether you're drawn to modern minimalism or cozy traditional vibes, we offer living room setups tailored for your unique lifestyle.
       </p>
-     <button style="
-        background-color: #2563eb;
-        color: white;
-        padding: 10px 16px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 16px;
-        font-weight: 600;
-    
-      "
-      id="book-consultation-button"
-      onmouseover="this.style.backgroundColor='#1e40af';"
-      onmouseout="this.style.backgroundColor='#2563eb';">Schedule Now</button>
+      <p>
+        From accent lighting to sleek TV units and ergonomic furniture arrangements, our experts craft inviting spaces for your family and guests. Explore themes, finishes, and layouts that maximize space and elevate aesthetic appeal.
+      </p>
     </div>
 
-    <!-- Contact Info Card -->
-    <div class="contact-card" style="
-      background-color:  rgb(144, 227, 224);
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      width: 400px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.15)';"
-       onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.1)';">
-          <i class="fa-solid fa-headphones-simple"></i>
-       <h2 style="font-size: 19px;margin-top: 2rem; color: #2563eb; margin-bottom: 15px;">Need help? Hum always ready hain!</h2>
-    
-       <p style="margin: 4px 0; color: #444;margin-top: 2rem;">📞  +91-9506423475</p>
-      <p style="margin: 4px 0; color: #444;margin-top: 2rem;">📧 elicitengineers@outlook.com</p>
+    <h2>Explore Our Designs</h2>
+    <div class="design-gallery">
+      <div class="design-card">
+        <img src="Photos/Living/09-08 Rd 03Edit (1).jpg" alt="Contemporary Blue Living Room">
+        <div class="content">
+          <h3>Contemporary Blue Elegance</h3>
+          <p>Calming tones and minimalist furniture with a smart TV unit design.</p>
+        </div>
+      </div>
+
+      <div class="design-card">
+        <img src="Photos/Living/071123 rd 01-1-01.jpeg" alt="Earthy Modern Living Room">
+        <div class="content">
+          <h3>Earthy Modern Charm</h3>
+          <p>Textured wood finishes, subtle lighting, and cozy furniture.</p>
+        </div>
+      </div>
+
+      <div class="design-card">
+        <img src="Photos/Living/sofa1.jpg" alt="Grey Sophisticated Living Room">
+        <div class="content">
+          <h3>Grey Sophistication</h3>
+          <p>Layered lighting, custom shelves, and premium storage for an elegant feel.</p>
+        </div>
+      </div>
+
+      <div class="design-card">
+        <img src="Photos/Living/skyblue sofa.jpg" alt="Luxe Modern Living Room">
+        <div class="content">
+          <h3>Luxe Urban Living</h3>
+          <p>High-gloss finishes, false ceiling designs, and statement seating.</p>
+        </div>
+      </div>
     </div>
 
+    <div class="cta">
+      <h2>You're Almost There!</h2>
+      <p>One step away from designing your dream living space with us.</p>
+      <button class="btn">Continue Booking Your Session</button>
+    </div>
   </div>
-
-</div>
-
-   <footer style="background-color: #1c3d5a; color: #fff; padding: 30px 20px;">
+    <footer style="background-color: #1c3d5a; color: #fff; padding: 30px 20px;margin-top: 1px;">
     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; max-width: 1000px; margin:auto;height:24rem;">
 
       <!-- Contact Info -->
-        <div style="flex: 1 1 300px; margin-bottom: 20px;">
+     <div style="flex: 1 1 300px; margin-bottom: 20px;">
         <h3 style="margin: 0 0 10px 0; font-size: 20px;">Contact Us</h3>
         <p style="margin: 5px 0;"><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-9506423475</p>
         <!-- <p style="margin: 5px 0;"><i class="fas fa-envelope" style="margin-right: 8px;"></i> elicitengineers@outlook.com</p> -->
@@ -181,21 +255,4 @@
   <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
 </a>
 </body>
-
-<script>
-  localStorage.clear();
-  document.getElementById('book-consultation-button').addEventListener('click',(e)=>{
-    e.preventDefault();
-  
-    localStorage.setItem('booked',true);
-    window.location.href='form.html';
-
-  })
-
-  document.getElementById('btn').addEventListener('click',(e)=>{
-    e.preventDefault();
-    localStorage.setItem('booked',true);
-    window.location.href='form.html';
-  })
-</script>
 </html>

@@ -3,16 +3,176 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us</title>
-   <link rel="stylesheet" href="style1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <style>
+  <title>Interior Design Services</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+  <style>
+    :root {
+      --primary: #050505;
+      --text-dark: #222;
+      --text-light: #555;
+      --bg-light: #f9f9fc;
+      --card-bg: #fff;
+      --radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: var(--bg-light);
+      color: var(--text-dark);
+    }
+
+
+
+
+  
+
    
+    .services {
+      margin-top: 12rem;
+      padding: 60px 5%;
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      color: var(--primary);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+      transition: 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card img {
+      width: 60px;
+      margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+      margin-bottom: 0.1rem;
+      font-size: 2rem;
+      color: var(--text-dark);
+    }
+
+    .service-card p {
+      font-size: 1.5rem;
+      color: var(--text-light);
+    }
+
+    .process {
+    
+      background: white;
+      padding: 60px 5%;
+      text-align: center;
+    }
+
+    .process h2 {
+      margin-top: -3rem;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .process-steps {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .step {
+      background: #f4f2fe;
+      padding: 25px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .step span {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    .step h4 {
+      margin-top: 10px;
+      font-size: 2rem;
+    }
+
+    .step p {
+      font-size: 1.5rem;
+      color: var(--text-light);
+    }
+span{
+  font-size: 2rem;
+}
+    .cta {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+
+    .cta a {
+      background: white;
+      color: var(--primary);
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .cta a:hover {
+      background: #e6e0ff;
+    }
+
+ 
+
+    @media(max-width: 500px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .cta h2 {
+        font-size: 1.5rem;
+      }
+    }
   </style>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style1.css"/>
 </head>
 <body>
-    <!-- ========== Start nav section ========== -->
+
+  <!-- ========== Start nav section ========== -->
    <header class ="section-navbar" style="position: fixed; top: 0; left: 0; right: 0;  background:#fff; z-index: 1000;">
     <div class="container">
         <div class="navbar-brand" >
@@ -43,16 +203,15 @@
         grid-template-columns: repeat(3, 200px);
         gap: 20px;
       ">
-      
-        <div >
+      <div >
           <a href="#" style=" margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href=`bedroom.html`;return false">Bedroom</a>
           <a href="#" style=" margin-top:2.5rem;text-decoration: none; color: #444 ;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`Living.html`;return false">Living Room</a>
           <a href="#" style=" margin-top:2.5rem;text-decoration: none; color: #444 ;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`Kitchen.html`;return false">Kitchen</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Kids Room </a>
+          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href=`Kids.html`;return false">Kids Room </a>
 
           <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`tv.html`;return false">TV Unit Design</a>
         </div>
-        <div>
+       <div>
           <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"></a>
           <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Balcony.html';return false">Garden Design</a>
           <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Wardrobe.html';return false">Design Wardrobe</a>
@@ -80,70 +239,93 @@
     </div>
    </header>
    <!-- ========== End nav section========== -->
-<div style="font-family: Arial, sans-serif; background-color: #f4f6f8; margin: 0; padding: 40px;padding-bottom: 25rem;margin-top: 13rem;">
 
-  <h1 style="text-align: center; color: #161616; font-size: 36px; margin-bottom: 50px;">Contact Us</h1>
 
-  <div class="contact-container" style="display: flex; gap: 20rem; justify-content: center; flex-wrap: wrap;">
 
-    <!-- Book Consultation Card -->
-    <div class="consultation-card" style="
-      background-color: rgb(144, 227, 224);
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      width: 400px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.15)';"
-       onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.1)';">
-      <h2 style="font-size: 24px; color: #2563eb; margin-bottom: 15px;text-align:center;" id="btn">Book Free Consultation</h2>
-      <p style="color: #555; margin-bottom: 20px;">
-      Book a free consultation with our experienced professionals today. Whether you  have questions, we're here  to help you  and Guide every step of the way , absolutely free,Go aHead.
-      </p>
-     <button style="
-        background-color: #2563eb;
-        color: white;
-        padding: 10px 16px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 16px;
-        font-weight: 600;
-    
-      "
-      id="book-consultation-button"
-      onmouseover="this.style.backgroundColor='#1e40af';"
-      onmouseout="this.style.backgroundColor='#2563eb';">Schedule Now</button>
-    </div>
-
-    <!-- Contact Info Card -->
-    <div class="contact-card" style="
-      background-color:  rgb(144, 227, 224);
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      width: 400px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.15)';"
-       onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.1)';">
-          <i class="fa-solid fa-headphones-simple"></i>
-       <h2 style="font-size: 19px;margin-top: 2rem; color: #2563eb; margin-bottom: 15px;">Need help? Hum always ready hain!</h2>
-    
-       <p style="margin: 4px 0; color: #444;margin-top: 2rem;">📞  +91-9506423475</p>
-      <p style="margin: 4px 0; color: #444;margin-top: 2rem;">📧 elicitengineers@outlook.com</p>
-    </div>
-
-  </div>
-
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid" onclick="window.location.href='livingRoom.html';return false">
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/1c5ee2/living-room.png" alt="Living Room"/>
+        <h3>Living Room</h3>
+        <p>Modern, comfortable, and elegant living spaces tailored for your family’s lifestyle.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/1c5ee2/kitchen.png" alt="Kitchen"/>
+        <h3>Modular Kitchen</h3>
+        <p>Functional and stylish kitchen layouts with the latest fittings and finishes.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/1c5ee2/bedroom.png" alt="Bedroom"/>
+        <h3>Bedrooms</h3>
+        <p>Cozy, customized bedroom interiors for peaceful and luxurious rest.</p>
+      </div>
+      
+      <div class="service-card" >
+        <img src="https://img.icons8.com/ios-filled/50/1c5ee2/wardrobe.png" alt="Wardrobe"/>
+        <h3>Wardrobes</h3>
+        <p>Space-saving, sleek, and smart storage solutions tailored for your needs.</p>
+      </div>
+      
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/1c5ee2/prayer.png" alt="Pooja Room"/>
+        <h3>Pooja Room</h3>
+        <p>Elegant and peaceful pooja spaces that fit seamlessly into your home.</p>
+      </div>
+      <div class="service-card">
+  <img src="https://img.icons8.com/ios-filled/50/1c5ee2/park-bench.png" alt="Balcony Garden"/>
+  <h3>Balcony Garden</h3>
+  <p>Turn your balcony into a serene green escape with vertical gardens, planters, and ambient lighting.</p>
 </div>
 
-   <footer style="background-color: #1c3d5a; color: #fff; padding: 30px 20px;">
+<div class="service-card">
+  <img src="https://img.icons8.com/ios-filled/50/1c5ee2/ceiling-light.png"  style="color:rgb(87, 149, 203);"alt="False Ceiling"/>
+  <h3>False Ceiling</h3>
+  <p>Stylish and functional ceilings with modern lighting for every room, enhancing beauty and acoustics.</p>
+</div>
+
+<div class="service-card">
+  <img src="https://img.icons8.com/ios-filled/50/1c5ee2/tv.png" alt="TV Unit Design" />
+  <h3>TV Unit Design</h3>
+  <p>Modern and elegant TV units with storage, lighting, and finishes that complement your living space.</p>
+</div>
+
+    </div>
+  </section>
+
+  <section class="process">
+    <h2>Our Process</h2>
+    <div class="process-steps">
+      <div class="step">
+        <span>1</span>
+        <h4>Consultation</h4>
+        <p>Discuss your needs and get expert design suggestions tailored to your space.</p>
+      </div>
+      <div class="step">
+        <span>2</span>
+        <h4>Design & Quote</h4>
+        <p>Receive 3D designs, layout options, and an instant quote.</p>
+      </div>
+      <div class="step">
+        <span>3</span>
+        <h4>Execution</h4>
+        <p>Our team starts site work and shares progress updates with complete transparency.</p>
+      </div>
+      <div class="step">
+        <span>4</span>
+        <h4>Handover</h4>
+        <p>Final installation and styling, followed by smooth and on-time delivery.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer style="background-color: #1c3d5a; color: #fff; padding: 30px 20px; margin-top: 3rem;">
     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; max-width: 1000px; margin:auto;height:24rem;">
 
       <!-- Contact Info -->
-        <div style="flex: 1 1 300px; margin-bottom: 20px;">
+     <div style="flex: 1 1 300px; margin-bottom: 20px;">
         <h3 style="margin: 0 0 10px 0; font-size: 20px;">Contact Us</h3>
         <p style="margin: 5px 0;"><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-9506423475</p>
         <!-- <p style="margin: 5px 0;"><i class="fas fa-envelope" style="margin-right: 8px;"></i> elicitengineers@outlook.com</p> -->
@@ -180,22 +362,13 @@
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
   <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
 </a>
+
 </body>
-
-<script>
-  localStorage.clear();
-  document.getElementById('book-consultation-button').addEventListener('click',(e)=>{
-    e.preventDefault();
-  
-    localStorage.setItem('booked',true);
-    window.location.href='form.html';
-
-  })
-
-  document.getElementById('btn').addEventListener('click',(e)=>{
-    e.preventDefault();
-    localStorage.setItem('booked',true);
-    window.location.href='form.html';
-  })
-</script>
 </html>
+
+
+
+
+
+
+
