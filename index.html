@@ -214,7 +214,84 @@
     text-align: center !important;
   }
 }
+/* section-about */
 
+/* Add this to your style1.css or inside a <style> tag */
+
+/* Default styles (desktop) */
+.section-about .sh2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  justify-content: center;
+}
+.section-about .about-div {
+  flex: 1 1 22rem;
+  min-width: 300px;
+  max-width: 420px;
+  margin: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  padding: 1.5rem 1rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .section-about .sh2 {
+    gap: 1.8rem;
+  }
+  .section-about .about-div {
+       flex: 1 1 45%;
+    max-width: 45%;
+    min-width: 180px;
+    width: 45%;
+    margin: 1rem 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .section-about .sh2 {
+    display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;         /* This sets both column and row gap */
+  row-gap: 8rem;       /* This specifically increases the space between rows */
+  justify-content: center;
+  }
+  .section-about .about-div {
+    width: 95vw;
+    min-width: unset;
+    max-width: 100vw;
+    margin: 0 auto 2rem auto;
+    padding: 1rem 0.5rem;
+  }
+  .section-about .about-div img {
+    width: 100%;
+    height: auto;
+    max-width: 100vw;
+  }
+  .section-about .section-common--title {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+}
+    .section-about .about-div img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+    /* On small screens, reduce image height */
+@media (max-width: 600px) {
+  .section-about .about-div img {
+    height: 120px;
+  }
+}
     </style>
 </head>
 <body>
@@ -391,7 +468,7 @@
         </div>
         <div class="about-div" style="position: relative; text-align: center;">
           
-                <img src=" Photos/WhatsApp Image 2025-05-27 at 21.59.45_cff33d28.jpg" alt=" technical research item" />
+                <img src="Photos/WhatsApp Image 2025-05-27 at 21.59.45_cff33d28.jpg" alt=" technical research item" />
            
                       <h2 style="
     position: absolute;
