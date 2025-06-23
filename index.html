@@ -177,21 +177,44 @@
         
       }
     }
-    @media (width < 768px) {
-      .container{
-           nav{display:none;
-  }
-  .navbar-brand{
-    width:89%;
-    /* height:160px; */
-    object-fit: cover;
-  }
-        .btn{
-          display:none;
-        }
-      }
+   .brand-text {
+  display: none;
+}
 
-    }
+@media (max-width: 768px) {
+  .navbar-brand img {
+    display: none !important;
+  }
+  .brand-text {
+    height:50px;
+    display: block !important;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7b7c7f;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    text-align: center;
+  }
+  nav.navbar {
+    display: none !important;
+  }
+  .btn {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2.7rem !important;
+    letter-spacing: 0.2rem;
+    font-weight: 600 !important;
+    margin-bottom: 1rem !important;
+    /* color: #333 !important; */
+    text-align: center !important;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -202,6 +225,7 @@
             <a href="index.html">
                 <div>
                   <a href="index.html"> <img src="Photos/elicit_logo-removebg-preview (2) (1).png" alt="logo" class="logo"/></a> 
+                    <span class="brand-text">Elicit Interior and Engineers</span>
                 </div>
             </a>
         </div>
