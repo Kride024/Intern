@@ -105,7 +105,9 @@
       font-size: 18px;
       margin-bottom: 8px;
     }
-
+.section-about  .me .container{
+  margin-left: 50rem;
+}
     .name {
       font-weight: bold;
       margin-bottom: 6px;
@@ -288,10 +290,81 @@
     }
     /* On small screens, reduce image height */
 @media (max-width: 600px) {
+  .custom-shape-divider-bottom-1734607603{
+    display: none;
+  }
   .section-about .about-div img {
     height: 120px;
   }
 }
+
+@media (max-width: 500px) {
+   .c1{
+    .grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+       text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  .section-common-heading {
+    font-size: 2.2rem;
+   margin-top: -3rem;
+   margin-bottom: 1.5rem;
+   color:#373535
+  }
+  
+  button{
+    display:none;
+  }
+  margin-bottom: -2rem;
+     }
+   }
+
+   @media (max-width: 500px) {
+    .section-about1{
+      display:none;
+    }
+   }
+
+/* Desktop: 4 columns */
+.section-about .grid-four--cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* Mobile: 2 columns, 2 rows */
+@media (max-width: 700px) {
+  .section-about .grid-four--cols {
+    grid-template-columns: repeat(2, 180px);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+    width: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  .section-about .about-div {
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem 0.5rem;
+  }
+  .section-about .about-div img {
+    /* height:Desktop: 4 columns */
+.section-about .grid-four--cols {
+  margin-right: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-right: 5rem;
+} 
+  }
+}
+
     </style>
 </head>
 <body>
@@ -652,8 +725,8 @@
 
    <!-- ========== End course Section ========== -->
 
-   <section class="section-about">
-    <div class="container " style="margin-left: 50rem;">
+   <section class="section-about me">
+    <div class="container " style="">
        <div class=" grid grid-two--cols" style="text-align: center;"> <div><h2 class="section-common-heading " style="margin-bottom: 4rem;" >Interior Cost in Second</h2>
           <!-- <p class="section-common-subheading" style="margin-top: 1rem;">Calculate the approximate cost of doing up your interiors. -->
         <!-- </p> -->
@@ -668,8 +741,8 @@
         <div class="about-div" style="position: relative; text-align: center;">
            
                 <img src="https://i.pinimg.com/736x/c6/82/ca/c682cafdf626143dc3b14c6800ada3fc.jpg" alt="technical research item"/>
-<!--            
-                      <h2 style="
+         
+                      <!-- <h2 style="
     position: absolute;
     top: 38%;
     left: 40%;
@@ -683,7 +756,7 @@
     white-space: nowrap;
   ">
     Elicit Engineers and Interiors
-  </h2> -->
+  </h2>  -->
             <h3 class="section-common--title"  style="margin-bottom: 4rem; text-align: left; margin-left: 1.5rem;"> False Ceiling : <p>Know the estimated Price</p> </h3>
             <!-- <p>
                 we start by learning what you need.We look at what's new and exciting
