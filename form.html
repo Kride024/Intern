@@ -29,7 +29,27 @@
       align-items: center;
       padding: 2rem;
     }
+ .navbar-brand img {
+    
+      margin-top: 1rem;
+      
+    }
 
+
+
+    .navbar{
+      margin-bottom: -2rem;
+/* 
+      & ul {
+        margin-right: 17rem;
+      } */
+      & li a{
+        font-family: "Poppins";
+        font-size: 1.5rem;
+        font-weight:400;
+        
+      }
+    }
     .container {
       background-color: #eceaeb;
       padding: 2rem;
@@ -104,7 +124,7 @@
   <!-- https://script.google.com/macros/s/AKfycbwBylxYgSQ4qnSKs9bdembG8r7oX-OjJ-EwydGzNK2bpOTvyQLIm8WnpM--ZcfY6fU3vg/exec -->
 </head>
 <body>
-  <div style="
+  <div  id="Divmate" style="
   position: fixed;
   top: 20px;
   right: 20px;
@@ -140,7 +160,7 @@
       <label for="property">Detail and Address</label>
       <textarea id="property" name="property" rows="5" required></textarea>
 
-      <button type="submit">Send Message</button>
+      <button type="submit" id="sendBtn">Send Message</button>
     </form>
   </div>
    <a href="https://wa.me/+919506423475" target="_blank" style="
@@ -166,6 +186,15 @@
   const form = document.querySelector('#form');
   const button = form.querySelector('button');
 
+      if(localStorage.getItem('Hii')=='For_kitchen'){
+         const btn = document.getElementById('sendBtn');
+         const mate = document.getElementById('Divmate');
+         mate.style.backgroundColor = '#f16e84';
+           btn.style.backgroundColor = '#f16e84';
+
+           }
+
+
   form.addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent default form submission
 
@@ -187,6 +216,8 @@
       window.location.href = 'Thank you.html'; // Redirect to form.html if Renovation is true
       }
       else if(localStorage.getItem('Hii')=='For_kitchen'){
+         const btn = document.getElementById('sendBtn');
+           btn.style.backgroundColor = 'pink';
         localStorage.setItem("Hii","For_Done");
         window.location.href = 'Kr.html'; // Redirect to Kr.html if Hii is For_Kitchen
       }

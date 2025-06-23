@@ -85,10 +85,10 @@
     }
    .d-1 {
   width: 100%;
-  display: flex;
+  display: grid;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap; /* Makes it responsive */
   margin-top: 3rem;
   gap: 2rem;
@@ -96,7 +96,8 @@
 
 .d-1 img {
   width: 100%;
-  max-width: 600px;
+  align-self: center;
+  max-width: 800px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
@@ -110,15 +111,17 @@
 
 .cta h2 {
   /* font-size: 2rem; */
+  margin-top: 2rem;
   margin-bottom: 1rem;
   margin-left: 1rem;
 }
 
 .cta p {
   /* font-size: 1.2rem; */
-   margin-left: 7rem;
+   margin-left: 10rem;
   margin-bottom: 1.5rem;
 }
+
 
 /* .btn {
   padding: 0.8rem 1.5rem;
@@ -135,7 +138,27 @@
 /* .btn:hover {
   background-color: #005fa3;
 } */
+ .navbar-brand img {
+    
+      margin-top: 1rem;
+      
+    }
 
+
+
+    .navbar{
+      margin-bottom: -2rem;
+/* 
+      & ul {
+        margin-right: 17rem;
+      } */
+      & li a{
+        font-family: "Poppins";
+        font-size: 1.5rem;
+        font-weight:400;
+        
+      }
+    }
   </style>
   <link rel="stylesheet" href="style1.css">
 </head>
@@ -254,12 +277,12 @@ Experience elegance made effortless with handcrafted interiors tailored for your
       </div>
     </div>
 <div class="d-1">
-    <img src="Screenshot 2025-05-30 013710.png" alt="Living Room Design" style="width: 100%; height: auto; margin-top: 2rem; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);">
+    <img src="Screenshot 2025-06-20 175937.png" alt="Living Room Design" style="width: 100%; height: auto; margin-top: 2rem; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);padding-bottom: 2.5rem;">
 
     <div class="cta">
       <h2>You're Almost There!</h2>
       <p>One step away from designing your dream living space with us.</p>
-      <button class="btn" style="margin-left: 20.5rem;background:#264de4;">Continue Booking Your Session</button>
+      <button class="btn" style="margin-left: 23.5rem;background:#264de4;">Continue Booking Your Session</button>
     </div>
   </div>
   </div>

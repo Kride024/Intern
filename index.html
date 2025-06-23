@@ -144,25 +144,64 @@
       display: none;
     }
 
-    @media (max-width: 1140px) {
-      .slider-container {
-        width: 100%;
+  /* Mobile view adjustment */
+@media (max-width: 770px) {
+  .navbar-brand img {
+    width: 120px;
+    height: auto;
+    max-width: 80vw;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+}
+
+    .navbar-brand img {
+    
+      margin-top: 1rem;
+      
+    }
+
+
+
+    .navbar{
+      margin-bottom: -2rem;
+/* 
+      & ul {
+        margin-right: 17rem;
+      } */
+      & li a{
+        font-family: "Poppins";
+        font-size: 1.5rem;
+        font-weight:400;
+        
       }
     }
-      @keyframes scrollLoop {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+    @media (width < 768px) {
+      .container{
+           nav{display:none;
+  }
+  .navbar-brand{
+    width:89%;
+    /* height:160px; */
+    object-fit: cover;
+  }
+        .btn{
+          display:none;
+        }
+      }
+
     }
     </style>
 </head>
-<body style="overflow-x: hidden;">
+<body>
    <!-- ========== Start nav section ========== -->
-   <header class ="section-navbar" style="position: fixed; top: 0; left: 0; right: 0;  background:#fff; z-index: 1000;">
+   <header class ="section-navbar" >
     <div class="container">
         <div class="navbar-brand" >
             <a href="index.html">
                 <div>
-                  <a href="index.html"> <img src="elicit_logo-removebg-preview (1).png" alt="logo" class="logo" style="width: 10rem; height: 9rem; margin-top: -4px;margin-left: 1rem;"/></a> 
+                  <a href="index.html"> <img src="Photos/elicit_logo-removebg-preview (2) (1).png" alt="logo" class="logo"/></a> 
                 </div>
             </a>
         </div>
@@ -172,45 +211,32 @@
             <li class="nav-item"><a href="who we are.html" class="nav-link">Who we are</a></li>
              <li class="nav-item" style="position: relative;"
         onmouseover="this.querySelector('.dropdown').style.display='grid'; this.querySelector('a').style.color='#d52c6e';"
-        onmouseout="this.querySelector('.dropdown').style.display='none'; this.querySelector('a').style.color='#333';"><a href="service.html" class="nav-link">Design Ideas</a>
-    <div class="dropdown" style="
-    
-        display: none; /* Hidden on page load */
-        position: absolute;
-        top: 100%;
-        left: 0;
-        height:30rem;
-        background-color: #fff;
-        padding: 20px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        z-index: 1000;
-        grid-template-columns: repeat(3, 200px);
-        gap: 20px;
-      ">
+        onmouseout="this.querySelector('.dropdown').style.display='none'; this.querySelector('a').style.color='#333';"><a href="design.html" class="nav-link">Design Ideas</a>
+    <div class="dropdown" >
       
         <div >
-          <a href="#" style=" margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href=`bedroom.html`;return false">Bedroom</a>
-          <a href="#" style=" margin-top:2.5rem;text-decoration: none; color: #444 ;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`Living.html`;return false">Living Room</a>
-          <a href="#" style=" margin-top:2.5rem;text-decoration: none; color: #444 ;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`Kitchen.html`;return false">Kitchen</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href=`kids.html`;return false">Kids Room </a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href=`bedroom.html`;return false">Bedroom</a><br/>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`Living.html`;return false">Living Room</a><br/>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`Kitchen.html`;return false">Kitchen</a><br/>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href=`kids.html`;return false">Kids Room </a>
 
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`tv.html`;return false">TV Unit Design</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`tv.html`;return false">TV Unit Design</a>
         </div>
         <div>
-          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"></a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Balcony.html';return false">Garden Design</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Wardrobe.html';return false">Design Wardrobe</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href='Puja Unit.html';return false">Puja Unit Design</a>
-          <a href="#" style="margin-top:3rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='crockery design.html';return false">Crockery Unit Design</a>
-          <a href="#" style="margin-top: 2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Flooring design.html';return false">Flooring Design</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"></a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Balcony.html';return false">Garden Design</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Wardrobe.html';return false">Design Wardrobe</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href='Puja Unit.html';return false">Puja Unit Design</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='crockery design.html';return false">Crockery Unit Design</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Flooring design.html';return false">Flooring Design</a>
         </div>
         <div>
         
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='StudyRoom.html';return false">Study Room Design</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='false ceiling.html';return false">False Ceiling Ideas</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='bathroom.html';return false">Bathroom Design</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='door.html';return false">Door Designs</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href='staircase.html';return false">Staircase Design</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='StudyRoom.html';return false">Study Room Design</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='false ceiling.html';return false">False Ceiling Ideas</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='bathroom.html';return false">Bathroom Design</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='door.html';return false">Door Designs</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href='staircase.html';return false">Staircase Design</a>
         </div>
       </div>
     </li>
@@ -220,7 +246,7 @@
            
         </ul>
         </nav>
-        <button class="btn" id="btn"style="background-color:  rgb(28, 94, 226); font-weight: 600;font-size:1.4rem">BOOK FREE CONSULTATION</button>
+        <button class="btn" id="btn">BOOK FREE CONSULTATION</button>
     </div>
    </header>
    <!-- ========== End nav section========== -->
@@ -228,42 +254,16 @@
 
    <!-- ========== Start Hero Section ========== -->
    <main>
-    <div class="section-hero" style="
-  background-image: url('https://storage.planner5d.com/c/0c966f05c517554d7fd54cea895ecfbd.jpg?v=1649766100');
-  min-height: 100vh;
-  width:100vw;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center 80%;
-">
+    <div class="section-hero" >
 
 
         <div class="container grid " >
-        <div class="section-hero--content" style="display:grid;justify-content: center;align-content:center; margin-top: 20rem;">
+        <div class="section-hero--content">
             <p class="hero-subheading"></p>
-            <h1 class="hero-heading" style="color: white; text-shadow: 
-  -1px -1px 0 black,  
-   1px -1px 0 black,
-  -1px  2px 0 black,
-   1px  2px 0 black;font-family:Poppins,sana-serif;font-size: 50px;">
+            <h1 class="hero-heading" >
                 Dream Aapka , Vision Hamara
-
-
-            </h1>
-            <button class="btn btns" style=" justify-self:center;background-color: rgb(28, 94, 226);width:30rem;margin-top: 3rem; border-radius: 4rem;padding:1.6rem;font-weight: 600;" onclick="window.location.href=`welcome.html`;">Get Free Estimate</button>
-            <p class="hero-para">
-                <!-- Welcome to Eduhub,your Gateway to Knowledge and skill
-                development. We are dedicated to providing high-quality,
-                accessible education for learners of all ages and backgrounds  -->
-            </p>
-            <div class="hero-btn">
-             <!-- <a href="services.html" class="btn btn-white">Learn with us</a> -->
-            </div>
-        </div>
-        <div class="section-hero--images">
-<!-- <figure>
-    <img src="main-hero1.webp" alt="Image don't exist"/>
-</figure> -->
+               </h1>
+            <button class="btn_main" onclick="window.location.href=`welcome.html`;">Get Free Estimate</button>
         </div>
         </div>
   </div>
@@ -278,17 +278,17 @@
    <!-- ========== End Hero Section ========== -->
    <!-- ========== Start Section-About ========== -->
    <section class="section-about">
-    <div class="container " style="margin-left: 11rem;">
+    <div class="c1">
        <div class=" grid grid-two--cols"> <div><h2 class="section-common-heading ">Get a glimpse Of Elicit Homes</h2>
-          <p class="section-common-subheading" style="margin-top: 1rem;">Swag wala ghar, hassle ka no scene, full-on aapki vibe.
+          <p class="sh1" >Swag wala ghar, hassle ka no scene, full-on aapki vibe.
         </p>
     </div>
-    <button class="btn" style=" width:20rem; margin-left: 36rem;background: rgb(28, 94, 226); border-radius:2rem;">More</button>
+    <button class="btn_more" >More</button>
     </div>
       
 </div>
 
-     <div class="container grid grid-four--cols">
+     <div class="sh2">
        
         <div class="about-div" style="position: relative; text-align: center;" >
            
@@ -403,7 +403,7 @@
           <p class="section-common-subheading" style="margin-top: 1rem;">New look chahiye? Try these interior ideas made just for you!
         </p>
     </div>
-    <button class="btn" style=" width:20rem; margin-left: 36rem;background: rgb(28, 94, 226); border-radius:2rem;">More</button>
+    <button class="btn_more">More</button>
     </div>
       
 </div>

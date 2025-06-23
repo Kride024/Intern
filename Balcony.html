@@ -4,19 +4,39 @@
   <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
+ .navbar-brand img {
+    
+      margin-top: 1rem;
+      
+    }
 
+
+
+    .navbar{
+      margin-bottom: -2rem;
+/* 
+      & ul {
+        margin-right: 17rem;
+      } */
+      & li a{
+        font-family: "Poppins";
+        font-size: 1.5rem;
+        font-weight:400;
+        
+      }
+    }
   </style>
    <link rel="stylesheet" href="style1.css">
   <title>final docs</title>
 </head>
 <body>
      <!-- ========== Start nav section ========== -->
-   <header class ="section-navbar" style="position: fixed; top: 0; left: 0; right: 0;  background:#fff; z-index: 1000;">
+   <header class ="section-navbar" style="">
     <div class="container">
         <div class="navbar-brand" >
             <a href="index.html">
                 <div>
-                  <a href="index.html"> <img src="elicit_logo-removebg-preview (1).png" alt="logo" class="logo" style="width: 10rem; height: 9rem; margin-top: -4px;margin-left: 1rem;"/></a> 
+                  <a href="index.html"> <img src="elicit_logo-removebg-preview (2).png" alt="logo" class="logo" style=""/></a> 
                 </div>
             </a>
         </div>
@@ -29,42 +49,32 @@
         onmouseout="this.querySelector('.dropdown').style.display='none'; this.querySelector('a').style.color='#333';"><a href="service.html" class="nav-link">Design Ideas</a>
     <div class="dropdown" style="
     
-        display: none; /* Hidden on page load */
-        position: absolute;
-        top: 100%;
-        left: 0;
-        height:30rem;
-        background-color: #fff;
-        padding: 20px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        z-index: 1000;
-        grid-template-columns: repeat(3, 200px);
-        gap: 20px;
+       
       ">
        
         <div >
-          <a href="#" style=" margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href=`bedroom.html`;return false">Bedroom</a>
-          <a href="#" style=" margin-top:2.5rem;text-decoration: none; color: #444 ;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`Living.html`;return false">Living Room</a>
-          <a href="#" style=" margin-top:2.5rem;text-decoration: none; color: #444 ;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`Kitchen.html`;return false">Kitchen</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href=`Kids.html`;return false">Kids Room </a>
+          <a href="#" style="" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href=`bedroom.html`;return false">Bedroom</a>
+          <a href="#" style="" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`Living.html`;return false">Living Room</a>
+          <a href="#" style="" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`Kitchen.html`;return false">Kitchen</a>
+          <a href="#" style="" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href=`Kids.html`;return false">Kids Room </a>
 
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`tv.html`;return false">TV Unit Design</a>
+          <a href="#" style="" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`tv.html`;return false">TV Unit Design</a>
         </div>
       <div>
-          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"></a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Balcony.html';return false">Garden Design</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Wardrobe.html';return false">Design Wardrobe</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href='Puja Unit.html';return false">Puja Unit Design</a>
-          <a href="#" style="margin-top:3rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='crockery design.html';return false">Crockery Unit Design</a>
-          <a href="#" style="margin-top: 2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Flooring design.html';return false">Flooring Design</a>
+          <a href="#" style="" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"></a>
+          <a href="#" style="" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Balcony.html';return false">Garden Design</a>
+          <a href="#" style="" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Wardrobe.html';return false">Design Wardrobe</a>
+          <a href="#" style="" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href='Puja Unit.html';return false">Puja Unit Design</a>
+          <a href="#" style="" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='crockery design.html';return false">Crockery Unit Design</a>
+          <a href="#" style="" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Flooring design.html';return false">Flooring Design</a>
         </div>
         <div>
         
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='StudyRoom.html';return false">Study Room Design</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='false ceiling.html';return false">False Ceiling Ideas</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='bathroom.html';return false">Bathroom Design</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='door.html';return false">Door Designs</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href='staircase.html';return false">Staircase Design</a>
+          <a href="#" style="" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='StudyRoom.html';return false">Study Room Design</a>
+          <a href="#" style="" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='false ceiling.html';return false">False Ceiling Ideas</a>
+          <a href="#" style="" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='bathroom.html';return false">Bathroom Design</a>
+          <a href="#" style="" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='door.html';return false">Door Designs</a>
+          <a href="#" style="" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href='staircase.html';return false">Staircase Design</a>
         </div>
       </div>
     </li>
@@ -74,7 +84,7 @@
            
         </ul>
         </nav>
-        <button class="btn" id="btn"style="background-color:  rgb(28, 94, 226); font-weight: 600;font-size:1.4rem">BOOK FREE CONSULTATION</button>
+        <button class="btn" id="btn"style="">BOOK FREE CONSULTATION</button>
     </div>
    </header>
    <!-- ========== End nav section========== -->
