@@ -1665,4 +1665,19 @@ window.addEventListener('load', () => {
  
 
 </script>
+<script>
+function toggleFaq(button) {
+  // Find the next sibling element (the answer div)
+  const answer = button.nextElementSibling;
+  if (!answer) return;
+  // Toggle display
+  if (answer.style.display === "none" || answer.style.display === "") {
+    answer.style.display = "block";
+    button.querySelector("span").textContent = "−";
+  } else {
+    answer.style.display = "none";
+    button.querySelector("span").textContent = "+";
+  }
+}
+</script>
 </html>
