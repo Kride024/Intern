@@ -325,6 +325,10 @@
     font-size: 2.2rem;
    margin-top: -3rem;
    margin-bottom: 1.5rem;
+    margin-left: auto;
+  margin-right: auto;
+    text-align: center;
+  display: block;
    color:#373535
   }
   
@@ -333,6 +337,13 @@
   }
   margin-bottom: -2rem;
      }
+
+     .section-common-heading {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: block;
+}
    }
 
    @media (max-width: 500px) {
@@ -1263,7 +1274,7 @@ Yes, Elicit specializes in both custom-made furniture and modular designs tailor
        <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" style="
   position: fixed;
   bottom: 45rem;
-  right: 10px;
+  right: 25px;
   z-index: 1000;
   width: 60px;
   height: 60px;
@@ -1279,7 +1290,7 @@ Yes, Elicit specializes in both custom-made furniture and modular designs tailor
       <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" style="
   position: fixed;
   bottom: 35rem;
-  right: 10px;
+  right: 25px;
   z-index: 1000;
   width: 60px;
   height: 60px;
@@ -1294,7 +1305,7 @@ Yes, Elicit specializes in both custom-made furniture and modular designs tailor
    <a href="https://wa.me/+919506423475" target="_blank" style="
   position: fixed;
   bottom: 25rem;
-  right: 10px;
+  right: 25px;
   z-index: 1000;
   width: 60px;
   height: 60px;
@@ -1336,43 +1347,55 @@ Yes, Elicit specializes in both custom-made furniture and modular designs tailor
 
 </body>
 <script>
-     const container = document.getElementById('reviewContainer');
-  const leftBtn = document.getElementById('leftBtn');
-  const rightBtn = document.getElementById('rightBtn');
-  const cardWidth = 270; // includes margin
-  const visibleCards = 4;
+const container = document.getElementById('reviewContainer');
+const leftBtn = document.getElementById('leftBtn');
+const rightBtn = document.getElementById('rightBtn');
 
-  let currentIndex = 0;
+function getCardWidth() {
+  const card = container.querySelector('.review-card');
+  return card ? card.offsetWidth + 10 : 230;
+}
+function getVisibleCards() {
+  if(window.innerWidth <= 700) return 1;
+  if(window.innerWidth <= 1000) return 2;
+  return 4;
+}
 
-  function scrollReviews(direction) {
-    const totalCards = container.children.length;
-    const maxIndex = totalCards - visibleCards;
+let cardWidth = getCardWidth();
+let visibleCards = getVisibleCards();
+let currentIndex = 0;
 
-    currentIndex += direction;
-    if (currentIndex < 0) currentIndex = 0;
-    if (currentIndex > maxIndex) currentIndex = maxIndex;
+function scrollReviews(direction) {
+  const totalCards = container.children.length;
+  const maxIndex = totalCards - visibleCards;
 
-    container.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  currentIndex += direction;
+  if (currentIndex < 0) currentIndex = 0;
+  if (currentIndex > maxIndex) currentIndex = maxIndex;
 
-    leftBtn.classList.toggle('hidden', currentIndex === 0);
-    rightBtn.classList.toggle('hidden', currentIndex === maxIndex);
+  container.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+
+  leftBtn.classList.toggle('hidden', currentIndex === 0);
+  rightBtn.classList.toggle('hidden', currentIndex === maxIndex);
+}
+
+// Update on resize
+window.addEventListener('resize', () => {
+  cardWidth = getCardWidth();
+  visibleCards = getVisibleCards();
+  scrollReviews(0);
+});
+
+// Hide right button if cards fit without scrolling
+window.addEventListener('load', () => {
+  cardWidth = getCardWidth();
+  visibleCards = getVisibleCards();
+  const totalCards = container.children.length;
+  if (totalCards <= visibleCards) {
+    rightBtn.classList.add('hidden');
   }
-
-  // Hide right button if cards fit without scrolling
-  window.addEventListener('load', () => {
-    const totalCards = container.children.length;
-    if (totalCards <= visibleCards) {
-      rightBtn.classList.add('hidden');
-    }
-  });
-
-    function toggleFaq(btn) {
-    var answer = btn.nextElementSibling;
-    var icon = btn.querySelector('span');
-    var isVisible = answer.style.display === "block";
-    answer.style.display = isVisible ? "none" : "block";
-    icon.textContent = isVisible ? "+" : "−";
-  }
+  scrollReviews(0);
+});
 
 
   document.getElementById('btn').addEventListener('click',(e)=>{
