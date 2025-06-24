@@ -545,6 +545,157 @@ p{
     padding-right: 1vw;
   }
 }
+/* @media (max-width: 700px) {
+  .reviews-container {
+  margin-left: -16px;
+  }
+} */
+ .channel-partners-wrapper {
+  overflow: hidden;
+  margin: 0 auto 2rem auto;
+  width: 89%;
+  max-width: 1400px;
+}
+
+.channel-partners-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLoop 18s linear infinite;
+  gap: 0;
+}
+
+.channel-partner-card {
+  min-width: 200px;
+  height: 100px;
+  background: #fff;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.channel-partner-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .channel-partners-wrapper {
+    width: 98vw;
+    margin: 0 auto 2rem auto;
+  }
+  .channel-partner-card {
+    min-width: 140px;
+    height: 70px;
+    margin: 0 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .channel-partners-wrapper {
+    width: 100vw;
+    margin: 0 -10px 2rem -10px;
+    padding: 0;
+  }
+  .channel-partner-card {
+    min-width: 100px;
+    height: 50px;
+    margin: 0 3px;
+  }
+}
+
+/* Optional: Keyframes for scrolling animation */
+@keyframes scrollLoop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 700px) {
+  .channel-partners-wrapper {
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 2vw;
+    padding-right: 0;
+  }
+}
+
+.channel-partners-heading {
+  font-size: 3rem;
+   text-align: center;
+  font-weight: 700;
+  color: #373535;
+  /* text-align: left; */
+  margin-left: auto;
+  margin-bottom: 2.5rem;
+  margin-top: 4rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+  .channel-partners-heading {
+    font-size: 3rem;
+    text-align: center;
+    margin-left: 2vw;
+    margin-bottom: 2.3rem;
+    margin-top: 2.9rem;
+  }
+}
+
+@media (max-width : 600px) {
+  .channel-partners-heading {
+   font-size: 2rem;
+    text-align: center;
+    margin-left: 3vw;
+    margin-bottom: 1.7rem;
+    margin-top: 2.4rem;
+    /* text-align: left; */
+  }
+}
+
+/* Desktop styles */
+.achievement-heading,
+.review-heading {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #373535;
+  text-align: left;
+  margin-left: 2vw;
+  /* margin-bottom: 3rem; */
+  /* margin-top: -4rem; */
+  letter-spacing: 0.5px;
+   font-size: 3rem;
+   text-align: center;
+}
+
+@media (max-width: 900px) {
+  .achievement-heading,
+  .review-heading {
+    font-size: 2rem;
+    margin-left: 2vw;
+    font-size: 3rem;
+    text-align: center;
+
+    /* margin-bottom: 2rem; */
+    /* margin-top: 2.5rem; */
+  }
+}
+
+@media (max-width: 600px) {
+  .achievement-heading,
+  .review-heading {
+    font-size: 1.3rem;
+    margin-left: 3vw;
+    /* margin-bottom: 1.5rem; */
+    /* margin-top: 2rem; */
+  font-size: 2rem;
+    text-align: center;
+  }
+}
     </style>
 </head>
 <body>
@@ -1029,7 +1180,7 @@ p{
 
 <!--Review Page start-->
 <div class="body1" >
-<h2  class="section-common-heading review">Customer Reviews</h2>
+<h2 class="section-common-heading review-heading" style="margin-top: 1rem;margin-bottom: 4rem;">Customer Reviews</h2>
 
 <div class="review-wrapper">
   <button class="arrow-button arrow-left hidden" onclick="scrollReviews(-1)" id="leftBtn">←</button>
@@ -1107,7 +1258,7 @@ Abhishek Singh Bhadouria</div>
 <!-- Our Achievements -->
  <div class="Achievement">
 
-<h2 class="section-common-heading " style="margin-bottom: 20px; text-align: center;margin-bottom: 5rem;">Our Achievements</h2>
+<h2 class="section-common-heading achievement-heading" style="margin-top: 1rem;margin-bottom: 4rem;">Our Achievements</h2>
 
 <div id="achievement-wrapper" style="max-width: 3000px; margin: auto; margin-bottom: 5rem;">
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 5rem;">
@@ -1142,12 +1293,13 @@ Abhishek Singh Bhadouria</div>
 </div>
 
 <!-- Partners starts -->
- <div style="margin: 0; padding: 40px 20px; font-family: Arial, sans-serif; background: #ffffff; color: #000000;">
+ <!-- style="margin: 0; padding: 40px 20px; font-family: Arial, sans-serif; background: #ffffff; color: #000000;" -->
+ <div >
 
-<h2  class="section-common-heading" style="text-align: center; margin-bottom: 5rem;">Our Channel Partners</h2>
+<h2 class="section-common-heading channel-partners-heading" style="margin-top: 6rem;margin-bottom: 4rem;">Our Channel Partners</h2>
 
 <!-- Auto-scrolling flex wrapper (no visible box) -->
-<div style="overflow: hidden;margin: 0 7rem; width: 89%;">
+<div class="channel-partners-wrapper">
 
   <!-- Scroll track (twice duplicated for seamless looping) -->
   <div style="display: flex; width: max-content; animation: scrollLoop 10s linear infinite;">
@@ -1444,7 +1596,10 @@ const rightBtn = document.getElementById('rightBtn');
 
 function getCardWidth() {
   const card = container.querySelector('.review-card');
-  return card ? card.offsetWidth + 10 : 230;
+  if (!card) return 230;
+  const style = window.getComputedStyle(card);
+  const margin = parseFloat(style.marginLeft) + parseFloat(style.marginRight);
+  return card.offsetWidth + margin;
 }
 function getVisibleCards() {
   if(window.innerWidth <= 700) return 1;
@@ -1456,18 +1611,28 @@ let cardWidth = getCardWidth();
 let visibleCards = getVisibleCards();
 let currentIndex = 0;
 
+let currentScroll = 0;
+
 function scrollReviews(direction) {
   const totalCards = container.children.length;
-  const maxIndex = totalCards - visibleCards;
+  const containerWidth = container.parentElement.offsetWidth;
+  const cardW = getCardWidth();
+  const totalWidth = cardW * totalCards;
+  let maxScroll = totalWidth - containerWidth;
 
-  currentIndex += direction;
-  if (currentIndex < 0) currentIndex = 0;
-  if (currentIndex > maxIndex) currentIndex = maxIndex;
+  if (maxScroll < 0) maxScroll = 0;
 
-  container.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  // Move by one card width per click
+  currentScroll += direction * cardW;
 
-  leftBtn.classList.toggle('hidden', currentIndex === 0);
-  rightBtn.classList.toggle('hidden', currentIndex === maxIndex);
+  // Clamp scroll
+  if (currentScroll < 0) currentScroll = 0;
+  if (currentScroll > maxScroll) currentScroll = maxScroll;
+
+  container.style.transform = `translateX(-${currentScroll}px)`;
+
+  leftBtn.classList.toggle('hidden', currentScroll === 0);
+  rightBtn.classList.toggle('hidden', currentScroll === maxScroll || maxScroll === 0);
 }
 
 // Update on resize
