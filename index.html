@@ -58,15 +58,23 @@
       padding: 40px 20px;
       text-align: center;
       color: #000000;
+       overflow-x: hidden;
+
     }
 
 /* Responsive Review Section */
 .review-wrapper {
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
+  width: 100%;
   max-width: 1100px;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0 10px;
 }
+
 
 .slider-container {
   overflow: hidden;
@@ -77,6 +85,9 @@
 .reviews-container {
   display: flex;
   transition: transform 0.4s ease;
+  align-items: stretch;
+    min-width: 100%; /* ensures no partial cards show */
+  box-sizing: border-box;
 }
 
 .review-card {
@@ -91,6 +102,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .review-card img {
@@ -164,17 +176,39 @@
   .slider-container {
     width: 100vw;
   }
-  .review-card {
+   .reviews-container {
+    gap: 0;
+  }
+   .review-card {
     width: 90vw;
     min-width: 220px;
     max-width: 95vw;
-    margin: 0 5vw 0 0;
-    padding: 10px;
-    font-size: 12px;
+    margin: 0 auto;
+    padding: 12px;
+    font-size: 13px;
   }
 }
-   
-
+  @media (max-width: 700px) {
+  .arrow-button {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: -5px;
+    /* margin-bottom: 10px; */
+    position: absolute;
+  }
+  .arrow-left {
+    left: 35%;
+    right: auto;
+  }
+  .arrow-right {
+    left: 65%;
+    right: auto;
+  }
+} 
+.section-common-heading .review{
+  margin-bottom: 4rem;
+}
 
 
     .navbar{
@@ -453,7 +487,64 @@ p{
 }
 }
 
+.section-common-heading.review{
+  margin-bottom: 5rem ;
+}
 
+.Achievement{
+  font-family: Arial, sans-serif;
+   background-color: #f3f1f1; 
+   margin: 0; 
+   padding: 40px 20px;
+  color: #000;
+}
+
+
+/* @media (max-width: 700px){
+  .container.grid.grid-four--cols.calculater{
+    font-size: 2rem !important;
+    color: #373535 !important;
+    font-weight: 700 !important;
+    width: 100%;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: -3rem;
+  }
+  .reviews-container {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+} */
+ .container.grid.grid-four--cols.calculater {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px; /* or your preferred max width */
+}
+
+.review-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (width<= 700px) {
+  .container.grid.grid-four--cols.calculater,
+  .review-wrapper {
+    max-width: 98vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+}
     </style>
 </head>
 <body>
@@ -825,7 +916,7 @@ p{
       
 </div>
 
-     <div class="container grid grid-four--cols">
+     <div class="container grid grid-four--cols calculater">
        
         <div class="about-div" style="position: relative; text-align: center;">
            
@@ -938,7 +1029,7 @@ p{
 
 <!--Review Page start-->
 <div class="body1" >
-<h2  class="section-common-heading " style="margin-bottom: 4rem;">Customer Reviews</h2>
+<h2  class="section-common-heading review">Customer Reviews</h2>
 
 <div class="review-wrapper">
   <button class="arrow-button arrow-left hidden" onclick="scrollReviews(-1)" id="leftBtn">←</button>
@@ -1014,7 +1105,7 @@ Abhishek Singh Bhadouria</div>
 </div>
 
 <!-- Our Achievements -->
- <div  style="font-family: Arial, sans-serif; background-color: #f3f1f1; margin: 0; padding: 40px 20px; color: #000; ">
+ <div class="Achievement">
 
 <h2 class="section-common-heading " style="margin-bottom: 20px; text-align: center;margin-bottom: 5rem;">Our Achievements</h2>
 
