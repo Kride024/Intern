@@ -96,7 +96,7 @@
       }
 
       .containers.right {
-        left: 0;
+        left: 30px;
       }
 
       .containers::before {
@@ -128,15 +128,7 @@ p{
   font-size: 1.7rem;
 }
 
- .navbar-brand img {
-    
-      margin-top: 1rem;
-      
-    }
-
-
-
-    .navbar{
+   .navbar{
       margin-bottom: -2rem;
 /* 
       & ul {
@@ -149,16 +141,328 @@ p{
         
       }
     }
+   .brand-text {
+  display: none;
+}
+@media (max-width: 768px) {
+ 
+  .brand-text {
+    height:50px;
+    display: block !important;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7b7c7f;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    text-align: center;
+  }
+  nav.navbar {
+    display: none !important;
+  }
+  .btn {
+    display: none !important;
+  }
+}
+
+ .mobile-menu-unique {
+      display: none;
+    }
+ 
+     @media (max-width: 768px) {
+      .mobile-menu-unique {
+        display: block;
+        position: fixed;
+        top: 4.6rem;
+        right: 1rem;
+        z-index: 9999;
+      }
+
+      .hamburger-icon-unique {
+        width: 30px;
+        height: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+      }
+
+      .hamburger-icon-unique span {
+        height: 4px;
+        width: 100%;
+        background-color: #333;
+        border-radius: 2px;
+        transition: 0.3s ease;
+      }
+
+      .dropdown-unique {
+        display: none;
+        position: absolute;
+        top: 2.8rem;
+        right: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 200px; /* Increased width */
+      }
+
+      .dropdown-unique a {
+        display: block;
+        text-align: center;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #eee;
+      }
+
+      .dropdown-unique a:last-child {
+        border-bottom: none;
+      }
+
+      .dropdown-unique a:hover {
+        background-color: #f2f2f2;
+      }
+    }
+
+.brand-text-mobile {
+  display: none;
+}
+
+/* nav bar mobile */
+.navbar-brand img{
+  width:100px;}
+
+
+  /* Mobile view only */
+@media (max-width: 768px) {
+  .logo,
+  nav.navbar,
+  .btn {
+    display: none !important;
+  }
+
+  .brand-text-mobile {
+    display: flex !important;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    margin-left: -6rem;
+    gap:1rem;
+    margin-bottom: -0.7rem;
+    /* margin-top: 1rem; */
+    /* text-align: center; */
+  }
+
+  .brand-text-mobile .mobile-logo {
+    width: 97px;
+    height: auto;
+    /* margin-bottom: 0.rem; */
+  }
+
+  .brand-lines {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #252525;
+    line-height: 1.5;
+    font-size:2rem ;
+  }
+
+   .line-one {
+    font-size: 1.6rem;
+  }
+
+  .brand-lines .line-two {
+    font-size: 1.6rem;
+    margin-top: 0.2rem;
+  }
+}
+/* Mobile view only */
+
+ 
+
+  
+  
+
+ 
+
+    footer {
+  background-color: #1c3d5a;
+  color: #fff;
+  padding: 30px 20px;
+}
+
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: auto;
+  min-height: 18rem;
+  gap: 2rem;
+}
+
+.footer-contact,
+.footer-social {
+  flex: 1 1 300px;
+  margin-bottom: 20px;
+}
+
+.footer-social {
+  text-align: right;
+}
+
+.footer-social a {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+.footer-social a:last-child {
+  margin-right: 0;
+}
+.footer-social a:hover {
+  color: #d52c6e;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Responsive styles */
+@media (max-width: 700px) {
+  footer{
+  height:600px;
+  }
+  .footer-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 0;
+  }
+  .footer-social {
+    text-align: left;
+    margin-top: 0;
+  }
+  .footer-contact, .footer-social {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  footer {
+    padding: 24px 8px;
+  }
+  .footer-social h3 {
+  display: none;
+}
+.footer-social{
+  text-align: center;
+  margin-top: -10rem;
+}
+}
+.supported-brands{
+display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem auto;
+    padding: 0 1rem;
+}
+@media (max-width: 768px) {
+  .supported {
+   display:none;
+  }
+  
+}
+.supported{
+  display:hide;
+}
+.founder{
+display: flex;
+ align-items: center; 
+ justify-content: center;
+  padding: 4rem 2rem; 
+  background-color: #f4f4f4; 
+  gap: 10rem; 
+  flex-wrap: wrap;
+}
+.about-founder{
+font-size: 3rem; margin-bottom: 1rem; color: #1c1c1c;
+}
+.founder-details{
+font-size: 1.7rem;
+ color: #444; 
+ line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .founder{
+   display:grid;
+  }
+  .about-founder{
+    text-align: center;
+     margin-top: -8rem;
+  }
+  .founder-details{
+    text-align: center;
+   
+  }
+  
+}
+.heading-timeline{
+  font-size: 3rem; margin-bottom: 1rem; color: #1c1c1c;
+  margin-top: 4rem;
+  text-align: center;
+}
+.footer-container{
+margin: 0; padding: 0; font-family: Arial, sans-serif;margin-top:1rem;
+}
+@media (max-width:700px) {
+  .footer-container{
+margin: 0; padding: 0; font-family: Arial, sans-serif;margin-top:15rem;
+}
+}
     </style>
 </head>
 <body>
-     <!-- ========== Start nav section ========== -->
-   <header class ="section-navbar" style="position: fixed; top: 0; left: 0; right: 0;  background:#fff; z-index: 1000;">
+<!-- Unique Hamburger Menu -->
+<div class="mobile-menu-unique">
+  <div class="hamburger-icon-unique" id="hamburgerBtnUnique">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="dropdown-unique" id="hamburgerDropdownUnique">
+    <a href="index.html">Home</a>
+    <a href="who we are.html">Who we Are</a>
+    <a href="design.html">Design Ideas</a>
+    <a href="service.html">Services</a>
+    <a href="work with us.html">Work with Us</a>
+       <a href="contact us.html">Contact</a>
+  </div>
+</div>
+
+   <!-- ========== Start nav section ========== -->
+   <header class ="section-navbar" >
     <div class="container">
         <div class="navbar-brand" >
             <a href="index.html">
                 <div>
-                  <a href="index.html"> <img src="elicit_logo-removebg-preview (1).png" alt="logo" class="logo" style="width: 10rem; height: 9rem; margin-top: -4px;margin-left: 1rem;"/></a> 
+                  <a href="index.html"> <img src="Adobe Express - file.png" alt="logo" class="logo"/></a> 
+            <!-- ✅ HTML Brand Text Section -->
+<span class="brand-text-mobile">
+  <a href="index.html">
+    <img src="Adobe Express - file.png" alt="logo" class="mobile-logo" />
+  </a>
+  <div class="brand-lines">
+    <div class="line-one">Elicit Interiors</div>
+    <div class="line-two">& Engineers</div>
+  </div>
+</span>
                 </div>
             </a>
         </div>
@@ -168,45 +472,32 @@ p{
             <li class="nav-item"><a href="who we are.html" class="nav-link">Who we are</a></li>
              <li class="nav-item" style="position: relative;"
         onmouseover="this.querySelector('.dropdown').style.display='grid'; this.querySelector('a').style.color='#d52c6e';"
-        onmouseout="this.querySelector('.dropdown').style.display='none'; this.querySelector('a').style.color='#333';"><a href="service.html" class="nav-link">Design Ideas</a>
-    <div class="dropdown" style="
-    
-        display: none; /* Hidden on page load */
-        position: absolute;
-        top: 100%;
-        left: 0;
-        height:30rem;
-        background-color: #fff;
-        padding: 20px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        z-index: 1000;
-        grid-template-columns: repeat(3, 200px);
-        gap: 20px;
-      ">
+        onmouseout="this.querySelector('.dropdown').style.display='none'; this.querySelector('a').style.color='#333';"><a href="design.html" class="nav-link">Design Ideas</a>
+    <div class="dropdown" >
       
         <div >
-          <a href="#" style=" margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href=`bedroom.html`;return false">Bedroom</a>
-          <a href="#" style=" margin-top:2.5rem;text-decoration: none; color: #444 ;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`Living.html`;return false">Living Room</a>
-          <a href="#" style=" margin-top:2.5rem;text-decoration: none; color: #444 ;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`Kitchen.html`;return false">Kitchen</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'">Kids Room </a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href=`bedroom.html`;return false">Bedroom</a><br/>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`Living.html`;return false">Living Room</a><br/>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`Kitchen.html`;return false">Kitchen</a><br/>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href=`kids.html`;return false">Kids Room </a>
 
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`tv.html`;return false">TV Unit Design</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href=`tv.html`;return false">TV Unit Design</a>
         </div>
-       <div>
-          <a href="#" style="text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"></a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Balcony.html';return false">Garden Design</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Wardrobe.html';return false">Design Wardrobe</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href='Puja Unit.html';return false">Puja Unit Design</a>
-          <a href="#" style="margin-top:3rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='crockery design.html';return false">Crockery Unit Design</a>
-          <a href="#" style="margin-top: 2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Flooring design.html';return false">Flooring Design</a>
+        <div>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"></a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Balcony.html';return false">Garden Design</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Wardrobe.html';return false">Design Wardrobe</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href='Puja Unit.html';return false">Puja Unit Design</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='crockery design.html';return false">Crockery Unit Design</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='Flooring design.html';return false">Flooring Design</a>
         </div>
         <div>
         
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='StudyRoom.html';return false">Study Room Design</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='false ceiling.html';return false">False Ceiling Ideas</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='bathroom.html';return false">Bathroom Design</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='door.html';return false">Door Designs</a>
-          <a href="#" style="margin-top:2.5rem;text-decoration: none; color: #444;font-weight: 600;font-size: 1.4rem; margin-bottom: 8px; display: block;" onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href='staircase.html';return false">Staircase Design</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='StudyRoom.html';return false">Study Room Design</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='false ceiling.html';return false">False Ceiling Ideas</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='bathroom.html';return false">Bathroom Design</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'" onclick="window.location.href='door.html';return false">Door Designs</a>
+          <a href="#"  onmouseover="this.style.color='#d52c6e'" onmouseout="this.style.color='#444'"onclick="window.location.href='staircase.html';return false">Staircase Design</a>
         </div>
       </div>
     </li>
@@ -216,7 +507,7 @@ p{
            
         </ul>
         </nav>
-        <button class="btn" id="btn"style="background-color:  rgb(28, 94, 226); font-weight: 600;font-size:1.4rem">BOOK FREE CONSULTATION</button>
+        <button class="btn" id="btn">BOOK FREE CONSULTATION</button>
     </div>
    </header>
    <!-- ========== End nav section========== -->
@@ -304,7 +595,7 @@ sorts of different ways, but with the same goal.
   </div>
   </div>
 <div class="section-timeline">
-<h1 class="section-common-heading"  style="font-size: 3.5rem; margin-bottom: 10px; color: #333;margin-left: 40%;margin-top: 5rem;">Our growth journey</h1>
+<h1 class="heading-timeline">Our growth journey</h1>
 <div class="timeline">
   <div class="containers left">
     <div class="content">
@@ -361,15 +652,15 @@ sorts of different ways, but with the same goal.
 </div>
 
 
-<div style="display: flex; align-items: center; justify-content: center; padding: 4rem 2rem; background-color: #f4f4f4; gap: 10rem; flex-wrap: wrap;">
+<div  class="founder">
   
   <div style="flex: 1; max-width: 400px;">
     <img src="elicit founder.jpg" alt="CEO of Elicit Homes" style="width: 100%; height: auto; border-radius: 50%; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);" />
   </div>
   
   <div style="flex: 2; max-width: 600px;">
-    <h2 style="font-size: 3rem; margin-bottom: 1rem; color: #1c1c1c;">Meet Our Founder</h2>
-    <p style="font-size: 1.7rem; color: #444; line-height: 1.6;">
+    <h2 class="about-founder">Meet Our Founder</h2>
+    <p class="founder-details">
       The founder of Elicit Homes brings a powerful blend of creativity, vision, and
       industry expertise. With a passion for redefining interiors, He lead a team
       dedicated to crafting spaces that are bold, functional, and deeply personal.
@@ -377,7 +668,7 @@ sorts of different ways, but with the same goal.
   </div>
 
 </div>
-<div style=" padding-bottom:19rem;">
+<div style=" padding-bottom:19rem;" class="supported">
   <div style="font-family: Arial, sans-serif; margin: 40px; ">
 <div style="margin: 0; font-family: Arial, sans-serif; ">
 
@@ -385,14 +676,7 @@ sorts of different ways, but with the same goal.
     Supported by the Best
   </h1>
 
-  <div style="
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-    max-width: 1200px;
-    margin: 0 auto 3rem auto;
-    padding: 0 1rem;
-  ">
+  <div  class="supported-brands">
     <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://tse3.mm.bing.net/th?id=OIP.aEtF3x_ejUdgSmXnrdp3uAHaBq&pid=Api&P=0&h=220" style="width:100% ;height:auto; object-fit: contain;"></div>
     <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://5.imimg.com/data5/IOS/Default/2020/9/DJ/IE/PQ/2593275/product-jpeg-500x500.png" style="width:100%;height:100%; object-fit: contain;"></div>
     <div style="background-color: white; border: 1px solid #ccc; height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 6px;"><img src="https://tse4.mm.bing.net/th?id=OIP.iNvDFaU6WkQFwc54J3k7fgAAAA&pid=Api&P=0&h=220" style="width:100%;height:100%; object-fit: contain;"></div>
@@ -417,37 +701,72 @@ sorts of different ways, but with the same goal.
   
 
 <!-- <div class="section-hero" style="background-image: url('Screenshot 2025-05-30 013843.png'); background-size: cover; background-repeat: no-repeat; background-position: center; min-height: 80vh; margin: 0;"></div> -->
- <!-- Footer -->
-  <footer style="background-color: #1c3d5a; color: #fff; padding: 30px 20px;">
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; max-width: 1000px; margin:auto;height:24rem;">
+  <!-- ========== Start Footer Section ========== -->
 
-      <!-- Contact Info -->
-     <div style="flex: 1 1 300px; margin-bottom: 20px;">
-        <h3 style="margin: 0 0 10px 0; font-size: 20px;">Contact Us</h3>
-        <p style="margin: 5px 0;"><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-9506423475</p>
-        <!-- <p style="margin: 5px 0;"><i class="fas fa-envelope" style="margin-right: 8px;"></i> elicitengineers@outlook.com</p> -->
-        <p style="margin: 5px 0;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 0169, Ghaseekatra Beside Karbala, Ghasi Katra Gorakhpur-273001, Uttar Pradesh, India</p>
-      </div>
+<div  class="footer-container" >
 
-      <!-- Social Icons -->
-      <div style="flex: 1 1 200px; text-align: right;">
-        <h3 style="margin: 0 0 10px 0; font-size: 20px;">Connect with us</h3>
-        <a href="https://wa.me/+919506423475" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/elicitengineers/" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.facebook.com/share/16XpHzab3M/?mibextid=wwXIfr" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fa-brands fa-facebook"></i></a>
-        <a href="mailto:elicitengineers@outlook.com" style="color: #fff; font-size: 18px;"><i class="fas fa-envelope"></i></a>
-      </div>
-
+  <!-- Footer -->
+  <footer>
+  <div class="footer-main">
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h3 style="margin: 0 0 10px 0; font-size: 20px;">Contact Us</h3>
+      <p style="margin: 5px 0;"><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-9506423475</p>
+      <p style="margin: 5px 0;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 0169, Ghaseekatra , Ghasi Katra Gorakhpur1, Uttar Pradesh, India-27300</p>
     </div>
-    <div style="text-align: center; margin-top: 20px; font-size: 14px; color: #ccc;">
-      © 2025 Your Interior Company. All rights reserved.
+    <!-- Social Icons -->
+    <div class="footer-social">
+      <h3 style="margin: 0 0 10px 0; font-size: 20px;">Connect with us</h3>
+      <a href="https://wa.me/+919506423475"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/company/elicitengineers/"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.facebook.com/share/16XpHzab3M/?mibextid=wwXIfr"><i class="fa-brands fa-facebook"></i></a>
+      <a href="mailto:elicitengineers@outlook.com"><i class="fas fa-envelope"></i></a>
     </div>
-  </footer>
-    <a href="https://wa.me/+919506423475" target="_blank" style="
+  </div>
+  <div class="footer-bottom">
+    © 2025 Your Interior Company. All rights reserved.
+  </div>
+</footer>
+
+</div>
+
+   <!-- ========== End Footer Section ========== -->
+       <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" style="
   position: fixed;
-  bottom: 19rem;
-  right: 10px;
+  bottom: 45rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 00 2px 10px rgba(0,0,0,0.2);">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+</a>
+
+      <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" style="
+  position: fixed;
+  bottom: 35rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0077B5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+</a>
+   <a href="https://wa.me/+919506423475" target="_blank" style="
+  position: fixed;
+  bottom: 25rem;
+  right: 25px;
   z-index: 1000;
   width: 60px;
   height: 60px;
@@ -461,6 +780,20 @@ sorts of different ways, but with the same goal.
 </a>
 
 </body>
+<script>
+  const hamburgerBtn = document.getElementById("hamburgerBtnUnique");
+  const dropdownMenu = document.getElementById("hamburgerDropdownUnique");
+
+  hamburgerBtn.addEventListener("click", () => {
+    dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!hamburgerBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownMenu.style.display = "none";
+    }
+  });
+</script>
 <script>
   localStorage.clear();
   document.getElementById('btn').addEventListener('click',(e)=>{

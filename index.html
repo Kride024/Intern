@@ -229,9 +229,7 @@
 }
 
 @media (max-width: 768px) {
-  .navbar-brand img {
-    display: none !important;
-  }
+ 
   .brand-text {
     height:50px;
     display: block !important;
@@ -253,12 +251,19 @@
 }
 @media (max-width: 768px) {
   .hero-heading {
-    font-size: 2.7rem !important;
+    display:inline;
+    font-size: 1.8rem !important;
     letter-spacing: 0.2rem;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
     margin-bottom: 1rem !important;
     /* color: #333 !important; */
     text-align: center !important;
+    margin-top: 10rem;
+  }
+  .btn_main{
+    width:19rem;
+    padding: 9px;
+    font-size: 1.5rem;
   }
 }
 /* section-about */
@@ -593,6 +598,7 @@ p{
     height: 70px;
     margin: 0 6px;
   }
+ 
 }
 
 @media (max-width: 600px) {
@@ -606,6 +612,7 @@ p{
     height: 50px;
     margin: 0 3px;
   }
+
 }
 
 /* Optional: Keyframes for scrolling animation */
@@ -779,17 +786,271 @@ footer {
   margin-top: -10rem;
 }
 }
+
+ .mobile-menu-unique {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu-unique {
+        display: block;
+        position: fixed;
+        top: 4.6rem;
+        right: 1rem;
+        z-index: 9999;
+      }
+
+      .hamburger-icon-unique {
+        width: 30px;
+        height: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+      }
+
+      .hamburger-icon-unique span {
+        height: 4px;
+        width: 100%;
+        background-color: #333;
+        border-radius: 2px;
+        transition: 0.3s ease;
+      }
+
+      .dropdown-unique {
+        display: none;
+        position: absolute;
+        top: 2.8rem;
+        right: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 120px; /* Increased width */
+      }
+
+      .dropdown-unique a {
+        display: block;
+        text-align: center;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #eee;
+        font-size: 1.1rem;
+      }
+
+      .dropdown-unique a:last-child {
+        border-bottom: none;
+      }
+
+      .dropdown-unique a:hover {
+        background-color: #f2f2f2;
+      }
+    }
+
+    #ach-card-2015,#ach-card-projects,#ach-card-vendors,#ach-card-supply{
+      .first{
+font-size: 28px;
+ margin: 10px 0;
+      }
+      .second{
+font-size: 14px;
+      }
+    }
+     @media (max-width: 768px){
+      /* Reduce number size in achievement cards */
+#ach-card-2015 .first,
+#ach-card-projects .first,
+#ach-card-vendors .first,
+#ach-card-supply .first {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+#ach-card-2015 .second,
+#ach-card-projects .second,
+#ach-card-vendors .second,
+#ach-card-supply .second {
+  font-size: 13px;
+}
+     }
+     /* Hide on desktop */
+.brand-text-mobile {
+  display: none;
+}
+/* nav bar mobile */
+.navbar-brand img{
+  width:100px;}
+
+/* Mobile view only */
+@media (max-width: 768px) {
+  .logo,
+  nav.navbar,
+  .btn {
+    display: none !important;
+  }
+
+  .brand-text-mobile {
+    display: flex !important;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    margin-left: -6rem;
+    gap:1rem;
+    margin-bottom: -0.7rem;
+    /* margin-top: 1rem; */
+    /* text-align: center; */
+  }
+
+  .brand-text-mobile .mobile-logo {
+    width: 97px;
+    height: auto;
+    /* margin-bottom: 0.rem; */
+  }
+
+  .brand-lines {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #252525;
+    line-height: 1.5;
+    font-size:2rem ;
+  }
+
+   .line-one {
+    font-size: 2rem;
+  }
+
+  .brand-lines .line-two {
+    font-size: 2rem;
+    margin-top: 0.2rem;
+  }
+  
+}
+
+.Link-1{
+position: fixed;
+  bottom: 45rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 00 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
+}
+.Link-2{
+  position: fixed;
+  bottom: 35rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0077B5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
+}
+.Link-3{
+ position: fixed;
+  bottom: 25rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
+}
+
+  @media (max-width: 700px) {
+  .Link-1,
+  .Link-2,
+  .Link-3 {
+    width: 36px;
+    height: 36px;
+  
+    /* bottom: unset; */
+    right: 10px;
+  }
+  .Link-1{
+    bottom:45rem;
+    /*
+    . right:50px; */
+  }
+  .Link-2{
+bottom:40rem;
+
+  }
+  .Link-3{
+Bottom:35rem;
+  }
+  .Link-1 img,
+  .Link-2 img,
+  .Link-3 img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+
+
+
     </style>
 </head>
 <body>
+  
+<!-- Unique Hamburger Menu -->
+<div class="mobile-menu-unique">
+  <div class="hamburger-icon-unique" id="hamburgerBtnUnique">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="dropdown-unique" id="hamburgerDropdownUnique">
+    <a href="index.html">Home</a>
+    <a href="who we are.html">Who we Are</a>
+    <a href="design.html">Design Ideas</a>
+    <a href="service.html">Services</a>
+    <a href="work with us.html">Work with Us</a>
+       <a href="contact us.html">Contact</a>
+  </div>
+</div>
+
    <!-- ========== Start nav section ========== -->
    <header class ="section-navbar" >
     <div class="container">
         <div class="navbar-brand" >
             <a href="index.html">
                 <div>
-                  <a href="index.html"> <img src="Photos/elicit_logo-removebg-preview (2) (1).png" alt="logo" class="logo"/></a> 
-                    <span class="brand-text">Elicit Interiors and Engineers</span>
+                  <a href="index.html"> <img src="Adobe Express - file.png" alt="logo" class="logo"/></a> 
+            <!-- ✅ HTML Brand Text Section -->
+<span class="brand-text-mobile">
+  <a href="index.html">
+    <img src="Adobe Express - file.png" alt="logo" class="mobile-logo" />
+  </a>
+  <div class="brand-lines">
+    <div class="line-one">Elicit Engineers</div>
+    <div class="line-two">& Interiors</div>
+  </div>
+</span>
                 </div>
             </a>
         </div>
@@ -1348,26 +1609,26 @@ Abhishek Singh Bhadouria</div>
     
     <div id="ach-card-2015" style="background: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 300px; padding: 20px; text-align: center; flex-shrink: 0;">
       <h3 style="margin: 0; font-size: 20px;">2015</h3>
-      <p style="font-size: 28px; margin: 10px 0;"><strong>Established</strong></p>
-      <p style="font-size: 14px;">Year we began our journey in interior excellence.</p>
+      <p class="first"><strong>Established</strong></p>
+      <p class="second">Year we began our journey in interior excellence.</p>
     </div>
 
     <div id="ach-card-projects" style="background: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 300px; padding: 20px; text-align: center; flex-shrink: 0;">
       <h3 style="margin: 0; font-size: 20px;">300+</h3>
-      <p style="font-size: 28px; margin: 10px 0;"><strong>Projects Done</strong></p>
-      <p style="font-size: 14px;">Successfully delivered quality spaces across the country.</p>
+      <p class="first"><strong>Projects Done</strong></p>
+      <p class="second">Successfully delivered quality spaces across the country.</p>
     </div>
 
     <div id="ach-card-vendors" style="background: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 300px; padding: 20px; text-align: center; flex-shrink: 0;">
       <h3 style="margin: 0; font-size: 20px;">150+</h3>
-      <p style="font-size: 28px; margin: 10px 0;"><strong>Trusted Vendors</strong></p>
-      <p style="font-size: 14px;">Collaborations built on reliability and quality materials.</p>
+      <p class="first"><strong>Trusted Vendors</strong></p>
+      <p class="second">Collaborations built on reliability and quality materials.</p>
     </div>
 
     <div id="ach-card-supply" style="background: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 300px; padding: 20px; text-align: center; flex-shrink: 0;">
       <h3 style="margin: 0; font-size: 20px;">100+</h3>
-      <p style="font-size: 28px; margin: 10px 0;"><strong>Supply Channels</strong></p>
-      <p style="font-size: 14px;">Efficient delivery networks to meet every project need.</p>
+      <p class="first"><strong>Supply Channels</strong></p>
+      <p class="second">Efficient delivery networks to meet every project need.</p>
     </div>
     
   </div>
@@ -1593,51 +1854,15 @@ Yes, Elicit specializes in both custom-made furniture and modular designs tailor
 </div>
 
    <!-- ========== End Footer Section ========== -->
-       <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" style="
-  position: fixed;
-  bottom: 45rem;
-  right: 25px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 00 2px 10px rgba(0,0,0,0.2);">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+       <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" class="Link-1">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="WhatsApp">
 </a>
 
-      <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" style="
-  position: fixed;
-  bottom: 35rem;
-  right: 25px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #0077B5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+      <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" class="Link-2" >
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="WhatsApp"   >
 </a>
-   <a href="https://wa.me/+919506423475" target="_blank" style="
-  position: fixed;
-  bottom: 25rem;
-  right: 25px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #25D366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+   <a href="https://wa.me/+919506423475" target="_blank"  class="Link-3">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"  >
 </a>
 
 <!-- Modal -->
@@ -1668,6 +1893,20 @@ Yes, Elicit specializes in both custom-made furniture and modular designs tailor
 
 
 </body>
+<script>
+  const hamburgerBtn = document.getElementById("hamburgerBtnUnique");
+  const dropdownMenu = document.getElementById("hamburgerDropdownUnique");
+
+  hamburgerBtn.addEventListener("click", () => {
+    dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!hamburgerBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownMenu.style.display = "none";
+    }
+  });
+</script>
 <script>
 const container = document.getElementById('reviewContainer');
 const leftBtn = document.getElementById('leftBtn');

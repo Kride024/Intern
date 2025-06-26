@@ -215,7 +215,7 @@ box-shadow:var(--btn-box-shadow);
 /*****navbar Section *****/ 
 .section-navbar{
     width:100%;
-    background: #e7e0e0;
+    background: #e9e8e8;
     box-shadow:rgba(0,0,0,0.05)0px 6px 24px 0px ,
     rgba(0,0,0,0.08)0px 0px 0px 1px;
     position: fixed; 
