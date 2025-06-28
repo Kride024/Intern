@@ -25,12 +25,17 @@ body {
 
 /* Masonry Layout */
 .masonry {
-    margin-top: 15rem;
+    margin-top:12rem;
   column-count: 4;
   column-gap: 1rem;
   padding: 2rem;
 }
-
+@media (max-width: 700px) {
+  .masonry {
+    margin-top: 7rem;
+  }
+  
+}
 .item {
   margin-bottom: 1rem;
   border-radius: 8px;
@@ -78,7 +83,27 @@ body {
   color: #777;
   font-size: 1.7rem;
 }
-
+@media (max-width: 768px) {
+ 
+  .brand-text {
+    height:50px;
+    display: block !important;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7b7c7f;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    text-align: center;
+  }
+  nav.navbar {
+    display: none !important;
+  }
+  .btn {
+    display: none !important;
+  }
+}
 
 /* Responsive */
 @media (max-width: 1200px) {
@@ -95,7 +120,7 @@ body {
 
 @media (max-width: 480px) {
   .masonry {
-    column-count: 1;
+    column-count: 2;
     padding: 1rem;
   }
 }
@@ -139,65 +164,7 @@ body {
   }
 }
 
- .mobile-menu-unique {
-      display: none;
-    }
- 
-     @media (max-width: 768px) {
-      .mobile-menu-unique {
-        display: block;
-        position: fixed;
-        top: 4.6rem;
-        right: 1rem;
-        z-index: 9999;
-      }
 
-      .hamburger-icon-unique {
-        width: 30px;
-        height: 22px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        cursor: pointer;
-      }
-
-      .hamburger-icon-unique span {
-        height: 4px;
-        width: 100%;
-        background-color: #333;
-        border-radius: 2px;
-        transition: 0.3s ease;
-      }
-
-      .dropdown-unique {
-        display: none;
-        position: absolute;
-        top: 2.8rem;
-        right: 0;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        width: 200px; /* Increased width */
-      }
-
-      .dropdown-unique a {
-        display: block;
-        text-align: center;
-        padding: 10px 15px;
-        text-decoration: none;
-        color: #333;
-        border-bottom: 1px solid #eee;
-      }
-
-      .dropdown-unique a:last-child {
-        border-bottom: none;
-      }
-
-      .dropdown-unique a:hover {
-        background-color: #f2f2f2;
-      }
-    }
 
 .brand-text-mobile {
   display: none;
@@ -229,7 +196,7 @@ body {
   }
 
   .brand-text-mobile .mobile-logo {
-    width: 97px;
+    width: 52px;
     height: auto;
     /* margin-bottom: 0.rem; */
   }
@@ -244,14 +211,15 @@ body {
   }
 
    .line-one {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .brand-lines .line-two {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-top: 0.2rem;
   }
 }
+
 /* Mobile view only */
 
 /* Footer Styles */
@@ -263,6 +231,7 @@ body {
 }
 
 .footer-main {
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -303,6 +272,20 @@ body {
   color: #ccc;
 }
 
+.footer-heading{
+margin: 0 0 10px 0;
+ font-size: 20px;
+}
+.footer-para--1{
+margin: 5px 0;
+}
+.footer-para--2{
+margin: 5px 0;
+}
+.footer-social{
+margin: 0 0 10px 0;
+ font-size: 20px;
+}
 /* Responsive styles */
 @media (max-width: 700px) {
   footer{
@@ -332,28 +315,289 @@ body {
   text-align: center;
   margin-top: -10rem;
 }
+.footer-para--1,.footer-para--2,.footer-bottom{
+font-size: 1.1rem;
+font-family:'Poppins', sans-serif ;
+font-weight: 700;
+}
+.footer-heading,.footer-social{
+  font-size: 1.6rem;
+  font-family:'Poppins', sans-serif ;
+font-weight: 700;
+}
+.footer-bottom{
+  color:fff;
+}
+.btn_main{
+   font-size: 1.1rem;
+  font-family:'Poppins', sans-serif ;
+  letter-spacing: 0.1;
+/* font-weight: 700; */
+}
+}
+  /* Hamburger Dropdown */
+    .mobile-menu-unique {
+      position: fixed;
+      bottom: 60px;
+      right: 15px;
+      display: none;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      flex-direction: column;
+    }
+
+    .mobile-menu-unique a {
+      padding: 10px 16px;
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .mobile-menu-unique a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu-unique a:hover {
+      background-color: #f9f9f9;
+    }
+
+    .hamburger-icon-unique {
+      display: none;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .hamburger-icon-unique span {
+      height: 2px;
+      width: 18px;
+      background-color: #444;
+      display: block;
+    }
+    .mobile-navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 56px;
+  border-top: 1px solid #eee;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+}
+.mobile-navbar .nav-item {
+  flex: 1;
+  text-align: center;
+  color: #444;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 6px 0 0 0;
+}
+.mobile-navbar .nav-item i {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 2px;
+}
+@media (min-width: 769px) {
+  .mobile-navbar {
+    display: none !important;
+  }
+}
+  /* Active link styling */
+    .nav-item.active {
+      color: #007bff !important;
+    }
+
+    .nav-item.active i,
+    .nav-item.active span {
+      color: #007bff !important;
+    }
+.Link-1{
+position: fixed;
+  bottom: 45rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 00 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
+}
+.Link-2{
+  position: fixed;
+  bottom: 35rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0077B5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
+}
+.Link-3{
+ position: fixed;
+  bottom: 25rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
+}
+
+  @media (max-width: 700px) {
+  .Link-1,
+  .Link-2,
+  .Link-3 {
+    width: 36px;
+    height: 36px;
+  
+    /* bottom: unset; */
+    right: 10px;
+  }
+  .Link-1{
+    bottom:45rem;
+    /*
+    . right:50px; */
+  }
+  .Link-2{
+bottom:40rem;
+
+  }
+  .Link-3{
+Bottom:35rem;
+  }
+  .Link-1 img,
+  .Link-2 img,
+  .Link-3 img {
+    width: 18px;
+    height: 18px;
+  }
+  .item.four{
+    img{
+      height:480px;
+    }
+   
+  }
+}
+
+#imageModal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+}
+#imageModal img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+}
+#imageModal span {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 2100;
 }
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
-<!-- Unique Hamburger Menu -->
-<div class="mobile-menu-unique">
-  <div class="hamburger-icon-unique" id="hamburgerBtnUnique">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <div class="dropdown-unique" id="hamburgerDropdownUnique">
-    <a href="index.html">Home</a>
-    <a href="who we are.html">Who we Are</a>
-    <a href="design.html">Design Ideas</a>
-    <a href="service.html">Services</a>
-    <a href="work with us.html">Work with Us</a>
-       <a href="contact us.html">Contact</a>
+<div class="mobile">
+  <!-- Mobile Bottom Navbar -->
+ <div class="mobile-navbar">
+  <a href="index.html" class="nav-item" data-page="index.html">
+    <i class="fas fa-home"></i>
+    <span>Home</span>
+  </a>
+  <a href="design.html" class="nav-item" data-page="design.html">
+    <i class="fas fa-lightbulb"></i>
+    <span>Design Ideas</span>
+  </a>
+  <a href="welcome.html" class="nav-item" data-page="welcome.html">
+    <i class="fas fa-calculator"></i>
+    <span>Estimate</span>
+  </a>
+  <div class="nav-item" onclick="toggleDropdown()">
+    <i class="fas fa-ellipsis-h"></i>
+    <span>More</span>
   </div>
 </div>
+
+
+  <!-- More Dropdown Menu -->
+  <div class="mobile-menu-unique" id="hamburgerDropdownUnique">
+    <a href="who we are.html">Who we Are</a>
+    <a href="service.html">Services</a>
+    <a href="work with us.html">Work with Us</a>
+    <a href="contact us.html">Contact</a>
+  </div>
+
+  <!-- JS to Toggle Dropdown -->
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("hamburgerDropdownUnique");
+      if (dropdown.style.display === "flex") {
+        dropdown.style.display = "none";
+      } else {
+        dropdown.style.display = "flex";
+      }
+    }
+
+    // Optional: Close on outside click
+    document.addEventListener('click', function (event) {
+      const dropdown = document.getElementById("hamburgerDropdownUnique");
+      const moreBtn = event.target.closest('.nav-item');
+      if (!dropdown.contains(event.target) && !moreBtn) {
+        dropdown.style.display = "none";
+      }
+    });
+       window.addEventListener("DOMContentLoaded", function () {
+  const path = window.location.pathname.split("/").pop().split("?")[0]; // current file, like 'design.html'
+  const navLinks = document.querySelectorAll(".mobile-navbar .nav-item");
+
+  navLinks.forEach(link => {
+    const page = link.getAttribute("data-page");
+    if (page === path) {
+      link.classList.add("active"); // This triggers the blue styling from CSS
+    }
+  });
+});
+  </script>
+
+</div>
+
 
    <!-- ========== Start nav section ========== -->
    <header class ="section-navbar" >
@@ -361,11 +605,11 @@ body {
         <div class="navbar-brand" >
             <a href="index.html">
                 <div>
-                  <a href="index.html"> <img src="Adobe Express - file.png" alt="logo" class="logo"/></a> 
+                  <a href="index.html"> <img src="Screenshot_2025-06-25_180908-removebg-preview.svg" alt="logo" class="logo"/></a> 
             <!-- ✅ HTML Brand Text Section -->
 <span class="brand-text-mobile">
   <a href="index.html">
-    <img src="Adobe Express - file.png" alt="logo" class="mobile-logo" />
+    <img src="Screenshot_2025-06-25_180908-removebg-preview.svg" alt="logo" class="mobile-logo" />
   </a>
   <div class="brand-lines">
     <div class="line-one">Elicit Interiors</div>
@@ -426,7 +670,7 @@ body {
     <div class="item"><img src="designpage/p13.jpg" alt="Design 1"></div>
     <div class="item"><img src="designpage/p12.jpg" alt="Design 2"></div>
     <div class="item"><img src="designpage/p11.jpg" alt="Design 3"></div>
-    <div class="item"><img src="designpage/p10.jpg" alt="Design 4"></div>
+    <div class="item four"><img src="designpage/p10.jpg" alt="Design 4"></div>
     <div class="item"><img src="designpage/p9.jpg" alt="Design 5"></div>
     <div class="item"><img src="designpage/p8.jpg" alt="Design 6"></div>
     <div class="item"><img src="designpage/p7.jpg" alt="Design 7"></div>
@@ -457,17 +701,22 @@ body {
 <div style="margin: 0; padding: 0; font-family: Arial, sans-serif;margin-top:18rem;">
 
   <!-- Footer -->
+  <!-- ========== Start Footer Section ========== -->
+
+<div style="margin: 0; padding: 0; font-family: Arial, sans-serif;margin-top:18rem;">
+
+  <!-- Footer -->
   <footer>
   <div class="footer-main">
     <!-- Contact Info -->
     <div class="footer-contact">
-      <h3 style="margin: 0 0 10px 0; font-size: 20px;">Contact Us</h3>
-      <p style="margin: 5px 0;"><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-9506423475</p>
-      <p style="margin: 5px 0;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 0169, Ghaseekatra , Ghasi Katra Gorakhpur1, Uttar Pradesh, India-27300</p>
+      <h3 class="footer-heading" >Contact Us</h3>
+      <p class="footer-para--1" ><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-9506423475</p>
+      <p class="footer-para--2" ><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 0169, Ghaseekatra , Ghasi Katra Gorakhpur1, Uttar Pradesh, India-27300</p>
     </div>
     <!-- Social Icons -->
     <div class="footer-social">
-      <h3 style="margin: 0 0 10px 0; font-size: 20px;">Connect with us</h3>
+      <h3  class="heading-social">Connect with us</h3>
       <a href="https://wa.me/+919506423475"><i class="fab fa-whatsapp"></i></a>
       <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1"><i class="fab fa-instagram"></i></a>
       <a href="https://www.linkedin.com/company/elicitengineers/"><i class="fab fa-linkedin-in"></i></a>
@@ -481,52 +730,46 @@ body {
 </footer>
 
 </div>
-       <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" style="
-  position: fixed;
-  bottom: 45rem;
-  right: 25px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 00 2px 10px rgba(0,0,0,0.2);">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+
+   <!-- ========== End Footer Section ========== -->
+
+</div>
+            <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" class="Link-1">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="WhatsApp">
 </a>
 
-      <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" style="
-  position: fixed;
-  bottom: 35rem;
-  right: 25px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #0077B5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+      <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" class="Link-2" >
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="WhatsApp"   >
 </a>
-   <a href="https://wa.me/+919506423475" target="_blank" style="
-  position: fixed;
-  bottom: 25rem;
-  right: 25px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #25D366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+   <a href="https://wa.me/+919506423475" target="_blank"  class="Link-3">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"  >
 </a>
+
+<!-- Modal -->
+<div id="imageModal">
+  <span onclick="closeModal()">&times;</span>
+  <img id="modalImage" src="" alt="Preview">
+</div>
+
+<script>
+  function openModal(src) {
+    document.getElementById("modalImage").src = src;
+    document.getElementById("imageModal").style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+
+  // Attach click to all images inside .about-div
+  window.onload = function () {
+    const images = document.querySelectorAll('.item img');
+    images.forEach(img => {
+      img.style.cursor = 'pointer';
+      img.onclick = () => openModal(img.src);
+    });
+  };
+</script>
 </body>
 <script>
   const hamburgerBtn = document.getElementById("hamburgerBtnUnique");
