@@ -66,6 +66,27 @@
       box-shadow: 0 8px 32px rgba(235,89,95,0.25);
     }
 
+    /* WhatsApp Button */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 80px;
+      right: 15px;
+      z-index: 1000;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    .whatsapp-btn img {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* Mobile Navbar */
     .mobile-navbar {
       position: fixed;
       bottom: 0;
@@ -86,11 +107,20 @@
       text-decoration: none;
       color: #444;
       font-size: 12px;
+      transition: color 0.2s;
     }
 
     .mobile-navbar .nav-item i {
       font-size: 18px;
       margin-bottom: 3px;
+      transition: color 0.2s;
+    }
+
+    .mobile-navbar .nav-item span {
+      font-size: 12px;
+      margin-top: 2px;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
     }
 
     .nav-item.active,
@@ -99,6 +129,7 @@
       color: #007bff !important;
     }
 
+    /* Dropdown */
     .mobile-menu-unique {
       position: fixed;
       bottom: 60px;
@@ -109,6 +140,9 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       z-index: 1000;
       flex-direction: column;
+      min-width: 180px;
+      max-height: 320px;
+      overflow-y: auto;
     }
 
     .mobile-menu-unique a {
@@ -117,6 +151,9 @@
       text-decoration: none;
       font-size: 14px;
       border-bottom: 1px solid #eee;
+      display: block;
+      text-align: left;
+      transition: background 0.2s;
     }
 
     .mobile-menu-unique a:last-child {
@@ -142,6 +179,11 @@
         font-size: 1rem;
       }
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
   </style>
 </head>
 <body>
@@ -152,20 +194,8 @@
   </div>
 
   <!-- WhatsApp Button -->
-  <a href="https://wa.me/+919506423475" target="_blank" style="
-    position: fixed;
-    bottom: 100px;
-    right: 15px;
-    z-index: 1000;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #25D366;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+  <a href="https://wa.me/+919506423475" target="_blank" class="whatsapp-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
   </a>
 
   <!-- Mobile Bottom Navbar -->
@@ -199,14 +229,13 @@
   <script>
     function toggleDropdown() {
       const dropdown = document.getElementById("hamburgerDropdownUnique");
-      dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
     }
 
     document.addEventListener('click', function (event) {
       const dropdown = document.getElementById("hamburgerDropdownUnique");
-      const isMore = event.target.closest('.nav-item');
-      const isEllipsis = isMore?.querySelector('.fa-ellipsis-h');
-      if (!dropdown.contains(event.target) && !isEllipsis) {
+      const moreBtn = document.querySelector('.mobile-navbar .nav-item:last-child');
+      if (!dropdown.contains(event.target) && !moreBtn.contains(event.target)) {
         dropdown.style.display = "none";
       }
     });

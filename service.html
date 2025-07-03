@@ -190,6 +190,7 @@ span{
    .brand-text {
   display: none;
 }
+
 @media (max-width: 768px) {
  
   .brand-text {
@@ -217,59 +218,12 @@ span{
     }
  
      @media (max-width: 768px) {
-      .mobile-menu-unique {
-        display: block;
-        position: fixed;
-        top: 4.6rem;
-        right: 1rem;
-        z-index: 9999;
-      }
+   
 
-      .hamburger-icon-unique {
-        width: 30px;
-        height: 22px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        cursor: pointer;
-      }
-
-      .hamburger-icon-unique span {
-        height: 4px;
-        width: 100%;
-        background-color: #333;
-        border-radius: 2px;
-        transition: 0.3s ease;
-      }
-
-      .dropdown-unique {
-        display: none;
-        position: absolute;
-        top: 2.8rem;
-        right: 0;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        width: 200px; /* Increased width */
-      }
-
-      .dropdown-unique a {
-        display: block;
-        text-align: center;
-        padding: 10px 15px;
-        text-decoration: none;
-        color: #333;
-        border-bottom: 1px solid #eee;
-      }
-
-      .dropdown-unique a:last-child {
-        border-bottom: none;
-      }
-
-      .dropdown-unique a:hover {
-        background-color: #f2f2f2;
-      }
+     
+      header{
+  display:none;
+}
     }
 
 .brand-text-mobile {
@@ -449,31 +403,582 @@ font-size: 1.7rem;
     text-align: center;
    
   }
+  .services{
+    margin-top: -5rem;
+    & h2{
+font-size: 1.8rem;
+font-weight:700;
+font-family: 'Poppins',sans-serif;
+margin-bottom: 2rem;
+    }
+  }
+
   
 }
-    
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+/* Tablet: 2 cards per row */
+@media (max-width: 900px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Mobile: 2 cards per row */
+@media (max-width: 600px) {
+  .service-card{
+    width:150px;
+    height:130px;
+  }
+   .service-card{
+    img{
+      width:30px;
+      height:30px;
+    }
+    h3{
+      font-size: 1.2rem;
+      font-family: 'Poppins',sans-serif;
+      font-weight: 500;
+    }
+    p{
+       /* font-size: 1.1rem;
+      font-family: 'Poppins',sans-serif;
+      font-weight: 400; */
+      display:none;
+    }
+   }
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .process{
+    h2{
+      font-size: 1.6rem;
+      font-family: 'Poppins',sans-serif;
+      font-weight: 700;
+    }
+    .process-steps{
+          grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .step{
+      span{
+         font-size: 1.6rem;
+      font-family: 'Poppins',sans-serif;
+      font-weight: 700;
+      }
+      h4{
+         font-size: 1.2rem;
+      font-family: 'Poppins',sans-serif;
+      font-weight: 500;
+      }
+      p{
+         /* font-size: 1.1rem;
+      font-family: 'Poppins',sans-serif;
+      font-weight: 400; */
+      display:none;
+      }
+    }
+  }
+}
+    .Link-1{
+position: fixed;
+  bottom: 45rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+   /* background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); */
+   background-color: #09335e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 00 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
+}
+.Link-2{
+  position: fixed;
+  bottom: 35rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /* background-color: #0077B5; */
+  background-color: #09335e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
+}
+.Link-3{
+ position: fixed;
+  bottom: 25rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /* background-color: #25D366; */
+  background-color: #09335e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
+}
+
+  @media (max-width: 700px) {
+  .Link-1,
+  .Link-2,
+  .Link-3 {
+    width: 36px;
+    height: 36px;
+  
+    /* bottom: unset; */
+    right: 10px;
+  }
+  .Link-1{
+    bottom:57rem;
+    /*
+    . right:50px; */
+  }
+  .Link-2{
+bottom:52rem;
+
+  }
+  .Link-3{
+Bottom:47rem;
+  }
+  .Link-1 img,
+  .Link-2 img,
+  .Link-3 img {
+    width: 18px;
+    height: 18px;
+  }
+}
+footer {
+  background-color: #1c3d5a;
+  color: #fff;
+  padding: 30px 20px;
+}
+
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: auto;
+  min-height: 18rem;
+  gap: 2rem;
+}
+
+.footer-contact,
+.footer-social {
+  flex: 1 1 300px;
+  margin-bottom: 20px;
+}
+
+.footer-social {
+  text-align: right;
+}
+
+.footer-social a {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+.footer-social a:last-child {
+  margin-right: 0;
+}
+.footer-social a:hover {
+  color: #d52c6e;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.footer-heading{
+margin: 0 0 10px 0;
+ font-size: 20px;
+}
+.footer-para--1{
+margin: 5px 0;
+}
+.footer-para--2{
+margin: 5px 0;
+}
+.footer-social{
+margin: 0 0 10px 0;
+ font-size: 20px;
+}
+/* Responsive styles */
+@media (max-width: 700px) {
+  footer{
+  height:600px;
+  text-align: center;
+  }
+  .footer-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 0;
+  }
+  .footer-social {
+    text-align: left;
+    margin-top: 0;
+  }
+  .footer-contact, .footer-social {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  footer {
+    padding: 24px 8px;
+  }
+  .footer-social h3 {
+  display: none;
+}
+.footer-social{
+  text-align: center;
+  margin-top: -10rem;
+}
+.footer-para--1,.footer-para--2,.footer-bottom{
+font-size: 1.1rem;
+font-family:'Poppins', sans-serif ;
+font-weight: 700;
+}
+.footer-heading,.footer-social{
+  font-size: 1.6rem;
+  font-family:'Poppins', sans-serif ;
+font-weight: 700;
+}
+.btn_main{
+   font-size: 1.1rem;
+  font-family:'Poppins', sans-serif ;
+  letter-spacing: 0.1;
+/* font-weight: 700; */
+}
+header{
+  display:none;
+}
+}
+
+.navbar{
+      margin-bottom: -2rem;
+/* 
+      & ul {
+        margin-right: 17rem;
+      } */
+      & li a{
+        font-family: "Poppins";
+        font-size: 1.5rem;
+        font-weight:400;
+        
+      }
+    }
+   .brand-text {
+  display: none;
+}
+@media (max-width: 768px) {
+ 
+  .brand-text {
+    height:50px;
+    display: block !important;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7b7c7f;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    text-align: center;
+  }
+  nav.navbar {
+    display: none !important;
+  }
+  .btn {
+    display: none !important;
+  }
+}
+
+
+
+.brand-text-mobile {
+  display: none;
+}
+
+/* nav bar mobile */
+.navbar-brand img{
+  width:100px;}
+
+
+  /* Mobile view only */
+@media (max-width: 768px) {
+  .logo,
+  nav.navbar,
+  .btn {
+    display: none !important;
+  }
+
+  .brand-text-mobile {
+    display: flex !important;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    margin-left: -6rem;
+    gap:1rem;
+    margin-bottom: -0.7rem;
+    /* margin-top: 1rem; */
+    /* text-align: center; */
+  }
+
+  .brand-text-mobile .mobile-logo {
+    width: 52px;
+    height: auto;
+    /* margin-bottom: 0.rem; */
+  }
+
+  .brand-lines {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #252525;
+    line-height: 1.5;
+    font-size:2rem ;
+  }
+
+   .line-one {
+    font-size: 1.4rem;
+  }
+
+  .brand-lines .line-two {
+    font-size: 1.4rem;
+    margin-top: 0.2rem;
+  }
+}
+/*  */
+/* Hamburger Dropdown */
+    .mobile-menu-unique {
+      position: fixed;
+      bottom: 60px;
+      right: 15px;
+      display: none;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      flex-direction: column;
+    }
+
+    .mobile-menu-unique a {
+      padding: 10px 16px;
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+    }
+
+   
+
+    .hamburger-icon-unique {
+      display: none;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .hamburger-icon-unique span {
+      /* height: 2px;
+      width: 18px; */
+      background-color: #444;
+      display: block;
+    }
+    @media (min-width: 769px) {
+  .mobile-navbar {
+    display: none !important;
+  }
+  .mobile-navbar .nav-item i {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+   .mobile-navbar .nav-item span {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+    .mobile-navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 56px;
+  border-top: 1px solid #eee;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+}
+.mobile-navbar .nav-item {
+  flex: 1;
+  text-align: center;
+  color: #444;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 6px 0 0 0;
+}
+.mobile-navbar .nav-item i {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 2px;
+}
+
+@media (min-width: 769px) {
+  .mobile-navbar {
+    display: none !important;
+  }
+  .mobile-navbar .nav-item i {
+    font-size: 1rem!important;
+    font-weight: 400!important;
+  }
+   .mobile-navbar .nav-item span {
+    font-size: 1rem!important;
+    font-weight: 400!important;
+  }
+}
+
+  /* Active link styling */
+    .nav-item.active {
+      color: #007bff !important;
+    }
+
+    .nav-item.active i,
+    .nav-item.active span {
+      color: #007bff !important;
+    }
+
+   
+.mobile-navbar .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 4px 0 0 0;
+  transition: color 0.2s;
+}
+
+.mobile-navbar .nav-item i {
+  font-size: 1.8rem;
+  margin-bottom: 2px;
+  display: block;
+  transition: color 0.2s;
+}
+
+.mobile-navbar .nav-item span {
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-top: 2px;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+/* Active state */
+.nav-item.active,
+.nav-item.active i,
+.nav-item.active span {
+  color: #007bff !important;
+}
   </style>
   <link rel="stylesheet" href="style1.css"/>
 </head>
 <body>
 
-<!-- Unique Hamburger Menu -->
-<div class="mobile-menu-unique">
-  <div class="hamburger-icon-unique" id="hamburgerBtnUnique">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <div class="dropdown-unique" id="hamburgerDropdownUnique">
-    <a href="index.html">Home</a>
-    <a href="who we are.html">Who we Are</a>
-    <a href="design.html">Design Ideas</a>
-    <a href="service.html">Services</a>
-    <a href="work with us.html">Work with Us</a>
-       <a href="contact us.html">Contact</a>
+
+  <!-- Navbar -->
+<div class="mobile">
+  <!-- Mobile Bottom Navbar -->
+ <div class="mobile-navbar">
+  <a href="index.html" class="nav-item" data-page="index.html">
+    <i class="fas fa-home"></i>
+    <span>Home</span>
+  </a>
+  <a href="design.html" class="nav-item" data-page="design.html">
+    <i class="fas fa-lightbulb"></i>
+    <span>Design Ideas</span>
+  </a>
+  <a href="welcome.html" class="nav-item" data-page="welcome.html">
+    <i class="fas fa-calculator"></i>
+    <span>Estimate</span>
+  </a>
+  <div class="nav-item" onclick="toggleDropdown()">
+    <i class="fas fa-ellipsis-h"></i>
+    <span>More</span>
   </div>
 </div>
 
+
+  <!-- More Dropdown Menu -->
+  <div class="mobile-menu-unique" id="hamburgerDropdownUnique">
+    <a href="who we are.html">Who we Are</a>
+    <a href="service.html">Services</a>
+    <a href="work with us.html">Work with Us</a>
+    <a href="contact us.html">Contact</a>
+  </div>
+
+  <!-- JS to Toggle Dropdown -->
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("hamburgerDropdownUnique");
+      if (dropdown.style.display === "flex") {
+        dropdown.style.display = "none";
+      } else {
+        dropdown.style.display = "flex";
+      }
+    }
+
+    // Optional: Close on outside click
+    document.addEventListener('click', function (event) {
+      const dropdown = document.getElementById("hamburgerDropdownUnique");
+      const moreBtn = event.target.closest('.nav-item');
+      if (!dropdown.contains(event.target) && !moreBtn) {
+        dropdown.style.display = "none";
+      }
+    });
+       window.addEventListener("DOMContentLoaded", function () {
+  const path = window.location.pathname.split("/").pop().split("?")[0]; // current file, like 'design.html'
+  const navLinks = document.querySelectorAll(".mobile-navbar .nav-item");
+
+  navLinks.forEach(link => {
+    const page = link.getAttribute("data-page");
+    if (page === path) {
+      link.classList.add("active"); // This triggers the blue styling from CSS
+    }
+  });
+});
+
+
+  </script>
    <!-- ========== Start nav section ========== -->
    <header class ="section-navbar" >
     <div class="container">
@@ -628,13 +1133,13 @@ font-size: 1.7rem;
   <div class="footer-main">
     <!-- Contact Info -->
     <div class="footer-contact">
-      <h3 style="margin: 0 0 10px 0; font-size: 20px;">Contact Us</h3>
-      <p style="margin: 5px 0;"><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-9506423475</p>
-      <p style="margin: 5px 0;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 0169, Ghaseekatra , Ghasi Katra Gorakhpur1, Uttar Pradesh, India-27300</p>
+      <h3 class="footer-heading" >Contact Us</h3>
+      <p class="footer-para--1" ><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-9506423475</p>
+      <p class="footer-para--2" ><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 0169, Ghaseekatra , Ghasi Katra Gorakhpur1, Uttar Pradesh, India-27300</p>
     </div>
     <!-- Social Icons -->
     <div class="footer-social">
-      <h3 style="margin: 0 0 10px 0; font-size: 20px;">Connect with us</h3>
+      <h3  class="heading-social">Connect with us</h3>
       <a href="https://wa.me/+919506423475"><i class="fab fa-whatsapp"></i></a>
       <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1"><i class="fab fa-instagram"></i></a>
       <a href="https://www.linkedin.com/company/elicitengineers/"><i class="fab fa-linkedin-in"></i></a>
@@ -648,67 +1153,34 @@ font-size: 1.7rem;
 </footer>
 
 </div>
-        <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" style="
-  position: fixed;
-  bottom: 45rem;
-  right: 25px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 00 2px 10px rgba(0,0,0,0.2);">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+
+   <!-- ========== End Footer Section ========== -->
+       <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" class="Link-1">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="WhatsApp">
 </a>
 
-      <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" style="
-  position: fixed;
-  bottom: 35rem;
-  right: 25px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #0077B5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+      <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" class="Link-2" >
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="WhatsApp"   >
 </a>
-   <a href="https://wa.me/+919506423475" target="_blank" style="
-  position: fixed;
-  bottom: 25rem;
-  right: 25px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #25D366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+   <a href="https://wa.me/+919506423475" target="_blank"  class="Link-3">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"  >
 </a>
 
 </body>
 <script>
-  const hamburgerBtn = document.getElementById("hamburgerBtnUnique");
-  const dropdownMenu = document.getElementById("hamburgerDropdownUnique");
-
-  hamburgerBtn.addEventListener("click", () => {
-    dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!hamburgerBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
-      dropdownMenu.style.display = "none";
-    }
-  });
+function toggleFaq(button) {
+  // Find the next sibling element (the answer div)
+  const answer = button.nextElementSibling;
+  if (!answer) return;
+  // Toggle display
+  if (answer.style.display === "none" || answer.style.display === "") {
+    answer.style.display = "block";
+    button.querySelector("span").textContent = "−";
+  } else {
+    answer.style.display = "none";
+    button.querySelector("span").textContent = "+";
+  }
+}
 </script>
 </html>
 

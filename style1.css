@@ -215,7 +215,7 @@ box-shadow:var(--btn-box-shadow);
 /*****navbar Section *****/ 
 .section-navbar{
     width:100%;
-    background: #f2f2f2;
+    background: #fff;
     box-shadow:rgba(0,0,0,0.05)0px 6px 24px 0px ,
     rgba(0,0,0,0.08)0px 0px 0px 1px;
     position: fixed; 
@@ -316,7 +316,7 @@ main{
 } */
   .section-hero {
   background:
-    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)),
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
     url('https://storage.planner5d.com/c/0c966f05c517554d7fd54cea895ecfbd.jpg?v=1649766100');
   min-height: 100vh;
   width: 100vw;

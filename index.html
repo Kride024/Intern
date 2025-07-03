@@ -315,12 +315,13 @@ font-size: 20px;
     /* color: #333 !important; */
     text-align: center !important;
     margin-top: 10rem;
+    font-family: 'Poppins',sans-serif;
   }
   .btn_main{
     margin-top: -0.6rem;
-    width:19rem;
+    width:22rem;
     padding: 9px;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 /* section-about */
@@ -388,6 +389,8 @@ font-size: 20px;
   .section-about .section-common--title {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    font-family:'Poppins',sans-serif;
+    font-weight: 400;
   }
 }
     .section-about .about-div img {
@@ -516,14 +519,21 @@ p{
   }
    
 }
-@media (width>700px) {
+  .section-about .section-common-heading.mq{
+     width: 100%;
+    margin-left: auto;
+  margin-right: auto;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+@media (width<700px) {
   .section-about .section-common-heading.mq {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #373535;
   font-weight: 700;
   text-align: center;
-  margin: -7rem auto 0 auto;
-  margin-left: 50%;;
+  /* margin: -7rem auto 0 auto; */
+  /* margin-left: 50%;; */
   /* margin-bottom: -12rem; */
   width: 100%;
   max-width: 800px;
@@ -531,7 +541,7 @@ p{
   margin-right: auto;
     text-align: center;
   display: block;
-  font-size: 1.6rem;
+  font-size: 2rem;
    color:#373535
 }
 
@@ -545,10 +555,11 @@ p{
    color:#373535 !important;
   font-weight: 700 !important;;
   width:100%;
+  font-family: 'Poppins',sans-serif;
     text-align: center!important;
   margin-left: auto!important;
   margin-right: auto;
-  margin-left: 11rem!important;
+  /* margin-left: 11rem!important; */
   margin-top: -3rem;
 
 }
@@ -872,6 +883,7 @@ margin: 0 0 10px 0;
   .footer-contact, .footer-social {
     width: 100%;
     margin-bottom: 0;
+    font-weight: 400;
   }
   footer {
     padding: 24px 8px;
@@ -949,11 +961,31 @@ font-weight: 700;
       color: #f16e84;
     }
 
+.section-hero--content .mobile-logo{
+display:none;
+}
+
     @media (max-width: 768px) {
       .mobile-navbar {
         display: flex;
       }
+        .section-hero--content .mobile-logo{
+      display:block;
+  width: 40px;
+      height: 40px;
+      object-fit: cover;
+}
     }
+    @media (max-width: 768px) {
+  .section-hero--content .mobile-logo {
+    display: block;
+    margin: 0 auto 1rem auto; /* centers the logo and adds space below */
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+}
+  
 
     /* Hamburger Dropdown */
     .mobile-menu-unique {
@@ -1054,7 +1086,7 @@ font-size: 14px;
   }
 
   .brand-text-mobile .mobile-logo {
-    width: 52px;
+    width: 35px;
     height: auto;
     /* margin-bottom: 0.rem; */
   }
@@ -1066,14 +1098,21 @@ font-size: 14px;
     color: #252525;
     line-height: 1.5;
     font-size:2rem ;
+     margin-left: 6.5rem;
   }
 
    .line-one {
-    font-size: 1.4rem;
+    /* text-transform: uppercase; */
+    /* color:#0062ff; */
+    margin-top: -0.5rem;
+   
+    font-size: 1.6rem;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
   }
 
   .brand-lines .line-two {
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     margin-top: 0.2rem;
   }
   
@@ -1087,7 +1126,8 @@ position: fixed;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+   /* background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); */
+   background-color: #09335e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1104,7 +1144,8 @@ width: 30px; height: 30px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #0077B5;
+  /* background-color: #0077B5; */
+  background-color: #09335e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1121,7 +1162,8 @@ width: 30px; height: 30px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #25D366;
+  /* background-color: #25D366; */
+  background-color: #09335e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1142,16 +1184,16 @@ width: 30px; height: 30px;
     right: 10px;
   }
   .Link-1{
-    bottom:45rem;
+    bottom:57rem;
     /*
     . right:50px; */
   }
   .Link-2{
-bottom:40rem;
+bottom:52rem;
 
   }
   .Link-3{
-Bottom:35rem;
+Bottom:47rem;
   }
   .Link-1 img,
   .Link-2 img,
@@ -1201,6 +1243,7 @@ margin-bottom: 4rem;
 .section-common-heading.review-heading{
 margin-top: 1rem;
 margin-bottom: 4rem;
+font-family: 'Poppins',sans-serif;
 }
 @media (width<= 700px){
  .container.grid.grid-four--cols.calculater {
@@ -1209,6 +1252,9 @@ margin-bottom: 4rem;
 }
 
 @media (max-width: 700px) {
+  .section-navbar{
+    display:none;
+  }
   .stars{
     margin-top: -1rem;
     font-size: 2rem;
@@ -1241,7 +1287,8 @@ font-size: 1rem;
 
 .section-common-heading.review-heading{
     margin-top:-2rem;
-font-size: 1.7rem;
+font-size: 1.6rem;
+font-weight: 700;
 }
 #leftBtn,#rightBtn{
   margin-top: 1rem;
@@ -1333,12 +1380,14 @@ line-height: 2rem;
    font-family: 'Poppins', sans-serif ;
   font-size: 1.3rem!important;
   margin-top: -0.2rem!important;
+  letter-spacing:0px;
  }
  .second{
     font-family: 'Poppins', sans-serif ;
     font-weight: 400;
   font-size: 1rem!important;
   margin-top: -1rem!important;
+  letter-spacing:0px;
  }
  .section-common-heading.channel-partners-heading{
   margin-top: 2rem;
@@ -1351,7 +1400,7 @@ font-weight: 700;
 @media (max-width: 700px) {
 .faq-heading{
  
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   
@@ -1365,25 +1414,102 @@ font-weight: 700;
   height:700px;
   font-family:'Poppins', sans-serif ;
   font-size:1.1rem;
-  font-weight: 500;
+  font-weight: 400;
   
 }
 .button-faq{
  font-family:'Poppins', sans-serif ;
   font-size:1.1rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 .Partner-Main-box{
-  height:200px;
+  height:130px;
 }
 .content-faq{
   font-family:'Poppins', sans-serif ;
   font-size:1.1rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 }
+@media (max-width: 768px) {
+  .section-hero--content a {
+   
+    width: 130px;
+    height: 130px!important;
+  }
+  .section-hero--content .mobile-logo {
+     margin-top: -18rem;
+    width: 130px;
+    height: 130px!important;
+    margin-left: 5rem;
+  
+  }
+  .hero-heading{
+    margin-top:-11rem ;
+    font-size: 2.8rem!important;
+  }
+}
+.mobile-break {
+  display: none;
+}
+.Elicit_Name{
+  display:none;
+}
+@media (max-width: 768px) {
+  .mobile-break {
+    display: block;
+    height: 0;
+  }
+  .section-hero{
+    margin-top: -7rem;
+  }
+  .Elicit_Name{
+  display:block;
+  margin-top: -28rem;
+  color:#fff;
+  margin-left: -6rem;
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 1.9px;
+  font-family: Futura;
+  
+}
 
+  header{
+    display:none;
+  }
+  .btn_main{
+    padding:1.5rem;
+  font-size:1.8rem;
+}
+
+.Elicit_Name {
+  text-decoration: underline;
+  text-decoration-color: #000;
+  text-underline-offset: 6px; /* Adjust the gap as needed */
+}
+
+}
+@media (max-width: 700px) {
+  .section-common-heading.mq {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    display: block;
+    width: 100%;
+  }
+  .section-common--title.calculate{
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: 'Poppins', Arial, sans-serif;
+  }
+}
+.section-common--title.calculate{
+  margin-bottom: 4rem;
+  text-align: left; 
+  margin-left: 1.5rem;
+}
     </style>
 </head>
 <body>
@@ -1463,12 +1589,9 @@ font-weight: 700;
                   <a href="index.html"> <img src="Screenshot_2025-06-25_180908-removebg-preview.svg" alt="logo" class="logo"/></a> 
             <!-- ✅ HTML Brand Text Section -->
 <span class="brand-text-mobile">
-  <a href="index.html">
-    <img src="Adobe Express - file.png" alt="logo" class="mobile-logo" />
-  </a>
   <div class="brand-lines">
-    <div class="line-one">Elicit Engineers</div>
-    <div class="line-two">& Interiors</div>
+
+    <!-- <div class="line-two"></div> -->
   </div>
 </span>
                 </div>
@@ -1524,13 +1647,17 @@ font-weight: 700;
    <!-- ========== Start Hero Section ========== -->
    <main>
     <div class="section-hero" >
-
+  
 
         <div class="container grid " >
+          
         <div class="section-hero--content">
-            <p class="hero-subheading"></p>
+        <div class="Elicit_Name">Elicit Interiors</div>
+  <a href="index.html">
+    <img src="Adobe Express - file.png" alt="logo" class="mobile-logo" />
+  </a>
             <h1 class="hero-heading">
-  Dream Aapka , Vision Hamara
+  Dream Aapka,<span class="mobile-break"></span> Vision Hamara
 </h1>
             <button class="btn_main" onclick="window.location.href=`welcome.html`;">Get Free Estimate</button>
         </div>
@@ -1548,11 +1675,11 @@ font-weight: 700;
    <!-- ========== Start Section-About ========== -->
    <section class="section-about">
     <div class="c1">
-       <div class=" grid grid-two--cols"> <div><h2 class="section-common-heading ">Get a glimpse Of Elicit Homes</h2>
-          <p class="sh1" >Swag wala ghar, hassle ka no scene, full-on aapki vibe.
+       <div class=" grid grid-two--cols"> <div><h2 class="section-common-heading ">Get a glimpse Of Elicit Interiors</h2>
+          <p class="sh1" >A home that doesn’t just look luxurious, It feels like it was made just for you.
         </p>
     </div>
-    <button class="btn_more" >More</button>
+    <button class="btn_more" onclick="window.location.href='design.html';return false">More</button>
     </div>
       
 </div>
@@ -1672,7 +1799,7 @@ font-weight: 700;
           <p class="section-common-subheading" style="margin-top: 1rem;">New look chahiye? Try these interior ideas made just for you!
         </p>
     </div>
-    <button class="btn_more">More</button>
+    <button class="btn_more" onclick="window.location.href='design.html';return false">More</button>
     </div>
       
 </div>
@@ -1822,12 +1949,8 @@ font-weight: 700;
 
    <section class="section-about me">
     <div class="container ">
-       <div class=" grid grid-two--cols" > <div><h2 class="section-common-heading mq"  >Interior Cost in Second</h2>
-          <!-- <p class="section-common-subheading" style="margin-top: 1rem;">Calculate the approximate cost of doing up your interiors. -->
-        <!-- </p> -->
-    </div>
-    <!-- <button class="btn" style=" width:20rem; margin-left: 36rem;background: rgb(28, 94, 226); border-radius:2rem;">More</button> -->
-    </div>
+        <h2 class="section-common-heading mq"  >Interior Cost in Second</h2>
+  
       
 </div>
 
@@ -1852,7 +1975,7 @@ font-weight: 700;
   ">
     Elicit Engineers and Interiors
   </h2>  -->
-            <h3 class="section-common--title calculate"  style="margin-bottom: 4rem; text-align: left; margin-left: 1.5rem;"> False Ceiling : <span>Know the estimated Price</span> </h3>
+            <h3 class="section-common--title calculate"> False Ceiling : <span>Know the estimated Price</span> </h3>
             <!-- <p>
                 we start by learning what you need.We look at what's new and exciting
                 in learning and choose topics that match what you want to learn.
@@ -1878,7 +2001,7 @@ font-weight: 700;
     Elicit Engineers and Interiors
   </h2>
            
-            <h3 class="section-common--title calculate"  style="margin-bottom: 4rem;  text-align: left; margin-left: 1.5rem;">Flooring design : <span>Know the estimated Price</span> </h3>
+            <h3 class="section-common--title calculate">Flooring design : <span>Know the estimated Price</span> </h3>
             <!-- <p>
                 we start by learning what you need.We look at what's new and exciting
                 in learning and choose topics that match what you want to learn.
@@ -1903,7 +2026,7 @@ font-weight: 700;
   ">
     Elicit Engineers and Interiors
   </h2>
-            <h3 class="section-common--title calculate"  style="margin-bottom: 4rem;  text-align: left; margin-left: 1.5rem;">Wall Design : <span>Know the estimated Price</span></h3>
+            <h3 class="section-common--title calculate"  >Wall Design : <span>Know the estimated Price</span></h3>
             <!-- <p>
             Next,we make the lessons.We make them fun and interesting for you.We make
             sure they work for different ways people like to learn.
@@ -1928,7 +2051,7 @@ font-weight: 700;
   ">
     Elicit Engineers and Interiors
   </h2>
-            <h3 class="section-common--title calculate" style="margin-bottom: 4rem; text-align: left; margin-left: 1.5rem;">Interior Design : <span>Know the estimated Price</span></h3>
+            <h3 class="section-common--title calculate">Interior Design : <span>Know the estimated Price</span></h3>
             <!-- <p>
              After that,we turn the lessons into things you can use online.We use the latest tools to make sure they work well 
              and make you happy.   
@@ -2010,7 +2133,7 @@ Abhishek Singh Bhadouria</div>
       
     
       
-
+<!-- //“” -->
      
     </div>
   </div>
@@ -2029,25 +2152,25 @@ Abhishek Singh Bhadouria</div>
     
     <div id="ach-card-2015">
       <h3 class="card-head" >2015</h3>
-      <p class="first"><strong>Established</strong></p>
+      <p class="first">Established</p>
       <p class="second">Year we began our beautiful journey in interior excellence.</p>
     </div>
 
     <div id="ach-card-projects">
       <h3 class="card-head" >300+</h3>
-      <p class="first"><strong>Projects Done</strong></p>
+      <p class="first">Projects Done</p>
       <p class="second">Successfully delivered quality spaces across the country.</p>
     </div>
 
     <div id="ach-card-vendors">
       <h3  class="card-head">150+</h3>
-      <p class="first"><strong>Trusted Vendors</strong></p>
+      <p class="first">Trusted Vendors</p>
       <p class="second">Collaborations built on reliability and quality materials.</p>
     </div>
 
     <div id="ach-card-supply">
       <h3 class="card-head">100+</h3>
-      <p class="first"><strong>Supply Channels</strong></p>
+      <p class="first">Supply Channels</p>
       <p class="second">Efficient delivery networks to meet every project need.</p>
     </div>
     

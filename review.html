@@ -2,107 +2,131 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Switch Boxes on Mobile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elicit Engineers & Interiors</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    .box-para--1 {
-      padding: 20px;
-    }
-
-    .box {
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
       background-color: #f9f9f9;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-bottom: 15px;
     }
 
-    /* Mobile view: show only one box and show dot indicators */
-    @media (max-width: 768px) {
-      .box {
-        display: none !important;
+    /* Header styling */
+    .header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-icons a img {
+      width: 22px;
+      height: 22px;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Hero section */
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background-image: url('https://source.unsplash.com/featured/?interior'); /* You can replace this */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .hero button {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,123,255,0.4);
+      transition: background 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 16px;
       }
 
-      .box.active {
-        display: block !important;
+      .hero h1 {
+        font-size: 20px;
       }
 
-      .dots {
-        text-align: center;
-        margin-top: 10px;
-      }
-
-      .dot {
-        height: 10px;
-        width: 10px;
-        margin: 0 5px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.3s ease;
-      }
-
-      .dot.active {
-        background-color: #333;
+      .social-icons a img {
+        width: 20px;
+        height: 20px;
       }
     }
   </style>
 </head>
 <body>
 
-<div class="box-para--1">
-  <!-- Box 1 -->
-  <div class="box para-1">
-    <h2 class="section-common-subheading heading--1">Our Vision</h2>
-    <p class="para-main--1">
-      EE&I was established in Gorakhpur in 2015 to provide comprehensive architectural, interior design, HVAC-R, and contracting services.
-    </p>
+  <!-- Header Section -->
+  <div class="header">
+    <div class="logo">Elicit Engineers & Interiors</div>
+    <div class="social-icons">
+      <a href="#"><img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram"></a>
+      <a href="#"><img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn"></a>
+      <a href="#"><img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp"></a>
+    </div>
   </div>
 
-  <!-- Box 2 -->
-  <div class="box para-2">
-    <h2 class="section-common-subheading heading--2">Our Mission</h2>
-    <p class="para-main--2">
-      We aim to build a better world by providing eco-conscious, optimized solutions that reduce environmental impact.
-    </p>
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Dream Aapka, Vision Hamara</h1>
+      <button>Get Free Estimate</button>
+    </div>
   </div>
-
-  <!-- Dots -->
-  <div class="dots">
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-</div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const boxes = document.querySelectorAll(".box-para--1 .box");
-    const dots = document.querySelectorAll(".box-para--1 .dot");
-    let currentIndex = 0;
-
-    function switchBoxes() {
-      boxes.forEach((box, i) => {
-        box.classList.remove('active');
-        dots[i].classList.remove('active');
-      });
-
-      boxes[currentIndex].classList.add('active');
-      dots[currentIndex].classList.add('active');
-
-      currentIndex = (currentIndex + 1) % boxes.length;
-    }
-
-    // Only run in mobile view
-    if (window.innerWidth <= 768) {
-      switchBoxes(); // Show first box
-      setInterval(switchBoxes, 4000); // Switch every 4 sec
-    } else {
-      // On desktop, show all boxes and hide dots
-      boxes.forEach(box => box.classList.add('active'));
-      document.querySelector('.dots').style.display = 'none';
-    }
-  });
-</script>
 
 </body>
 </html>
