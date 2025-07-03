@@ -60,6 +60,7 @@
       color: #000000;
        overflow-x: hidden;
        height:350px;
+       overflow-y: hidden;
 
     }
 
@@ -75,9 +76,7 @@
   align-items: center;
   padding: 0 10px;
 }
-.Achievement{
-  height:300px;
-}
+
 
 #achievement-wrapper{
 max-width: 3000px; 
@@ -221,6 +220,9 @@ font-size: 20px;
     width: 200px;
     padding: 15px;
   }
+  .Achievement{
+  height:300px;
+}
 }
 
 @media (max-width: 700px) {
@@ -913,6 +915,7 @@ font-weight: 700;
 }
 }
 
+
   .mobile{
       margin: 0;
       font-family: Arial, sans-serif;
@@ -1060,6 +1063,9 @@ font-size: 14px;
      /* Hide on desktop */
 .brand-text-mobile {
   display: none;
+}
+.section-common-heading.review-heading{
+margin-bottom: 4rem!important;
 }
 /* nav bar mobile */
 .navbar-brand img{
@@ -1235,20 +1241,33 @@ Bottom:47rem;
     display: block;
   }
 } */
-
+@media (width> 700px){
+  .body1{
+    height:500px;
+  }
 .section-common-heading.achievement-heading{
-margin-top: 1rem;
-margin-bottom: 4rem;
+margin-top: -4rem;
+/* margin-bottom: 4rem; */
 }
+.review-wrapper{
+  margin-top: 2rem;
+}
+}
+
 .section-common-heading.review-heading{
 margin-top: 1rem;
-margin-bottom: 4rem;
+/* margin-bottom: 4rem; */
 font-family: 'Poppins',sans-serif;
 }
 @media (width<= 700px){
  .container.grid.grid-four--cols.calculater {
     margin-top: -10rem !important; /* adjust as needed */
   }
+  .section-common-heading.review-heading{
+margin-top: 1rem;
+margin-bottom: 4rem;
+font-family: 'Poppins',sans-serif;
+}
 }
 
 @media (max-width: 700px) {
@@ -1510,6 +1529,35 @@ font-weight: 700;
   text-align: left; 
   margin-left: 1.5rem;
 }
+
+@media (prefers-color-scheme: dark) {
+  footer {
+    background-color: #eff4f9 !important;
+    color: #272727 !important;
+  }
+
+  .footer-social a,
+  .footer-bottom,
+  .footer-heading,
+  .footer-para--1,
+  .footer-para--2 {
+    color: #fff !important;
+  }
+}
+
+@media (width> 1200px){
+.Achievement{
+  height:450px;}
+  .section-common-heading.achievement-heading{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .section-common-heading.review-heading{
+    margin-bottom: 4rem;
+  }
+}
+
+
     </style>
 </head>
 <body>
