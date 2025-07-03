@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1c3d5a" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1c3d5a" media="(prefers-color-scheme: dark)">
     <title>final doc</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style1.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -130,17 +133,99 @@ border-radius: 10px;
 margin: 0; 
 font-size: 20px;
 }
+/* Global font and rendering fix */
+body, .body1, .review-card, footer, .footer-heading, .footer-para--1, .footer-para--2, .footer-bottom, .btn_main {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Modal Style */
+#imageModal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+#imageModal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px black;
+}
+
+#imageModal span {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.hero-heading {
+  color: #fff;
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+.body1 {
+  background: #ffffff;
+  margin: 0;
+  padding: 40px 20px;
+  text-align: center;
+  color: #000000;
+  overflow-x: hidden;
+  height: 350px;
+  overflow-y: hidden;
+}
+
+/* Review Section */
+.review-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+
 .slider-container {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
   width: 100%;
   margin: auto;
+  position: relative;
+}
+
+.slider-container::-webkit-scrollbar {
+  display: none;
+}
+.slider-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .reviews-container {
   display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
   transition: transform 0.4s ease;
   align-items: stretch;
-    min-width: 100%; /* ensures no partial cards show */
+  min-width: 100%;
   box-sizing: border-box;
 }
 
@@ -198,18 +283,198 @@ font-size: 20px;
 }
 
 .arrow-left {
-  left: -6px;
+  left: 0;
   box-shadow: 0 4px 8px rgba(84, 82, 82, 0.1);
 }
 
 .arrow-right {
-  right: -5px;
+  right: 0;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .arrow-button.hidden {
   display: none;
 }
+
+/* Footer */
+footer {
+  background-color: #1c3d5a;
+  color: #fff;
+  padding: 30px 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-text-fill-color: #fff;
+  box-sizing: border-box;
+}
+
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: auto;
+  min-height: 18rem;
+  gap: 2rem;
+}
+
+.footer-contact,
+.footer-social {
+  flex: 1 1 300px;
+  margin-bottom: 20px;
+}
+
+.footer-social {
+  text-align: right;
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+.footer-social a {
+  color: #fff !important;
+  margin-right: 15px;
+  font-size: 18px;
+  transition: color 0.2s;
+  -webkit-text-fill-color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.footer-social a:last-child {
+  margin-right: 0;
+}
+
+.footer-social a:hover {
+  color: #d52c6e;
+}
+
+.footer-social a i,
+.footer-social a svg {
+  color: #fff !important;
+  fill: #fff !important;
+  -webkit-text-fill-color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.footer-heading {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.footer-para--1,
+.footer-para--2 {
+  margin: 5px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* Responsive styles */
+@media (max-width: 1000px) {
+  .review-wrapper {
+    max-width: 95vw;
+  }
+  .review-card {
+    width: 200px;
+    padding: 15px;
+  }
+  .Achievement {
+    height: 300px;
+  }
+}
+
+@media (max-width: 700px) {
+  .review-wrapper {
+    max-width: 200vw;
+    padding: 0 2vw;
+  }
+  .slider-container {
+    width: 100vw;
+  }
+  .reviews-container {
+    gap: 0;
+  }
+  .review-card {
+    width: 90vw;
+    min-width: 220px;
+    max-width: 95vw;
+    margin: 0 auto;
+    padding: 12px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  }
+  .arrow-button {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: -5px;
+    position: absolute;
+  }
+  .arrow-left {
+    left: 35%;
+    right: auto;
+  }
+  .arrow-right {
+    left: 65%;
+    right: auto;
+  }
+  footer {
+    height: 600px;
+    padding: 24px 8px;
+  }
+  .footer-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 0;
+  }
+  .footer-contact,
+  .footer-social {
+    width: 100%;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+  .footer-social {
+    text-align: center;
+    margin-top: -10rem;
+  }
+  .footer-social h3 {
+    display: none;
+  }
+  .footer-heading,
+  .footer-social {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  .footer-bottom {
+    font-size: 1.1rem;
+  }
+  .btn_main {
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+/* Dark mode override for iOS Safari */
+@media (prefers-color-scheme: dark) {
+  footer {
+    background-color: #1c3d5a;
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+  }
+  .footer-social a i,
+  .footer-social a svg {
+    color: #fff !important;
+    fill: #fff !important;
+    -webkit-text-fill-color: #fff;
+  }
+}
+
 
 /* Responsive styles */
 @media (max-width: 1000px) {
@@ -810,6 +1075,10 @@ footer {
   background-color: #1c3d5a;
   color: #fff;
   padding: 30px 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-text-fill-color: #fff;
+  box-sizing: border-box;
 }
 
 .footer-main {
@@ -831,19 +1100,32 @@ footer {
 
 .footer-social {
   text-align: right;
+  font-size: 20px;
+  margin: 0 0 10px 0;
 }
 
 .footer-social a {
-  color: #fff;
+  color: #fff !important;
   margin-right: 15px;
   font-size: 18px;
   transition: color 0.2s;
+  -webkit-text-fill-color: #fff;
+  -webkit-font-smoothing: antialiased;
 }
+
 .footer-social a:last-child {
   margin-right: 0;
 }
+
 .footer-social a:hover {
   color: #d52c6e;
+}
+
+.footer-social a i,
+.footer-social a svg {
+  color: #fff !important;
+  fill: #fff !important;
+  -webkit-text-fill-color: #fff;
 }
 
 .footer-bottom {
@@ -853,66 +1135,90 @@ footer {
   color: #ccc;
 }
 
-.footer-heading{
-margin: 0 0 10px 0;
- font-size: 20px;
+.footer-heading {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
-.footer-para--1{
-margin: 5px 0;
+
+.footer-para--1,
+.footer-para--2 {
+  margin: 5px 0;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
-.footer-para--2{
-margin: 5px 0;
+
+.footer-social h3 {
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
-.footer-social{
-margin: 0 0 10px 0;
- font-size: 20px;
-}
+
 /* Responsive styles */
 @media (max-width: 700px) {
-  footer{
-  height:600px;
+  footer {
+    height: 600px;
+    padding: 24px 8px;
   }
+
   .footer-main {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
     padding: 0;
   }
+
+  .footer-contact,
   .footer-social {
-    text-align: left;
-    margin-top: 0;
-  }
-  .footer-contact, .footer-social {
     width: 100%;
     margin-bottom: 0;
     font-weight: 400;
   }
-  footer {
-    padding: 24px 8px;
+
+  .footer-social {
+    text-align: center;
+    margin-top: -10rem;
   }
+
   .footer-social h3 {
-  display: none;
+    display: none;
+  }
+
+  .footer-bottom {
+    font-size: 1.1rem;
+  }
+
+  .footer-heading,
+  .footer-social {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+  }
+
+  .btn_main {
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1rem;
+    /* font-weight: 700; */
+  }
 }
-.footer-social{
-  text-align: center;
-  margin-top: -10rem;
-}
-.footer-para--1,.footer-para--2,.footer-bottom{
-font-size: 1.1rem;
-font-family:'Poppins', sans-serif ;
-font-weight: 700;
-}
-.footer-heading,.footer-social{
-  font-size: 1.6rem;
-  font-family:'Poppins', sans-serif ;
-font-weight: 700;
-}
-.btn_main{
-   font-size: 1.1rem;
-  font-family:'Poppins', sans-serif ;
-  letter-spacing: 0.1;
-/* font-weight: 700; */
-}
+
+/* Dark mode override for iOS Safari */
+@media (prefers-color-scheme: dark) {
+  footer {
+    background-color: #1c3d5a;
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+  }
+
+  .footer-social a i,
+  .footer-social a svg {
+    color: #fff !important;
+    fill: #fff !important;
+    -webkit-text-fill-color: #fff;
+  }
 }
 
 
@@ -1335,12 +1641,25 @@ font-weight: 700;
 margin-top: 6rem;
 margin-bottom: 4rem;
 }
-.section-common-heading.faq{
-margin: 0;
- font-family: 'Poppins', Arial, sans-serif;
-  background: #f3f1f1;
-  color: #000;
+.section-common-heading.faq {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f3f1f1;
+  color: #000000;
+
+  /* Safari-specific rendering tweaks */
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-fill-color: #000; /* Helps override dark mode */
+  -webkit-appearance: none;
 }
+
+@media (prefers-color-scheme: dark) {
+  .section-common-heading.faq {
+    background-color: #f3f1f1;
+    color: #000;
+  }
+}
+
 .faq-2{
 max-width: 800px; 
 margin: 40px auto;
@@ -1450,7 +1769,37 @@ font-weight: 700;
   font-weight: 400;
 }
 
+}.containerPartner {
+  flex: 0 0 200px;               /* Prevent flex growth/shrink */
+  max-width: 200px;              /* Cap width explicitly */
+  height: 100px;
+  background: #fff;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;        /* Include padding/border in width */
+  overflow: hidden;              /* Prevent content overflow */
 }
+
+/* Image inside the container */
+.containerPartner img {
+  max-width: 100%;               /* Prevent image from stretching container */
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Optional: iOS Safari-specific fix */
+@supports (-webkit-touch-callout: none) {
+  .containerPartner {
+    flex: 0 0 200px;
+    max-width: 200px;
+  }
+}
+
 @media (max-width: 768px) {
   .section-hero--content a {
    
@@ -1483,18 +1832,6 @@ font-weight: 700;
   .section-hero{
     margin-top: -7rem;
   }
-  .Elicit_Name{
-  display:block;
-  margin-top: -28rem;
-  color:#fff;
-  margin-left: -6rem;
-  font-size: 2.6rem;
-  font-weight: 700;
-  letter-spacing: 1.9px;
-  font-family: Futura;
-  
-}
-
   header{
     display:none;
   }
@@ -1503,12 +1840,31 @@ font-weight: 700;
   font-size:1.8rem;
 }
 
-.Elicit_Name {
-  text-decoration: underline;
-  text-decoration-color: #000;
-  text-underline-offset: 6px; /* Adjust the gap as needed */
-}
 
+
+}
+/* Show and style on mobile */
+@media (max-width: 700px) {
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+ .Elicit_Name {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #ffffff;
+    background: none;
+    padding: 0.2rem 0.5rem;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-radius: 0 0 4px 0;
+    z-index: 9999;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+  }
 }
 @media (max-width: 700px) {
   .section-common-heading.mq {
@@ -1556,7 +1912,9 @@ font-weight: 700;
     margin-bottom: 4rem;
   }
 }
-
+.btn_more{
+  display:none;
+}
 
     </style>
 </head>
@@ -2242,28 +2600,28 @@ Abhishek Singh Bhadouria</div>
     <!-- Card set duplicated twice for infinite loop -->
     <div style="display: flex;">
       <!-- Cards -->
-      <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+      <div class="containerPartner" >
         <img src="https://tse3.mm.bing.net/th?id=OIP.aEtF3x_ejUdgSmXnrdp3uAHaBq&pid=Api&P=0&h=220" style="width:100% ;height:100%; object-fit: contain;">
       </div>
-      <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+      <div class="containerPartner">
         <img src="https://5.imimg.com/data5/IOS/Default/2020/9/DJ/IE/PQ/2593275/product-jpeg-500x500.png" style="width:100%;height:100%; object-fit: contain;">
       </div>
-      <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+      <div class="containerPartner">
         <img src="https://tse4.mm.bing.net/th?id=OIP.iNvDFaU6WkQFwc54J3k7fgAAAA&pid=Api&P=0&h=220" style="width:100%;height:100%; object-fit: contain;">
       </div>
-      <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+      <div class="containerPartner">
       <img src="https://supremeinteriordesigns.com/wp-content/uploads/2024/03/Everest-Cement-Sheet.jpg" style="width:100%;height:100%; object-fit: contain;">
       </div>
-      <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+      <div class="containerPartner">
       <img src="https://mir-s3-cdn-cf.behance.net/projects/404/39ecc1123065489.Y3JvcCwxMTU2LDkwNCwzODAsODg.png" style="width:100%;height:100%; object-fit: contain;">
       </div>
-      <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+      <div class="containerPartner">
       <img src="https://www.specthrum.com/wp-content/uploads/2020/05/Bison-Panel.jpg" style="width:100%;height:100%; object-fit: contain;">
       </div>
-       <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+       <div class="containerPartner">
         <img src="https://www.earthindra.com/wp-content/uploads/2023/06/green-ply-scaled.jpg"style="width:100%;height:100%; object-fit: contain;">
       </div>
-       <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+       <div class="containerPartner">
       <img src="https://jainlaminates.com/wp-content/uploads/2020/04/action-tesa.jpeg" style="width:100%;height:100%; object-fit: contain;">
       </div>
     </div>
@@ -2271,25 +2629,25 @@ Abhishek Singh Bhadouria</div>
     <!-- Same set duplicated again -->
     <div style="display: flex;">
       <!-- Duplicate Cards -->
-      <div style="min-width: 200px; height: 100px; background-color:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+      <div class="containerPartner">
         <img src="https://logowik.com/content/uploads/images/asian-paints6567.logowik.com.webp" style="width:100%;height:100%; object-fit: contain;">
       </div>
-      <div style="min-width: 200px; height: 100px; background-color:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+      <div class="containerPartner">
        <img src="https://images.yourstory.com/cs/images/companies/birlaopuslogo-1708922934512.jpg?fm=auto&ar=1:1&mode=fill&fill=solid&fill-color=fff" style="width:100%;height:100%; object-fit: contain;">
       </div>
-      <div style="min-width: 200px; height: 100px; background-color:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+      <div class="containerPartner">
        <img src="https://www.buildersmart.in/media/mobile/bmobilebrands/meraki2.jpg" style="width:100%;height:100%; object-fit: contain;">
       </div>
-      <div style="min-width: 200px; height: 100px; background:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+      <div class="containerPartner">
        <img src="https://tse3.mm.bing.net/th?id=OIP.5HwWjeia8qFLGFs_gctCbgHaHa&pid=Api&P=0&h=220" style="width:100%;height:100%; object-fit: contain;">
       </div>
-      <div style="min-width: 200px; height: 100px; background:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+      <div class="containerPartner">
        <img src="https://www.mgsarchitecture.in/images/Updates/Orient-Bell.jpg" style="width:100%;height:100%; object-fit: contain;">
       </div>
-      <div style="min-width: 200px; height: 100px; background:#fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+      <div class="containerPartner">
     <img src="https://www.saint-gobain.ie/sites/default/files/styles/brand_logo/public/bean/brand/logo/Gyproc%20Logo%20SG.png?itok=-F_7MYfE" style="width:100%;height:100%; object-fit: contain;">
       </div>
-       <div style="min-width: 200px; height: 100px; background: #fff; margin: 0 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 4px;">
+       <div class="containerPartner",,,,,,,,,,,,,,,,>
         <img src="https://tse2.mm.bing.net/th?id=OIP.WQAVE47myc5xBPAy1EWtrQAAAA&pid=Api&P=0&h=220" style="width:100%;height:100%; object-fit: contain;">
       </div>
 
@@ -2510,70 +2868,27 @@ function getCardWidth() {
   const margin = parseFloat(style.marginLeft) + parseFloat(style.marginRight);
   return card.offsetWidth + margin;
 }
-function getVisibleCards() {
-  if(window.innerWidth <= 700) return 2;
-  if(window.innerWidth <= 1000) return 2;
-  return 4;
-}
-
-let cardWidth = getCardWidth();
-let visibleCards = getVisibleCards();
-let currentIndex = 0;
-
-let currentScroll = 0;
 
 function scrollReviews(direction) {
-  const totalCards = container.children.length;
-  const containerWidth = container.parentElement.offsetWidth;
   const cardW = getCardWidth();
-  const totalWidth = cardW * totalCards;
-  let maxScroll = totalWidth - containerWidth;
-
-  if (maxScroll < 0) maxScroll = 0;
-
-  // Move by one card width per click
-  currentScroll += direction * cardW;
-
-  // Clamp scroll
-  if (currentScroll < 0) currentScroll = 0;
-  if (currentScroll > maxScroll) currentScroll = maxScroll;
-
-  container.style.transform = `translateX(-${currentScroll}px)`;
-
-  leftBtn.classList.toggle('hidden', currentScroll === 0);
-  rightBtn.classList.toggle('hidden', currentScroll === maxScroll || maxScroll === 0);
+  container.parentElement.scrollBy({
+    left: direction * cardW,
+    behavior: 'smooth'
+  });
 }
 
-// Update on resize
-window.addEventListener('resize', () => {
-  cardWidth = getCardWidth();
-  visibleCards = getVisibleCards();
-  scrollReviews(0);
-});
+function updateButtonVisibility() {
+  const scrollContainer = container.parentElement;
+  const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+  leftBtn.classList.toggle('hidden', scrollContainer.scrollLeft <= 0);
+  rightBtn.classList.toggle('hidden', scrollContainer.scrollLeft >= maxScroll);
+}
 
-// Hide right button if cards fit without scrolling
-window.addEventListener('load', () => {
-  cardWidth = getCardWidth();
-  visibleCards = getVisibleCards();
-  const totalCards = container.children.length;
-  if (totalCards <= visibleCards) {
-    rightBtn.classList.add('hidden');
-  }
-  scrollReviews(0);
-});
-
-
-  document.getElementById('btn').addEventListener('click',(e)=>{
-    e.preventDefault();
-   localStorage.clear();
-    localStorage.setItem('booked',true);
-    window.location.href='form.html';
-
-  })
-
- 
-
+container.parentElement.addEventListener('scroll', updateButtonVisibility);
+window.addEventListener('resize', updateButtonVisibility);
+window.addEventListener('load', updateButtonVisibility);
 </script>
+
 <script>
 function toggleFaq(button) {
   // Find the next sibling element (the answer div)
