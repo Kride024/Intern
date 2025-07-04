@@ -55,7 +55,6 @@
 
   
  .body1 {
-      font-family: Arial, sans-serif;
       background: #ffffff;
       margin: 0;
       padding: 40px 20px;
@@ -983,8 +982,12 @@ p{
 
 /* Optional: Keyframes for scrolling animation */
 @keyframes scrollLoop {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+   0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 @media (max-width: 700px) {
@@ -1034,10 +1037,11 @@ p{
   position: relative; /* Required for iOS overflow fix */
 }
 
-.Brand-Scrolling,
-.channel-partners-track {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+.Brand-Scrolling {
+   display: flex;
+  width: max-content;
+  animation: scrollLoop 20s linear infinite;
+  transform: translateZ(0);
   will-change: transform;
 }
 
@@ -2620,7 +2624,7 @@ Abhishek Singh Bhadouria</div>
   <div class="Brand-Scrolling">
 
     <!-- Card set duplicated twice for infinite loop -->
-    <div style="display: flex;">
+   
       <!-- Cards -->
       <div class="containerPartner" >
         <img src="https://tse3.mm.bing.net/th?id=OIP.aEtF3x_ejUdgSmXnrdp3uAHaBq&pid=Api&P=0&h=220" style="width:100% ;height:100%; object-fit: contain;">
@@ -2646,10 +2650,10 @@ Abhishek Singh Bhadouria</div>
        <div class="containerPartner">
       <img src="https://jainlaminates.com/wp-content/uploads/2020/04/action-tesa.jpeg" style="width:100%;height:100%; object-fit: contain;">
       </div>
-    </div>
+   
 
     <!-- Same set duplicated again -->
-    <div style="display: flex;">
+    
       <!-- Duplicate Cards -->
       <div class="containerPartner">
         <img src="https://logowik.com/content/uploads/images/asian-paints6567.logowik.com.webp" style="width:100%;height:100%; object-fit: contain;">
@@ -2669,11 +2673,11 @@ Abhishek Singh Bhadouria</div>
       <div class="containerPartner">
     <img src="https://www.saint-gobain.ie/sites/default/files/styles/brand_logo/public/bean/brand/logo/Gyproc%20Logo%20SG.png?itok=-F_7MYfE" style="width:100%;height:100%; object-fit: contain;">
       </div>
-       <div class="containerPartner",,,,,,,,,,,,,,,,>
+       <div class="containerPartner">
         <img src="https://tse2.mm.bing.net/th?id=OIP.WQAVE47myc5xBPAy1EWtrQAAAA&pid=Api&P=0&h=220" style="width:100%;height:100%; object-fit: contain;">
       </div>
 
-    </div>
+  
 
   </div>
 </div>
