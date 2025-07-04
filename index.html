@@ -922,6 +922,11 @@ p{
   width: 89%;
   max-width: 1400px;
 }
+.Brand-Scrolling{
+  display: flex;
+   width: max-content; 
+  animation: scrollLoop 10s linear infinite;
+}
 
 .channel-partners-track {
   display: flex;
@@ -1023,6 +1028,23 @@ p{
     margin-top: 2.4rem;
     /* text-align: left; */
   }
+}
+/* iOS-friendly enhancements */
+.channel-partners-wrapper {
+  position: relative; /* Required for iOS overflow fix */
+}
+
+.Brand-Scrolling,
+.channel-partners-track {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+/* iOS-compatible keyframes */
+@-webkit-keyframes scrollLoop {
+  0% { -webkit-transform: translate3d(0, 0, 0); }
+  100% { -webkit-transform: translate3d(-50%, 0, 0); }
 }
 
 /* Desktop styles */
@@ -2595,7 +2617,7 @@ Abhishek Singh Bhadouria</div>
 <div class="channel-partners-wrapper">
 
   <!-- Scroll track (twice duplicated for seamless looping) -->
-  <div style="display: flex; width: max-content; animation: scrollLoop 10s linear infinite;">
+  <div class="Brand-Scrolling">
 
     <!-- Card set duplicated twice for infinite loop -->
     <div style="display: flex;">
