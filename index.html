@@ -37,9 +37,10 @@
     top: 20px;
     right: 40px;
     font-size: 2rem;
-    color: white;
+    color: #fff;
     cursor: pointer;
   }
+  
 
 
       .hero-heading {
@@ -1689,7 +1690,8 @@ margin-bottom: 4rem;
 
   /* Safari-specific rendering tweaks */
   -webkit-font-smoothing: antialiased;
-  -webkit-text-fill-color: #000; /* Helps override dark mode */
+  /* -webkit-text-fill-color: #000;  */
+  /* Helps override dark mode */
   -webkit-appearance: none;
 }
 
@@ -1889,7 +1891,7 @@ font-weight: 700;
     display: block;
     position: absolute;
     top: 2rem;
-    left: 1rem;
+    left: 2px;
     font-family: 'DM Serif Display', serif;
     font-size: 1.8rem;
     font-weight: normal;
@@ -1953,6 +1955,19 @@ font-weight: 700;
 .btn_more{
   display:none;
 }
+
+  #imageModal span {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+  }
+#imageModal span {
+  color: #fff !important;
+}
+
 
     </style>
 </head>
@@ -2252,9 +2267,9 @@ font-weight: 700;
        
      
          <div class="about-div1" style="position: relative; text-align: center;">
-           
+           <div class="item">
                 <img src="Photos/Bedroom/Screenshot 2025-06-03 224652.png" style="width:644px;height: 394px;"/>
-           
+           </div>
                  <h2 style="
     position: absolute;
     top: 93%;
@@ -2859,6 +2874,10 @@ Yes, Elicit specializes in both custom-made furniture and modular designs tailor
   function openModal(src) {
     document.getElementById("modalImage").src = src;
     document.getElementById("imageModal").style.display = "flex";
+
+        // Force white color on the close span
+    const closeSpan = document.querySelector("#imageModal span");
+    closeSpan.style.color = "#ffffff";
   }
 
   function closeModal() {
