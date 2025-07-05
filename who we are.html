@@ -826,6 +826,105 @@ header{
   display:none;
 }
 }
+
+/* Mobile Navbar */
+    /* .mobile-navbar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+      display: none;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      z-index: 999;
+    }
+
+    .mobile-navbar .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #444;
+      font-size: 12px;
+      transition: color 0.2s;
+    } */
+
+    /* .mobile-navbar .nav-item i {
+      font-size: 18px;
+      margin-bottom: 3px;
+      transition: color 0.2s;
+    }
+
+    .mobile-navbar .nav-item span { */
+      /* font-size: 12px;
+      margin-top: 2px;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+
+    .nav-item.active,
+    .nav-item.active i,
+    .nav-item.active span {
+      color: #007bff !important;
+    } */
+
+    /* Dropdown */
+    .mobile-menu-unique {
+      position: fixed;
+      bottom: 60px;
+      right: 15px;
+      display: none;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      flex-direction: column;
+      min-width: 180px;
+      max-height: 320px;
+      overflow-y: auto;
+    }
+
+    .mobile-menu-unique a {
+      padding: 10px 16px;
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+      display: block;
+      text-align: left;
+      transition: background 0.2s;
+    }
+
+    .mobile-menu-unique a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu-unique a:hover {
+      background-color: #f9f9f9;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-navbar {
+        display: flex;
+      }
+      .container {
+        width: 90%;
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1rem;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
     </style>
 </head>
 <body>
@@ -1186,18 +1285,7 @@ sorts of different ways, but with the same goal.
     }
   });
 </script>
-<script>
-  localStorage.clear();
-  document.getElementById('btn').addEventListener('click',(e)=>{
-    e.preventDefault();
-  
-    localStorage.setItem('booked',true);
-    window.location.href='form.html';
 
-  })
-
-
-</script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const boxes = document.querySelectorAll(".box-para--1 .box");

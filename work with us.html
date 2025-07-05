@@ -119,10 +119,10 @@ li{
     margin-left:-2rem ;
     
    & li a{
-    color:var(--heading-color);
+    /* color:var(--heading-color); */
     text-transform: uppercase;
     display: inline-block;
-    font-weight: 800;
+    /* font-weight: 800; */
    position:relative;
    &::after{
     content:"";
@@ -213,7 +213,7 @@ box-shadow:var(--btn-box-shadow);
       & li a{
         font-family: "Poppins";
         font-size: 1.5rem;
-        font-weight:400;
+        
         
       }
     }
@@ -225,10 +225,7 @@ box-shadow:var(--btn-box-shadow);
   .brand-text {
     height:50px;
     display: block !important;
-    font-size: 2rem;
-    font-weight: bold;
     color: #7b7c7f;
-    font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
     margin-top: 1rem;
     margin-left: 2rem;
@@ -362,6 +359,7 @@ box-shadow:var(--btn-box-shadow);
   background-color: #1c3d5a;
   color: #fff;
   padding: 30px 20px;
+  margin-top: 3rem;
 }
 
 .footer-main {
@@ -476,29 +474,473 @@ color:blue;
 
 }
 
+#hiringForm_right{
+  background-color: rgb(106, 163, 206);
+  padding:-2rem; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 3rem;
+  margin-top: 0.1rem;
+  .section-common-heading{
+text-align: center;
+margin-bottom:2rem
+  }
+  #email_error,#phone_error{
+  color: red; 
+  display: none;
+  }
+}
+ #hiringForm{
+display: none; 
+color: green;
+text-align: center;
+margin-top: 15px;
+ }
+ .Link-1{
+position: fixed;
+  bottom: 45rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+   /* background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); */
+   background-color: #09335e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 00 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
+}
+.Link-2{
+  position: fixed;
+  bottom: 35rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /* background-color: #0077B5; */
+  background-color: #09335e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
+}
+.Link-3{
+ position: fixed;
+  bottom: 25rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /* background-color: #25D366; */
+  background-color: #09335e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
+}
 
+  @media (max-width: 700px) {
+  .Link-1,
+  .Link-2,
+  .Link-3 {
+    width: 36px;
+    height: 36px;
+  
+    /* bottom: unset; */
+    right: 10px;
+  }
+  .Link-1{
+    bottom:57rem;
+    /*
+    . right:50px; */
+  }
+  .Link-2{
+bottom:52rem;
+
+  }
+  .Link-3{
+Bottom:47rem;
+  }
+  .Link-1 img,
+  .Link-2 img,
+  .Link-3 img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+
+
+@media (width< 600px){
+  .form-part--1{
+ margin-top: 0rem;
+  }
+#hiringForm_right{
+ 
+  font-size:1.2rem;
+  font-weight: 400;
+  font-family:'Poppins',sans-serif ;
+  .section-common-heading{
+    font-size:1.6rem;
+    font-weight: 700;
+  } 
+  label{
+     font-size:1.2rem;
+  font-weight: 400;
+  font-family:'Poppins',sans-serif ;
+  }
+select#hiringForm_position {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+}
+}
+#hiringForm_success{
+  font-size:1.2rem;
+  font-family:'Poppins',sans-serif;
+  font-weight: 500;
+}
+}
+
+/* Mobile Navbar */
+    .mobile-navbar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+      display: none;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      z-index: 999;
+    }
+
+    .mobile-navbar .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #444;
+      font-size: 12px;
+      transition: color 0.2s;
+    }
+
+    .mobile-navbar .nav-item i {
+      font-size: 18px;
+      margin-bottom: 3px;
+      transition: color 0.2s;
+    }
+
+    .mobile-navbar .nav-item span {
+      font-size: 12px;
+      margin-top: 2px;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+
+    /* .nav-item.active,
+    .nav-item.active i,
+    .nav-item.active span {
+      color: #007bff !important;
+    } */
+
+    /* Dropdown */
+    .mobile-menu-unique {
+      position: fixed;
+      bottom: 60px;
+      right: 15px;
+      display: none;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      flex-direction: column;
+      min-width: 180px;
+      max-height: 320px;
+      overflow-y: auto;
+    }
+
+    .mobile-menu-unique a {
+      padding: 10px 16px;
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+      display: block;
+      text-align: left;
+      transition: background 0.2s;
+    }
+
+    .mobile-menu-unique a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu-unique a:hover {
+      background-color: #f9f9f9;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-navbar {
+        display: flex;
+      }
+      .container {
+        width: 90%;
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1rem;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+
+    
+ .brand-text {
+  display: none;
+}
+
+@media (max-width: 768px) {
+ 
+  .brand-text {
+    height:50px;
+    display: block !important;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7b7c7f;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    text-align: center;
+  }
+  nav.navbar {
+    display: none !important;
+  }
+  .btn {
+    display: none !important;
+  }
+}
+.mobile{
+      margin: 0;
+      font-family: Arial, sans-serif;
+      padding-bottom: 60px;
+    }
+
+   .mobile-navbar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #ffffff;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 8px 0;
+      z-index: 999;
+      box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.05);
+      display: none;
+    }
+
+    .mobile-navbar .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #444;
+      font-size: 12px;
+    }
+
+    .mobile-navbar .nav-item i {
+      font-size: 18px;
+      margin-bottom: 3px;
+    }
+
+    .nav-logo {
+      width: 22px;
+      height: 22px;
+      margin-bottom: 3px;
+      border-radius: 50%;
+    }
+
+    .brand-name {
+      font-size: 12px;
+      font-weight: bold;
+      color: #f16e84;
+    }
+
+.section-hero--content .mobile-logo{
+display:none;
+}
+
+    @media (max-width: 768px) {
+      .mobile-navbar {
+        display: flex;
+      }
+        .section-hero--content .mobile-logo{
+      display:block;
+  width: 40px;
+      height: 40px;
+      object-fit: cover;
+}
+    }
+    @media (max-width: 768px) {
+  .section-hero--content .mobile-logo {
+    display: block;
+    margin: 0 auto 1rem auto; /* centers the logo and adds space below */
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+}
+  
+
+    /* Hamburger Dropdown */
+    .mobile-menu-unique {
+      position: fixed;
+      bottom: 60px;
+      right: 15px;
+      display: none;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      flex-direction: column;
+    }
+
+    .mobile-menu-unique a {
+      padding: 10px 16px;
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .mobile-menu-unique a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu-unique a:hover {
+      background-color: #f9f9f9;
+    }
+ .hamburger-icon-unique {
+      display: none;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .hamburger-icon-unique span {
+      height: 2px;
+      width: 18px;
+      background-color: #444;
+      display: block;
+    }
   </style>
 </head>
 <body>
 
    
+<!-- Unique Hamburger Menu -->
+<div class="mobile">
+  <!-- Mobile Bottom Navbar -->
+  <div class="mobile-navbar">
+    <a href="index.html" class="nav-item active" >
+      <i class="fas fa-home" ></i>
+      <span>Home</span>
+    </a>
+    <a href="design.html" class="nav-item">
+      <i class="fas fa-lightbulb"></i>
+      <span>Design Ideas</span>
+    </a>
+    <a href="welcome.html" class="nav-item">
+      <i class="fas fa-calculator"></i>
+      <span>Estimate</span>
+    </a>
+    <div class="nav-item" onclick="toggleDropdown()">
+      <i class="fas fa-ellipsis-h"></i>
+      <span>More</span>
+    </div>
+  </div>
+
+  <!-- More Dropdown Menu -->
+  <div class="mobile-menu-unique" id="hamburgerDropdownUnique">
+    <a href="who we are.html">Who we Are</a>
+    <a href="service.html">Services</a>
+    <a href="work with us.html">Work with Us</a>
+    <a href="contact us.html">Contact</a>
+  </div>
+
+  <!-- JS to Toggle Dropdown -->
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("hamburgerDropdownUnique");
+      if (dropdown.style.display === "flex") {
+        dropdown.style.display = "none";
+      } else {
+        dropdown.style.display = "flex";
+      }
+    }
+
+    // Optional: Close on outside click
+    document.addEventListener('click', function (event) {
+      const dropdown = document.getElementById("hamburgerDropdownUnique");
+      const moreBtn = event.target.closest('.nav-item');
+      if (!dropdown.contains(event.target) && !moreBtn) {
+        dropdown.style.display = "none";
+      }
+    });
+
+       window.addEventListener("DOMContentLoaded", function () {
+  const path = window.location.pathname.split("/").pop().split("?")[0]; // current file, like 'design.html'
+  const navLinks = document.querySelectorAll(".mobile-navbar .nav-item");
+
+  navLinks.forEach(link => {
+    const page = link.getAttribute("data-page");
+    if (page === path) {
+      link.classList.add("active"); // This triggers the blue styling from CSS
+    }
+  });
+});
+
+  </script>
+
+</div>
 
 
-   <!-- ========== Start nav section ========== -->
+ <!-- ========== Start nav section ========== -->
    <header class ="section-navbar" >
     <div class="container">
         <div class="navbar-brand" >
             <a href="index.html">
                 <div>
-                  <a href="index.html"> <img src="Adobe Express - file.png" alt="logo" class="logo"/></a> 
+                  <a href="index.html"> <img src="Screenshot_2025-06-25_180908-removebg-preview.svg" alt="logo" class="logo"/></a> 
             <!-- ✅ HTML Brand Text Section -->
 <span class="brand-text-mobile">
-  <a href="index.html">
-    <img src="Adobe Express - file.png" alt="logo" class="mobile-logo" />
-  </a>
   <div class="brand-lines">
-    <div class="line-one">Elicit Interiors</div>
-    <div class="line-two">& Engineers</div>
+
+    <!-- <div class="line-two"></div> -->
   </div>
 </span>
                 </div>
@@ -561,9 +1003,9 @@ color:blue;
     </div>
 
    
-    <div id="hiringForm_right" style="background-color: rgb(106, 163, 206);padding:-2rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);border-radius: 3rem;margin-top: 0.1rem;">
+    <div id="hiringForm_right">
       <form id="hiringForm_form" onsubmit="handleSubmit(event)" >
-       <h2 class="section-common-heading"style="text-align: center;margin-bottom:2rem">Apply Now</h2>
+       <h2 class="section-common-heading">Apply Now</h2>
         <div class="hiringForm_field">
           <label for="hiringForm_name">Full Name</label>
           <input type="text" id="hiringForm_name" name="name" required>
@@ -572,13 +1014,13 @@ color:blue;
         <div class="hiringForm_field">
           <label for="hiringForm_email">Email</label>
           <input type="email" id="hiringForm_email" name="email" required oninput="validateEmail()">
-          <small id="email_error" style="color: red; display: none;">Invalid email format</small>
+          <small id="email_error">Invalid email format</small>
         </div>
 
         <div class="hiringForm_field">
           <label for="hiringForm_phone">Phone Number</label>
           <input type="tel" id="hiringForm_phone" name="phone" required oninput="validatePhone()">
-          <small id="phone_error" style="color: red; display: none;">Invalid phone format</small>
+          <small id="phone_error" >Invalid phone format</small>
         </div>
 
         <div class="hiringForm_field">
@@ -604,7 +1046,7 @@ color:blue;
         <button id="hiringForm_submit" type="submit">Submit Application</button>
       </form>
 
-      <p id="hiringForm_success" style="display: none; color: green; text-align: center; margin-top: 15px;">
+      <p id="hiringForm_success">
         Thank you! Your application has been received.
       </p>
     </div>
@@ -614,10 +1056,10 @@ color:blue;
 </div>
    <!-- ========== Start Footer Section ========== -->
 
-<div style="margin: 0; padding: 0; font-family: Arial, sans-serif;margin-top:1rem;"class="footer-container">
+<div style="margin: 0; padding:0; font-family: Arial, sans-serif;margin-top:1rem;  background-color: #1c3d5a;color:#fff"class="ter-container">
 
   <!-- Footer -->
-  <footer>
+  <footer style="padding-top:3rem">
   <div class="footer-main">
     <!-- Contact Info -->
     <div class="footer-contact">
@@ -642,54 +1084,18 @@ color:blue;
 
 </div>
 
-</div>
+
 
    <!-- ========== End Footer Section ========== -->
-       <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" style="
-  position: fixed;
-  bottom: 45rem;
-  right: 25px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 00 2px 10px rgba(0,0,0,0.2);">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+       <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" class="Link-1">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="WhatsApp">
 </a>
 
-      <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" style="
-  position: fixed;
-  bottom: 35rem;
-  right: 25px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #0077B5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+      <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" class="Link-2" >
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="WhatsApp"   >
 </a>
-   <a href="https://wa.me/+919506423475" target="_blank" style="
-  position: fixed;
-  bottom: 25rem;
-  right: 25px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #25D366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+   <a href="https://wa.me/+919506423475" target="_blank"  class="Link-3">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"  >
 </a>
 
   <script>
@@ -762,7 +1168,33 @@ color:blue;
 
 
 </script>
-  
+   <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("hamburgerDropdownUnique");
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    document.addEventListener('click', function (event) {
+      const dropdown = document.getElementById("hamburgerDropdownUnique");
+      const moreBtn = document.querySelector('.mobile-navbar .nav-item:last-child');
+      if (!dropdown.contains(event.target) && !moreBtn.contains(event.target)) {
+        dropdown.style.display = "none";
+      }
+    });
+
+    window.addEventListener("DOMContentLoaded", function () {
+      const path = window.location.pathname.split("/").pop().split("?")[0];
+      const navLinks = document.querySelectorAll(".mobile-navbar .nav-item");
+      navLinks.forEach(link => {
+        const page = link.getAttribute("data-page");
+        if (page === path) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    localStorage.clear();
+  </script>
 
 </body>
 </html>
