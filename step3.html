@@ -1,144 +1,290 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Step 3 - Sub-Options</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <style>
-      .container{
-    padding:2rem 9rem;
-  }
-  h2{
-  color:rgb(70, 69, 69);
-  /* margin-top: rem; */
-  }
-   select {
-    width: 100%;
-    height:60px;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    box-shadow:  0 6px 24px rgba(0,0,0,0.12), 0 1.5px 4px rgba(0,0,0,0.10);
-  }
- 
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-select option:hover {background-color: #f1f1f1}
+    .container {
+      padding: 2rem 9rem;
+    }
 
- .image-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin: 1.5rem 0;
+    h2 {
+      color: rgb(70, 69, 69);
+    }
+
+    select {
+      width: 100%;
+      height: 60px;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12), 0 1.5px 4px rgba(0, 0, 0, 0.10);
+    }
+
+    select option:hover {
+      background-color: #f1f1f1;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: 150px;
+      border-radius: 0.5rem;
+      object-fit: cover;
+    }
+
+    .main--top--heading {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background-color: rgb(6, 158, 228);
+      color: white;
+      border-radius: 20px;
+      padding: 8px 15px;
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      user-select: none;
+      min-width: 40px;
+      justify-content: center;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      background-color: #069ee4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    button:hover {
+      background-color: #057fc2;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      h2{
+        font-size:1rem ;
+        font-family: 'Poppins',sans-serif;
+        font-weight: 700;
+      }
+      .container {
+        padding: 1rem;
+        /* margin-top: 8rem; */
+        width: 85%;
+        background:#fff;
+        /* align-items: center; */
+      }
+
+      .main--top--heading {
+        width: 100px;
+        height: 20px;
+        font-size: 14px;
+        top: 10px;
+        right: 10px;
+      }
+
+      select {
+        font-size: 14px;
+        height: 50px;
+      }
+
+      button {
+        /* align-items: center; */
+        width: 100px;
+        font-size: 16px;
+        margin-left: 7rem;
+        margin-top: -1rem;
+        border-radius: 0.5rem;
+      }
+
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .Link-1{
+position: fixed;
+  bottom: 35rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+   /* background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); */
+   background-color: #09335e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 00 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
 }
-.image-grid img {
-  width: 100%;
- height:150px;
-  border-radius: 0.5rem;
-  object-fit: cover;
-   /* transition: transform 0.3s ease, box-shadow 0.4s ease; */
-
+.Link-2{
+  position: fixed;
+  bottom: 30rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /* background-color: #0077B5; */
+  background-color: #09335e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
 }
-/* img:hover{
-  scale:1.1;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-} */
+.Link-3{
+ position: fixed;
+  bottom: 25rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /* background-color: #25D366; */
+  background-color: #09335e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
+}
+
+  @media (max-width: 700px) {
+  .Link-1,
+  .Link-2,
+  .Link-3 {
+    width: 36px;
+    height: 36px;
+  
+    /* bottom: unset; */
+    right: 10px;
+  }
+  .Link-1{
+    bottom:12rem;
+    /*
+    . right:50px; */
+  }
+  .Link-2{
+bottom:8rem;
+
+  }
+  .Link-3{
+Bottom:4rem;
+  }
+  .Link-1 img,
+  .Link-2 img,
+  .Link-3 img {
+    width: 18px;
+    height: 18px;
+  }
+}
   </style>
   <script>
- 
     function showOptions() {
-  const category = localStorage.getItem('selected-Category');
-  const select = document.getElementById('options');
-  const subOptionsDiv = document.getElementById('Sub-Options');
-  const imageGrid = document.querySelector('.image-grid');
-  subOptionsDiv.textContent = category ? `${category}` : 'Sub-Options';
-  if (!category) {
-    alert('Category not selected. Redirecting to Step 2.');
-    window.location.href = 'step2.html';
-    return;
-  }
+      const category = localStorage.getItem('selected-Category');
+      const select = document.getElementById('options');
+      const subOptionsDiv = document.getElementById('Sub-Options');
+      const imageGrid = document.querySelector('.image-grid');
+      subOptionsDiv.textContent = category ? `${category}` : 'Sub-Options';
 
-  // Clear previous options and images
-  select.innerHTML = '';
-  imageGrid.innerHTML = '';
+      if (!category) {
+        alert('Category not selected. Redirecting to Step 2.');
+        window.location.href = 'step2.html';
+        return;
+      }
 
-  let options = [];
-  let images = [];
-  if (category === 'False Ceiling Designs'  ) {
-    if((localStorage.getItem('Residential')==="true")){
-    options = ['POP False Ceiling', 'Gypsum Board False Ceiling', 'Soffit Ceiling'];
+      select.innerHTML = '';
+      imageGrid.innerHTML = '';
+
+      let options = [];
+
+      if (category === 'False Ceiling Designs') {
+        if (localStorage.getItem('Residential') === "true") {
+          options = ['POP False Ceiling', 'Gypsum Board False Ceiling', 'Soffit Ceiling'];
+        } else if (localStorage.getItem('Commercial') === "true") {
+          options = ['POP False Ceiling', 'Gypsum Board False Ceiling', 'Soffit Ceiling', 'Gypsum Grid False Ceiling', 'Metal Ceiling', 'Mineral Fiber Ceiling', 'Baffle Ceiling'];
+        }
+      } else if (category === 'Flooring Designs') {
+        options = ['Wooden Flooring', 'LVT (Luxury Vinyl Tile)', 'Tiles Flooring', 'Artificial Turf', 'Carpet Tiles'];
+      } else if (category === 'Window Designs') {
+        options = ['uPVC Sliding Window', 'uPVC Casement Window', 'Powder Coated Aluminum Sliding Window', 'Powder Coated Aluminum Casement window', 'Glazing Window'];
+      } else if (category === 'Door Designs') {
+        options = ['Powder Coated Aluminum Door', 'Glass Door'];
+      } else if (category === 'Wall Designs') {
+        options = ['WPC Wainscoting', 'WPC Louvers', 'Charcoal Panel', 'Wall Punning', 'Wall Painting', 'Wall Covering', 'PVC Panel', 'Vertical Garden'];
+      } else if (category === 'Interior Designs') {
+        if (localStorage.getItem('Residential') === "true") {
+          options = ['2BHK', '3BHK', 'Bedrooms', 'Living Room', 'Modular Kitchen', 'Kids Room', 'Terrace Garden'];
+        } else if (localStorage.getItem('Commercial') === "true") {
+          options = ['Office Interior', 'Showroom Interior', 'Jewelry Shop Interior', 'Parlour Interior', 'Restaurant Interior', 'School Interior'];
+        }
+      } else if (category === 'Window blind') {
+        options = ['Roller Blind', 'Roman Blind', 'Vertical Blind', 'Venetian Blind', 'Zebra Blind', 'Honeycomb Blind'];
+      } else {
+        alert('Invalid category selected.');
+        return;
+      }
+
+      options.forEach(opt => {
+        const el = document.createElement('option');
+        el.value = opt;
+        el.textContent = opt;
+        select.appendChild(el);
+      });
     }
-    else if((localStorage.getItem('Commercial')==="true")){
-      options = ['POP False Ceiling', 'Gypsum Board False Ceiling', 'Soffit Ceiling','Gypsum Grid False Ceiling','Metal Ceiling','Mineral Fiber Ceiling','Baffle Ceiling'];
-    }
 
-  } else if (category === 'Flooring Designs') {
-    options = ['Wooden Flooring', 'LVT (Luxury Vinyl Tile)', 'Tiles Flooring','Artificial Turf', 'Carpet Tiles'];
-    
-    
-  }
-   else if (category === 'Window Designs') {
-    options = [ 'uPVC Sliding Window','uPVC Casement Window','Powder Coated Aluminum  Sliding Window','Powder Coated Aluminum Casement window', 'Glazing  Window'];
-    
-    
-  }
-  else if (category === 'Door Designs') {
-    options = ['Powder Coated Aluminum Door', 'Glass Door'];
-    // images = ['WhatsApp Image 2025-05-24 at 15.23.44_1b0c8f2e.jpg', 'WhatsApp Image 2025-05-24 at 15.23.44_2b0c8f2e.jpg'];
-  }
-
-  else if (category === 'Wall Designs') {
-    options = ['WPC Wainscoting', 'WPC Louvers', 'Charcoal Panel','Wall Punning',  'Wall Painting','Wall Covering', 'PVC Panel','Vertical Garden'];
-    // images = ['WhatsApp Image 2025-05-24 at 15.23.45_328d0c67.jpg', 'WhatsApp Image 2025-05-24 at 15.23.46_492a3eb4.jpg'];
-  } else if (category === 'Interior Designs') {
-    if((localStorage.getItem('Residential')==="true")){
-    options = ['2BHK','3BHK', 'Bedrooms', 'Living Room', 'Modular Kitchen', 'Kids Room','Terrace Garden'];
-    // images = ['WhatsApp Image 2025-05-24 at 15.23.47_75a828db.jpg', 'WhatsApp Image 2025-05-24 at 15.23.49_be7a7c85.jpg'];
-  }
-  else if((localStorage.getItem('Commercial')==="true")){
-    options = ['Office Interior','Showroom Interior', 'Jewelry Shop Interior', 'Parlour Interior', 'Restaurant Interior ', 'School Interior'];
-    // images = ['WhatsApp Image 2025-05-24 at 15.23.47_75a828db.jpg', 'WhatsApp Image 2025-05-24 at 15.23.49_be7a7c85.jpg'];
-  }
-}
-  else if(category==='Window blind'){
-    options = ['Roller Blind', 'Roman Blind', 'Vertical Blind', 'Venetian Blind','Zebra Blind','Honeycomb Blind'];
-    // images = ['WhatsApp Image 2025-05-24 at 15.23.50_1b0c8f2e.jpg', 'WhatsApp Image 2025-05-24 at 15.23.50_2b0c8f2e.jpg'];
-  } else {
-    alert('Invalid category selected.');
-    return;
-  }
-
-  options.forEach(opt => {
-    const el = document.createElement('option');
-    el.value = opt;
-    el.textContent = opt;
-    select.appendChild(el);
-  });
-
-  // images.forEach(src => {
-  //   const img = document.createElement('img');
-  //   img.src = src;
-  //   img.alt = 'Category Image';
-  //   imageGrid.appendChild(img);
-  // });
-}
-   function handleSubmit(event) {
+    function handleSubmit(event) {
       event.preventDefault();
-
       const selectedOption = document.getElementById('options').value;
       localStorage.setItem('selected-SubOption', selectedOption);
       const category = localStorage.getItem('selected-Category');
-      if(category==='Window blind'){
-      window.location.href = 'window bind.html';
+
+      if (category === 'Window blind') {
+        window.location.href = 'window bind.html';
+      } else if (['Wall Designs', 'Window Designs', 'Door Designs'].includes(category)) {
+        window.location.href = 'step41.html';
+      } else if (category === 'Interior Designs') {
+        window.location.href = 'step_interior.html';
+      } else {
+        window.location.href = 'step4.html';
       }
-   else if(category === 'Wall Designs'||category ==='Window Designs'||category==='Door Designs'){
-      window.location.href = 'step41.html';
-   }
-   else if(category==='Interior Designs'){
-    window.location.href='step_interior.html';
-   }
-   else
-    window.location.href = 'step4.html';
     }
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -148,55 +294,28 @@ select option:hover {background-color: #f1f1f1}
   </script>
 </head>
 <body>
-  <div style="
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  background-color:rgb(6,158,228);
-  color: white;
-  border-radius: 20px;
-  padding: 8px 15px;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  user-select: none;
-  min-width: 40px;
-  justify-content: center;
-">
-  3/5
-</div>
+  <div class="main--top--heading">3/5</div>
   <div class="container">
-    <h2>Select the type Of<div id="Sub-Options"></div></h2>
+    <h2>Select the type of <span id="Sub-Options"></span></h2>
     <form id="form">
       <select id="options" name="subOption" required></select>
-    <div class="image-grid">
-    <!-- <img src="intern-img1.jpg" alt="Image 1">
-    <img src="intern-img2.jpg" alt="Image 2">
-    <img src="intern-img3.jpg" alt="Image 3">
-    <img src="intern-img4.jpg" alt="Image 4"> -->
-  </div>
-     <h1> <button type="submit">Next</button></h1>
+      <div class="image-grid">
+        <!-- Optional images can be added here -->
+      </div>
+      <button type="submit">Next</button>
     </form>
   </div>
-   <a href="https://wa.me/+919506423475" target="_blank" style="
-  position: fixed;
- bottom: 19rem;
-  right: 10px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #25D366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+
+      <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" class="Link-1">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="WhatsApp">
 </a>
+
+      <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" class="Link-2" >
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="WhatsApp"   >
+</a>
+   <a href="https://wa.me/+919506423475" target="_blank"  class="Link-3">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"  >
+</a>
+
 </body>
 </html>
-
