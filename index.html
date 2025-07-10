@@ -10,7 +10,9 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style1.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
   /* Modal Style */
@@ -135,7 +137,7 @@ margin: 0;
 font-size: 20px;
 }
 /* Global font and rendering fix */
-body, .body1, .review-card, footer, .footer-heading, .footer-para--1, .footer-para--2, .footer-bottom, .btn_main {
+body, .body1, .review-card, .btn_main {
   font-family: 'Poppins', Arial, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -306,84 +308,6 @@ body, .body1, .review-card, footer, .footer-heading, .footer-para--1, .footer-pa
   display: none;
 }
 
-/* Footer */
-footer {
-  background-color: #1c3d5a;
-  color: #fff;
-  padding: 30px 20px;
-  -webkit-appearance: none;
-  appearance: none;
-  -webkit-text-fill-color: #fff;
-  box-sizing: border-box;
-}
-
-.footer-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1000px;
-  margin: auto;
-  min-height: 18rem;
-  gap: 2rem;
-}
-
-.footer-contact,
-.footer-social {
-  flex: 1 1 300px;
-  margin-bottom: 20px;
-}
-
-.footer-social {
-  text-align: right;
-  font-size: 20px;
-  margin: 0 0 10px 0;
-}
-
-.footer-social a {
-  color: #fff !important;
-  margin-right: 15px;
-  font-size: 18px;
-  transition: color 0.2s;
-  -webkit-text-fill-color: #fff;
-  -webkit-font-smoothing: antialiased;
-}
-
-.footer-social a:last-child {
-  margin-right: 0;
-}
-
-.footer-social a:hover {
-  color: #d52c6e;
-}
-
-.footer-social a i,
-.footer-social a svg {
-  color: #fff !important;
-  fill: #fff !important;
-  -webkit-text-fill-color: #fff;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
-  color: #ccc;
-}
-
-.footer-heading {
-  margin: 0 0 10px 0;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.footer-para--1,
-.footer-para--2 {
-  margin: 5px 0;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
 /* Responsive styles */
 @media (max-width: 1000px) {
   .review-wrapper {
@@ -437,37 +361,6 @@ footer {
     left: 65%;
     right: auto;
   }
-  footer {
-    height: 600px;
-    padding: 24px 8px;
-  }
-  .footer-main {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-    padding: 0;
-  }
-  .footer-contact,
-  .footer-social {
-    width: 100%;
-    margin-bottom: 0;
-    font-weight: 400;
-  }
-  .footer-social {
-    text-align: center;
-    margin-top: -10rem;
-  }
-  .footer-social h3 {
-    display: none;
-  }
-  .footer-heading,
-  .footer-social {
-    font-size: 1.6rem;
-    font-weight: 700;
-  }
-  .footer-bottom {
-    font-size: 1.1rem;
-  }
   .btn_main {
     font-size: 1.1rem;
     letter-spacing: 0.1rem;
@@ -475,19 +368,7 @@ footer {
 }
 
 /* Dark mode override for iOS Safari */
-@media (prefers-color-scheme: dark) {
-  footer {
-    background-color: #1c3d5a;
-    color: #fff;
-    -webkit-text-fill-color: #fff;
-  }
-  .footer-social a i,
-  .footer-social a svg {
-    color: #fff !important;
-    fill: #fff !important;
-    -webkit-text-fill-color: #fff;
-  }
-}
+
 
 
 /* Responsive styles */
@@ -879,25 +760,6 @@ p{
 }
 
 
-/* @media (max-width: 700px){
-  .container.grid.grid-four--cols.calculater{
-    font-size: 2rem !important;
-    color: #373535 !important;
-    font-weight: 700 !important;
-    width: 100%;
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    margin-top: -3rem;
-  }
-  .reviews-container {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    margin-bottom: 5rem;
-  }
-} */
  .container.grid.grid-four--cols.calculater {
   margin-left: auto;
   margin-right: auto;
@@ -925,11 +787,7 @@ p{
     padding-right: 1vw;
   }
 }
-/* @media (max-width: 700px) {
-  .reviews-container {
-  margin-left: -16px;
-  }
-} */
+
  .channel-partners-wrapper {
   overflow: hidden;
   margin: 0 auto 2rem auto;
@@ -1069,14 +927,11 @@ p{
 /* Desktop styles */
 .achievement-heading,
 .review-heading {
-  /* margin-top: -2rem; */
   font-size: 1.2rem;
   font-weight: 700;
   color: #373535;
   text-align: left;
   margin-left: 2vw;
-  /* margin-bottom: 3rem; */
-  /* margin-top: -4rem; */
   letter-spacing: 0.5px;
    font-size: 3rem;
    text-align: center;
@@ -1089,9 +944,6 @@ p{
     margin-left: 2vw;
     font-size: 3rem;
     text-align: center;
-
-    /* margin-bottom: 2rem; */
-    /* margin-top: 2.5rem; */
   }
 }
 
@@ -1100,8 +952,6 @@ p{
   .review-heading {
     font-size: 1.3rem;
     margin-left: 3vw;
-    /* margin-bottom: 1.5rem; */
-    /* margin-top: 2rem; */
   font-size: 2rem;
     text-align: center;
   }
@@ -1112,157 +962,14 @@ p{
   box-shadow: none;
 }
 
-footer {
-  background-color: #1c3d5a;
-  color: #fff;
-  padding: 30px 20px;
-  -webkit-appearance: none;
-  appearance: none;
-  -webkit-text-fill-color: #fff;
-  box-sizing: border-box;
-}
-
-.footer-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1000px;
-  margin: auto;
-  min-height: 18rem;
-  gap: 2rem;
-}
-
-.footer-contact,
-.footer-social {
-  flex: 1 1 300px;
-  margin-bottom: 20px;
-}
-
-.footer-social {
-  text-align: right;
-  font-size: 20px;
-  margin: 0 0 10px 0;
-}
-
-.footer-social a {
-  color: #fff !important;
-  margin-right: 15px;
-  font-size: 18px;
-  transition: color 0.2s;
-  -webkit-text-fill-color: #fff;
-  -webkit-font-smoothing: antialiased;
-}
-
-.footer-social a:last-child {
-  margin-right: 0;
-}
-
-.footer-social a:hover {
-  color: #d52c6e;
-}
-
-.footer-social a i,
-.footer-social a svg {
-  color: #fff !important;
-  fill: #fff !important;
-  -webkit-text-fill-color: #fff;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
-  color: #ccc;
-}
-
-.footer-heading {
-  margin: 0 0 10px 0;
-  font-size: 20px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-}
-
-.footer-para--1,
-.footer-para--2 {
-  margin: 5px 0;
-  font-size: 1.1rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-}
-
-.footer-social h3 {
-  font-size: 1.6rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-}
-
 /* Responsive styles */
 @media (max-width: 700px) {
-  footer {
-    height: 600px;
-    padding: 24px 8px;
-  }
-
-  .footer-main {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-    padding: 0;
-  }
-
-  .footer-contact,
-  .footer-social {
-    width: 100%;
-    margin-bottom: 0;
-    font-weight: 400;
-  }
-
-  .footer-social {
-    text-align: center;
-    margin-top: -10rem;
-  }
-
-  .footer-social h3 {
-    display: none;
-  }
-
-  .footer-bottom {
-    font-size: 1.1rem;
-  }
-
-  .footer-heading,
-  .footer-social {
-    font-size: 1.6rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-  }
-
-  .btn_main {
+ .btn_main {
     font-size: 1.1rem;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 0.1rem;
-    /* font-weight: 700; */
   }
 }
-
-/* Dark mode override for iOS Safari */
-@media (prefers-color-scheme: dark) {
-  footer {
-    background-color: #1c3d5a;
-    color: #fff;
-    -webkit-text-fill-color: #fff;
-  }
-
-  .footer-social a i,
-  .footer-social a svg {
-    color: #fff !important;
-    fill: #fff !important;
-    -webkit-text-fill-color: #fff;
-  }
-}
-
-
   .mobile{
       margin: 0;
       font-family: Arial, sans-serif;
@@ -1400,12 +1107,7 @@ font-size: 14px;
   margin: 10px 0;
 }
 
-/* #ach-card-2015 .second,
-#ach-card-projects .second,
-#ach-card-vendors .second,
-#ach-card-supply .second {
-  font-size: 13px;
-} */
+ 
      }
      /* Hide on desktop */
 .brand-text-mobile {
@@ -1434,14 +1136,11 @@ margin-bottom: 4rem!important;
     margin-left: -6rem;
     gap:1rem;
     margin-bottom: -0.7rem;
-    /* margin-top: 1rem; */
-    /* text-align: center; */
   }
 
   .brand-text-mobile .mobile-logo {
     width: 35px;
     height: auto;
-    /* margin-bottom: 0.rem; */
   }
 
   .brand-lines {
@@ -1455,8 +1154,6 @@ margin-bottom: 4rem!important;
   }
 
    .line-one {
-    /* text-transform: uppercase; */
-    /* color:#0062ff; */
     margin-top: -0.5rem;
    
     font-size: 1.6rem;
@@ -1582,19 +1279,13 @@ Bottom:47rem;
   color: #007bff !important;
 }
 
-/* @media (max-width: 700px) {
-  .mobile-break::after {
-    content: "";
-    display: block;
-  }
-} */
+
 @media (width> 700px){
   .body1{
     height:500px;
   }
 .section-common-heading.achievement-heading{
 margin-top: -4rem;
-/* margin-bottom: 4rem; */
 }
 .review-wrapper{
   margin-top: 2rem;
@@ -1603,7 +1294,6 @@ margin-top: -4rem;
 
 .section-common-heading.review-heading{
 margin-top: 1rem;
-/* margin-bottom: 4rem; */
 font-family: 'Poppins',sans-serif;
 }
 @media (width<= 700px){
@@ -1635,7 +1325,6 @@ font-family: 'Poppins',sans-serif;
     max-width: 95vw;
     margin: 0 2vw;
     padding: 12px;
-    /* font-size: 13px; */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Match calculator card shadow */
   }
   .name{
@@ -1684,10 +1373,10 @@ margin-bottom: 4rem;
 }
 .section-common-heading.faq {
   margin: 0;
+  height:850px;
   font-family: 'Poppins', Arial, sans-serif;
   background-color: #f3f1f1;
   color: #000000;
-
   /* Safari-specific rendering tweaks */
   -webkit-font-smoothing: antialiased;
   -webkit-text-fill-color: #000; 
@@ -1926,20 +1615,7 @@ font-weight: 700;
   margin-left: 1.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  footer {
-    background-color: #eff4f9 !important;
-    color: #272727 !important;
-  }
-
-  .footer-social a,
-  .footer-bottom,
-  .footer-heading,
-  .footer-para--1,
-  .footer-para--2 {
-    color: #fff !important;
-  }
-}
+/*  */
 
 @media (width> 1200px){
 .Achievement{
@@ -1967,6 +1643,200 @@ font-weight: 700;
 #imageModal span {
   color: #fff !important;
 }
+
+/* Base Footer Styles */
+.custom-footer {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+  padding: 40px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+
+}
+
+/* Main Layout Container */
+.custom-footer__main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Headings */
+.custom-footer__heading {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-align: left;
+}
+
+/* Contact Info */
+.custom-footer__contact p {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+
+.custom-footer__contact i {
+  margin-right: 10px;
+  color: #f1c40f;
+  min-width: 20px;
+  
+}
+
+.custom-footer__info .text {
+  display: inline;
+}
+
+.custom-footer__info .texti{
+  margin-left: 1.6rem;
+}
+/* Social Icons */
+.custom-footer__icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.custom-footer__icons i {
+  font-size: 18px;  /* Adjust this value to scale icons */
+  margin: 0 8px;    /* Optional: spacing between icons */
+  color: #fff;      /* Optional: icon color */
+  transition: transform 0.2s;
+}
+
+.custom-footer__icons i:hover {
+  transform: scale(1.1);  /* Optional: adds a nice hover effect */
+  color: #f1c40f;         /* Optional: hover color */
+}
+
+
+.custom-footer__icons a {
+  color: #f1f1f1;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.custom-footer__icons a:hover {
+  color: #f1c40f;
+}
+
+/* Footer Bottom */
+.custom-footer__bottom {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1rem;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  color: #aaa;
+}
+.custom-footer__icons i {
+  font-size: 12px;  /* Adjust this value to scale icons */
+  margin: 0 8px;    /* Optional: spacing between icons */
+  color: #fff;      /* Optional: icon color */
+  transition: transform 0.2s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Section Headings */
+  .custom-footer{
+    height:auto;
+  }
+.custom-footer__heading {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-align: left;
+}
+
+/* Contact Info */
+.custom-footer__contact p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+  .custom-footer__main {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .custom-footer__contact,
+  .custom-footer__social {
+    width: 100%;
+  }
+
+  .custom-footer__info .text {
+    display: block;
+    /* margin-left: 18px; aligns with icon spacing */
+  }
+  .custom-footer__info .texti{
+    margin-left: 1.8rem;
+  }
+
+  .custom-footer__contact {
+    border-bottom: 1px solid #444;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+
+  .custom-footer__icons {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .mobile-keywords-inline {
+    display: block;
+    padding: 0.3rem;
+    
+  }
+
+  .mobile-keywords-inline a {
+    display: inline-block;
+    margin: 2px 4px;
+    padding: 2px 6px;
+  
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    white-space: nowrap;
+  }
+  .custom-footer_bottom {
+    display: block;       /* Ensure it's not hidden */
+    padding: 0rem;        /* Add padding for breathing room */
+    font-size: 0.75rem;   /* Slightly smaller text for mobile */
+    text-align: center;
+    color: #fff;
+  
+  }
+  .custom-footer {
+  min-height: auto;
+  overflow: visible;
+  margin-bottom: 5rem;
+}
+
+
+  .mobile-keywords-inline a:hover {
+    /* background-color: #e0e0e0; */
+    color: #d1bb2c;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-keywords-inline {
+    display: none;
+  }
+}
+
 
 
     </style>
@@ -2165,10 +2035,7 @@ font-weight: 700;
   </h2>
            
             <h3 class="section-common--title"  style="margin-bottom: 4rem;">Room Design: <span>Bold & Timeless</span> </h3>
-            <!-- <p>
-                we start by learning what you need.We look at what's new and exciting
-                in learning and choose topics that match what you want to learn.
-                         </p> -->
+          
         </div>
          <div class="about-div" style="position: relative; text-align: center;" >
            
@@ -2190,10 +2057,7 @@ font-weight: 700;
   </h2>
            
             <h3 class="section-common--title"  style="margin-bottom: 4rem;">Kitchen Design: <span>Deep Accents</span> </h3>
-            <!-- <p>
-                we start by learning what you need.We look at what's new and exciting
-                in learning and choose topics that match what you want to learn.
-                         </p> -->
+         
         </div>
         <div class="about-div" style="position: relative; text-align: center;">
           
@@ -2215,10 +2079,7 @@ font-weight: 700;
     Elicit Engineers and Interiors
   </h2>
             <h3 class="section-common--title"  style="margin-bottom: 4rem;">Wardrobe Design: <span>Modern</span></h3>
-            <!-- <p>
-            Next,we make the lessons.We make them fun and interesting for you.We make
-            sure they work for different ways people like to learn.
-                         </p> -->
+            
         </div>
         <div class="about-div" style="position: relative; text-align: center;">
           
@@ -2240,10 +2101,7 @@ font-weight: 700;
     Elicit Engineers and Interiors
   </h2>
             <h3 class="section-common--title" style="margin-bottom: 4rem;">Room Design:  <span>Forest-Inspired</span></h3>
-            <!-- <p>
-             After that,we turn the lessons into things you can use online.We use the latest tools to make sure they work well 
-             and make you happy.   
-                         </p> -->
+           
         </div>
         
      </div>
@@ -2286,35 +2144,12 @@ font-weight: 700;
     Elicit Engineers and Interiors
   </h2>
            
-            <!-- <p>
-                we start by learning what you need.We look at what's new and exciting
-                in learning and choose topics that match what you want to learn.
-                         </p> -->
+         
         </div>
         <div class="about-div1" style="position: relative; text-align: center;">
           
                 <img src="https://i.pinimg.com/736x/49/6b/a1/496ba1456d87d5e12a42dade7483d52a.jpg"  alt="technical research item" style="width:347px;height: 394px;margin-left: -1.6rem;"/>
-                <!-- <h2 style="
-    position: absolute;
-    top: 93%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1vw;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: 300;
-    white-space: nowrap;
-  ">
-    Elicit Engineers and Interiors
-  </h2> -->
-                <!-- margin-left: -65rem; -->
-           
-            <!-- <p>
-            Next,we make the lessons.We make them fun and interesting for you.We make
-            sure they work for different ways people like to learn.
-                         </p> -->
+ 
         </div >
         <div class="about-div1" style="position: relative; text-align: center;">
           
@@ -2382,21 +2217,6 @@ font-weight: 700;
               <div class="about-div1" style="position: relative; text-align: center;">
           
                 <img src="https://i.pinimg.com/736x/07/b4/6d/07b46d9f835510ba38c1a62b530a8b40.jpg" alt=" technical research item" style="width:350px;height: 394px;margin-top: 7rem; margin-left: -2.1rem;"  />
-                 <!-- <h2 style="
-    position: absolute;
-    top: 94%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1vw;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: 300;
-    white-space: nowrap;
-  ">
-    Elicit Engineers and Interiors
-  </h2> -->
            
         </div>
         
@@ -2419,26 +2239,9 @@ font-weight: 700;
            
                 <img src="https://i.pinimg.com/736x/c6/82/ca/c682cafdf626143dc3b14c6800ada3fc.jpg" alt="technical research item"/>
          
-                      <!-- <h2 style="
-    position: absolute;
-    top: 38%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1vw;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: 300;
-    white-space: nowrap;
-  ">
-    Elicit Engineers and Interiors
-  </h2>  -->
+                     
             <h3 class="section-common--title calculate"> False Ceiling : <span>Know the estimated Price</span> </h3>
-            <!-- <p>
-                we start by learning what you need.We look at what's new and exciting
-                in learning and choose topics that match what you want to learn.
-                         </p> -->
+         
                           <button class="btni" onclick="window.location.href=`step2.html`;">Calculate</button>
         </div>
          <div class="about-div mq" style="position: relative; text-align: center;" >
@@ -2825,33 +2628,63 @@ Yes, Elicit specializes in both custom-made furniture and modular designs tailor
     <!-- ========== Start Footer Section ========== -->
      </div>
 
-<div style="margin: 0; padding: 0; font-family: Arial, sans-serif;margin-top:18rem;">
-
-  <!-- Footer -->
-  <footer>
-  <div class="footer-main">
+<footer class="custom-footer">
+  <div class="custom-footer__main">
     <!-- Contact Info -->
-    <div class="footer-contact">
-      <h3 class="footer-heading" >Contact Us</h3>
-      <p class="footer-para--1" ><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-9506423475</p>
-      <p class="footer-para--2" ><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 0169, Ghaseekatra , Ghasi Katra Gorakhpur1, Uttar Pradesh, India-27300</p>
+    <div class="custom-footer__contact">
+      <h3 class="custom-footer__heading">Contact Us</h3>
+      <div class="custom-footer__info">
+        <p><i class="fas fa-phone"></i><span class="text">+91-9506423475</span></p>
+        <p><i class="fas fa-map-marker-alt"></i><span class="text">0169, Ghaseekatra,</span></p>
+        <p><span class="texti">Ghasi Katra, Gorakhpur</span></p>
+       <p><span class="texti">UP - 273001</span></p>
+      </div>
     </div>
-    <!-- Social Icons -->
-    <div class="footer-social">
-      <h3  class="heading-social">Connect with us</h3>
-      <a href="https://wa.me/+919506423475"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/company/elicitengineers/"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://www.facebook.com/share/16XpHzab3M/?mibextid=wwXIfr"><i class="fa-brands fa-facebook"></i></a>
-      <a href="mailto:elicitengineers@outlook.com"><i class="fas fa-envelope"></i></a>
+    <!-- options-para info -->
+<div class="mobile-keywords-inline">
+  <a href="/kitchen-cabinet">Kitchen Cabinet</a>
+  <a href="/bedroom-ceiling">Bedroom Ceiling</a>
+  <a href="/l-shape-kitchen">L Shape Kitchen</a>
+  <a href="/u-shape-kitchen">U Shape Kitchen</a>
+  <a href="/island-kitchen">Island Kitchen</a>
+  <a href="/open-kitchen">Open Kitchen</a>
+  <a href="/parallel-kitchen">Parallel Kitchen</a>
+  <a href="/mandir-design">Mandir Design</a>
+  <a href="/sliding-wardrobe">Sliding Wardrobe</a>
+  <a href="/walk-in-wardrobe">Walk-in Wardrobe</a>
+  <a href="/mirror-wardrobe">Mirror Wardrobe</a>
+  <a href="/small-bathroom">Small Bathroom</a>
+  <a href="/girls-bedroom">Girls Bedroom</a>
+  <a href="/boys-bedroom">Boys Bedroom</a>
+  <a href="/kitchen-tile-designs">Kitchen Tile Designs</a>
+  <a href="/bedroom-tile-designs">Bedroom Tile Designs</a>
+  <a href="/bathroom-tile-designs">Bathroom Tile Designs</a>
+  <a href="/living-room-tile-designs">Living room Tile Designs</a>
+  <a href="/living-room-wallpaper-designs">Living room Wallpaper Designs</a>
+  <a href="/bedroom-wallpaper-designs">Bedroom Wallpaper Designs</a>
+  <a href="/living-room-wallpaint-ideas">Living room Wallpaint Ideas</a>
+  <a href="/bedroom-wallpaint-ideas">Bedroom Wallpaint Ideas</a>
+</div>
+
+    <!-- Social Links -->
+    <div class="custom-footer__social">
+      <h3 class="custom-footer__heading">Connect with us</h3>
+      <div class="custom-footer__icons">
+        <a href="https://wa.me/919506423475" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/share/16XpHzab3M/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:elicitengineers@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
+    
   </div>
-  <div class="footer-bottom">
-    © 2025 Your Interior Company. All rights reserved.
+
+  <div class="custom-footer__bottom">
+    © 2025 Elicit Engineers and Interiors Company. All rights reserved.<br/>
+    Designed by kriti Yadav
   </div>
 </footer>
-
-</div>
 
    <!-- ========== End Footer Section ========== -->
        <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" class="Link-1">

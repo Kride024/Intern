@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Step 1 - Type</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     * { box-sizing: border-box; }
@@ -96,7 +97,7 @@
       background: #069ee4;
       color: #fff;
       border: none;
-      border-radius: 2rem;
+      border-radius: 1rem;
       cursor: pointer;
       box-shadow: 0 4px 24px rgba(235,89,95,0.15);
       transition: transform 0.2s, box-shadow 0.2s;
@@ -140,6 +141,13 @@
         min-width: 30px;
         top: 10px;
         right: 10px;
+        
+        width: 100px;
+        height: 30px;
+        font-size: 14px;
+        top: 10px;
+        right: 10px;
+    
       }
       .container {
         max-width: 98vw;
@@ -167,10 +175,317 @@
         height: 24px;
       }
     }
+     /* Dropdown */
+    .mobile-menu-unique {
+      position: fixed;
+      bottom: 60px;
+      right: 15px;
+      display: none;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 2000;
+      flex-direction: column;
+      min-width: 180px;
+      max-height: 320px;
+      overflow-y: auto;
+    }
+
+    .mobile-menu-unique a {
+      padding: 10px 16px;
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+      display: block;
+      text-align: left;
+      transition: background 0.2s;
+    }
+
+    .mobile-menu-unique a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu-unique a:hover {
+      background-color: #f9f9f9;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-navbar {
+        display: flex;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+
+    
+ .brand-text {
+  display: none;
+}
+
+@media (max-width: 768px) {
+ 
+  .brand-text {
+    height:50px;
+    display: block !important;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7b7c7f;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    text-align: center;
+  }
+  nav.navbar {
+    display: none !important;
+  }
+ 
+}
+.mobile{
+      margin-left: 0;
+      font-family: Arial, sans-serif;
+      padding-bottom: 60px;
+    }
+
+   .mobile-navbar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #ffffff;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 8px 0;
+      z-index: 999;
+      box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.05);
+      display: none;
+      margin-left: -12.2rem;
+    }
+
+    .mobile-navbar .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #444;
+      font-size: 12px;
+    }
+
+    .mobile-navbar .nav-item i {
+      font-size: 18px;
+      margin-bottom: 3px;
+    }
+
+    .nav-logo {
+      width: 22px;
+      height: 22px;
+      margin-bottom: 3px;
+      border-radius: 50%;
+    }
+
+    .brand-name {
+      font-size: 12px;
+      font-weight: bold;
+      color: #f16e84;
+    }
+
+.section-hero--content .mobile-logo{
+display:none;
+}
+
+    @media (max-width: 768px) {
+      .mobile-navbar {
+        display: flex;
+      }
+        .section-hero--content .mobile-logo{
+      display:block;
+  width: 40px;
+      height: 40px;
+      object-fit: cover;
+}
+    }
+    @media (max-width: 768px) {
+  .section-hero--content .mobile-logo {
+    display: block;
+    margin: 0 auto 1rem auto; /* centers the logo and adds space below */
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+}
+  
+
+    /* Hamburger Dropdown */
+    .mobile-menu-unique {
+      position: fixed;
+      bottom: 60px;
+      right: 15px;
+      display: none;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      flex-direction: column;
+    }
+
+    .mobile-menu-unique a {
+      padding: 10px 16px;
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .mobile-menu-unique a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu-unique a:hover {
+      background-color: #f9f9f9;
+    }
+ .hamburger-icon-unique {
+      display: none;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .hamburger-icon-unique span {
+      height: 2px;
+      width: 18px;
+      background-color: #444;
+      display: block;
+    }
+  .Link-1, .Link-2, .Link-3 {
+      position: fixed;
+      right: 25px;
+      z-index: 1000;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #09335e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .Link-1 { bottom: 35rem; }
+    .Link-2 { bottom: 30rem; }
+    .Link-3 { bottom: 25rem; }
+
+    .Link-1 img, .Link-2 img, .Link-3 img {
+      width: 30px;
+      height: 30px;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        padding: 2rem 1.2rem;
+      }
+ h2{
+   font-size: 1.3rem;
+ }
+      .btn {
+        width: 205px;
+        font-size: 1rem;
+      }
+
+      #resulti {
+        top: 10px;
+        right: 10px;
+        font-size: 11px;
+      }
+
+      .Link-1, .Link-2, .Link-3 {
+        width: 36px;
+        height: 36px;
+        right: 10px;
+      }
+
+      .Link-1 { bottom: 12rem; }
+      .Link-2 { bottom: 8rem; }
+      .Link-3 { bottom: 4rem; }
+
+      .Link-1 img, .Link-2 img, .Link-3 img {
+        width: 18px;
+        height: 18px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="progress-badge">1/5</div>
+   <!-- Navbar -->
+<div class="mobile">
+  <!-- Mobile Bottom Navbar -->
+ <div class="mobile-navbar">
+  <a href="index.html" class="nav-item" data-page="index.html">
+    <i class="fas fa-home"></i>
+    <span>Home</span>
+  </a>
+  <a href="design.html" class="nav-item" data-page="design.html">
+    <i class="fas fa-lightbulb"></i>
+    <span>Design Ideas</span>
+  </a>
+  <a href="welcome.html" class="nav-item" data-page="welcome.html">
+    <i class="fas fa-calculator"></i>
+    <span>Estimate</span>
+  </a>
+  <div class="nav-item" onclick="toggleDropdown()">
+    <i class="fas fa-ellipsis-h"></i>
+    <span>More</span>
+  </div>
+</div>
+
+
+  <!-- More Dropdown Menu -->
+  <div class="mobile-menu-unique" id="hamburgerDropdownUnique">
+    <a href="who we are.html">Who we Are</a>
+    <a href="service.html">Services</a>
+    <a href="work with us.html">Work with Us</a>
+    <a href="contact us.html">Contact</a>
+  </div>
+
+  <!-- JS to Toggle Dropdown -->
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("hamburgerDropdownUnique");
+      if (dropdown.style.display === "flex") {
+        dropdown.style.display = "none";
+      } else {
+        dropdown.style.display = "flex";
+      }
+    }
+
+    // Optional: Close on outside click
+    document.addEventListener('click', function (event) {
+      const dropdown = document.getElementById("hamburgerDropdownUnique");
+      const moreBtn = event.target.closest('.nav-item');
+      if (!dropdown.contains(event.target) && !moreBtn) {
+        dropdown.style.display = "none";
+      }
+    });
+       window.addEventListener("DOMContentLoaded", function () {
+  const path = window.location.pathname.split("/").pop().split("?")[0]; // current file, like 'design.html'
+  const navLinks = document.querySelectorAll(".mobile-navbar .nav-item");
+
+  navLinks.forEach(link => {
+    const page = link.getAttribute("data-page");
+    if (page === path) {
+      link.classList.add("active"); // This triggers the blue styling from CSS
+    }
+  });
+});
+
+
+  </script>
+
+</div>
   <div class="container">
     <h2>Choose the type of project</h2>
     <form action="step2.html" method="get" id="form">
@@ -195,9 +510,17 @@
       <button type="submit">Next</button>
     </form>
   </div>
-  <a href="https://wa.me/+919506423475" target="_blank" class="whatsapp-btn">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
-  </a>
+ 
+  <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" class="Link-1">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="WhatsApp">
+</a>
+
+      <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" class="Link-2" >
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="WhatsApp"   >
+</a>
+   <a href="https://wa.me/+919506423475" target="_blank"  class="Link-3">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"  >
+</a>
   <script>
     const form = document.getElementById('form');
     const Residential = document.getElementById('Residential');

@@ -4,129 +4,215 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elicit Engineers & Interiors</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #f9f9f9;
-    }
+/* Base Footer Styles */
+.custom-footer {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+  /* margin-top: 60px; */
+}
 
-    /* Header styling */
-    .header {
-      position: sticky;
-      top: 0;
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0.95);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 16px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      z-index: 999;
-    }
+/* Main Layout Container */
+.custom-footer__main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    .logo {
-      font-weight: 600;
-      font-size: 18px;
-      color: #333;
-    }
+/* Section Headings */
+.custom-footer__heading {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-align: left;
+}
 
-    .social-icons {
-      display: flex;
-      gap: 12px;
-    }
+/* Contact Info */
+.custom-footer__contact p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.4;
+}
 
-    .social-icons a img {
-      width: 22px;
-      height: 22px;
-      transition: transform 0.3s;
-    }
+.custom-footer__contact i {
+  margin-right: 10px;
+  color: #f1c40f;
+  min-width: 20px;
+}
 
-    .social-icons a:hover img {
-      transform: scale(1.1);
-    }
+.custom-footer__info .text {
+  display: inline;
+}
 
-    /* Hero section */
-    .hero {
-      text-align: center;
-      padding: 40px 20px;
-      background-image: url('https://source.unsplash.com/featured/?interior'); /* You can replace this */
-      background-size: cover;
-      background-position: center;
-      color: white;
-      position: relative;
-    }
+.custom-footer__info .texti{
+  margin-left: 1.6rem;
+}
+/* Social Icons */
+.custom-footer__icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.4);
-    }
+.custom-footer__icons a {
+  color: #f1f1f1;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
 
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
+.custom-footer__icons a:hover {
+  color: #f1c40f;
+}
 
-    .hero h1 {
-      font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
+/* Footer Bottom */
+.custom-footer__bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.85rem;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  color: #aaa;
+}
 
-    .hero button {
-      background-color: #007bff;
-      border: none;
-      color: white;
-      padding: 12px 24px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,123,255,0.4);
-      transition: background 0.3s;
-    }
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .custom-footer__main {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
 
-    .hero button:hover {
-      background-color: #0056b3;
-    }
+  .custom-footer__contact,
+  .custom-footer__social {
+    width: 100%;
+  }
 
-    @media (max-width: 480px) {
-      .logo {
-        font-size: 16px;
-      }
+  .custom-footer__info .text {
+    display: block;
+    /* margin-left: 18px; aligns with icon spacing */
+  }
+  .custom-footer__info .texti{
+    margin-left: 1.8rem;
+  }
 
-      .hero h1 {
-        font-size: 20px;
-      }
+  .custom-footer__contact {
+    border-bottom: 1px solid #444;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
 
-      .social-icons a img {
-        width: 20px;
-        height: 20px;
-      }
-    }
+  .custom-footer__icons {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .mobile-keywords-inline {
+    display: block;
+    padding: 0.3rem;
+    /* background-color: #f0f0f0; */
+  }
+
+  .mobile-keywords-inline a {
+    display: inline-block;
+    margin: 2px 4px;
+    padding: 2px 6px;
+    /* background-color: #ffffff; */
+    /* border: 1px solid #ddd; */
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .mobile-keywords-inline a:hover {
+    /* background-color: #e0e0e0; */
+    color: #d1bb2c;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-keywords-inline {
+    display: none;
+  }
+}
+
+
   </style>
 </head>
 <body>
 
-  <!-- Header Section -->
-  <div class="header">
-    <div class="logo">Elicit Engineers & Interiors</div>
-    <div class="social-icons">
-      <a href="#"><img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram"></a>
-      <a href="#"><img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn"></a>
-      <a href="#"><img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp"></a>
+<footer class="custom-footer">
+  <div class="custom-footer__main">
+    <!-- Contact Info -->
+    <div class="custom-footer__contact">
+      <h3 class="custom-footer__heading">Contact Us</h3>
+      <div class="custom-footer__info">
+        <p><i class="fas fa-phone"></i><span class="text">+91-9506423475</span></p>
+        <p><i class="fas fa-map-marker-alt"></i><span class="text">0169, Ghaseekatra,</span></p>
+        <p><span class="texti">Ghasi Katra, Gorakhpur</span></p>
+       <p><span class="texti">UP - 273001</span></p>
+      </div>
     </div>
-  </div>
+    <!-- options-para info -->
+<div class="mobile-keywords-inline">
+  <a href="/kitchen-cabinet">Kitchen Cabinet</a>
+  <a href="/bedroom-ceiling">Bedroom Ceiling</a>
+  <a href="/l-shape-kitchen">L Shape Kitchen</a>
+  <a href="/u-shape-kitchen">U Shape Kitchen</a>
+  <a href="/island-kitchen">Island Kitchen</a>
+  <a href="/open-kitchen">Open Kitchen</a>
+  <a href="/parallel-kitchen">Parallel Kitchen</a>
+  <a href="/mandir-design">Mandir Design</a>
+  <a href="/sliding-wardrobe">Sliding Wardrobe</a>
+  <a href="/walk-in-wardrobe">Walk-in Wardrobe</a>
+  <a href="/mirror-wardrobe">Mirror Wardrobe</a>
+  <a href="/small-bathroom">Small Bathroom</a>
+  <a href="/girls-bedroom">Girls Bedroom</a>
+  <a href="/boys-bedroom">Boys Bedroom</a>
+  <a href="/kitchen-tile-designs">Kitchen Tile Designs</a>
+  <a href="/bedroom-tile-designs">Bedroom Tile Designs</a>
+  <a href="/bathroom-tile-designs">Bathroom Tile Designs</a>
+  <a href="/living-room-tile-designs">Living room Tile Designs</a>
+  <a href="/living-room-wallpaper-designs">Living room Wallpaper Designs</a>
+  <a href="/bedroom-wallpaper-designs">Bedroom Wallpaper Designs</a>
+  <a href="/living-room-wallpaint-ideas">Living room Wallpaint Ideas</a>
+  <a href="/bedroom-wallpaint-ideas">Bedroom Wallpaint Ideas</a>
+</div>
 
-  <!-- Hero Section -->
-  <div class="hero">
-    <div class="hero-content">
-      <h1>Dream Aapka, Vision Hamara</h1>
-      <button>Get Free Estimate</button>
+    <!-- Social Links -->
+    <div class="custom-footer__social">
+      <h3 class="custom-footer__heading">Connect with us</h3>
+      <div class="custom-footer__icons">
+        <a href="https://wa.me/919506423475" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/share/16XpHzab3M/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:elicitengineers@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
+    
   </div>
+<div class="custom-footer_bottom">
+    © 2025 Your Interior Company. All rights reserved.<br/>
+    <hr/>
+    <p>Designed by <a href="https://www.linkedin.com/in/kriti-yadav-22951b295">Kriti Yadav</a>
+  
+  </div>
+ 
+</footer>
+
 
 </body>
 </html>
