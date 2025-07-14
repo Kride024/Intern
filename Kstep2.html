@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Step 1 - Kitchen Budget Type</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Step 2 - Kitchen Budget Type</title>
   <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      background: 
-        linear-gradient(rgba(6, 158, 228, 0.12), rgba(255, 255, 255, 0.7)),
-        url('https://images.unsplash.com/photo-1615874959474-d609969a9c31?auto=format&fit=crop&w=1200&q=80') no-repeat center center fixed;
-      background-size: cover;
       margin: 0;
       padding: 0;
       min-height: 100vh;
+      background:
+        linear-gradient(rgba(6, 158, 228, 0.12), rgba(255, 255, 255, 0.7)),
+        url('https://images.unsplash.com/photo-1615874959474-d609969a9c31?auto=format&fit=crop&w=1200&q=80') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
       display: flex;
       justify-content: center;
       align-items: flex-start;
@@ -60,7 +66,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-sizing: border-box;
     }
 
     .option-card:hover {
@@ -114,17 +119,15 @@
       cursor: pointer;
       box-shadow: 0 4px 24px rgba(6, 158, 228, 0.3);
       transition: 0.3s;
-      position: fixed;
       bottom: 30px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 100;
-     
+      margin-top: 2rem;
+      margin-left: 8rem;
     }
 
-    button:hover {
-      transform: translateX(-50%) scale(1.05);
-    }
+  
 
     .step-indicator {
       position: fixed;
@@ -140,23 +143,104 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
 
-    @media(max-width: 768px) {
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      body {
+        align-items: center;
+        padding: 1rem;
+        background-attachment: scroll;
+      }
+
+      .container {
+        width: 350px;
+        padding: 1.5rem;
+      }
+      h1 {
+        padding-top: 1rem;
+        font-size: 1.2rem;
+      }
+      h2 {
+      
+        font-size: 0.9rem;
+      }
+      .options {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
       .option-card {
-        flex: 1 1 100%;
         max-width: 100%;
+      }
+
+      .option-title {
+        font-size: 1rem;
+      }
+
+      .option-description {
+        font-size: 0.75em;
       }
 
       button {
         width: 90%;
-        left: 5%;
+        /* left: 5%; */
         transform: none;
+        margin-left: 0rem;
+      }
+
+      .step-indicator {
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
+        padding: 6px 12px;
+      }
+
+ 
+    }
+     .Link-1, .Link-2, .Link-3 {
+      position: fixed;
+      right: 25px;
+      z-index: 1000;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #09335e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .Link-1 { bottom: 35rem; }
+    .Link-2 { bottom: 30rem; }
+    .Link-3 { bottom: 25rem; }
+
+    .Link-1 img, .Link-2 img, .Link-3 img {
+      width: 30px;
+      height: 30px;
+    }
+
+     @media (max-width: 700px) {
+
+      .Link-1, .Link-2, .Link-3 {
+        width: 36px;
+        height: 36px;
+        right: 10px;
+      }
+
+      .Link-1 { bottom: 12rem; }
+      .Link-2 { bottom: 8rem; }
+      .Link-3 { bottom: 4rem; }
+
+      .Link-1 img, .Link-2 img, .Link-3 img {
+        width: 18px;
+        height: 18px;
       }
     }
   </style>
 </head>
 <body>
 
-<div class="step-indicator">1/5</div>
+<div class="step-indicator">2/5</div>
 
 <div class="container">
   <h1 style="margin-top: -1rem;">Your Budget</h1>
@@ -165,8 +249,8 @@
     <div class="options">
 
       <label class="option-card" id="standard-card">
-        <input type="radio" name="kitchenType" value="Standard" checked>
-        <img src="Photos/KITCHEN/Screenshot 2025-06-05 173704.png" class="option-image" alt="Standard Kitchen">
+        <input type="radio" name="kitchenType" value="Standard" checked />
+        <img src="Photos/KITCHEN/Screenshot 2025-06-05 173704.png" class="option-image" alt="Standard Kitchen" />
         <div class="option-title">Standard</div>
         <div class="option-description">
           A range of basic units and accessories that are necessary for a comfortable modular kitchen.<br>
@@ -177,8 +261,8 @@
       </label>
 
       <label class="option-card" id="luxury-card">
-        <input type="radio" name="kitchenType" value="Luxury">
-        <img src="Photos/KITCHEN/kitchen7.jpg" class="option-image" alt="Luxury Kitchen">
+        <input type="radio" name="kitchenType" value="Luxury" />
+        <img src="Photos/KITCHEN/kitchen7.jpg" class="option-image" alt="Luxury Kitchen" />
         <div class="option-title">Premium</div>
         <div class="option-description">
           A premium modular kitchen with advanced materials, smart layouts, and modern accessories.<br>
@@ -189,8 +273,8 @@
       </label>
 
       <label class="option-card" id="superluxury-card">
-        <input type="radio" name="kitchenType" value="Super Luxury">
-        <img src="designpage/p8.jpg" class="option-image" alt="Super Luxury Kitchen">
+        <input type="radio" name="kitchenType" value="Super Luxury" />
+        <img src="designpage/p8.jpg" class="option-image" alt="Super Luxury Kitchen" />
         <div class="option-title">Luxury</div>
         <div class="option-description">
           The ultimate in style, materials, and innovation for a dream kitchen space.<br>
@@ -201,28 +285,20 @@
       </label>
 
     </div>
-    <div style="background:#fff;">
-      <button type="submit">Next</button>
-    </div>
+    <button type="submit">Next</button>
   </form>
 </div>
-
 <!-- WhatsApp Icon -->
-<a href="https://wa.me/+919506423475" target="_blank" style="
-  position: fixed;
-  bottom: 8rem;
-  right: 10px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #25D366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+<a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" class="Link-1">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="WhatsApp">
 </a>
+
+      <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" class="Link-2" >
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="WhatsApp"   >
+</a>
+   <a href="https://wa.me/+919506423475" target="_blank"  class="Link-3">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"  >
+</a>  
 
 <script>
   const cards = document.querySelectorAll('.option-card');

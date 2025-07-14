@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Step 1 - Kitchen Layout Type</title>
   <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      background: 
+      background:
         linear-gradient(rgba(6, 158, 228, 0.12), rgba(255, 255, 255, 0.7)),
-        url('https://images.unsplash.com/photo-1615874959474-d609969a9c31?auto=format&fit=crop&w=1200&q=80') no-repeat center center fixed;
+        url('https://images.unsplash.com/photo-1615874959474-d609969a9c31?auto=format&fit=crop&w=1200&q=80') no-repeat center center;
       background-size: cover;
+      background-attachment: fixed;
       margin: 0;
       padding: 0;
       min-height: 100vh;
@@ -25,12 +31,18 @@
       box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
       text-align: center;
       max-width: 600px;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1, h2 {
       color: #333;
       margin-bottom: 1rem;
-      animation: fadeIn 1.2s ease;
+      animation: fadeIn 1.2s ease forwards;
     }
 
     h2 {
@@ -76,7 +88,7 @@
       background: #f16e84;
       color: #fff;
       border: none;
-      border-radius: 2rem;
+      border-radius: 1rem;
       cursor: pointer;
       box-shadow: 0 4px 24px rgba(235, 89, 95, 0.15);
       transition: transform 0.2s, box-shadow 0.2s;
@@ -87,7 +99,6 @@
       box-shadow: 0 8px 32px rgba(235, 89, 95, 0.25);
     }
 
-    /* Step indicator */
     .step-indicator {
       position: fixed;
       top: 20px;
@@ -97,10 +108,107 @@
       color: white;
       border-radius: 20px;
       padding: 8px 15px;
-      font-family: Arial, sans-serif;
       font-weight: bold;
       font-size: 16px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+.option-label {
+  font-size: 1.2rem;
+}
+
+
+
+    /* Mobile Optimization */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+        padding: 1rem;
+        background-attachment: scroll;
+      }
+
+      .container {
+        width: 350px;
+        padding: 1.5rem;
+        border-radius: 1rem;
+      }
+
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      h2 {
+        font-size: 0.8rem;
+      }
+
+      .image-option {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 1rem;
+      }
+
+      .image-option input[type="radio"] {
+      width: 0.5rem;
+      height: 0.5rem;
+      margin-bottom: 0.7rem;
+      }
+
+      button {
+        width: 150px;
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+      }
+
+      .step-indicator {
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
+        padding: 6px 12px;
+      }
+      .option-label {
+  font-size: 0.8rem;
+}
+
+
+    }
+     .Link-1, .Link-2, .Link-3 {
+      position: fixed;
+      right: 25px;
+      z-index: 1000;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #09335e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .Link-1 { bottom: 35rem; }
+    .Link-2 { bottom: 30rem; }
+    .Link-3 { bottom: 25rem; }
+
+    .Link-1 img, .Link-2 img, .Link-3 img {
+      width: 30px;
+      height: 30px;
+    }
+
+     @media (max-width: 700px) {
+
+      .Link-1, .Link-2, .Link-3 {
+        width: 36px;
+        height: 36px;
+        right: 10px;
+      }
+
+      .Link-1 { bottom: 12rem; }
+      .Link-2 { bottom: 8rem; }
+      .Link-3 { bottom: 4rem; }
+
+      .Link-1 img, .Link-2 img, .Link-3 img {
+        width: 18px;
+        height: 18px;
+      }
     }
   </style>
 </head>
@@ -112,20 +220,19 @@
   <h1>Select Kitchen Layout</h1>
   <h2>Which kitchen layout are you planning for?</h2>
   <form id="form">
-    
     <label class="image-option" for="uType">
-      <input type="radio" name="kitchenType" id="uType" value="U-Type" checked>
-      <span style="font-size: 1.2rem;">U-Shaped Kitchen</span>
+      <input type="radio" name="kitchenType" id="uType" value="U-Type" checked />
+      <span class="option-label">U-Shaped Kitchen</span>
     </label>
 
     <label class="image-option" for="lType">
-      <input type="radio" name="kitchenType" id="lType" value="L-Type">
-      <span style="font-size: 1.2rem;">L-Shaped Kitchen</span>
+      <input type="radio" name="kitchenType" id="lType" value="L-Type" />
+      <span class="option-label">L-Shaped Kitchen</span>
     </label>
 
     <label class="image-option" for="parallel">
-      <input type="radio" name="kitchenType" id="parallel" value="Parallel">
-      <span style="font-size: 1.2rem;">Parallel Kitchen</span>
+      <input type="radio" name="kitchenType" id="parallel" value="Parallel" />
+      <span class="option-label">Parallel Kitchen</span>
     </label>
 
     <button type="submit">Next</button>
@@ -133,44 +240,31 @@
 </div>
 
 <!-- WhatsApp Button -->
-<a href="https://wa.me/+919506423475" target="_blank" style="
-  position: fixed;
-  bottom: 19rem;
-  right: 10px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #25D366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+<a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" class="Link-1">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="WhatsApp">
 </a>
+
+      <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" class="Link-2" >
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="WhatsApp"   >
+</a>
+   <a href="https://wa.me/+919506423475" target="_blank"  class="Link-3">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"  >
+</a>   
 
 <script>
   const form = document.getElementById('form');
   form.addEventListener('submit', function(event) {
     event.preventDefault();
     localStorage.clear();
-    const uType = document.getElementById('uType').checked;
-    const lType = document.getElementById('lType').checked;
-    const parallel = document.getElementById('parallel').checked;
-    if(uType) {
-      localStorage.setItem('Type', 'U-Type');
-    } else if(lType) {
-      localStorage.setItem('Type', 'L-Type');
-    }
-    else if(parallel) {
-      localStorage.setItem('Type', 'Parallel');
+
+    const selectedType = document.querySelector('input[name="kitchenType"]:checked');
+    if (selectedType) {
+      localStorage.setItem('Type', selectedType.value);
     }
 
-    // Redirect to the next step
-
-      window.location.href = 'Kstep2.html';
-   
+    window.location.href = 'Kstep2.html';
   });
 </script>
 </body>
 </html>
+

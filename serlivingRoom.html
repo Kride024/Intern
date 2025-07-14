@@ -449,7 +449,199 @@ Bottom:47rem;
   }
 }
 
- 
+ /* Base Footer Styles */
+.custom-footer {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+  padding: 40px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin-top: 0rem;
+
+}
+
+/* Main Layout Container */
+.custom-footer__main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Headings */
+.custom-footer__heading {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-align: left;
+}
+
+/* Contact Info */
+.custom-footer__contact p {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+
+.custom-footer__contact i {
+  margin-right: 10px;
+  color: #f1c40f;
+  min-width: 20px;
+  
+}
+
+.custom-footer__info .text {
+  display: inline;
+}
+
+.custom-footer__info .texti{
+  margin-left: 1.6rem;
+}
+/* Social Icons */
+.custom-footer__icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.custom-footer__icons i {
+  font-size: 18px;  /* Adjust this value to scale icons */
+  margin: 0 8px;    /* Optional: spacing between icons */
+  color: #fff;      /* Optional: icon color */
+  transition: transform 0.2s;
+}
+
+.custom-footer__icons i:hover {
+  transform: scale(1.1);  /* Optional: adds a nice hover effect */
+  color: #f1c40f;         /* Optional: hover color */
+}
+
+
+.custom-footer__icons a {
+  color: #f1f1f1;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.custom-footer__icons a:hover {
+  color: #f1c40f;
+}
+
+/* Footer Bottom */
+.custom-footer__bottom {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1rem;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  color: #aaa;
+}
+.custom-footer__icons i {
+  font-size: 12px;  /* Adjust this value to scale icons */
+  margin: 0 8px;    /* Optional: spacing between icons */
+  color: #fff;      /* Optional: icon color */
+  transition: transform 0.2s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Section Headings */
+  .custom-footer{
+    height:auto;
+  }
+.custom-footer__heading {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-align: left;
+}
+
+/* Contact Info */
+.custom-footer__contact p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+  .custom-footer__main {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .custom-footer__contact,
+  .custom-footer__social {
+    width: 100%;
+  }
+
+  .custom-footer__info .text {
+    display: block;
+    /* margin-left: 18px; aligns with icon spacing */
+  }
+  .custom-footer__info .texti{
+    margin-left: 1.8rem;
+  }
+
+  .custom-footer__contact {
+    border-bottom: 1px solid #444;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+
+  .custom-footer__icons {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .mobile-keywords-inline {
+    display: block;
+    padding: 0.3rem;
+    
+  }
+
+  .mobile-keywords-inline a {
+    display: inline-block;
+    margin: 2px 4px;
+    padding: 2px 6px;
+  
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    white-space: nowrap;
+  }
+  .custom-footer_bottom {
+    display: block;       /* Ensure it's not hidden */
+    padding: 0rem;        /* Add padding for breathing room */
+    font-size: 0.75rem;   /* Slightly smaller text for mobile */
+    text-align: center;
+    color: #fff;
+  
+  }
+  .custom-footer {
+  min-height: auto;
+  overflow: visible;
+  margin-bottom: 5rem;
+}
+
+
+  .mobile-keywords-inline a:hover {
+    /* background-color: #e0e0e0; */
+    color: #d1bb2c;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-keywords-inline {
+    display: none;
+  }
+}
   </style>
   <link rel="stylesheet" href="style1.css">
 </head>
@@ -638,32 +830,69 @@ Experience elegance made effortless with handcrafted interiors tailored for your
     </div>
   </div>
   </div>
-    <footer style="background-color: #1c3d5a; color: #fff; padding: 30px 20px;margin-top: 1px;">
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; max-width: 1000px; margin:auto;height:24rem;">
-
-      <!-- Contact Info -->
-     <div style="flex: 1 1 300px; margin-bottom: 20px;">
-        <h3 style="margin: 0 0 10px 0; font-size: 20px;">Contact Us</h3>
-        <p style="margin: 5px 0;"><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-9506423475</p>
-        <!-- <p style="margin: 5px 0;"><i class="fas fa-envelope" style="margin-right: 8px;"></i> elicitengineers@outlook.com</p> -->
-        <p style="margin: 5px 0;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 0169, Ghaseekatra Beside Karbala, Ghasi Katra Gorakhpur-273001, Uttar Pradesh, India</p>
+     <footer class="custom-footer">
+  <div class="custom-footer__main">
+    <!-- Contact Info -->
+    <div class="custom-footer__contact">
+      <h3 class="custom-footer__heading">Contact Us</h3>
+      <div class="custom-footer__info">
+        <p><i class="fas fa-phone"></i><span class="text">+91-9506423475</span></p>
+        <p><i class="fas fa-map-marker-alt"></i><span class="text">0169, Ghaseekatra,</span></p>
+        <p><span class="texti">Ghasi Katra, Gorakhpur</span></p>
+       <p><span class="texti">UP - 273001</span></p>
       </div>
+    </div>
+    <!-- options-para info -->
+<div class="mobile-keywords-inline">
+  <a href="/kitchen-cabinet">Kitchen Cabinet</a>
+  <a href="/bedroom-ceiling">Bedroom Ceiling</a>
+  <a href="/l-shape-kitchen">L Shape Kitchen</a>
+  <a href="/u-shape-kitchen">U Shape Kitchen</a>
+  <a href="/island-kitchen">Island Vibe Kitchen</a>
+  <a href="/open-kitchen">Open Air Kitchen</a>
+  <a href="/mandir-design">Mandir Design</a>
+  <a href="/sliding-wardrobe">Sliding Wardrobe</a>
+  <a href="/wardrobe-design">Wooden Design</a>
+  <a href="/walk-in-wardrobe">Walk-in Wardrobe</a>
+  <a href="/modular-wardrobe">Modular Wardrobe</a>
+  <a href="/wall-mounted-wardrobe">Wall Mounted Wardrobe</a>
+  <a href="/mirror-wardrobe">Mirror Wardrobe</a>
+  <a href="/small-bathroom">Small Bathroom</a>
+  <a href="/girls-bedroom">Girls Bedroom</a>
+  <a href="/boys-bedroom">Boys Bedroom</a>
+  <a href="/kitchen-tile-designs">Kitchen Tile Designs</a>
+  <a href="/bedroom-tile-designs">Bedroom Tile Designs</a>
+  <a href="/bathroom-tile-designs">Bathroom Tile Designs</a>
+  <a href="/living-room-tile-designs">Living room Tile Designs</a>
+  <a href="/mandir-design">Prayer Room</a>
+  <a href="/living-room-wallpaper-designs">Wallpaper Designs</a>
+  <a href="/bedroom-wallpaper-designs">Bedroom Wallpaper Designs</a>
+  <a href="/bathroom-wallpaper-designs">Wall Painting</a>
+  <a href="/kitchen-wallpaint-ideas">Kids Room Ideas</a>
+  <a href="/living-room-wallpaint-ideas">Living room  Ideas</a>
+  <a href="/bedroom-wallpaint-ideas">Bedroom Wallpaint Ideas</a>
+  <a href="/bathroom-wallpaint-ideas">Balcony Designs</a>
+</div>
 
-      <!-- Social Icons -->
-      <div style="flex: 1 1 200px; text-align: right;">
-        <h3 style="margin: 0 0 10px 0; font-size: 20px;">Connect with us</h3>
-        <a href="https://wa.me/+919506423475" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/elicitengineers/" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.facebook.com/share/16XpHzab3M/?mibextid=wwXIfr" style="color: #fff; margin-right: 15px; font-size: 18px;"><i class="fa-brands fa-facebook"></i></a>
-        <a href="mailto:elicitengineers@outlook.com" style="color: #fff; font-size: 18px;"><i class="fas fa-envelope"></i></a>
+    <!-- Social Links -->
+    <div class="custom-footer__social">
+      <h3 class="custom-footer__heading">Connect with us</h3>
+      <div class="custom-footer__icons">
+        <a href="https://wa.me/919506423475" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/share/16XpHzab3M/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:elicitengineers@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
+    </div>
+    
+  </div>
 
-    </div>
-    <div style="text-align: center; margin-top: 20px; font-size: 14px; color: #ccc;">
-      © 2025 Your Interior Company. All rights reserved.
-    </div>
-  </footer>
+  <div class="custom-footer__bottom">
+    © 2025 Elicit Engineers and Interiors Company. All rights reserved.<br/>
+    Designed by kriti Yadav
+  </div>
+</footer>
 <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" class="Link-1">
   <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="WhatsApp">
 </a>

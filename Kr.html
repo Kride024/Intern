@@ -1,33 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Step 5 - Cost</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
       background: 
         linear-gradient(rgba(6, 158, 228, 0.1), rgba(255, 255, 255, 0.8)),
-        url('https://images.unsplash.com/photo-1586201375761-83865001e17b?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+        url('https://images.unsplash.com/photo-1586201375761-83865001e17b?auto=format&fit=crop&w=1350&q=80') no-repeat center center;
       background-size: cover;
+      background-attachment: fixed;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 1rem;
     }
 
     .container {
       background-color: rgba(255, 255, 255, 0.95);
       padding: 4rem 5rem;
-      margin-top: 0rem;
       border-radius: 1.5rem;
       box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
       max-width: 900px;
       width: 90%;
       text-align: center;
+      margin-top: 1rem;
     }
 
     h2#heading {
@@ -53,13 +63,11 @@
       color: #000;
       border-radius: 20px;
       padding: 10px 18px;
-      font-family: Arial, sans-serif;
       font-weight: bold;
       font-size: 15px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-      display: flex;
-      align-items: center;
       background-color: #fff;
+      user-select: none;
     }
 
     .whatsapp-icon {
@@ -103,46 +111,101 @@
       background-color: #fff;
     }
 
+    .note {
+      margin: 2rem auto;
+      max-width: 900px;
+      width: 90%;
+      font-size: 0.9rem;
+      color: #555;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 1rem;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      line-height: 1.6;
+    }
+
     @media(max-width: 768px) {
       .container {
-        padding: 2rem;
-      }
-
-      #result {
-        font-size: 1.5rem;
+        padding: 1.5rem;
       }
 
       h2#heading {
-        font-size: 1.5rem;
-      }
-
-      table, th, td {
         font-size: 0.9rem;
       }
+
+      #result {
+        font-size: 0.7rem;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+
+      th, td {
+        padding: 10px 1rem;
+        white-space: nowrap;
+        font-size: 0.7rem;
+      }
+
+      #resulti {
+        top: 10px;
+        right: 10px;
+        font-size: 0.7rem;
+        padding: 6px 10px;
+      }
+
+   
+
+      .note {
+        font-size: 0.61rem;
+        padding: 0.8rem 1rem;
+      }
     }
 
-     .navbar-brand img {
-    
-      margin-top: 1rem;
-      
+         .Link-1, .Link-2, .Link-3 {
+      position: fixed;
+      right: 25px;
+      z-index: 1000;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #09335e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
 
+    .Link-1 { bottom: 35rem; }
+    .Link-2 { bottom: 30rem; }
+    .Link-3 { bottom: 25rem; }
 
+    .Link-1 img, .Link-2 img, .Link-3 img {
+      width: 30px;
+      height: 30px;
+    }
 
-    .navbar{
-      margin-bottom: -2rem;
-/* 
-      & ul {
-        margin-right: 17rem;
-      } */
-      & li a{
-        font-family: "Poppins";
-        font-size: 1.5rem;
-        font-weight:400;
-        
+     @media (max-width: 700px) {
+
+      .Link-1, .Link-2, .Link-3 {
+        width: 36px;
+        height: 36px;
+        right: 10px;
+      }
+
+      .Link-1 { bottom: 12rem; }
+      .Link-2 { bottom: 8rem; }
+      .Link-3 { bottom: 4rem; }
+
+      .Link-1 img, .Link-2 img, .Link-3 img {
+        width: 18px;
+        height: 18px;
       }
     }
   </style>
+
   <script>
     setTimeout(() => {
       document.getElementById('resulti').innerHTML = '🎉 Congratulations! It’s Time To Contact Us';
@@ -210,7 +273,7 @@
 
       const selected = features[KitchenType];
       const tableBody = document.getElementById('feature-table-body');
-      tableBody.innerHTML = ''; // Clear existing
+      tableBody.innerHTML = '';
 
       for (const key in selected) {
         const row = document.createElement('tr');
@@ -228,7 +291,6 @@
     <h2 id="heading"></h2>
     <div id="result"></div>
 
-    <!-- Feature Table -->
     <table>
       <thead>
         <tr>
@@ -236,30 +298,22 @@
           <th>Details</th>
         </tr>
       </thead>
-      <tbody id="feature-table-body">
-        <!-- JS will fill this -->
-      </tbody>
+      <tbody id="feature-table-body"></tbody>
     </table>
   </div>
 
-  <!-- WhatsApp Icon -->
-  <a href="https://wa.me/+919506423475" target="_blank" class="whatsapp-icon">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
-  </a>
+ <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" class="Link-1">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="WhatsApp">
+</a>
 
-  <div style="
-  margin: 2rem auto;
-  max-width: 900px;
-  width: 90%;
-  font-size: 0.9rem;
-  color: #555;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 1rem;
-  padding: 1rem 1.5rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  line-height: 1.6;
-">
+      <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" class="Link-2" >
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="WhatsApp"   >
+</a>
+   <a href="https://wa.me/+919506423475" target="_blank"  class="Link-3">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"  >
+</a>  
+
+  <div class="note">
   <strong>Note:</strong><br>
   The estimated cost shown is indicative and based on average client expenditures. Actual pricing may vary depending on factors such as choice of finishes, quantity of furniture, scope of civil work (including painting, flooring, plumbing), design complexity, and material selection. Our expert designers will guide you through every detail to ensure clarity and transparency.
 </div>
