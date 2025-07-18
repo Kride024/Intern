@@ -1580,7 +1580,7 @@ font-weight: 700;
     display: block;
     position: absolute;
     top: 2rem;
-    left: 2px;
+    left: 4px;
     font-family: 'DM Serif Display', serif;
     font-size: 1.8rem;
     font-weight: normal;
@@ -1616,7 +1616,9 @@ font-weight: 700;
 }
 
 /*  */
-
+#btn:hover{
+background-color: grey;
+}
 @media (width> 1200px){
 .Achievement{
   height:450px;}
@@ -1741,6 +1743,74 @@ font-weight: 700;
   color: #fff;      /* Optional: icon color */
   transition: transform 0.2s;
 }
+.footer-contact-form {
+  margin-top: 10px;
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.footer-contact-form h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #f1c40f;
+}
+
+.footer-contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-contact-form input {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #fff;
+  color: #000;
+  box-sizing: border-box;
+}
+
+.footer-contact-form button {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #f1c40f;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-contact-form button:hover {
+  background-color: #d4ac0d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-contact-form {
+    max-width: 100%;
+    padding: 15px;
+    margin-top: -2rem;
+  }
+
+  .footer-contact-form h3 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .footer-contact-form input,
+  .footer-contact-form button {
+    font-size: 1.2rem;
+  }
+
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -1837,12 +1907,184 @@ font-weight: 700;
   }
 }
 
+/* Pop up */
+.reg-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+    }
 
+    .reg-modal-content {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      position: relative;
+      h2{
+        font-size: 1.6rem;
+        text-align: center;
+      }
+    }
+
+    .reg-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .reg-label {
+      display: block;
+      margin-top: 11px;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .reg-input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .reg-button {
+      width: 100%;
+      margin-top: 20px;
+      background-color: #0b61d1;
+      border: none;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .reg-button:hover {
+      background-color: #20629c;
+    }
+
+    #reg-status {
+      margin-top: 10px;
+      font-size: 14px;
+      color: green;
+    }
+
+        /* Hamburger menu container */
+@media (max-width: 480px) {
+     
+
+    .menu-toggle-container {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 9999;
+    }
+
+    .hamburger {
+      width: 30px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      height: 4px;
+      background-color: #f1f1f1;
+      border-radius: 2px;
+      transition: 0.3s ease;
+    }
+
+    .menu-options {
+      display: none;
+      position: absolute;
+      top: 35px;
+      right: 0;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      min-width: 180px;
+    }
+
+    .menu-options div {
+      padding: 12px 16px;
+      cursor: pointer;
+      font-size: 15px;
+      color: #000;
+      border-bottom: 1px solid #f1f1f1;
+      transition: background-color 0.2s ease;
+    }
+
+    .menu-options div:last-child {
+      border-bottom: none;
+    }
+
+    .menu-options div:hover {
+      background-color: #f5f5f5;
+    }
+
+  }
+
+  #one{
+  display:none;
+}
+    /* Mobile styles */
+    @media (max-width: 480px) {
+       .menu-toggle-container{
+      display:inline;
+    }
+      .menu-options {
+        min-width: 150px;
+      }
+
+      .menu-options div {
+        font-size: 14px;
+        padding: 10px 14px;
+      }
+     
+      .btn_main{
+        display:none;
+      }
+       #one{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        
+      }
+    }
 
     </style>
 </head>
 <body>
   
+    <!-- Hamburger Toggle Button with Dropdown Menu -->
+  <div class="menu-toggle-container">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="menu-options" id="menu-options">
+      <div onclick="window.location.href='service.html'">Services</div>
+      <div onclick="window.location.href='who we are.html'">Who We Are</div>
+      <div onclick="window.location.href='work with us.html'">Work With Us</div>
+    </div>
+  </div>
+
 <!-- Unique Hamburger Menu -->
 <div class="mobile">
   <!-- Mobile Bottom Navbar -->
@@ -1853,62 +2095,35 @@ font-weight: 700;
     </a>
     <a href="design.html" class="nav-item">
       <i class="fas fa-lightbulb"></i>
-      <span>Design Ideas</span>
+      <span>Our Design</span>
     </a>
     <a href="welcome.html" class="nav-item">
       <i class="fas fa-calculator"></i>
       <span>Estimate</span>
     </a>
-    <div class="nav-item" onclick="toggleDropdown()">
+    <!-- <div class="nav-item" onclick="toggleDropdown()">
       <i class="fas fa-ellipsis-h"></i>
       <span>More</span>
-    </div>
+    </div> -->
   </div>
 
-  <!-- More Dropdown Menu -->
-  <div class="mobile-menu-unique" id="hamburgerDropdownUnique">
-    <a href="who we are.html">Who we Are</a>
-    <a href="service.html">Services</a>
-    <a href="work with us.html">Work with Us</a>
-    <a href="contact us.html">Contact</a>
-  </div>
-
-  <!-- JS to Toggle Dropdown -->
-  <script>
-    function toggleDropdown() {
-      const dropdown = document.getElementById("hamburgerDropdownUnique");
-      if (dropdown.style.display === "flex") {
-        dropdown.style.display = "none";
-      } else {
-        dropdown.style.display = "flex";
-      }
+ 
+</div>
+   <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu-options");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
     }
 
-    // Optional: Close on outside click
-    document.addEventListener('click', function (event) {
-      const dropdown = document.getElementById("hamburgerDropdownUnique");
-      const moreBtn = event.target.closest('.nav-item');
-      if (!dropdown.contains(event.target) && !moreBtn) {
-        dropdown.style.display = "none";
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (e) {
+      const menu = document.getElementById("menu-options");
+      const hamburger = document.querySelector(".hamburger");
+      if (!hamburger.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = "none";
       }
     });
-
-       window.addEventListener("DOMContentLoaded", function () {
-  const path = window.location.pathname.split("/").pop().split("?")[0]; // current file, like 'design.html'
-  const navLinks = document.querySelectorAll(".mobile-navbar .nav-item");
-
-  navLinks.forEach(link => {
-    const page = link.getAttribute("data-page");
-    if (page === path) {
-      link.classList.add("active"); // This triggers the blue styling from CSS
-    }
-  });
-});
-
   </script>
-
-</div>
-
    <!-- ========== Start nav section ========== -->
    <header class ="section-navbar" >
     <div class="container">
@@ -1967,7 +2182,7 @@ font-weight: 700;
            
         </ul>
         </nav>
-        <button class="btn" id="btn">BOOK FREE CONSULTATION</button>
+        <button class="btn" id="btn" onclick="window.location.href='form.html'">BOOK FREE CONSULTATION</button>
     </div>
    </header>
    <!-- ========== End nav section========== -->
@@ -1981,7 +2196,7 @@ font-weight: 700;
         <div class="container grid " >
           
         <div class="section-hero--content">
-        <div class="Elicit_Name">Elicit Interiors</div>
+        <div class="Elicit_Name">Elicit Engineers & Interiors</div>
   <a href="index.html">
     <img src="Adobe Express - file.png" alt="logo" class="mobile-logo" />
   </a>
@@ -1989,6 +2204,7 @@ font-weight: 700;
   Dream Aapka,<span class="mobile-break"></span> Vision Hamara
 </h1>
             <button class="btn_main" onclick="window.location.href=`welcome.html`;">Get Free Estimate</button>
+            <button class="btn_main" id="one" onclick="window.location.href='form.html'">Book Free Consultation</button>
         </div>
         </div>
   </div>
@@ -2237,12 +2453,12 @@ font-weight: 700;
        
         <div class="about-div mq" style="position: relative; text-align: center;">
            
-                <img src="https://i.pinimg.com/736x/c6/82/ca/c682cafdf626143dc3b14c6800ada3fc.jpg" alt="technical research item"/>
+                <img src="Photos/KITCHEN/kitchen4.jpg" alt="technical research item"/>
          
                      
-            <h3 class="section-common--title calculate"> False Ceiling : <span>Know the estimated Price</span> </h3>
+            <h3 class="section-common--title calculate"> Kitchen Interior : <span>Know the estimated Price</span> </h3>
          
-                          <button class="btni" onclick="window.location.href=`step2.html`;">Calculate</button>
+                          <button class="btni" onclick="window.location.href=`Kwelcome.html`;">Calculate</button>
         </div>
          <div class="about-div mq" style="position: relative; text-align: center;" >
            
@@ -2632,50 +2848,13 @@ Yes, Elicit specializes in both custom-made furniture and modular designs tailor
   <div class="custom-footer__main">
     <!-- Contact Info -->
     <div class="custom-footer__contact">
-      <h3 class="custom-footer__heading">Contact Us</h3>
-      <div class="custom-footer__info">
-        <p><i class="fas fa-phone"></i><span class="text">+91-9506423475</span></p>
-        <p><i class="fas fa-map-marker-alt"></i><span class="text">0169, Ghaseekatra,</span></p>
-        <p><span class="texti">Ghasi Katra, Gorakhpur</span></p>
-       <p><span class="texti">UP - 273001</span></p>
-      </div>
-    </div>
-    <!-- options-para info -->
-<div class="mobile-keywords-inline">
-  <a href="/kitchen-cabinet">Kitchen Cabinet</a>
-  <a href="/bedroom-ceiling">Bedroom Ceiling</a>
-  <a href="/l-shape-kitchen">L Shape Kitchen</a>
-  <a href="/u-shape-kitchen">U Shape Kitchen</a>
-  <a href="/island-kitchen">Island Vibe Kitchen</a>
-  <a href="/open-kitchen">Open Air Kitchen</a>
-  <a href="/mandir-design">Mandir Design</a>
-  <a href="/sliding-wardrobe">Sliding Wardrobe</a>
-  <a href="/wardrobe-design">Wooden Design</a>
-  <a href="/walk-in-wardrobe">Walk-in Wardrobe</a>
-  <a href="/modular-wardrobe">Modular Wardrobe</a>
-  <a href="/wall-mounted-wardrobe">Wall Mounted Wardrobe</a>
-  <a href="/mirror-wardrobe">Mirror Wardrobe</a>
-  <a href="/small-bathroom">Small Bathroom</a>
-  <a href="/girls-bedroom">Girls Bedroom</a>
-  <a href="/boys-bedroom">Boys Bedroom</a>
-  <a href="/kitchen-tile-designs">Kitchen Tile Designs</a>
-  <a href="/bedroom-tile-designs">Bedroom Tile Designs</a>
-  <a href="/bathroom-tile-designs">Bathroom Tile Designs</a>
-  <a href="/living-room-tile-designs">Living room Tile Designs</a>
-  <a href="/mandir-design">Prayer Room</a>
-  <a href="/living-room-wallpaper-designs">Wallpaper Designs</a>
-  <a href="/bedroom-wallpaper-designs">Bedroom Wallpaper Designs</a>
-  <a href="/bathroom-wallpaper-designs">Wall Painting</a>
-  <a href="/kitchen-wallpaint-ideas">Kids Room Ideas</a>
-  <a href="/living-room-wallpaint-ideas">Living room  Ideas</a>
-  <a href="/bedroom-wallpaint-ideas">Bedroom Wallpaint Ideas</a>
-  <a href="/bathroom-wallpaint-ideas">Balcony Designs</a>
-</div>
-
-    <!-- Social Links -->
-    <div class="custom-footer__social">
       <h3 class="custom-footer__heading">Connect with us</h3>
-      <div class="custom-footer__icons">
+      <div class="custom-footer__info">
+        <p><i class="fas fa-phone"></i><span class="text">+91-8427138348,+91-9506423475
+</span></p>
+        <p><i class="fas fa-envelope"></i><span class="text">elicitengineers@outlook.com </span></p>
+      </div>
+       <div class="custom-footer__icons">
         <a href="https://wa.me/919506423475" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -2683,6 +2862,31 @@ Yes, Elicit specializes in both custom-made furniture and modular designs tailor
         <a href="mailto:elicitengineers@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
+    <!-- options-para info -->
+<!-- Basic Contact Form -->
+<div class="footer-contact-form">
+  <h3>Get Free Design Help</h3>
+  <form id="form">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="tel" name="phone" placeholder="Phone Number" required />
+    <input type="text" name="city" placeholder="Your City" required />
+    <button type="submit" id="sendBtn">Submit</button>
+  </form>
+</div>
+
+
+    <!-- Social Links -->
+    <!-- <div class="custom-footer__social">
+      <h3 class="custom-footer__heading">Connect with us</h3>
+      
+      <div class="custom-footer__icons">
+        <a href="https://wa.me/919506423475" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/share/16XpHzab3M/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:elicitengineers@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div> -->
     
   </div>
 
@@ -2691,15 +2895,44 @@ Yes, Elicit specializes in both custom-made furniture and modular designs tailor
     Designed by kriti Yadav
   </div>
 </footer>
+<script>
+  const submitURL = 'https://script.google.com/macros/s/AKfycbxSy2h4rG5HO5xcST5tLPKKMidjfb-IHP0wmW0-uXXJeeeSqBPmcoEjjnOOmnfG1Q0jfQ/exec';
+  const contactForm = document.querySelector('#form');
+  const submitButton = document.getElementById('sendBtn');
+
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault(); // Stop page from reloading
+
+    submitButton.innerHTML = "Submitting...";
+    submitButton.disabled = true;
+
+    const formData = new FormData(contactForm);
+
+    fetch(submitURL, {
+      method: 'POST',
+      body: formData,
+    })
+    .then(() => {
+      submitButton.innerHTML = "Sent!";
+      contactForm.reset();
+      submitButton.disabled = false;
+    })
+    .catch(error => {
+      console.error('Submission Error:', error);
+      submitButton.innerHTML = "Submit";
+      submitButton.disabled = false;
+    });
+  });
+</script>
 
    <!-- ========== End Footer Section ========== -->
-       <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" class="Link-1">
+       <!-- <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" class="Link-1">
   <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="WhatsApp">
 </a>
 
       <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" class="Link-2" >
   <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="WhatsApp"   >
-</a>
+</a> -->
    <a href="https://wa.me/+919506423475" target="_blank"  class="Link-3">
   <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"  >
 </a>
@@ -2733,6 +2966,83 @@ Yes, Elicit specializes in both custom-made furniture and modular designs tailor
     });
   };
 </script>
+
+<!-- Unique Popup Modal -->
+<!-- Registration Popup Modal -->
+<!-- Registration Popup Modal -->
+<script>
+  if (!localStorage.getItem('regFormSubmitted')) {
+    document.write(`
+    <div id="reg-popup-form" class="reg-modal">
+      <div class="reg-modal-content">
+        <span class="reg-close" onclick="regCloseModal()">&times;</span>
+        <h2>Register Now</h2>
+        <form id="reg-form">
+          <label class="reg-label" for="reg-name">Full Name</label>
+          <input class="reg-input" type="text" id="reg-name" name="name" required placeholder="Enter your name" />
+
+          <label class="reg-label" for="reg-email">Email Address</label>
+          <input class="reg-input" type="email" id="reg-email" name="email" required placeholder="Enter your email" />
+
+          <label class="reg-label" for="reg-phone">Mobile Number</label>
+          <input class="reg-input" type="tel" id="reg-phone" name="phone" required pattern="[0-9]{10}" placeholder="10-digit mobile number" />
+
+          <label class="reg-label" for="reg-property">City</label>
+          <input class="reg-input" type="text" id="reg-property" name="property" required placeholder="Enter your city" />
+
+          <button class="reg-button" type="submit">Submit</button>
+          <div id="reg-status"></div>
+        </form>
+      </div>
+    </div>
+    `);
+  }
+</script>
+
+
+<script>
+  const regUrl = 'https://script.google.com/macros/s/AKfycbxSy2h4rG5HO5xcST5tLPKKMidjfb-IHP0wmW0-uXXJeeeSqBPmcoEjjnOOmnfG1Q0jfQ/exec';
+
+  function regCloseModal() {
+    const modal = document.getElementById('reg-popup-form');
+    if (modal) modal.style.display = 'none';
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('reg-popup-form');
+    if (modal) modal.style.display = 'flex';
+
+    const form = document.getElementById('reg-form');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const status = document.getElementById('reg-status');
+      status.textContent = 'Submitting...';
+
+      const formData = new FormData(form);
+
+      fetch(regUrl, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        status.textContent = 'Submitted successfully!';
+        localStorage.setItem('regFormSubmitted', 'true');
+        setTimeout(() => {
+          regCloseModal();
+          form.reset();
+        }, 1000);
+      })
+      .catch(error => {
+        status.textContent = 'Submission failed.';
+        console.error(error);
+      });
+    });
+  });
+</script>
+
 
 
 </body>
@@ -2798,4 +3108,26 @@ function toggleFaq(button) {
   }
 }
 </script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxSy2h4rG5HO5xcST5tLPKKMidjfb-IHP0wmW0-uXXJeeeSqBPmcoEjjnOOmnfG1Q0jfQ/exec';
+  const form = document.getElementById('contactForm');
+  const responseMsg = document.getElementById('formResponse');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault(); // prevent page reload
+
+    const formData = new FormData(form);
+
+    fetch(scriptURL, { method: 'POST', body: formData })
+      .then(response => {
+        responseMsg.textContent = 'Thank you! We will contact you soon.';
+        form.reset();
+      })
+      .catch(error => {
+        responseMsg.textContent = 'Error! Please try again.';
+        console.error('Error!', error.message);
+      });
+  });
+</script>
+
 </html>

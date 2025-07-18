@@ -2,217 +2,173 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elicit Engineers & Interiors</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>One-Time Registration Popup</title>
   <style>
-/* Base Footer Styles */
-.custom-footer {
-  background-color: #1f1f1f;
-  color: #f1f1f1;
-  padding: 40px 20px 20px;
-  font-family: 'Segoe UI', sans-serif;
-  box-sizing: border-box;
-  /* margin-top: 60px; */
-}
+    .reg-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+    }
 
-/* Main Layout Container */
-.custom-footer__main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    .reg-modal-content {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      position: relative;
+    }
 
-/* Section Headings */
-.custom-footer__heading {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #ffffff;
-  text-align: left;
-}
+    .reg-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+    }
 
-/* Contact Info */
-.custom-footer__contact p {
-  font-size: 0.95rem;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: flex-start;
-  line-height: 1.4;
-}
+    .reg-label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
 
-.custom-footer__contact i {
-  margin-right: 10px;
-  color: #f1c40f;
-  min-width: 20px;
-}
+    .reg-input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
 
-.custom-footer__info .text {
-  display: inline;
-}
+    .reg-button {
+      width: 100%;
+      margin-top: 20px;
+      background-color: #f16e84;
+      border: none;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-.custom-footer__info .texti{
-  margin-left: 1.6rem;
-}
-/* Social Icons */
-.custom-footer__icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 10px;
-}
+    .reg-button:hover {
+      background-color: #d95c73;
+    }
 
-.custom-footer__icons a {
-  color: #f1f1f1;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
+    #reg-status {
+      margin-top: 10px;
+      font-size: 14px;
+      color: green;
+    }
 
-.custom-footer__icons a:hover {
-  color: #f1c40f;
-}
+    /* Optional reset button for testing */
+    #reset-popup {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      background-color: #444;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      opacity: 0.6;
+    }
 
-/* Footer Bottom */
-.custom-footer__bottom {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 0.85rem;
-  border-top: 1px solid #444;
-  padding-top: 15px;
-  color: #aaa;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .custom-footer__main {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .custom-footer__contact,
-  .custom-footer__social {
-    width: 100%;
-  }
-
-  .custom-footer__info .text {
-    display: block;
-    /* margin-left: 18px; aligns with icon spacing */
-  }
-  .custom-footer__info .texti{
-    margin-left: 1.8rem;
-  }
-
-  .custom-footer__contact {
-    border-bottom: 1px solid #444;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-  }
-
-  .custom-footer__icons {
-    margin-top: 10px;
-  }
-}
-@media (max-width: 768px) {
-  .mobile-keywords-inline {
-    display: block;
-    padding: 0.3rem;
-    /* background-color: #f0f0f0; */
-  }
-
-  .mobile-keywords-inline a {
-    display: inline-block;
-    margin: 2px 4px;
-    padding: 2px 6px;
-    /* background-color: #ffffff; */
-    /* border: 1px solid #ddd; */
-    border-radius: 4px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.8rem;
-    white-space: nowrap;
-  }
-
-  .mobile-keywords-inline a:hover {
-    /* background-color: #e0e0e0; */
-    color: #d1bb2c;
-  }
-}
-
-@media (min-width: 769px) {
-  .mobile-keywords-inline {
-    display: none;
-  }
-}
-
-
+    #reset-popup:hover {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
 
-<footer class="custom-footer">
-  <div class="custom-footer__main">
-    <!-- Contact Info -->
-    <div class="custom-footer__contact">
-      <h3 class="custom-footer__heading">Contact Us</h3>
-      <div class="custom-footer__info">
-        <p><i class="fas fa-phone"></i><span class="text">+91-9506423475</span></p>
-        <p><i class="fas fa-map-marker-alt"></i><span class="text">0169, Ghaseekatra,</span></p>
-        <p><span class="texti">Ghasi Katra, Gorakhpur</span></p>
-       <p><span class="texti">UP - 273001</span></p>
-      </div>
-    </div>
-    <!-- options-para info -->
-<div class="mobile-keywords-inline">
-  <a href="/kitchen-cabinet">Kitchen Cabinet</a>
-  <a href="/bedroom-ceiling">Bedroom Ceiling</a>
-  <a href="/l-shape-kitchen">L Shape Kitchen</a>
-  <a href="/u-shape-kitchen">U Shape Kitchen</a>
-  <a href="/island-kitchen">Island Kitchen</a>
-  <a href="/open-kitchen">Open Kitchen</a>
-  <a href="/parallel-kitchen">Parallel Kitchen</a>
-  <a href="/mandir-design">Mandir Design</a>
-  <a href="/sliding-wardrobe">Sliding Wardrobe</a>
-  <a href="/walk-in-wardrobe">Walk-in Wardrobe</a>
-  <a href="/mirror-wardrobe">Mirror Wardrobe</a>
-  <a href="/small-bathroom">Small Bathroom</a>
-  <a href="/girls-bedroom">Girls Bedroom</a>
-  <a href="/boys-bedroom">Boys Bedroom</a>
-  <a href="/kitchen-tile-designs">Kitchen Tile Designs</a>
-  <a href="/bedroom-tile-designs">Bedroom Tile Designs</a>
-  <a href="/bathroom-tile-designs">Bathroom Tile Designs</a>
-  <a href="/living-room-tile-designs">Living room Tile Designs</a>
-  <a href="/living-room-wallpaper-designs">Living room Wallpaper Designs</a>
-  <a href="/bedroom-wallpaper-designs">Bedroom Wallpaper Designs</a>
-  <a href="/living-room-wallpaint-ideas">Living room Wallpaint Ideas</a>
-  <a href="/bedroom-wallpaint-ideas">Bedroom Wallpaint Ideas</a>
-</div>
+<!-- Inject popup only if not already submitted -->
+<script>
+  if (!localStorage.getItem('regFormSubmitted')) {
+    document.write(`
+      <div id="reg-popup-form" class="reg-modal" style="display: flex;">
+        <div class="reg-modal-content">
+          <span class="reg-close" onclick="regCloseModal()">&times;</span>
+          <h2>Register Now</h2>
+          <form id="reg-form">
+            <label class="reg-label" for="reg-name">Full Name</label>
+            <input class="reg-input" type="text" id="reg-name" name="name" required placeholder="Enter your name" />
 
-    <!-- Social Links -->
-    <div class="custom-footer__social">
-      <h3 class="custom-footer__heading">Connect with us</h3>
-      <div class="custom-footer__icons">
-        <a href="https://wa.me/919506423475" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.facebook.com/share/16XpHzab3M/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="mailto:elicitengineers@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-      </div>
-    </div>
-    
-  </div>
-<div class="custom-footer_bottom">
-    © 2025 Your Interior Company. All rights reserved.<br/>
-    <hr/>
-    <p>Designed by <a href="https://www.linkedin.com/in/kriti-yadav-22951b295">Kriti Yadav</a>
-  
-  </div>
- 
-</footer>
+            <label class="reg-label" for="reg-email">Email Address</label>
+            <input class="reg-input" type="email" id="reg-email" name="email" required placeholder="Enter your email" />
 
+            <label class="reg-label" for="reg-phone">Mobile Number</label>
+            <input class="reg-input" type="tel" id="reg-phone" name="phone" required pattern="[0-9]{10}" placeholder="10-digit mobile number" />
+
+            <label class="reg-label" for="reg-property">City</label>
+            <input class="reg-input" type="text" id="reg-property" name="property" required placeholder="Enter your city" />
+
+            <button class="reg-button" type="submit">Submit</button>
+            <div id="reg-status"></div>
+          </form>
+        </div>
+      </div>
+    `);
+  }
+</script>
+
+<!-- Optional Reset Button for Testing -->
+<button id="reset-popup" onclick="localStorage.removeItem('regFormSubmitted'); location.reload();">
+  Reset Popup
+</button>
+
+<script>
+  const regUrl = 'https://script.google.com/macros/s/AKfycbxSy2h4rG5HO5xcST5tLPKKMidjfb-IHP0wmW0-uXXJeeeSqBPmcoEjjnOOmnfG1Q0jfQ/exec';
+
+  function regCloseModal() {
+    const modal = document.getElementById('reg-popup-form');
+    if (modal) modal.style.display = 'none';
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('reg-form');
+    const status = document.getElementById('reg-status');
+
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      status.textContent = 'Submitting...';
+
+      const formData = new FormData(form);
+
+      fetch(regUrl, {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.text())
+        .then(data => {
+          status.textContent = 'Submitted successfully!';
+          localStorage.setItem('regFormSubmitted', 'true');
+          setTimeout(() => {
+            regCloseModal();
+            form.reset();
+          }, 1000);
+        })
+        .catch(error => {
+          status.textContent = 'Submission failed!';
+          console.error(error);
+        });
+    });
+  });
+</script>
 
 </body>
 </html>
