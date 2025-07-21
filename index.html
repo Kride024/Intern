@@ -1373,14 +1373,17 @@ margin-bottom: 4rem;
 }
 .section-common-heading.faq {
   margin: 0;
-  height:850px;
+  margin-top: 1rem;
+  min-height: 0;
+  height: auto !important;
+  overflow: visible !important;
   font-family: 'Poppins', Arial, sans-serif;
   background-color: #f3f1f1;
   color: #000000;
-  /* Safari-specific rendering tweaks */
+  z-index: 0;
+  padding-bottom: 4rem; /* Space above footer */
   -webkit-font-smoothing: antialiased;
   -webkit-text-fill-color: #000; 
-  /* Helps override dark mode */
   -webkit-appearance: none;
 }
 
@@ -1391,10 +1394,13 @@ margin-bottom: 4rem;
   }
 }
 
-.faq-2{
-max-width: 800px; 
-margin: 40px auto;
- padding: 0 20px;
+.faq-2 {
+  max-width: 800px;
+  margin: 40px auto 7rem auto; /* Extra bottom margin for footer */
+  padding: 0 20px 7rem 20px;   /* Add 7rem bottom padding */
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
 }
 .faq-heading{
 text-align: center; 
@@ -1467,25 +1473,30 @@ font-weight: 700;
  }
 }
 @media (max-width: 700px) {
+ 
 .faq-heading{
  
   font-size: 1.6rem;
   font-family: 'Poppins', sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   
 }
 .faq-heading{
   padding-top: 2rem;
   margin-bottom: 2.5rem;
 }
-.faq-2{
-   width:320px;
-  height:700px;
-  font-family:'Poppins', sans-serif ;
-  font-size:1.1rem;
-  font-weight: 400;
-  
-}
+   .faq-2 {
+    width: 94vw !important;
+    max-width: 400px !important;
+    margin: 0 auto 7rem auto !important;
+    padding: 0 0.5rem 9rem 0.5rem !important;
+  }
+    .section-common-heading.faq {
+       margin-top: 3rem !important; 
+    min-height: 0 !important;
+    height: auto !important;
+    padding-bottom: 0 !important; /* Remove padding here, use .faq-2 instead */
+  }
 .button-faq{
  font-family:'Poppins', sans-serif ;
   font-size:1.1rem;
@@ -1494,11 +1505,14 @@ font-weight: 700;
 .Partner-Main-box{
   height:130px;
 }
-.content-faq{
-  font-family:'Poppins', sans-serif ;
-  font-size:1.1rem;
-  font-weight: 400;
-}
+  .content-faq {
+    width: 90vw;
+    max-width: 370px;
+    margin: 0 auto;
+    font-size: 1rem;
+    padding: 12px 10px;
+    box-sizing: border-box;
+  }
 
 }.containerPartner {
   flex: 0 0 200px;               /* Prevent flex growth/shrink */
@@ -1685,7 +1699,7 @@ background-color: grey;
 
 .custom-footer__contact i {
   margin-right: 10px;
-  color: #0062ff;
+  color: #f1f1f1;
   min-width: 20px;
   
 }
@@ -1714,7 +1728,7 @@ background-color: grey;
 
 .custom-footer__icons i:hover {
   transform: scale(1.1);  /* Optional: adds a nice hover effect */
-  color: #0062ff;         /* Optional: hover color */
+  color: #f1f1f1;         /* Optional: hover color */
 }
 
 
@@ -1725,7 +1739,7 @@ background-color: grey;
 }
 
 .custom-footer__icons a:hover {
-  color: #0062ff;
+  color: #f1f1f1;
 }
 
 /* Footer Bottom */
@@ -1757,7 +1771,7 @@ background-color: grey;
 .footer-contact-form h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #0062ff;
+  color: #f1f1f1;
 }
 
 .footer-contact-form form {
@@ -1780,7 +1794,7 @@ background-color: grey;
   padding: 12px;
   font-size: 1rem;
   font-weight: bold;
-  background-color: #0062ff;
+  background-color: rgb(28, 94, 226);
   color: #000;
   border: none;
   border-radius: 4px;
@@ -1789,7 +1803,7 @@ background-color: grey;
 }
 
 .footer-contact-form button:hover {
-  background-color: #0062ff;
+  background-color: rgb(28, 94, 226);
 }
 
 /* Responsive Design */
@@ -1808,6 +1822,7 @@ background-color: grey;
   .footer-contact-form input,
   .footer-contact-form button {
     font-size: 1.2rem;
+    color:#f1f1f1;
   }
 .custom-footer__icons {
   display: flex;
@@ -2823,7 +2838,7 @@ Elicit helps you explore these styles and customize them to match your personali
     </div>
   </div>
     <!-- FAQ Item -->
-  <div class="Question-1" >
+  <!-- <div class="Question-1" >
     <button class="button-faq" onclick="toggleFaq(this)" >
 7. Will I be involved in the design process?
       <span style="float: right;">+</span>
@@ -2831,9 +2846,9 @@ Elicit helps you explore these styles and customize them to match your personali
     <div class="content-faq">
 Absolutely. At Elicit, we believe your home should reflect you. Our designers work closely with you from the very first consultation understanding your vision, preferences, and lifestyle. You’ll be involved at every key stage, from concept to material selection and final approvals, ensuring the end result is uniquely yours.
     </div>
-  </div>
+  </div> -->
     <!-- FAQ Item -->
-  <div class="Question-1">
+  <!-- <div class="Question-1">
     <button class="button-faq" onclick="toggleFaq(this)" >
 8. Do you offer customized furniture and modular solutions?
       <span style="float: right;">+</span>
@@ -2841,7 +2856,7 @@ Absolutely. At Elicit, we believe your home should reflect you. Our designers wo
     <div class="content-faq">
 Yes, Elicit specializes in both custom-made furniture and modular designs tailored to your space and style. Whether it’s a modular kitchen, wardrobes, or bespoke sofas and tables, our team ensures each piece is designed for comfort, durability, and visual harmony with your interiors.
     </div>
-  </div>
+  </div> -->
   </div>
    <!-- ========== Start Contact Home Section ========== -->
    
