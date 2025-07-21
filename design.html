@@ -25,7 +25,7 @@ body {
 
 /* Masonry Layout */
 .masonry {
-    margin-top:11rem;
+    margin-top:0rem!important;
   column-count: 4;
   column-gap: 1rem;
   padding: 2rem;
@@ -55,7 +55,14 @@ body {
 .item:hover img {
   transform: scale(1.03);
 }
-
+@media (width>700px){
+  .masonry{
+    margin-top: 12rem!important;
+  }
+  .item.one,.item.two{
+  display:none;
+}
+}
 .end-block {
   text-align: center;
   padding: 3rem 1rem 4rem;
@@ -354,9 +361,8 @@ width: 30px; height: 30px;
 width: 30px; height: 30px;
   }
 }
-.item.one,.item.two{
-  display:none;
-}
+
+
 .Link-3{
  position: fixed;
   bottom: 25rem;
@@ -430,6 +436,9 @@ Bottom:47rem;
   border-radius: 10px;
   box-shadow: 0 4px 32px rgba(0,0,0,0.4);
 }
+/* img{
+  background:#462303;
+} */
 #imageModal span {
   position: absolute;
   top: 30px;
@@ -478,7 +487,7 @@ Bottom:47rem;
 
 .custom-footer__contact i {
   margin-right: 10px;
-  color: #f1c40f;
+  color: #f1f1f1;
   min-width: 20px;
   
 }
@@ -507,7 +516,7 @@ Bottom:47rem;
 
 .custom-footer__icons i:hover {
   transform: scale(1.1);  /* Optional: adds a nice hover effect */
-  color: #f1c40f;         /* Optional: hover color */
+  color: #f1f1f1;         /* Optional: hover color */
 }
 
 
@@ -518,7 +527,7 @@ Bottom:47rem;
 }
 
 .custom-footer__icons a:hover {
-  color: #f1c40f;
+  color: #f1f1f1;
 }
 
 /* Footer Bottom */
@@ -551,7 +560,7 @@ Bottom:47rem;
 .footer-contact-form h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #f1c40f;
+  color: #f1f1f1;
 }
 
 .footer-contact-form form {
@@ -574,7 +583,7 @@ Bottom:47rem;
   padding: 12px;
   font-size: 1rem;
   font-weight: bold;
-  background-color: #f1c40f;
+  background-color: rgb(28, 94, 226);
   color: #000;
   border: none;
   border-radius: 4px;
@@ -583,7 +592,7 @@ Bottom:47rem;
 }
 
 .footer-contact-form button:hover {
-  background-color: #d4ac0d;
+  background-color: rgb(28, 94, 226);
 }
 
 /* Responsive Design */
@@ -722,53 +731,8 @@ Bottom:47rem;
     <i class="fas fa-calculator"></i>
     <span>Estimate</span>
   </a>
-  <div class="nav-item" onclick="toggleDropdown()">
-    <i class="fas fa-ellipsis-h"></i>
-    <span>More</span>
-  </div>
+ 
 </div>
-
-
-  <!-- More Dropdown Menu -->
-  <div class="mobile-menu-unique" id="hamburgerDropdownUnique">
-    <a href="who we are.html">Who we Are</a>
-    <a href="service.html">Services</a>
-    <a href="work with us.html">Work with Us</a>
-    <a href="contact us.html">Contact</a>
-  </div>
-
-  <!-- JS to Toggle Dropdown -->
-  <script>
-    function toggleDropdown() {
-      const dropdown = document.getElementById("hamburgerDropdownUnique");
-      if (dropdown.style.display === "flex") {
-        dropdown.style.display = "none";
-      } else {
-        dropdown.style.display = "flex";
-      }
-    }
-
-    // Optional: Close on outside click
-    document.addEventListener('click', function (event) {
-      const dropdown = document.getElementById("hamburgerDropdownUnique");
-      const moreBtn = event.target.closest('.nav-item');
-      if (!dropdown.contains(event.target) && !moreBtn) {
-        dropdown.style.display = "none";
-      }
-    });
-       window.addEventListener("DOMContentLoaded", function () {
-  const path = window.location.pathname.split("/").pop().split("?")[0]; // current file, like 'design.html'
-  const navLinks = document.querySelectorAll(".mobile-navbar .nav-item");
-
-  navLinks.forEach(link => {
-    const page = link.getAttribute("data-page");
-    if (page === path) {
-      link.classList.add("active"); // This triggers the blue styling from CSS
-    }
-  });
-});
-  </script>
-
 </div>
 
 
@@ -883,50 +847,13 @@ Bottom:47rem;
   <div class="custom-footer__main">
     <!-- Contact Info -->
     <div class="custom-footer__contact">
-      <h3 class="custom-footer__heading">Contact Us</h3>
-      <div class="custom-footer__info">
-        <p><i class="fas fa-phone"></i><span class="text">+91-9506423475</span></p>
-        <p><i class="fas fa-map-marker-alt"></i><span class="text">0169, Ghaseekatra,</span></p>
-        <p><span class="texti">Ghasi Katra, Gorakhpur</span></p>
-       <p><span class="texti">UP - 273001</span></p>
-      </div>
-    </div>
-    <!-- options-para info -->
-<div class="mobile-keywords-inline">
-  <a href="/kitchen-cabinet">Kitchen Cabinet</a>
-  <a href="/bedroom-ceiling">Bedroom Ceiling</a>
-  <a href="/l-shape-kitchen">L Shape Kitchen</a>
-  <a href="/u-shape-kitchen">U Shape Kitchen</a>
-  <a href="/island-kitchen">Island Vibe Kitchen</a>
-  <a href="/open-kitchen">Open Air Kitchen</a>
-  <a href="/mandir-design">Mandir Design</a>
-  <a href="/sliding-wardrobe">Sliding Wardrobe</a>
-  <a href="/wardrobe-design">Wooden Design</a>
-  <a href="/walk-in-wardrobe">Walk-in Wardrobe</a>
-  <a href="/modular-wardrobe">Modular Wardrobe</a>
-  <a href="/wall-mounted-wardrobe">Wall Mounted Wardrobe</a>
-  <a href="/mirror-wardrobe">Mirror Wardrobe</a>
-  <a href="/small-bathroom">Small Bathroom</a>
-  <a href="/girls-bedroom">Girls Bedroom</a>
-  <a href="/boys-bedroom">Boys Bedroom</a>
-  <a href="/kitchen-tile-designs">Kitchen Tile Designs</a>
-  <a href="/bedroom-tile-designs">Bedroom Tile Designs</a>
-  <a href="/bathroom-tile-designs">Bathroom Tile Designs</a>
-  <a href="/living-room-tile-designs">Living room Tile Designs</a>
-  <a href="/mandir-design">Prayer Room</a>
-  <a href="/living-room-wallpaper-designs">Wallpaper Designs</a>
-  <a href="/bedroom-wallpaper-designs">Bedroom Wallpaper Designs</a>
-  <a href="/bathroom-wallpaper-designs">Wall Painting</a>
-  <a href="/kitchen-wallpaint-ideas">Kids Room Ideas</a>
-  <a href="/living-room-wallpaint-ideas">Living room  Ideas</a>
-  <a href="/bedroom-wallpaint-ideas">Bedroom Wallpaint Ideas</a>
-  <a href="/bathroom-wallpaint-ideas">Balcony Designs</a>
-</div>
-
-    <!-- Social Links -->
-    <div class="custom-footer__social">
       <h3 class="custom-footer__heading">Connect with us</h3>
-      <div class="custom-footer__icons">
+      <div class="custom-footer__info">
+        <p><i class="fas fa-phone"></i><span class="text">+91-8427138348,+91-9506423475
+</span></p>
+        <p><i class="fas fa-envelope"></i><span class="text">elicitengineers@outlook.com </span></p>
+      </div>
+       <div class="custom-footer__icons">
         <a href="https://wa.me/919506423475" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -934,25 +861,56 @@ Bottom:47rem;
         <a href="mailto:elicitengineers@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
-    
+    <!-- options-para info -->
+<!-- Basic Contact Form -->
+<div class="footer-contact-form">
+  <h3>Get Free Design Help</h3>
+  <form id="form">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="tel" name="phone" placeholder="Phone Number" required />
+    <input type="text" name="city" placeholder="Your City" required />
+    <button type="submit" id="sendBtn">Submit</button>
+  </form>
+</div>   
   </div>
-
-  <div class="custom-footer__bottom">
+<div class="custom-footer__bottom">
     © 2025 Elicit Engineers and Interiors Company. All rights reserved.<br/>
     Designed by kriti Yadav
   </div>
 </footer>
+<script>
+  const submitURL = 'https://script.google.com/macros/s/AKfycbxSy2h4rG5HO5xcST5tLPKKMidjfb-IHP0wmW0-uXXJeeeSqBPmcoEjjnOOmnfG1Q0jfQ/exec';
+  const contactForm = document.querySelector('#form');
+  const submitButton = document.getElementById('sendBtn');
+
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault(); // Stop page from reloading
+
+    submitButton.innerHTML = "Submitting...";
+    submitButton.disabled = true;
+
+    const formData = new FormData(contactForm);
+
+    fetch(submitURL, {
+      method: 'POST',
+      body: formData,
+    })
+    .then(() => {
+      submitButton.innerHTML = "Sent!";
+      contactForm.reset();
+      submitButton.disabled = false;
+    })
+    .catch(error => {
+      console.error('Submission Error:', error);
+      submitButton.innerHTML = "Submit";
+      submitButton.disabled = false;
+    });
+  });
+</script>
 
    <!-- ========== End Footer Section ========== -->
 
 </div>
-            <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" class="Link-1">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="WhatsApp">
-</a>
-
-      <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" class="Link-2" >
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="WhatsApp"   >
-</a>
    <a href="https://wa.me/+919506423475" target="_blank"  class="Link-3">
   <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"  >
 </a>

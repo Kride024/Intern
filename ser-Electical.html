@@ -142,9 +142,7 @@
   margin-bottom: 1rem;
   margin-left: 1rem;
 }
-div img{
-    background: #6a3d02;
-}
+
 .logo{
     background: none;
 }
@@ -493,7 +491,7 @@ Bottom:47rem;
 
 .custom-footer__contact i {
   margin-right: 10px;
-  color: #f1c40f;
+  color: #f1f1f1;
   min-width: 20px;
   
 }
@@ -522,7 +520,7 @@ Bottom:47rem;
 
 .custom-footer__icons i:hover {
   transform: scale(1.1);  /* Optional: adds a nice hover effect */
-  color: #f1c40f;         /* Optional: hover color */
+  color: #f1f1f1;         /* Optional: hover color */
 }
 
 
@@ -533,7 +531,7 @@ Bottom:47rem;
 }
 
 .custom-footer__icons a:hover {
-  color: #f1c40f;
+  color: #f1f1f1;
 }
 
 /* Footer Bottom */
@@ -565,7 +563,7 @@ Bottom:47rem;
 .footer-contact-form h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #f1c40f;
+  color: #f1f1f1;
 }
 
 .footer-contact-form form {
@@ -588,8 +586,8 @@ Bottom:47rem;
   padding: 12px;
   font-size: 1rem;
   font-weight: bold;
-  background-color: #f1c40f;
-  color: #000;
+  background-color: rgb(28, 94, 226);
+  color: #f1f1f1;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -597,7 +595,7 @@ Bottom:47rem;
 }
 
 .footer-contact-form button:hover {
-  background-color: #d4ac0d;
+  background-color: rgb(28, 94, 226);
 }
 
 /* Responsive Design */
@@ -733,53 +731,13 @@ Bottom:47rem;
       <i class="fas fa-calculator"></i>
       <span>Estimate</span>
     </a>
-    <div class="nav-item" onclick="toggleDropdown()">
-      <i class="fas fa-ellipsis-h"></i>
-      <span>More</span>
-    </div>
+  
   </div>
 
-  <!-- More Dropdown Menu -->
-  <div class="mobile-menu-unique" id="hamburgerDropdownUnique">
-    <a href="who we are.html">Who we Are</a>
-    <a href="service.html">Services</a>
-    <a href="work with us.html">Work with Us</a>
-    <a href="contact us.html">Contact</a>
-  </div>
+
 
   <!-- JS to Toggle Dropdown -->
-  <script>
-    function toggleDropdown() {
-      const dropdown = document.getElementById("hamburgerDropdownUnique");
-      if (dropdown.style.display === "flex") {
-        dropdown.style.display = "none";
-      } else {
-        dropdown.style.display = "flex";
-      }
-    }
-
-    // Optional: Close on outside click
-    document.addEventListener('click', function (event) {
-      const dropdown = document.getElementById("hamburgerDropdownUnique");
-      const moreBtn = event.target.closest('.nav-item');
-      if (!dropdown.contains(event.target) && !moreBtn) {
-        dropdown.style.display = "none";
-      }
-    });
-
-       window.addEventListener("DOMContentLoaded", function () {
-  const path = window.location.pathname.split("/").pop().split("?")[0]; // current file, like 'design.html'
-  const navLinks = document.querySelectorAll(".mobile-navbar .nav-item");
-
-  navLinks.forEach(link => {
-    const page = link.getAttribute("data-page");
-    if (page === path) {
-      link.classList.add("active"); // This triggers the blue styling from CSS
-    }
-  });
-});
-
-  </script>
+ 
 
 </div>
 
