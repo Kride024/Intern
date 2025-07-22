@@ -372,7 +372,143 @@ Bottom:47rem;
     display: none;
   }
 }
+@media (min-width: 769px) {
+  .mobile-keywords-inline {
+    display: none;
+  }
+}
 
+
+/* Responsive styles */
+@media (max-width: 700px) {
+.btn_main{
+   font-size: 1.1rem;
+  font-family:'Poppins', sans-serif ;
+  letter-spacing: 0.1;
+/* font-weight: 700; */
+}
+header{
+  display:none;
+}
+}
+
+.navbar{
+      margin-bottom: -2rem;
+/* 
+      & ul {
+        margin-right: 17rem;
+      } */
+      & li a{
+        font-family: "Poppins";
+        font-size: 1.5rem;
+        font-weight:400;
+        
+      }
+    }
+   .brand-text {
+  display: none;
+}
+@media (max-width: 768px) {
+ 
+  .brand-text {
+    height:50px;
+    display: block !important;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #63666d;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    text-align: center;
+  }
+  nav.navbar {
+    display: none !important;
+  }
+  .btn {
+    display: none !important;
+  }
+}
+
+
+
+.brand-text-mobile {
+  display: none;
+}
+
+/* nav bar mobile */
+.navbar-brand img{
+  width:100px;}
+
+
+  /* Mobile view only */
+@media (max-width: 768px) {
+  .logo,
+  nav.navbar,
+  .btn {
+    display: none !important;
+  }
+
+  .brand-text-mobile {
+    display: flex !important;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    margin-left: -6rem;
+    gap:1rem;
+    margin-bottom: -0.7rem;
+    /* margin-top: 1rem; */
+    /* text-align: center; */
+  }
+
+  .brand-text-mobile .mobile-logo {
+    width: 52px;
+    height: auto;
+    /* margin-bottom: 0.rem; */
+  }
+
+  .brand-lines {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #252525;
+    line-height: 1.5;
+    font-size:2rem ;
+  }
+
+   .line-one {
+    font-size: 1.4rem;
+  }
+
+  .brand-lines .line-two {
+    font-size: 1.4rem;
+    margin-top: 0.2rem;
+  }
+}
+/*  */
+/* Hamburger Dropdown */
+    .mobile-menu-unique {
+      position: fixed;
+      bottom: 60px;
+      right: 15px;
+      display: none;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      flex-direction: column;
+    }
+
+    .mobile-menu-unique a {
+      padding: 10px 16px;
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+    }
+.btn:hover{
+  background: rgb(76, 75, 75)!important;
+}
   </style>
    <link rel="stylesheet" href="style1.css">
   <title>final docs</title>
@@ -442,7 +578,7 @@ Bottom:47rem;
            
         </ul>
         </nav>
-        <button class="btn" id="btn"style="background-color:  rgb(28, 94, 226); font-weight: 600;font-size:1.4rem">BOOK FREE CONSULTATION</button>
+        <button class="btn" id="btn"style="background-color:  rgb(28, 94, 226); font-weight: 600;font-size:1.4rem" onclick="window.location.href='form.html'">BOOK FREE CONSULTATION</button>
     </div>
    </header>
    <!-- ========== End nav section========== -->
@@ -466,7 +602,7 @@ False Ceiling Designs</h1>
          >
       <p style="color: #121212;font-size: 1.8rem;font-weight: 550;line-height: 3rem; text-align: left;margin-left: 1rem;">Premium materials chosen for durability, style, and everyday living.</p>
       <div style="display: flex; justify-content: space-between; width: 100%; margin-top: 15px;padding-bottom: 2rem;">
-        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff; ; border-radius:2rem;">Free Consult</button>
+        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff; ; border-radius:2rem;" onclick="window.location.href='form.html'">Free Consult</button>
         <button class="btn" style=" width:20rem;background: rgb(28, 94, 226); border-radius:2rem;margin-right: 1rem;">Free Estimate</button>
       </div>
     </div>
@@ -477,7 +613,7 @@ False Ceiling Designs</h1>
         >
       <p style="color: #121212;font-size: 1.8rem;font-weight: 550;line-height: 3rem; text-align: left;margin-left: 1rem;">Every material chosen with care, made to elevate your space.</p>
       <div style="display: flex; justify-content: space-between; width: 100%; margin-top: 15px;padding-bottom: 2rem;">
-        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff; border-radius:2rem;">Free Consult</button>
+        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff; border-radius:2rem;" onclick="window.location.href='form.html'">Free Consult</button>
         <button class="btn" style=" width:20rem; margin-right: 1rem;background: rgb(28, 94, 226); border-radius:2rem;">Free Estimate</button>
       </div>
     </div>
@@ -488,7 +624,7 @@ False Ceiling Designs</h1>
         >
       <p style="color: #121212;font-size: 1.8rem;font-weight: 550;line-height: 3rem; text-align: left;margin-left: 1rem;">Textures, tones, and touches that bring comfort and character.</p>
       <div style="display: flex; justify-content: space-between; width: 100%; margin-top: 15px;padding-bottom: 2rem;">
-        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff; border-radius:2rem;">Free Consult</button>
+        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff; border-radius:2rem;" onclick="window.location.href='form.html'">Free Consult</button>
         <button class="btn" style=" width:20rem; margin-right: 1rem;background: rgb(28, 94, 226); border-radius:2rem;">Free Estimate</button>
       </div>
     </div>
@@ -503,7 +639,7 @@ False Ceiling Designs</h1>
          >
       <p style="color: #121212;font-size: 1.8rem;font-weight: 550;line-height: 3rem; text-align: left;margin-left: 1rem;">A perfect balance of aesthetic charm and long-lasting utility.</p>
       <div style="display: flex; justify-content: space-between; width: 100%; margin-top: 15px;padding-bottom: 2rem;">
-        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff; border-radius:2rem;">Free Consult</button>
+        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff; border-radius:2rem;" onclick="window.location.href='form.html'">Free Consult</button>
         <button class="btn" style=" width:20rem; margin-right: 1rem;background: rgb(28, 94, 226); border-radius:2rem; margin-right: 1rem;">Free Estimate</button>
       </div>
     </div>
@@ -514,7 +650,7 @@ False Ceiling Designs</h1>
        >
       <p style="color: #121212;font-size: 1.8rem;font-weight: 550;line-height: 3rem;text-align: left;margin-left: 1rem;">From the base to the surface—materials that define your home.</p>
       <div style="display: flex; justify-content: space-between; width: 100%; margin-top: 15px;padding-bottom: 2rem;">
-        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff; border-radius:2rem;">Free Consult</button>
+        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff; border-radius:2rem;" onclick="window.location.href='form.html'">Free Consult</button>
         <button class="btn" style=" width:20rem; margin-right: 1rem;background: rgb(28, 94, 226); border-radius:2rem;">Free Estimate</button>
       </div>
     </div>
@@ -526,7 +662,7 @@ False Ceiling Designs</h1>
       <p style="color: #121212;font-size: 1.8rem;font-weight: 550;line-height: 3rem; text-align: left;margin-left: 1rem;">Durable designs that reflect your lifestyle and vision.
         Do it Now!</p>
       <div style="display: flex; justify-content: space-between; width: 100%; margin-top: 15px;padding-bottom: 2rem;">
-        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff; border-radius:2rem;">Free Consult</button>
+        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff; border-radius:2rem;" onclick="window.location.href='form.html'">Free Consult</button>
         <button class="btn" style=" width:20rem; margin-right: 1rem;background: rgb(28, 94, 226); border-radius:2rem;">Free Estimate</button>
       </div>
     </div>
@@ -559,7 +695,7 @@ False Ceiling Designs</h1>
         >
       <p style="color: #121212;font-size: 1.8rem;font-weight: 550;line-height: 3rem; text-align: left;margin-left: 1rem;">This is the second card content. You can describe anything here.</p>
       <div style="display: flex; justify-content: space-between; width: 100%; margin-top: 15px;padding-bottom: 2rem;">
-        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff;; border-radius:2rem;">Free Consult</button>
+        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff;; border-radius:2rem;" onclick="window.location.href='form.html'">Free Consult</button>
         <button class="btn" style=" width:20rem; margin-right: 1rem;background: rgb(28, 94, 226); border-radius:2rem;">Free Estimate</button>
       </div>
     </div>
@@ -570,7 +706,7 @@ False Ceiling Designs</h1>
         >
       <p style="color: #121212;font-size: 1.8rem;font-weight: 550;line-height: 3rem;text-align: left;margin-left: 1rem;">Materials that offer both elegance and endurance.</p>
       <div style="display: flex; justify-content: space-between; width: 100%; margin-top: 15px;padding-bottom: 2rem;">
-        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff; border-radius:2rem;">Free Consult</button>
+        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff; border-radius:2rem;" onclick="window.location.href='form.html'">Free Consult</button>
         <button class="btn" style=" width:20rem; margin-right: 1rem;background: rgb(28, 94, 226); border-radius:2rem;">Free Estimate</button>
       </div>
     </div>
@@ -581,7 +717,7 @@ False Ceiling Designs</h1>
       <p style="color: #121212;font-size: 1.8rem;font-weight: 550;line-height: 3rem; text-align: left;margin-left: 1rem;">Materials that combine strength, style, and lasting beauty.
         Do it Now!</p>
       <div style="display: flex; justify-content: space-between; width: 100%; margin-top: 15px;padding-bottom: 2rem;">
-        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff; border-radius:2rem;">Free Consult</button>
+        <button class="btn" style=" width:20rem; margin-left: 1rem;border:solid rgb(28, 94, 226);color:rgb(28, 94, 226);background:#fff; border-radius:2rem;" onclick="window.location.href='form.html'">Free Consult</button>
         <button class="btn" style=" width:20rem; margin-right: 1rem;background: rgb(28, 94, 226); border-radius:2rem;">Free Estimate</button>
       </div>
     </div>
