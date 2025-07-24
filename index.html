@@ -511,6 +511,95 @@ body, .body1, .review-card, .btn_main {
   align-items: center;
 }
 
+
+/* desktop */
+.section-about{
+    height:auto;
+  }
+   .c1{
+    .grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+       text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  .section-common-heading {
+    
+   margin-top: -7rem;
+   margin-bottom: 1.5rem;
+    margin-left: auto;
+  margin-right: auto;
+    text-align: center;
+  display: block;
+  font-size: 2.4rem;
+   color:#373535
+  }
+  .sh1{
+    font-size: 1.8rem;
+  }
+  margin-bottom: -7rem;
+     }
+
+     .section-common-heading {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: block;
+}
+     /* desktop part of gallery */
+
+
+
+
+/*  */
+
+/* .section-about1 .section-common-heading,
+.section-about1 .section-common-subheading,
+.section-about1 .container {
+  text-align: left;
+ 
+} */
+
+/*  */
+
+.section-about1 .heading-wrapper,
+.section-about1 .container {
+  margin-left: 4%;
+  margin-right: 4%; /* Optional: keeps layout symmetric */
+}
+.section-about1 .heading-wrapper{
+    margin-left: 6%;
+  margin-right: 6%;
+}
+
+.section-about1 .section-common-heading,
+.section-about1 .section-common-subheading {
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-about1 .section-common-heading {
+  margin-top: -2rem;
+  font-size: 2.4rem;
+}
+
+.section-about1 .section-common-subheading {
+  font-size: 1.7rem;
+  font-weight: 300;
+   margin-bottom: 1.8rem;
+}
+
+.section-about.me{
+  height:550px;
+}
+
+
+
+
 /* Responsive styles */
 @media (max-width: 900px) {
   .section-about .sh2 {
@@ -572,9 +661,10 @@ body, .body1, .review-card, .btn_main {
   }
 }
 
+
 @media (max-width: 500px) {
   .section-about{
-    height:550px;
+    height:600px;
   }
    .c1{
     .grid {
@@ -621,6 +711,8 @@ body, .body1, .review-card, .btn_main {
       display:none;
     }
    }
+
+
 
 /* Desktop: 4 columns */
 .section-about .grid-four--cols {
@@ -681,33 +773,43 @@ p{
   }
    
 }
+
+
+
+.section-common-heading.mq {
+  margin-top: -9rem; /* Match mobile or tweak as needed */
+  padding-bottom: 1rem; /* Optional: add if bottom spacing feels excessive */
+  text-align: center;
+  font-size: 2.4rem!important;
+
+}
+.container.grid.grid-four--cols.calculater{
+margin-top: -14rem;
+}
+
   .section-about .section-common-heading.mq{
-     width: 100%;
+    width: 100%;
     margin-left: auto;
-  margin-right: auto;
+    margin-right: auto;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
+ /*  */
 @media (width<700px) {
   .section-about .section-common-heading.mq {
   font-size: 2rem;
-  color: #373535;
+  color: #000;
   font-weight: 700;
   text-align: center;
-  /* margin: -7rem auto 0 auto; */
-  /* margin-left: 50%;; */
-  /* margin-bottom: -12rem; */
   width: 100%;
   max-width: 800px;
-     margin-left: auto;
+  margin-left: auto;
   margin-right: auto;
-    text-align: center;
+  text-align: center;
   display: block;
   font-size: 2rem;
-   color:#373535
+  color:#373535
 }
-
-
 }
 
 
@@ -1114,7 +1216,8 @@ font-size: 14px;
   display: none;
 }
 .section-common-heading.review-heading{
-margin-bottom: 4rem!important;
+margin-bottom: 5rem!important;
+
 }
 /* nav bar mobile */
 .navbar-brand img{
@@ -1282,7 +1385,7 @@ Bottom:47rem;
 
 @media (width> 700px){
   .body1{
-    height:500px;
+    height:450px;
   }
 .section-common-heading.achievement-heading{
 margin-top: -4rem;
@@ -1293,7 +1396,8 @@ margin-top: -4rem;
 }
 
 .section-common-heading.review-heading{
-margin-top: 1rem;
+margin-top: 0;
+font-size: 2.4rem;
 font-family: 'Poppins',sans-serif;
 }
 @media (width<= 700px){
@@ -1306,7 +1410,7 @@ margin-bottom: 4rem;
 font-family: 'Poppins',sans-serif;
 }
 }
-
+   
 @media (max-width: 700px) {
   .section-navbar{
     display:none;
@@ -1368,8 +1472,9 @@ font-weight: 700;
 
 }
 .section-common-heading.channel-partners-heading{
-margin-top: 6rem;
+margin-top: 4rem;
 margin-bottom: 4rem;
+font-size: 2.4rem;
 }
 .section-common-heading.faq {
   margin: 0;
@@ -1404,7 +1509,7 @@ margin-bottom: 4rem;
 }
 .faq-heading{
 text-align: center; 
-font-size: 28px; 
+font-size: 24px; 
 margin-bottom: 4rem;
 padding-top: 4rem;
 }
@@ -1465,7 +1570,7 @@ line-height: 2rem;
   letter-spacing:0px;
  }
  .section-common-heading.channel-partners-heading{
-  margin-top: 2rem;
+margin-top: 2rem;
 margin-bottom: 2rem;
 font-size: 1.5rem;
 font-family: 'Poppins', sans-serif ;
@@ -1635,10 +1740,11 @@ background-color: grey;
 }
 @media (width> 1200px){
 .Achievement{
-  height:450px;}
+  height:390px;}
   .section-common-heading.achievement-heading{
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-top: 0;
+    margin-bottom: 4rem;
+    font-size: 2.4rem;
   }
   .section-common-heading.review-heading{
     margin-bottom: 4rem;
@@ -2088,7 +2194,7 @@ background-color: grey;
     }
 .phone-link,
 .custom-footer__info .text a[href^="tel"] {
-  color: #f1f1f1 !important;      /* Your desired color */
+  color: #f1f1f1 !important;      /* Yo  ur desired color */
   font-weight: 400 !important;    /* Normal weight */
   text-decoration: none !important;
   font-family: 'Poppins', sans-serif !important;
@@ -2097,6 +2203,8 @@ background-color: grey;
 .btn:hover{
   background: rgb(76, 75, 75)!important;
 }
+
+
     </style>
 </head>
 <body>
@@ -2157,7 +2265,7 @@ background-color: grey;
         <div class="navbar-brand" >
             <a href="index.html">
                 <div>
-                  <a href="index.html"> <img src="Screenshot_2025-06-25_180908-removebg-preview.svg" alt="logo" class="logo"/></a> 
+                  <a href="index.html"> <img src="Adobe Express - file.png" alt="logo" class="logo"/></a> 
             <!-- ✅ HTML Brand Text Section -->
 <span class="brand-text-mobile">
   <div class="brand-lines">
@@ -2247,7 +2355,7 @@ background-color: grey;
    <!-- ========== Start Section-About ========== -->
    <section class="section-about">
     <div class="c1">
-       <div class=" grid grid-two--cols"> <div><h2 class="section-common-heading ">Get a glimpse Of Elicit Interiors</h2>
+       <div class=" grid grid-two--cols"> <div><h2 class="section-common-heading">Get a glimpse Of Elicit Interiors</h2>
           <p class="sh1" >A home that doesn’t just look luxurious, It feels like it was made just for you.
         </p>
     </div>
@@ -2261,7 +2369,7 @@ background-color: grey;
         <div class="about-div" style="position: relative; text-align: center;" >
            
                 <img src="Photos/bedroom 1st view c1.jpg" alt="technical research item"/>
-           <h2 style="
+           <!-- <h2 style="
     position: absolute;
     top: 53%;
     left: 20%;
@@ -2275,7 +2383,7 @@ background-color: grey;
     white-space: nowrap;
   ">
     Elicit Engineers and Interiors
-  </h2>
+  </h2> -->
            
             <h3 class="section-common--title"  style="margin-bottom: 4rem;">Room Design: <span>Bold & Timeless</span> </h3>
           
@@ -2283,21 +2391,7 @@ background-color: grey;
          <div class="about-div" style="position: relative; text-align: center;" >
            
                 <img src="Photos/kitchen 1st view c1.jpg" alt="technical research item"/>
-                 <h2 style="
-    position: absolute;
-    top: 53%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 0.6vw;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: 100;
-    white-space: nowrap;
-  ">
-    Elicit Engineers and Interiors
-  </h2>
+       
            
             <h3 class="section-common--title"  style="margin-bottom: 4rem;">Kitchen Design: <span>Deep Accents</span> </h3>
          
@@ -2305,22 +2399,7 @@ background-color: grey;
         <div class="about-div" style="position: relative; text-align: center;">
           
                 <img src="Photos/090923 rd 01 Ed.jpg"  alt="technical research item"/>
-            
-                      <h2 style="
-    position: absolute;
-    top: 53%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 0.6vw;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: 100;
-    white-space: nowrap;
-  ">
-    Elicit Engineers and Interiors
-  </h2>
+
             <h3 class="section-common--title"  style="margin-bottom: 4rem;">Wardrobe Design: <span>Modern</span></h3>
             
         </div>
@@ -2328,21 +2407,6 @@ background-color: grey;
           
                 <img src="Photos/WhatsApp Image 2025-05-27 at 21.59.45_cff33d28.jpg" alt=" technical research item" />
            
-                      <h2 style="
-    position: absolute;
-    top: 53%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 0.6vw;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: 100;
-    white-space: nowrap;
-  ">
-    Elicit Engineers and Interiors
-  </h2>
             <h3 class="section-common--title" style="margin-bottom: 4rem;">Room Design:  <span>Forest-Inspired</span></h3>
            
         </div>
@@ -2354,110 +2418,50 @@ background-color: grey;
    <!-- ========== End Section-About ========== -->
     <!-- ========== Start course Section ========== -->
     <section class="section-about1">
-    <div class="container " style="margin-left: 8rem;margin-top: -3rem;">
-       <div class=" grid grid-two--cols"> <div><h2 class="section-common-heading ">Inspiration for home interior designs</h2>
-          <p class="section-common-subheading" style="margin-top: 1rem;">New look chahiye? Try these interior ideas made just for you!
-        </p>
-    </div>
-    <button class="btn_more" onclick="window.location.href='design.html';return false">More</button>
-    </div>
-      
+   <div class="heading-wrapper">
+  <h2 class="section-common-heading">Inspiration for home interior designs</h2>
+  <p class="section-common-subheading">New look chahiye? Try these interior ideas made just for you!</p>
+  <button class="btn_more" onclick="window.location.href='design.html';return false">More</button>
 </div>
 
-     <div class="container grid grid-three--cols " style="margin-top: -8rem;">
+
+     <div class="container grid grid-three--cols ">
        
      
-         <div class="about-div1" style="position: relative; text-align: center;">
-           <div class="item">
+         <div class="about-div1">
+          
                 <img src="Photos/Bedroom/Screenshot 2025-06-03 224652.png" style="width:644px;height: 394px;"/>
-           </div>
-                 <h2 style="
-    position: absolute;
-    top: 93%;
-    left: 10%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 0.6vw;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: 100;
-    white-space: nowrap;
-  ">
-    Elicit Engineers and Interiors
-  </h2>
+          
+             
            
          
         </div>
-        <div class="about-div1" style="position: relative; text-align: center;">
+        <div class="about-div1">
           
                 <img src="https://i.pinimg.com/736x/49/6b/a1/496ba1456d87d5e12a42dade7483d52a.jpg"  alt="technical research item" style="width:347px;height: 394px;margin-left: -1.6rem;"/>
  
         </div >
-        <div class="about-div1" style="position: relative; text-align: center;">
+        <div class="about-div1">
           
                 <img src="Photos/090923 rd 02 Ed.jpg"  alt=" technical research item" style="width:350px;height: 394px;margin-left: -2.2rem;" />
-                <h2 style="
-    position: absolute;
-    top: 93%;
-    left: 15%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 0.6vw;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: 100;
-    white-space: nowrap;
-  ">
-    Elicit Engineers and Interiors
-  </h2>
-                <!-- margin-left: -160rem; -->
+           
            
         </div>
        
         
-              <div class="about-div1" style="position: relative; ">
+              <div class="about-div1">
           
                 <img src="Photos/bedroom 2nd view c2.jpg" alt=" technical research item" style="width:350px;height: 394px;margin-top: 7rem;"  />
-                 <h2 style="
-    position: absolute;
-    top: 94%;
-    left: 10%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 0.6vw;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: 100;
-    white-space: nowrap;
-  ">
-    Elicit Engineers and Interiors
-  </h2>
+    
            
         </div>
-              <div class="about-div1" style="position: relative; text-align: center;">
+              <div class="about-div1">
           
                 <img src="Photos/lobby 1st view c1.jpg" alt=" technical research item" style="width:644px;height: 394px;margin-top: 7rem;margin-left: -31rem;"  />
-                 <h2 style="
-    position: absolute;
-    top: 94%;
-    left: -70%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 0.6vw;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: 100;
-    white-space: nowrap;
-  ">
-    Elicit Engineers and Interiors
-  </h2>
+    
            
         </div>
-              <div class="about-div1" style="position: relative; text-align: center;">
+              <div class="about-div1">
           
                 <img src="https://i.pinimg.com/736x/07/b4/6d/07b46d9f835510ba38c1a62b530a8b40.jpg" alt=" technical research item" style="width:350px;height: 394px;margin-top: 7rem; margin-left: -2.1rem;"  />
            
@@ -2490,47 +2494,16 @@ background-color: grey;
          <div class="about-div mq" style="position: relative; text-align: center;" >
            
                 <img src="Photos/flooring/Screenshot 2025-06-10 231640.png" alt="technical research item"/>
-                 <h2 style="
-    position: absolute;
-    top: 38%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 0.6vw;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: 100;
-    white-space: nowrap;
-  ">
-    Elicit Engineers and Interiors
-  </h2>
+       
            
             <h3 class="section-common--title calculate">Flooring design : <span>Know the estimated Price</span> </h3>
-            <!-- <p>
-                we start by learning what you need.We look at what's new and exciting
-                in learning and choose topics that match what you want to learn.
-                         </p> -->
+          
                           <button class="btni"  onclick="window.location.href=`step2.html`;">Calculate</button>
         </div>
         <div class="about-div mq" style="position: relative; text-align: center;">
           
                 <img src="Screenshot 2025-06-12 172502.png"  alt="technical research item"/>
-                  <h2 style="
-    position: absolute;
-    top: 38%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 0.6vw;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: 100;
-    white-space: nowrap;
-  ">
-    Elicit Engineers and Interiors
-  </h2>
+            
             <h3 class="section-common--title calculate"  >Wall Design : <span>Know the estimated Price</span></h3>
             <!-- <p>
             Next,we make the lessons.We make them fun and interesting for you.We make
@@ -2541,21 +2514,7 @@ background-color: grey;
         <div class="about-div mq" style="position: relative; text-align: center;">
           
                 <img src="Photos/WhatsApp Image 2022-05-26 at 2.27.58 PM.jpeg" alt=" technical research item" />
-                 <h2 style="
-    position: absolute;
-    top: 38%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 0.6vw;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: 100;
-    white-space: nowrap;
-  ">
-    Elicit Engineers and Interiors
-  </h2>
+               
             <h3 class="section-common--title calculate">Interior Design : <span>Know the estimated Price</span></h3>
             <!-- <p>
              After that,we turn the lessons into things you can use online.We use the latest tools to make sure they work well 
@@ -2575,7 +2534,7 @@ background-color: grey;
 <h2 class="section-common-heading review-heading">Customer Reviews</h2>
 
 <div class="review-wrapper">
-  <button class="arrow-button arrow-left hidden" onclick="scrollReviews(-1)" id="leftBtn">←</button>
+  <!-- <button class="arrow-button arrow-left hidden" onclick="scrollReviews(-1)" id="leftBtn">←</button> -->
 
   <div class="slider-container">
     <div class="reviews-container" id="reviewContainer">
@@ -2643,7 +2602,7 @@ Abhishek Singh Bhadouria</div>
     </div>
   </div>
 
-  <button class="arrow-button arrow-right" onclick="scrollReviews(1)" id="rightBtn">→</button>
+  <!-- <button class="arrow-button arrow-right" onclick="scrollReviews(1)" id="rightBtn">→</button> -->
 </div>
 </div>
 
@@ -2840,26 +2799,7 @@ Indian Traditional: Ornate wooden details, ethnic motifs, and warm tones.<br>
 Elicit helps you explore these styles and customize them to match your personality and the essence of your home.
     </div>
   </div>
-    <!-- FAQ Item -->
-  <!-- <div class="Question-1" >
-    <button class="button-faq" onclick="toggleFaq(this)" >
-7. Will I be involved in the design process?
-      <span style="float: right;">+</span>
-    </button>
-    <div class="content-faq">
-Absolutely. At Elicit, we believe your home should reflect you. Our designers work closely with you from the very first consultation understanding your vision, preferences, and lifestyle. You’ll be involved at every key stage, from concept to material selection and final approvals, ensuring the end result is uniquely yours.
-    </div>
-  </div> -->
-    <!-- FAQ Item -->
-  <!-- <div class="Question-1">
-    <button class="button-faq" onclick="toggleFaq(this)" >
-8. Do you offer customized furniture and modular solutions?
-      <span style="float: right;">+</span>
-    </button>
-    <div class="content-faq">
-Yes, Elicit specializes in both custom-made furniture and modular designs tailored to your space and style. Whether it’s a modular kitchen, wardrobes, or bespoke sofas and tables, our team ensures each piece is designed for comfort, durability, and visual harmony with your interiors.
-    </div>
-  </div> -->
+   
   </div>
    <!-- ========== Start Contact Home Section ========== -->
    
