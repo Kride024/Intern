@@ -317,7 +317,10 @@
           display: grid;
   grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
   gap: 15px;
-         margin-left: -1.5rem;
+           .design-card.two,
+          .design-card.four{
+            margin-left:-1.5rem;
+          }
         .design-card{
           width:160px;
           height:230px;
@@ -618,6 +621,7 @@ Bottom:47rem;
 @media (max-width: 768px) {
   /* Section Headings */
   .custom-footer{
+     margin-top: -4rem;
     height:auto;
   }
 .custom-footer__heading {
@@ -864,11 +868,7 @@ With Elicit, your dream bedroom is just one design away from reality.
 <div class="d-1">
     <img src="Screenshot 2025-06-20 175937.png" alt="Living Room Design" style="width: 100%; height: auto; margin-top: 2rem; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);padding-bottom: 2.5rem;">
 
-    <div class="cta">
-      <h2>You're Almost There!</h2>
-      <p>One step away from designing your dream living space with us.</p>
-      <button class="btn">Continue Booking Your Session</button>
-    </div>
+    
   </div>
   </div>
 <footer class="custom-footer">
@@ -956,7 +956,7 @@ With Elicit, your dream bedroom is just one design away from reality.
   <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"  >
 </a>
 <!-- Modal -->
-<div id="imageModal">
+<!-- <div id="imageModal">
   <span onclick="closeModal()">&times;</span>
   <img id="modalImage" src="" alt="Preview">
 </div>
@@ -983,6 +983,6 @@ With Elicit, your dream bedroom is just one design away from reality.
       img.onclick = () => openModal(img.src);
     });
   };
-</script>
+</script> -->
 </body>
 </html>

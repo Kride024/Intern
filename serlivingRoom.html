@@ -316,7 +316,10 @@
           display: grid;
   grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
   gap: 15px;
-  margin-left: -1.5rem;
+  .design-card.two,
+          .design-card.four{
+            margin-left:-1.5rem;
+          }
          
         .design-card{
           width:160px;
@@ -619,6 +622,7 @@ Bottom:47rem;
 @media (max-width: 768px) {
   /* Section Headings */
   .custom-footer{
+     margin-top: -4rem;
     height:auto;
   }
 .custom-footer__heading {
@@ -863,11 +867,7 @@ Experience elegance made effortless with handcrafted interiors tailored for your
 <div class="d-1">
     <img src="Screenshot 2025-06-20 175937.png" alt="Living Room Design" >
 
-    <div class="cta">
-      <h2>You're Almost There!</h2>
-      <p>One step away from designing your dream living space with us.</p>
-      <button class="btn">Continue Booking Your Session</button>
-    </div>
+    
   </div>
   </div>
    <footer class="custom-footer">
@@ -955,7 +955,7 @@ Experience elegance made effortless with handcrafted interiors tailored for your
   <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"  >
 </a>
 <!-- Modal -->
-<div id="imageModal">
+<!-- <div id="imageModal">
   <span onclick="closeModal()">&times;</span>
   <img id="modalImage" src="" alt="Preview">
 </div>
@@ -982,6 +982,6 @@ Experience elegance made effortless with handcrafted interiors tailored for your
       img.onclick = () => openModal(img.src);
     });
   };
-</script>
+</script> -->
 </body>
 </html>

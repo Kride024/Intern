@@ -436,54 +436,13 @@ display:none;
     <i class="fas fa-calculator"></i>
     <span>Estimate</span>
   </a>
-  <div class="nav-item" onclick="toggleDropdown()">
-    <i class="fas fa-ellipsis-h"></i>
-    <span>More</span>
-  </div>
 </div>
 
 
-  <!-- More Dropdown Menu -->
-  <div class="mobile-menu-unique" id="hamburgerDropdownUnique">
-    <a href="who we are.html">Who we Are</a>
-    <a href="service.html">Services</a>
-    <a href="work with us.html">Work with Us</a>
-    <a href="contact us.html">Contact</a>
-  </div>
+
 
   <!-- JS to Toggle Dropdown -->
-  <script>
-    function toggleDropdown() {
-      const dropdown = document.getElementById("hamburgerDropdownUnique");
-      if (dropdown.style.display === "flex") {
-        dropdown.style.display = "none";
-      } else {
-        dropdown.style.display = "flex";
-      }
-    }
 
-    // Optional: Close on outside click
-    document.addEventListener('click', function (event) {
-      const dropdown = document.getElementById("hamburgerDropdownUnique");
-      const moreBtn = event.target.closest('.nav-item');
-      if (!dropdown.contains(event.target) && !moreBtn) {
-        dropdown.style.display = "none";
-      }
-    });
-       window.addEventListener("DOMContentLoaded", function () {
-  const path = window.location.pathname.split("/").pop().split("?")[0]; // current file, like 'design.html'
-  const navLinks = document.querySelectorAll(".mobile-navbar .nav-item");
-
-  navLinks.forEach(link => {
-    const page = link.getAttribute("data-page");
-    if (page === path) {
-      link.classList.add("active"); // This triggers the blue styling from CSS
-    }
-  });
-});
-
-
-  </script>
 
 </div>
   <div class="container">
