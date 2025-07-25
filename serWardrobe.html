@@ -295,13 +295,14 @@
           display: grid;
   grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
   gap: 15px;
-          .design-card.two,
-          .design-card.four{
-            margin-left:-1.5rem;
-          }
+         margin-left: auto;
+         margin-right: auto;
+          align-items: center;
+          justify-content: center;
         .design-card{
           width:160px;
           height:230px;
+         
          
 
           img{
@@ -602,7 +603,7 @@ Bottom:47rem;
 @media (max-width: 768px) {
   /* Section Headings */
   .custom-footer{
-    margin-top: -4rem;
+    margin-top: -2rem;
     height:auto;
   }
 .custom-footer__heading {
@@ -835,11 +836,11 @@ With Elicit, transform cluttered corners into sleek, functional storage solution
           <p>High-gloss finishes, false ceiling designs, and statement seating.</p>
         </div>
       </div>
-    
+    </div>
 <div class="d-1">
     <img src="Screenshot 2025-06-20 175937.png" alt="Living Room Design" style="width: 100%; height: auto; margin-top: 2rem; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);padding-bottom: 2.5rem;">
 
-   
+  
   </div>
   </div>
 <footer class="custom-footer">
@@ -927,33 +928,6 @@ With Elicit, transform cluttered corners into sleek, functional storage solution
   <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"  >
 </a>
 <!-- Modal -->
-<!-- <div id="imageModal">
-  <span onclick="closeModal()">&times;</span>
-  <img id="modalImage" src="" alt="Preview">
-</div>
 
-<script>
-  function openModal(src) {
-    document.getElementById("modalImage").src = src;
-    document.getElementById("imageModal").style.display = "flex";
-
-        // Force white color on the close span
-    const closeSpan = document.querySelector("#imageModal span");
-    closeSpan.style.color = "#ffffff";
-  }
-
-  function closeModal() {
-    document.getElementById("imageModal").style.display = "none";
-  }
-
-  // Attach click to all images inside .about-div
-  window.onload = function () {
-    const images = document.querySelectorAll('.design-card img');
-    images.forEach(img => {
-      img.style.cursor = 'pointer';
-      img.onclick = () => openModal(img.src);
-    });
-  };
-</script> -->
 </body>
 </html> 
