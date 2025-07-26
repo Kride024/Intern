@@ -42,8 +42,39 @@
     color: #fff;
     cursor: pointer;
   }
-  
+  @media (width> 1930px) {
+.section-hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
 
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-heading {
+  position: absolute;
+  top: 60%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.section-hero--content .btn_main {
+  position: absolute;
+  top: 65%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+  }
 
       .hero-heading {
   color: #fff; /* White text */
@@ -2348,12 +2379,14 @@ background-color: grey;
   <a href="index.html">
     <img src="Adobe Express - file.png" alt="logo" class="mobile-logo" />
   </a>
+  
             <h1 class="hero-heading">
   Dream Aapka,<span class="mobile-break"></span> Vision Hamara
 </h1>
             <button class="btn_main" onclick="window.location.href=`welcome.html`;">Get Free Estimate</button>
             <button class="btn_main" id="one" onclick="window.location.href='form.html'">Book Free Consultation</button>
-        </div>
+       
+          </div>
         </div>
   </div>
   <div class="custom-shape-divider-bottom-1734607603">
