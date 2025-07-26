@@ -27,29 +27,29 @@
     }
 
     .container {
-      background: rgba(255, 255, 255, 0.9);
+      width:400px;
+      height:100px;
+      display:grid;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      align-content: center;
+      background-color: #fff;
       padding: 2rem;
-      margin: 1rem;
       text-align: center;
       border-radius: 1rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
     }
    
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-30px);}
       to { opacity: 1; transform: translateY(0);}
     }
-    h1 {
-      animation: fadeIn 1.2s ease;
-      margin-bottom: 0.5rem;
-    }
-    h2{
-      color:rgb(70, 69, 69);
-      font-weight: 400;
-      margin-top:0.5rem;
-      margin-bottom: 2rem;
-      animation: fadeIn 2s ease;
-    }
+    
+     p{
+      font: 2rem;
+    
+     }
     button {
       padding: 1rem 2.5rem;
       font-size: 1.2rem;
@@ -106,20 +106,23 @@
     }
      @media (max-width: 700px) {
       .container {
+        width:100px;
+      height:200px;
+         background-color: #fff;
         padding: 2rem 1.2rem;
       }
- h2{
-   font-size: 1.3rem;
- }
+p{
+  font-size: 1.6rem;
+}
 }
   </style>
   <title>Thank you</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h2>Thank you!</span> </h1>
-    <h2>We'll reach out shortly.</h2>
+  <div class="container" style="background-color: #fff;" >
+    <p>Thank you!</span> </p>
+    <p style="width:200px;margin-top: -1rem;">We'll reach out shortly.</p>
    
   </div>
 <a href="https://wa.me/+919506423475" target="_blank"  class="Link-3">
