@@ -564,15 +564,21 @@ body, .body1, .review-card, .btn_main {
 } */
 
 /*  */
-
-.section-about1 .heading-wrapper,
+.section-about1{
+  display:grid;
+  margin-left:auto;
+  margin-right: auto;
+  justify-content:center;
+  align-content:center;
+}
+/* .section-about1 .heading-wrapper,
 .section-about1 .container {
   margin-left: 4%;
-  margin-right: 4%; /* Optional: keeps layout symmetric */
-}
+  margin-right: 4%; Optional: keeps layout symmetric
+} */
 .section-about1 .heading-wrapper{
-    margin-left: 6%;
-  margin-right: 6%;
+    margin-left: 2%;
+  margin-right: 2%;
 }
 
 .section-about1 .section-common-heading,
@@ -1643,6 +1649,10 @@ font-weight: 700;
   display: block;
 }
 
+.hero-heading
+{
+  
+}
 /* Optional: iOS Safari-specific fix */
 @supports (-webkit-touch-callout: none) {
   .containerPartner {
@@ -1669,12 +1679,14 @@ font-weight: 700;
     font-size: 2.8rem!important;
   }
 }
+
 .mobile-break {
   display: none;
 }
 .Elicit_Name{
   display:none;
 }
+
 @media (max-width: 768px) {
   .mobile-break {
     display: block;

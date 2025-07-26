@@ -1,210 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join Our Team</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
- <link rel="stylesheet" href="style1.css">
- <style>
-
-    *{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Urbanist", sans-serif;
-}
-html{
-    font-size:62.5%;
-    scroll-behavior: smooth;
-    scroll-snap-type: Y proximity;
-    /* 1rem=10px */
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
-    font-family:"Poppins", sans-serif;
-}
-p,
-li,
-a,label{
-    font-family: "Urbanist", serif;
-    font-size: 2rem;
-    letter-spacing: 0.1rem;
-    font-weight: 400px;
-    line-height:1.5;
-}
-a{
-    text-decoration: none;    
-}
-li{
-  list-style: none;
-}
-
-/* theme */
-:root{
-    --main-color:#0062ff;
-    --supporting-color:#ebf3fe;
-    --font-color:#424242;
-    /* --bg-color:#ffffff; */
-    --bg-color:#f7fcff;
-    --heading-color:#000a19;
-    --hero-heading-color:#003b99;
-    --white-color:#ffffff;
-    --para-color:#504e4d;
-    --bnt-hover-bg-color:#003b99;
-    --btn-box-shadow:rgba(100,100,111,0.2)0px 7px 29px 0px;
-    --footer-bg-color:#040d12;
-}
-
-/* layout */
-.section{scroll-snap-align:start}.section-common--title{margin:2rem 0 1rem;font-size:18px}.container{max-width:142rem;margin:0 auto;padding:9.6rem 2.4rem}:is( .section-about,.section-blog,.section-course,.section-contact--homepage,.section-why--choose,.section-contact) .container:first-child{padding:6.4rem 0 2.4rem}.grid{display:grid;align-items:center}.grid-two--cols{grid-template-columns:repeat(2,1fr)}.grid-three--cols{grid-template-columns:repeat(3,1fr)}.grid-four--cols{grid-template-columns:repeat(4,1fr)}
-
-/* module/reusable */
-.section-common-heading{
-    font-size:3.2rem;
-    font-weight: 700;
-    text-transform:capitalize
-}
-.section-common-subheading{
-    color:var(--heading-color);
-}
-.fa-solid{
-    padding:2.4rem;
-    background-color:var(--supporting-color);
-    font-size:2.4rem;
-    border-radius:50%;
-    color:var(--hero-heading-color);
-   
-}
-    * { box-sizing: border-box; font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    #hiringForm_container { display: flex; flex-wrap: wrap; min-height: 100vh; }
-    #hiringForm_left, #hiringForm_right { flex: 1 1 50%; padding: 40px; }
-    #hiringForm_left { background-color: #f0f4f8; }
-    #hiringForm_left h2 { font-size: 2rem; margin-bottom: 15px; }
-    #hiringForm_right { background-color: #ffffff; }
-    #hiringForm_form { max-width: 500px; margin: auto; }
-    .hiringForm_field { margin-bottom: 15px; }
-    .hiringForm_field label { display: block; margin-bottom: 5px; font-weight: bold; }
-    .hiringForm_field input, .hiringForm_field textarea, .hiringForm_field select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
-    #hiringForm_submit { background-color: #007bff; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; transition: 0.3s ease-in-out; }
-    #hiringForm_submit:hover { background-color: #0056b3; }
-    @media (max-width: 768px) { #hiringForm_left, #hiringForm_right { flex: 1 1 100%; } }
-
-    /*****navbar Section *****/ 
-.section-navbar{
-    width:100%;
-    box-shadow:rgba(0,0,0,0.05)0px 6px 24px 0px ,
-    rgba(0,0,0,0.08)0px 0px 0px 1px;
-
-}
-.section-navbar .container{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.8rem  0;
-    /* margin-right:30rem ; */
-}
-/* .section-navbar .navbar-brand {
-    margin-left: 7rem;
-} */
-.section-navbar .navbar ul {
-    display:flex;
-    gap:6rem;
-    text-transform: capitalize;
-    margin-left:-2rem ;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+   <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
+    .navbar-brand img {
     
-   & li a{
-    /* color:var(--heading-color); */
-    text-transform: uppercase;
-    display: inline-block;
-    /* font-weight: 800; */
-   position:relative;
-   &::after{
-    content:"";
-    width:0%;
-    border-bottom:1px solid var(--main-color);
-    position:absolute;
-    bottom:-0.3rem;
-    left:0;
-     transition:all 0.3s linear; 
-    
-}
-
-   } 
-   & li a:hover:after{
-    width:100%;
-   }
- 
-
-}
-/***** End navbar Section *****/
-.btn{
-  display:inline-block;
-  padding:1.2rem 3.2rem;
-  background-color: var(--main-color);
-  color:#fcfbfa;
-  font-weight: 600;
-  border-radius: 2rem;
-  -webkit-border-radius: 2rem;
-  -moz-border-radius: 2rem;
-  -ms-border-radius: 2rem;
-
-  -o-border-radius: 2rem;
-  
- background-color: rgb(76, 75, 75);
-border:none;
-
-}
-.btn:hover{
-background-color: rgb(76, 75, 75) !important;
-cursor:pointer;
-box-shadow:var(--btn-box-shadow);
-}
-.btni{
-    width:26rem;
-     display:inline-block;
-  padding:1.2rem 3.2rem;
-  background-color: var(--main-color);
-  color:#fcfbfa;
-  font-weight: 600;
-  border-radius: 2rem;
-  -webkit-border-radius: 2rem;
-  -moz-border-radius: 2rem;
-  -ms-border-radius: 2rem;
-
-  -o-border-radius: 2rem;
-  
- background-color: rgb(28, 94, 226);
- margin-bottom: 3rem;
- margin-top: -2rem;;
-border:none;
- &:hover {
-    background-color: rgb(76, 75, 75);
-  }
-}
- @media (max-width: 1140px) {
-      .slider-container {
-        width: 100%;
-      }
-    }
-      @keyframes scrollLoop {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      margin-top: 1rem;
+      
     }
 
-/* states */
-.btn:hover{
-background-color: rgb(76, 75, 75);
-cursor:pointer;
-box-shadow:var(--btn-box-shadow);
-}
 
-  .navbar{
+
+    .navbar{
       margin-bottom: -2rem;
 /* 
       & ul {
@@ -213,358 +24,144 @@ box-shadow:var(--btn-box-shadow);
       & li a{
         font-family: "Poppins";
         font-size: 1.5rem;
-        
+        font-weight:400;
         
       }
     }
-   .brand-text {
-  display: none;
-}
-@media (max-width: 768px) {
- 
-  .brand-text {
-    height:50px;
-    display: block !important;
-    color: #7b7c7f;
-    letter-spacing: 1px;
-    margin-top: 1rem;
-    margin-left: 2rem;
-    text-align: center;
-  }
-  nav.navbar {
-    display: none !important;
-  }
-  .btn {
-    display: none !important;
-  }
-}
-
- 
-.brand-text-mobile {
-  display: none;
-}
-
-
-.navbar-brand img{
-  width:100px;}
- 
-  .logo{
-  margin-top: 0.7rem!important;
-}
-
-  /* Mobile view only */
-@media (max-width: 768px) {
-  .logo,
-  nav.navbar,
-  .btn {
-    display: none !important;
-  }
-
-  .brand-text-mobile {
-    display: flex !important;
-    flex-direction:row;
-    align-items: center;
-    justify-content: center;
-    margin-left: -6rem;
-    gap:1rem;
-    margin-bottom: -0.7rem;
-    /* margin-top: 1rem; */
-    /* text-align: center; */
-  }
-
-  .brand-text-mobile .mobile-logo {
-    width: 97px;
-    height: auto;
-    /* margin-bottom: 0.rem; */
-  }
-
-  .brand-lines {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: #252525;
-    line-height: 1.5;
-    font-size:2rem ;
-  }
-
-   .line-one {
-    font-size: 1.6rem;
-  }
-
-  .brand-lines .line-two {
-    font-size: 1.6rem;
-    margin-top: 0.2rem;
-  }
-} */
-/* Mobile view only */ */
-
-    footer {
-  background-color: #1c3d5a;
-  color: #fff;
-  padding: 30px 20px;
-  margin-top: 3rem;
-}
-
-.footer-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1000px;
-  margin: auto;
-  min-height: 18rem;
-  gap: 2rem;
-}
-
-.footer-contact,
-.footer-social {
-  flex: 1 1 300px;
-  margin-bottom: 20px;
-}
-
-.footer-social {
-  text-align: right;
-}
-
-.footer-social a {
-  color: #fff;
-  margin-right: 15px;
-  font-size: 18px;
-  transition: color 0.2s;
-}
-.footer-social a:last-child {
-  margin-right: 0;
-}
-.footer-social a:hover {
-  color: #d52c6e;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
-  color: #ccc;
-}
-
-/* Responsive styles */
-@media (max-width: 700px) {
-  footer{
-  height:600px;
-  }
-  .footer-main {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-    padding: 0;
-  }
-  .footer-social {
-    text-align: left;
-    margin-top: 0;
-  }
-  .footer-contact, .footer-social {
-    width: 100%;
-    margin-bottom: 0;
-  }
-  footer {
-    padding: 24px 8px;
-  }
-  .footer-social h3 {
-  display: none;
-}
-.footer-social{
-  text-align: center;
-  margin-top: -10rem;
-}
-}
-.Vacancy-image{
-flex: 1 1 50%;
- padding: 12px;
-  box-sizing: border-box; 
-  display: flex; 
-  align-items: center;
+    .contact-main-container{
+font-family: Arial, sans-serif;
+background-color: #f4f6f8;
+margin: 0; padding: 40px;
+padding-bottom: 35rem;
+margin-top: 2rem;
+  .Heading-contact--main{
+text-align: center; 
+color: #161616;
+font-size: 36px;
+ margin-bottom: 50px;
+ /* margin-top: -3rem; */
+    }
+    }
+  
+    .contact-container{
+display: flex;
+ gap: 20rem; 
  justify-content: center;
-  background-color: #ffffff;
-}
-@media (max-width: 700px){
-  .Vacancy-image{
+  flex-wrap: wrap;
+    }
+    .consultation-card{
+   background-color: rgb(144, 227, 224);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    #btn-box{
+font-size: 24px; 
+color: #0d31e9; 
+margin-bottom: 15px;
+text-align:center;
+    }
+    .para-1{
+color: #555;
+ margin-bottom: 20px;
+    }
+    #book-consultation-button{
+  background-color: #2563eb;
+        color: white;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .contact-card{
+      background-color:  rgb(144, 227, 224);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .Need--help{
+font-size: 19px;
+margin-top: 3rem; 
+color: #2563eb; 
+margin-bottom: 15px;
+    }
+ 
+/* Responsive styles */
+
+   @media (max-width: 768px) {
+  header{
     display:none;
   }
- 
-header{
-  display:none;
-}
-
-}
-.btn{
-  background-color: rgb(28, 94, 226);
-  color:#fff;
-}
-  .form-part--1{
-    margin-top: 15rem;
-    padding-bottom: 20rem;
-  }
-.form-part--2{
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-}
-.Vacancy-image img{
-max-width: 100%; 
-height: 100vh;
- border-radius: 12px;
-margin-top: 6rem;
-color:blue;
-}
-@media (max-width: 700px){
-
-}
-
-#hiringForm_right{
-  background-color: rgb(106, 163, 206);
-  padding:-2rem; 
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 3rem;
-  margin-top: 0.1rem;
-  .section-common-heading{
-text-align: center;
-margin-bottom:2rem
-  }
-  #email_error,#phone_error{
-  color: red; 
-  display: none;
-  }
-}
- #hiringForm{
-display: none; 
-color: green;
-text-align: center;
-margin-top: 15px;
- }
- .Link-1{
-position: fixed;
-  bottom: 45rem;
-  right: 25px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-   /* background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); */
-   background-color: #09335e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 00 2px 10px rgba(0,0,0,0.2);
-  img{
-width: 30px; height: 30px;
-  }
-}
-.Link-2{
-  position: fixed;
-  bottom: 35rem;
-  right: 25px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  /* background-color: #0077B5; */
-  background-color: #09335e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  img{
-width: 30px; height: 30px;
-  }
-}
-.Link-3{
- position: fixed;
-  bottom: 25rem;
-  right: 25px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  /* background-color: #25D366; */
-  background-color: #09335e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  img{
-width: 30px; height: 30px;
-  }
-}
-
-  @media (max-width: 700px) {
-  .Link-1,
-  .Link-2,
-  .Link-3 {
-    width: 36px;
-    height: 36px;
-  
-    /* bottom: unset; */
-    right: 10px;
-  }
-  .Link-1{
-    bottom:57rem;
-    /*
-    . right:50px; */
-  }
-  .Link-2{
-bottom:52rem;
-
-  }
-  .Link-3{
-Bottom:47rem;
-  }
-  .Link-1 img,
-  .Link-2 img,
-  .Link-3 img {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-
-
-@media (width< 600px){
-  .form-part--1{
- margin-top: 0rem;
-  }
-#hiringForm_right{
- 
-  font-size:1.2rem;
-  font-weight: 400;
-  font-family:'Poppins',sans-serif ;
-  .section-common-heading{
-    font-size:1.6rem;
+  .contact-main-container{
+    margin-top: -7rem;
+   
+  .Heading-contact--main{
+    font-size: 1.6rem;
+    font-size: 'Poppins',sans-serif;
     font-weight: 700;
-  } 
-  label{
-     font-size:1.2rem;
-  font-weight: 400;
-  font-family:'Poppins',sans-serif ;
   }
-select#hiringForm_position {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  color: #333;
-}
-}
-#hiringForm_success{
-  font-size:1.2rem;
-  font-family:'Poppins',sans-serif;
-  font-weight: 500;
-}
-}
+  .contact-container{
+     display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
+  gap: 20px;
+   
+    .consultation-card{
+       width: 180px;
+    height:180px;
+    p{
+      display:none;
+    }
+    #btn-box{
+        font-size: 1.4rem;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    }
+    #book-consultation-button{
+     padding:9px;
+        font-size: 1.2rem;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 400;
+    }
+    }
+    .contact-card{
+      
+    width: 180px;
+    height:180px;
+ .Need--help{
+   font-size: 1.4rem;
+   margin-top: 1rem;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+ }
+ .fa-solid.fa-headphones-simple{
+  margin-left: 4rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  width:15px;
+  height:15px;
 
+ }
+ .Phone{
+  display:none;
+ }
+.Mail{
+ display:none;
+}
+    }
+  }
+    }
+  }
+  
 /* Mobile Navbar */
     .mobile-navbar {
       position: fixed;
@@ -663,8 +260,91 @@ select#hiringForm_position {
       from { opacity: 0; transform: translateY(20px);}
       to { opacity: 1; transform: translateY(0);}
     }
+     .Link-1{
+position: fixed;
+  bottom: 45rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+   /* background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); */
+   background-color: #09335e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 00 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
+}
+.Link-2{
+  position: fixed;
+  bottom: 35rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /* background-color: #0077B5; */
+  background-color: #09335e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
+}
+.Link-3{
+ position: fixed;
+  bottom: 25rem;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /* background-color: #25D366; */
+  background-color: #09335e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  img{
+width: 30px; height: 30px;
+  }
+}
 
-    
+  @media (max-width: 700px) {
+  .Link-1,
+  .Link-2,
+  .Link-3 {
+    width: 36px;
+    height: 36px;
+  
+    /* bottom: unset; */
+    right: 10px;
+  }
+  .Link-1{
+    bottom:57rem;
+    /*
+    . right:50px; */
+  }
+  .Link-2{
+bottom:52rem;
+
+  }
+  .Link-3{
+Bottom:47rem;
+  }
+  .Link-1 img,
+  .Link-2 img,
+  .Link-3 img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
  .brand-text {
   display: none;
 }
@@ -760,9 +440,6 @@ display:none;
     width: 40px;
     height: 40px;
     object-fit: cover;
-  }
-  .form-part--2{
-    margin-top: -5rem;
   }
 }
   
@@ -1070,6 +747,9 @@ display:none;
 .btn:hover{
   background: rgb(76, 75, 75)!important;
 }
+.logo{
+  margin-top: 0.7rem!important;
+}
 
 .phone-link,
 .custom-footer__info .text a[href^="tel"] {
@@ -1080,11 +760,10 @@ display:none;
   font-size: 1.2rem !important; /* Adjust size as needed */
 }
   </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-
-   
-<!-- Unique Hamburger Menu -->
+  <!-- Unique Hamburger Menu -->
 <div class="mobile">
   <!-- Mobile Bottom Navbar -->
   <div class="mobile-navbar">
@@ -1100,14 +779,13 @@ display:none;
       <i class="fas fa-calculator"></i>
       <span>Estimate</span>
     </a>
-  
   </div>
 
+  <!-- More Dropdown Menu -->
 
 </div>
 
-
- <!-- ========== Start nav section ========== -->
+   <!-- ========== Start nav section ========== -->
    <header class ="section-navbar" >
     <div class="container">
         <div class="navbar-brand" >
@@ -1169,75 +847,40 @@ display:none;
     </div>
    </header>
    <!-- ========== End nav section========== -->
-<div class="form-part--1">
-     <div class="form-part--2">
+<div class="contact-main-container">
 
-    <!-- Image Side -->
-    <div class="Vacancy-image">
-      <img 
-        src="https://static.vecteezy.com/system/resources/previews/001/879/436/non_2x/career-opportunities-at-job-fair-we-re-hiring-and-recruitment-ads-human-resources-open-vacancy-job-seekers-come-applying-for-jobs-illustration-for-business-card-banner-brochure-flyer-free-vector.jpg" 
-        alt="Team working" 
-      />
+  <h1 class="Heading-contact--main"></h1>
+
+  <div class="contact-container">
+
+    <!-- Book Consultation Card -->
+     <div class="contact-card"onclick="window.location.href='skill_developer.html'" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.15)';"
+       onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.1)';">
+          <i class="fa-solid fa-briefcase icon"></i>
+    <h2 class="Need--help">Job opening</h2>
+
+
+      
     </div>
 
-   
-    <div id="hiringForm_right">
-      <form id="hiringForm_form" onsubmit="handleSubmit(event)" >
-       <h2 class="section-common-heading">Apply Now</h2>
-        <div class="hiringForm_field">
-          <label for="hiringForm_name">Full Name</label>
-          <input type="text" id="hiringForm_name" name="name" required>
-        </div>
+    <!-- Contact Info Card -->
+    <div class="contact-card"onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfW2jJu79aaC1U8J94Gohi02efHlNXrxrdj-If1QomGnM2ryA/viewform'" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.15)';"
+       onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.1)';">
+           <i class="fa-solid fa-handshake icon"></i>
+    <h2 class="Need--help">Vendor Registration Form</h2>
 
-        <div class="hiringForm_field">
-          <label for="hiringForm_email">Email</label>
-          <input type="email" id="hiringForm_email" name="email" required oninput="validateEmail()">
-          <small id="email_error">Invalid email format</small>
-        </div>
 
-        <div class="hiringForm_field">
-          <label for="hiringForm_phone">Phone Number</label>
-          <input type="tel" id="hiringForm_phone" name="phone" required oninput="validatePhone()">
-          <small id="phone_error" >Invalid phone format</small>
-        </div>
-
-        <div class="hiringForm_field">
-          <label for="hiringForm_position">Position Applied For</label>
-          <select id="hiringForm_position" name="position" required>
-            <option value="">Select a position</option>
-            <option value="developer">Developer</option>
-            <option value="designer">Designer</option>
-            <option value="manager">Project Manager</option>
-          </select>
-        </div>
-
-         <div class="hiringForm_field">
-          <label for="hiringForm_resume">Resume Link</label>
-          <input type="url" id="hiringForm_resume" name="resume" placeholder="e.g., Google Drive or Dropbox link" required>
-        </div>
-
-        <div class="hiringForm_field">
-          <label for="hiringForm_message">Why do you want to join us?</label>
-          <textarea id="hiringForm_message" name="message" rows="4"></textarea>
-        </div>
-
-        <button id="hiringForm_submit" type="submit">Submit Application</button>
-      </form>
-<!-- 
-      <p id="hiringForm_success">
-        Thank you! Your application has been received.
-      </p> -->
+      
     </div>
 
   </div>
 
 </div>
-   <!-- ========== Start Footer Section ========== -->
 
-<div style="margin: 0; padding:0; font-family: Arial, sans-serif;margin-top:1rem;  background-color: #1c3d5a;color:#fff"class="ter-container">
+  <div style="margin: 0; padding:0; font-family: Arial, sans-serif;margin-top:-27rem;  background-color: #1c3d5a;color:#fff"class="footer-container">
 
   <!-- Footer -->
- <footer class="custom-footer">
+<footer class="custom-footer">
   <div class="custom-footer__main">
     <!-- Contact Info -->
     <div class="custom-footer__contact">
@@ -1268,18 +911,7 @@ display:none;
 </div>
 
 
-    <!-- Social Links -->
-    <!-- <div class="custom-footer__social">
-      <h3 class="custom-footer__heading">Connect with us</h3>
-      
-      <div class="custom-footer__icons">
-        <a href="https://wa.me/919506423475" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com/elicitengineers?igsh=ZjJ4eWoyZm9kYjY1" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/elicitengineers/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.facebook.com/share/16XpHzab3M/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="mailto:elicitengineers@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-      </div>
-    </div> -->
+  
     
   </div>
 
@@ -1317,87 +949,32 @@ display:none;
     });
   });
 </script>
+
+
 </div>
-
-
-
-   <!-- ========== End Footer Section ========== -->
 
    <a href="https://wa.me/+919506423475" target="_blank"  class="Link-3">
   <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp"  >
 </a>
+</body>
 
-  <script>
-    function handleSubmit(event) {
-      event.preventDefault();
-      document.getElementById('hiringForm_success').style.display = 'block';
-    }
-
-    function validateEmail() {
-      const email = document.getElementById("hiringForm_email").value;
-      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      document.getElementById("email_error").style.display = regex.test(email) ? "none" : "block";
-    }
-
-    function validatePhone() {
-      const phone = document.getElementById("hiringForm_phone").value;
-      const regex = /^[0-9]{10}$/;
-      document.getElementById("phone_error").style.display = regex.test(phone) ? "none" : "block";
-    }
-
-    function validateFile() {
-      const file = document.getElementById("hiringForm_resume").files[0];
-      if (file) {
-        const validTypes = ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
-        document.getElementById("file_error").style.display = validTypes.includes(file.type) ? "none" : "block";
-      }
-    }
-
-
-    
-  const url = 'https://script.google.com/macros/s/AKfycbwBylxYgSQ4qnSKs9bdembG8r7oX-OjJ-EwydGzNK2bpOTvyQLIm8WnpM--ZcfY6fU3vg/exec';
-  const form = document.querySelector('#hiringForm_form');
-  const button = form.querySelector('button');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent default form submission
-
-    button.innerHTML = "Submitting...";
-    button.disabled = true;
-
-    const formData = new FormData(form);
-
-    fetch(url, {
-      method: 'POST',
-      body: formData,
-    })
-    .then((res) => res.text())
-    .then((responseText) => {
-      button.innerHTML = "Sent!";
-     // Optional: show success message
-      form.reset();
-    })
-    .catch((error) => {
-      console.error("Error!", error.message);
-      button.innerHTML = "Failed. Try Again";
-    })
-    .finally(() => {
-      button.disabled = false;
-    });
-  });
-
- 
-  document.getElementById('btn').addEventListener('click',(e)=>{
-    e.preventDefault();
+<script>
   localStorage.clear();
+  document.getElementById('book-consultation-button').addEventListener('click',(e)=>{
+    e.preventDefault();
+  
     localStorage.setItem('booked',true);
     window.location.href='form.html';
 
   })
 
-
+  document.getElementById('btn').addEventListener('click',(e)=>{
+    e.preventDefault();
+    localStorage.setItem('booked',true);
+    window.location.href='form.html';
+  })
 </script>
-   <script>
+  <script>
     function toggleDropdown() {
       const dropdown = document.getElementById("hamburgerDropdownUnique");
       dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
@@ -1424,7 +1001,5 @@ display:none;
 
     localStorage.clear();
   </script>
-
-</body>
 </html>
 
