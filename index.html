@@ -497,25 +497,7 @@ body, .body1, .review-card, .btn_main {
     display: none !important;
   }
 }
-@media (max-width: 768px) {
-  .hero-heading {
-    display:inline;
-    font-size: 2.1rem !important;
-    letter-spacing: 0.2rem;
-    font-weight: 700 !important;
-    margin-bottom: 1rem !important;
-    /* color: #333 !important; */
-    text-align: center !important;
-    margin-top: 10rem;
-    font-family: 'Poppins',sans-serif;
-  }
-  .btn_main{
-    margin-top: -0.6rem;
-    width:22rem;
-    padding: 9px;
-    font-size: 2rem;
-  }
-}
+
 /* section-about */
 
 /* Add this to your style1.css or inside a <style> tag */
@@ -2249,6 +2231,41 @@ background-color: grey;
 }
 
 
+
+ @media (width> 1540px) {
+.section-hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-heading {
+  position: absolute;
+  top: 60%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.section-hero--content .btn_main {
+  position: absolute;
+  top: 69%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+  }
+
     </style>
 </head>
 <body>
@@ -2866,7 +2883,8 @@ Elicit helps you explore these styles and customize them to match your personali
   </div>
 </footer>
 <script>
-  const submitURL = 'https://script.google.com/macros/s/AKfycbxSy2h4rG5HO5xcST5tLPKKMidjfb-IHP0wmW0-uXXJeeeSqBPmcoEjjnOOmnfG1Q0jfQ/exec';
+  const submitURL ='https://script.google.com/macros/s/AKfycby6HXglKJXf_pvqa8gGsGAtoZbqRfvO37zFpyIKEtMXuVYM4IguWjj79gzSdXxtIe9q/exec';
+
   const contactForm = document.querySelector('#form');
   const submitButton = document.getElementById('sendBtn');
 
@@ -2964,7 +2982,8 @@ Elicit helps you explore these styles and customize them to match your personali
 
 
 <script>
-  const regUrl = 'https://script.google.com/macros/s/AKfycbxSy2h4rG5HO5xcST5tLPKKMidjfb-IHP0wmW0-uXXJeeeSqBPmcoEjjnOOmnfG1Q0jfQ/exec';
+  const regUrl = 'https://script.google.com/macros/s/AKfycby6HXglKJXf_pvqa8gGsGAtoZbqRfvO37zFpyIKEtMXuVYM4IguWjj79gzSdXxtIe9q/exec';
+
 
   function regCloseModal() {
     const modal = document.getElementById('reg-popup-form');
@@ -3072,7 +3091,7 @@ function toggleFaq(button) {
 }
 </script>
 <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxSy2h4rG5HO5xcST5tLPKKMidjfb-IHP0wmW0-uXXJeeeSqBPmcoEjjnOOmnfG1Q0jfQ/exec';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycby6HXglKJXf_pvqa8gGsGAtoZbqRfvO37zFpyIKEtMXuVYM4IguWjj79gzSdXxtIe9q/exec';
   const form = document.getElementById('contactForm');
   const responseMsg = document.getElementById('formResponse');
 

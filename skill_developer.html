@@ -3,37 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Apply Now</title>
+  <title>Apply Now – Elicit Interiors</title>
   <style>
     * {
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      padding: 0;
-      background-color: #eef2f7;
-      min-height: 100vh;
+      background: #fdfdfd;
+      padding: 2rem;
       display: flex;
       justify-content: center;
       align-items: center;
+      min-height: 100vh;
     }
 
     .form-wrapper {
+      background: #fff;
+      padding: 2rem 2.5rem;
+      border-radius: 1.2rem;
+      max-width: 550px;
       width: 100%;
-      max-width: 480px;
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-      margin: 1rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.08);
+      border: 1px solid #eee;
     }
 
     h2.section-common-heading {
-      text-align: center;
+      font-size: 2rem;
       margin-bottom: 1.5rem;
-      font-size: 1.8rem;
+      text-align: center;
+      color: #141313;
     }
 
     .hiringForm_field {
@@ -42,65 +44,70 @@
 
     .hiringForm_field label {
       display: block;
+      font-weight: 500;
       margin-bottom: 0.5rem;
-      font-weight: 600;
+      color: #555;
     }
 
     .hiringForm_field input,
     .hiringForm_field select,
     .hiringForm_field textarea {
       width: 100%;
-      padding: 0.7rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+      padding: 0.75rem 1rem;
       font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 0.6rem;
+      background-color: #fafafa;
+      transition: border 0.3s;
     }
 
-    small {
-      color: red;
-      display: none;
-      margin-top: 0.25rem;
-    }
+   
 
     #hiringForm_submit {
-      width: 100%;
-      padding: 0.75rem;
-      background-color: #007bff;
-      color: white;
+      background-color: #0b61d1;
+      color: #fff;
       border: none;
-      border-radius: 6px;
+      padding: 0.9rem 1.5rem;
+      border-radius: 0.6rem;
       font-size: 1rem;
       cursor: pointer;
+      width: 100%;
+      margin-top: 0.5rem;
+      transition: background 0.3s ease;
     }
 
     #hiringForm_submit:hover {
-      background-color: #0056b3;
+      background-color: #0b61d1;
     }
 
     #hiringForm_success {
-      display: none;
-      margin-top: 1rem;
-      color: green;
+      color: #28a745;
+      font-weight: 600;
       text-align: center;
-      font-weight: 500;
+      display: none;
+      margin-top: 1.2rem;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
       .form-wrapper {
         padding: 1.5rem;
-      }
-
-      h2.section-common-heading {
-        font-size: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-
   <div class="form-wrapper">
     <form id="hiringForm_form">
-      <h2 class="section-common-heading">Apply Now</h2>
+      <h2 class="section-common-heading">Apply</h2>
 
       <div class="hiringForm_field">
         <label for="hiringForm_name">Full Name</label>
@@ -116,22 +123,23 @@
       <div class="hiringForm_field">
         <label for="hiringForm_phone">Phone Number</label>
         <input type="tel" id="hiringForm_phone" name="phone" required oninput="validatePhone()">
-        <small id="phone_error">Invalid phone format</small>
+        <small id="phone_error">Invalid phone format (10 digits)</small>
       </div>
 
       <div class="hiringForm_field">
         <label for="hiringForm_position">Position Applied For</label>
         <select id="hiringForm_position" name="position" required>
           <option value="">Select a position</option>
-          <option value="developer">Developer</option>
-          <option value="designer">Designer</option>
-          <option value="manager">Project Manager</option>
+          <option value="Interior Designer">Interior Designer</option>
+          <option value="3D Visualizer">3D Visualizer</option>
+          <option value="Site Supervisor">Site Supervisor</option>
+          <option value="Vendor / Carpenter">Vendor / Carpenter</option>
         </select>
       </div>
 
       <div class="hiringForm_field">
-        <label for="hiringForm_resume">Resume Link</label>
-        <input type="url" id="hiringForm_resume" name="resume" placeholder="e.g., Google Drive or Dropbox link" required>
+        <label for="hiringForm_resume">Portfolio or Resume Link</label>
+        <input type="url" id="hiringForm_resume" name="resume" placeholder="Google Drive / Dropbox etc." required>
       </div>
 
       <div class="hiringForm_field">
@@ -140,90 +148,47 @@
       </div>
 
       <button id="hiringForm_submit" type="submit">Submit Application</button>
-      <p id="hiringForm_success">Thank you! Your application has been received.</p>
+      <p id="hiringForm_success">✅ Thank you! Your application has been received.</p>
     </form>
   </div>
-   <!-- ========== Start Footer Section ========== -->
-
-
-
-
-
-   <!-- ========== End Footer Section ========== -->
-
- 
 
   <script>
-    function handleSubmit(event) {
-      event.preventDefault();
-      document.getElementById('hiringForm_success').style.display = 'block';
-    }
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwS69NcWquwgZ0IUlUYCEyU-oJVWN4Gzi88rHgtfYk37Ya28RfDXw4KHLryMejVAd9A/exec';
+    const form = document.getElementById('hiringForm_form');
+    const successMessage = document.getElementById('hiringForm_success');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          if (response.ok) {
+            successMessage.style.display = 'block';
+            form.reset();
+          } else {
+            alert("❌ Something went wrong. Please try again.");
+          }
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          alert("❌ Something went wrong. Please try again.");
+        });
+    });
 
     function validateEmail() {
       const email = document.getElementById("hiringForm_email").value;
+      const error = document.getElementById("email_error");
       const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      document.getElementById("email_error").style.display = regex.test(email) ? "none" : "block";
+      error.style.display = regex.test(email) ? "none" : "inline";
     }
 
     function validatePhone() {
       const phone = document.getElementById("hiringForm_phone").value;
+      const error = document.getElementById("phone_error");
       const regex = /^[0-9]{10}$/;
-      document.getElementById("phone_error").style.display = regex.test(phone) ? "none" : "block";
+      error.style.display = regex.test(phone) ? "none" : "inline";
     }
-
-    function validateFile() {
-      const file = document.getElementById("hiringForm_resume").files[0];
-      if (file) {
-        const validTypes = ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
-        document.getElementById("file_error").style.display = validTypes.includes(file.type) ? "none" : "block";
-      }
-    }
-
-
-    
-  const url = 'https://script.google.com/macros/s/AKfycbwBylxYgSQ4qnSKs9bdembG8r7oX-OjJ-EwydGzNK2bpOTvyQLIm8WnpM--ZcfY6fU3vg/exec';
-  const form = document.querySelector('#hiringForm_form');
-  const button = form.querySelector('button');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent default form submission
-
-    button.innerHTML = "Submitting...";
-    button.disabled = true;
-
-    const formData = new FormData(form);
-
-    fetch(url, {
-      method: 'POST',
-      body: formData,
-    })
-    .then((res) => res.text())
-    .then((responseText) => {
-      button.innerHTML = "Sent!";
-     // Optional: show success message
-      form.reset();
-    })
-    .catch((error) => {
-      console.error("Error!", error.message);
-      button.innerHTML = "Failed. Try Again";
-    })
-    .finally(() => {
-      button.disabled = false;
-    });
-  });
-
- 
-  document.getElementById('btn').addEventListener('click',(e)=>{
-    e.preventDefault();
-  localStorage.clear();
-    localStorage.setItem('booked',true);
-    window.location.href='form.html';
-
-  })
-
-
-</script>
-
-
+  </script>
 </body>
 </html>
+
